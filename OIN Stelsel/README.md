@@ -3,11 +3,11 @@
 
 Logius wil de Voorwaarden Digikoppeling en de Digikoppeling Gebruiksvoorwaarden aanpassen. In beide documenten staan naast de regels voor het gebruik van Digikoppeling óók de spelregels beschreven van OIN uitgifte en gebruik. 
 
-> ## Openbare Consultatie
+> ## **Openbare Consultatie**
 > 
-> Logius brengt conform haar beheermodel de wijzingen in het OIN Stelsel in openbare consultatie. De regels van het OIN staan beschreven in de documenten *Voorwaarden Digikoppeling*  en *Digikoppeling Gebruiksvoorwaarden* 
+> **Logius brengt conform haar beheermodel de wijzingen in het OIN Stelsel in openbare consultatie. De regels van het OIN staan beschreven in de documenten *Voorwaarden Digikoppeling*  en *Digikoppeling Gebruiksvoorwaarden*** 
 >
-> Met deze openbare consultatie willen we betrokkenen bij de Digikoppeling standaard oproepen om inbreng te geven op deze voorgestelde wijziging. U kunt dit doen tot en met **woensdag 4 november 2020**.
+> **Met deze openbare consultatie willen we betrokkenen bij de Digikoppeling standaard oproepen om inbreng te geven op deze voorgestelde wijziging. U kunt dit doen tot en met <span style="color:blue">woensdag 4 november 2020</span>**.
 
 ## Aanleiding
 
@@ -28,7 +28,7 @@ In beide gevallen bleek het voor een ordentelijke gegevensuitwisseling met overh
 
 Om bovenstaande knelpunten op te lossen zijn wijzigingen doorgevoerd in beide voorwaarden documenten. Het gaat om de volgende onderdelen:
 
-- Private partijen met een publieke taak kunnen SubOIN’s aanvragen**
+- Private partijen met een publieke taak kunnen SubOIN’s aanvragen
 - Private partijen kunnen ten behoeve van (SAAS-)dienstverlening aan hun publieke klanten SubOIN’s aanvragen
 
 ## Verdere wijzigingen
