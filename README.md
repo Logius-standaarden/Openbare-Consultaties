@@ -12,6 +12,6 @@ U kunt op- en aanmerkingen aanbrengen op de onderstaande dossiers, via de [issue
 
 ## Afgeronde Consultaties
 
-|Onderwerp|Locatie|Omschrijving|Consultatie beeindigt|
+|Onderwerp|Locatie|Omschrijving|Consultatie geëindigd op|
 |---|---|---|---|
 |---|---|---|---|
