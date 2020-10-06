@@ -3,11 +3,19 @@
 
 Logius wil de Voorwaarden Digikoppeling en de Digikoppeling Gebruiksvoorwaarden aanpassen. In beide documenten staan naast de regels voor het gebruik van Digikoppeling óók de spelregels beschreven van OIN uitgifte en gebruik. 
 
-> ## **Openbare Consultatie**
+
+---
+## **Openbare Consultatie**
 > 
-> **Logius brengt conform haar beheermodel de wijzingen in het OIN Stelsel in openbare consultatie. De regels van het OIN staan beschreven in de documenten *Voorwaarden Digikoppeling*  en *Digikoppeling Gebruiksvoorwaarden*** 
->
-> **Met deze openbare consultatie willen we betrokkenen bij de Digikoppeling standaard oproepen om inbreng te geven op deze voorgestelde wijziging. U kunt dit doen tot en met <span style="color:blue">woensdag 4 november 2020</span>**.
+**Logius brengt conform haar beheermodel de wijzingen in het OIN Stelsel in openbare consultatie. De regels van het OIN staan beschreven in de documenten *Voorwaarden Digikoppeling*  en *Digikoppeling Gebruiksvoorwaarden***
+
+**Met deze openbare consultatie willen we betrokkenen bij de Digikoppeling standaard oproepen om inbreng te geven op deze voorgestelde wijziging. U kunt dit doen tot en met woensdag 4 november 2020.**
+
+### **Commentaar**
+
+**U kunt commentaar aanleveren op dit voorstel via de issues mogelijkheid van deze repository [https://github.com/Logius-standaarden/Openbare-Consultaties/issues](https://github.com/Logius-standaarden/Openbare-Consultaties/issues) (gebruik het label `Wijziging OIN regels - 2020`) of per email naar [digikoppeling@logius.nl](mailto:digikoppeling@logius.nl?subject=Wijziging%20OIN%20regels%20-%202020).**
+
+---
 
 ## Aanleiding
 
