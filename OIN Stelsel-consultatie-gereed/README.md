@@ -1,6 +1,6 @@
 # Aanpassingen in het OIN Stelsel 
 
-<table style="border: 1px solid blue;"><tr><td>De openbare consultatie over deze wijziging is beëindigd op 4 november 2020</td></tr></table>
+<table style="border: 3px solid blue;"><tr><td>De openbare consultatie over deze wijziging is geëindigd op 4 november 2020</td></tr></table>
 
 ## Inleiding 
 
