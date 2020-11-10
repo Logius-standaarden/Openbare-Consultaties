@@ -1,4 +1,7 @@
 # Aanpassingen in het OIN Stelsel 
+
+<table style="border: 1px solid blue;"><tr><td>De openbare consultatie over deze wijziging is beëindigd op 4 november 2020</td></tr></table>
+
 ## Inleiding 
 
 Logius wil de Voorwaarden Digikoppeling en de Digikoppeling Gebruiksvoorwaarden aanpassen. In beide documenten staan naast de regels voor het gebruik van Digikoppeling óók de spelregels beschreven van OIN uitgifte en gebruik. 
