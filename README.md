@@ -12,4 +12,4 @@ U kunt op- en aanmerkingen aanbrengen op de onderstaande dossiers, via de [issue
 
 |Onderwerp|Locatie|Omschrijving|Consultatie geëindigd op|
 |---|---|---|---|
-|Wijziging OIN regels - 2020|[OIN Stelsel](https://github.com/Logius-standaarden/Openbare-Consultaties/tree/master/OIN Stelsel-consultatie-gereed)|Wijzigingen in het gebruik en uitgifte van SubOINS| 4 november 2020|
+|Wijziging OIN regels - 2020| [OIN Stelsel](https://github.com/Logius-standaarden/Openbare-Consultaties/tree/master/OIN%20Stelsel-consultatie-gereed) |Wijzigingen in het gebruik en uitgifte van SubOINS| 4 november 2020|
