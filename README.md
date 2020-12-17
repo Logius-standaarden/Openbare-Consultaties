@@ -9,7 +9,7 @@ Ook is het mogelijk uw commentaar te sturen per email naar digikoppeling@logius.
 |Label|Locatie|Omschrijving|Consultatie loopt tot|
 |---|---|---|---|
 |Toevoeging Digikoppeling REST API profiel|[Digikoppeling REST API profiel](https://github.com/centrumvoorstandaarden/DigikoppelingRestfulApiProfiel)| Opname van een REST API profiel (op basis van de API Design Rules) in Digikoppeling |29 januari 2021|
-|Wijziging Digikoppeling Architectuur|[Digikoppeling Architectuur](https://github.com/centrumvoorstandaarden/Architectuur2.0-metRestfulAPI)| De aanleiding van de vernieuwing is tweeledig: in 2019 is een RFC ingediend oveop basis van de API Design Rulesr relatie van de Digikoppeling profielen met bevragen en melden. Daarnaast is een Rest API profiel uitgewerkt voor de Digikoppeling Standaard (zie hierboven)|29 januari 2021|
+|Wijziging Digikoppeling Architectuur|[Digikoppeling Architectuur](https://github.com/centrumvoorstandaarden/Architectuur2.0-metRestfulAPI)| De aanleiding van de vernieuwing is tweeledig: in 2019 is een RFC ingediend over de relatie van de Digikoppeling profielen met bevragen en melden. Daarnaast is een Rest API profiel uitgewerkt voor de Digikoppeling Standaard op basis van de API Design Rules (zie hierboven)|29 januari 2021|
 
 <!-- Op dit moment lopen er geen openbare consultaties -->
 
