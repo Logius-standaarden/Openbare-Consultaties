@@ -4,6 +4,8 @@
 
 U kunt op- en aanmerkingen aanbrengen op de onderstaande dossiers, via de [issues](https://github.com/Logius-standaarden/Openbare-Consultaties/issues) pagina. Gebruik het aangegeven `Label` bij uw commentaar.
 
+Ook is het mogelijk uw commentaar te sturen per email naar digikoppeling@logius.nl.  
+
 |Label|Locatie|Omschrijving|Consultatie loopt tot|
 |---|---|---|---|
 |Toevoeging Digikoppeling REST API profiel|[Digikoppeling REST API profiel](https://github.com/centrumvoorstandaarden/DigikoppelingRestfulApiProfiel)| Opname van een REST API profiel (op basis van de API Design Rules) in Digikoppeling |29 januari 2021|
