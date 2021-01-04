@@ -26,17 +26,17 @@ Het is ook mogelijk uw commentaar te sturen per email naar digikoppeling@logius.
 |Wijziging Digikoppeling WUS - 2020|[Digikoppeling Koppelvlakstandaard WUS](https://github.com/Logius-standaarden/Openbare-Consultaties/tree/master/20201007_Digikoppeling_WUS-gereed)|RFC 2020-2 wsa-to, RFC 2020-3 mtom| 18 november 2020|
 |Wijziging OIN regels - 2020| [OIN Stelsel](https://github.com/Logius-standaarden/Openbare-Consultaties/tree/master/OIN%20Stelsel-consultatie-gereed) |Wijzigingen in het gebruik en uitgifte van SubOINS| 4 november 2020|
 
-## Op-, aanmerkingen maken of nieuwe tekstvoorstellen indienen (*Issues* en *Pull Requests*)
+## Issues en Pull Requests: Opmerkingen maken of tekstvoorstellen indienen
 
-Om op- of aanmerkingen te maken in een dossier (repository) heeft u een Github Account nodig. U kunt dit account gratis aanmaken.
+Om opmerkingen te maken in een dossier (repository) heeft u een Github Account nodig. U kunt dit account gratis aanmaken.
 
-Met uw account kunt u Issues of Pull Request maken in een repository of reageren in een discussie. 
+Met uw account kunt u Issues of Pull Request maken in een repository of reageren op ingediende issues.
 
-|onderwerp|Link|  
+|Onderwerp|Link|  
 |---|---|
-|aanmaken Github Account| [Create account](https://github.com/join?plan=free&ref_cta=Join%2520for%2520free&ref_loc=topcarousel&ref_page=%2Fpricing&source=pricing-card-free)|
-|aanmaken Issue| [Creating an issue](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/creating-an-issue)|
-|aanmaken Pull request| [Creating an issue or pull request](https://docs.github.com/en/free-pro-team@latest/desktop/contributing-and-collaborating-using-github-desktop/creating-an-issue-or-pull-request)|
+|Aanmaken Github Account| [Create account](https://github.com/join?plan=free&ref_cta=Join%2520for%2520free&ref_loc=topcarousel&ref_page=%2Fpricing&source=pricing-card-free)|
+|Aanmaken Issue| [Creating an issue](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/creating-an-issue)|
+|Aanmaken Pull request| [Creating an issue or pull request](https://docs.github.com/en/free-pro-team@latest/desktop/contributing-and-collaborating-using-github-desktop/creating-an-issue-or-pull-request)|
 
 <br>
 <br>
