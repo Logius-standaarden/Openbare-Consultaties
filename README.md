@@ -38,11 +38,19 @@ Met uw account kunt u Issues of Pull Request maken in een repository of reageren
 |aanmaken Issue| [Creating an issue](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/creating-an-issue)|
 |aanmaken Pull request| [Creating an issue or pull request](https://docs.github.com/en/free-pro-team@latest/desktop/contributing-and-collaborating-using-github-desktop/creating-an-issue-or-pull-request)|
 
+<br>
+<br>
+
 ### Schermvoorbeelden
 
+**De Issues pagina van een Repository**
 ![Issue Pagina van een repository](media/goto_issues_example.png)
 figuur 1. Klik op de Issues tab van een repository
 
+<br>
+<br>
+
+**Issues aanmaken of reageren op bestaande issues**
 ![Aanmaken of bekijken issue](media/create_issues_example.png)
 figuur 2. Klik in een Issues pagina op *New issue* of bekijk een bestaande issue en discussieer mee
 
