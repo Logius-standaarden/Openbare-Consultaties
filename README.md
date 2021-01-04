@@ -13,11 +13,12 @@
 U kunt op- en aanmerkingen aanbrengen op de onderstaande dossiers, via de [issues](https://github.com/Logius-standaarden/Openbare-Consultaties/issues) pagina van deze repository (Openbare-consultaties). Gebruik het aangegeven `Label` bij uw commentaar. Voor instructie zie [onderaan deze pagina](https://github.com/Logius-standaarden/Openbare-Consultaties#issues-en-pull-requests-opmerkingen-maken-of-tekstvoorstellen-indienen).
 
 U kunt natuurlijk ook op- en aanmerkingen aanbrengen op de issues pagina van de respositories van de specifieke dossiers.
-## Commentaar per email
+### Commentaar per email
 
-Het is ook mogelijk uw commentaar te sturen per email naar digikoppeling@logius.nl. 
+Het is ook mogelijk uw commentaar te sturen per email naar digikoppeling@logius.nl.
 
-
+<br>
+<br>
 
 ## Afgeronde Consultaties
 
@@ -26,9 +27,13 @@ Het is ook mogelijk uw commentaar te sturen per email naar digikoppeling@logius.
 |Wijziging Digikoppeling WUS - 2020|[Digikoppeling Koppelvlakstandaard WUS](https://github.com/Logius-standaarden/Openbare-Consultaties/tree/master/20201007_Digikoppeling_WUS-gereed)|RFC 2020-2 wsa-to, RFC 2020-3 mtom| 18 november 2020|
 |Wijziging OIN regels - 2020| [OIN Stelsel](https://github.com/Logius-standaarden/Openbare-Consultaties/tree/master/OIN%20Stelsel-consultatie-gereed) |Wijzigingen in het gebruik en uitgifte van SubOINS| 4 november 2020|
 
+<br>
+<br>
+<br>
+
 ## Issues en Pull Requests: Opmerkingen maken of tekstvoorstellen indienen
 
-Om opmerkingen te maken in een dossier (repository) heeft u een Github Account nodig. U kunt dit account gratis aanmaken.
+Om opmerkingen (*Issues* in Github) te maken in een dossier (repository) heeft u een Github Account nodig. U kunt dit account gratis aanmaken.
 
 Met uw account kunt u Issues of Pull Request maken in een repository of reageren op ingediende issues.
 
