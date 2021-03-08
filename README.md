@@ -4,10 +4,9 @@
 
 |Label|Locatie|Omschrijving|Consultatie loopt tot|
 |---|---|---|---|
-|Toevoeging Digikoppeling REST API profiel|[Digikoppeling REST API profiel](https://github.com/centrumvoorstandaarden/DigikoppelingRestfulApiProfiel)| Opname van een REST API profiel (op basis van de API Design Rules) in Digikoppeling |29 januari 2021|
-|Wijziging Digikoppeling Architectuur|[Digikoppeling Architectuur](https://github.com/centrumvoorstandaarden/Architectuur2.0-metRestfulAPI)| De aanleiding van de vernieuwing is tweeledig: in 2019 is een RFC ingediend over de relatie van de Digikoppeling profielen met bevragen en melden. Daarnaast is een Rest API profiel uitgewerkt voor de Digikoppeling Standaard op basis van de API Design Rules (zie hierboven)|29 januari 2021|
+|||||
 
-<!-- Op dit moment lopen er geen openbare consultaties -->
+Op dit moment lopen er geen openbare consultaties 
 ## Op- en Aanmerkingen
 
 U kunt op- en aanmerkingen aanbrengen op de onderstaande dossiers, via de [issues](https://github.com/Logius-standaarden/Openbare-Consultaties/issues) pagina van deze repository (Openbare-consultaties). Gebruik het aangegeven `Label` bij uw commentaar. Voor instructie zie [onderaan deze pagina](https://github.com/Logius-standaarden/Openbare-Consultaties#issues-en-pull-requests-opmerkingen-maken-of-tekstvoorstellen-indienen).
@@ -24,6 +23,8 @@ Het is ook mogelijk uw commentaar te sturen per email naar digikoppeling@logius.
 
 |Onderwerp|Locatie|Omschrijving|Consultatie geëindigd op|
 |---|---|---|---|
+|Toevoeging Digikoppeling REST API profiel|[Digikoppeling REST API profiel](https://github.com/centrumvoorstandaarden/DigikoppelingRestfulApiProfiel)| Opname van een REST API profiel (op basis van de API Design Rules) in Digikoppeling |3 maart 2021|
+|Wijziging Digikoppeling Architectuur|[Digikoppeling Architectuur](https://github.com/centrumvoorstandaarden/Architectuur2.0-metRestfulAPI)| De aanleiding van de vernieuwing is tweeledig: in 2019 is een RFC ingediend over de relatie van de Digikoppeling profielen met bevragen en melden. Daarnaast is een Rest API profiel uitgewerkt voor de Digikoppeling Standaard op basis van de API Design Rules (zie hierboven)|3 maart 2021|
 |Wijziging Digikoppeling WUS - 2020|[Digikoppeling Koppelvlakstandaard WUS](https://github.com/Logius-standaarden/Openbare-Consultaties/tree/master/20201007_Digikoppeling_WUS-gereed)|RFC 2020-2 wsa-to, RFC 2020-3 mtom| 18 november 2020|
 |Wijziging OIN regels - 2020| [OIN Stelsel](https://github.com/Logius-standaarden/Openbare-Consultaties/tree/master/OIN%20Stelsel-consultatie-gereed) |Wijzigingen in het gebruik en uitgifte van SubOINS| 4 november 2020|
 
