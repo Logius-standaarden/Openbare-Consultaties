@@ -4,9 +4,11 @@
 
 |Label|Locatie|Omschrijving|Consultatie loopt tot|
 |---|---|---|---|
-|||||
+|Digikoppeling|[Digikoppeling REST-API Koppelvlakstandaard](https://github.com/Logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API/tree/preview-API-58)| Toevoegen API-58 regel aan het REST-API profiel. <BR> Zie [RFC-Toevoegen API-58 No sensitive information in URIs ](https://github.com/Logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API/tree/preview-API-58)|(19-9-2022)<BR>_Consultatie nog niet gestart_|
 
-Op dit moment lopen er geen openbare consultaties 
+<!-- (Op dit moment lopen er geen openbare consultaties  -->
+
+
 ## Op- en Aanmerkingen
 
 U kunt op- en aanmerkingen aanbrengen op de onderstaande dossiers, via de [issues](https://github.com/Logius-standaarden/Openbare-Consultaties/issues) pagina van deze repository (Openbare-consultaties). Gebruik het aangegeven `Label` bij uw commentaar. Voor instructie zie [onderaan deze pagina](https://github.com/Logius-standaarden/Openbare-Consultaties#issues-en-pull-requests-opmerkingen-maken-of-tekstvoorstellen-indienen).
