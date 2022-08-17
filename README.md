@@ -4,7 +4,7 @@
 
 |Label|Locatie|Omschrijving|Consultatie loopt tot|
 |---|---|---|---|
-|Digikoppeling|[Digikoppeling REST-API Koppelvlakstandaard](https://github.com/Logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API/tree/preview-API-58)| Toevoegen API-58 regel aan het REST-API profiel. <BR> Zie [RFC-Toevoegen API-58 No sensitive information in URIs ](https://github.com/Logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API/tree/preview-API-58)|(19-9-2022)<BR>_Consultatie nog niet gestart_|
+|Digikoppeling|[Digikoppeling REST-API Koppelvlakstandaard](https://logius-standaarden.github.io/Publicatie-Preview/Digikoppeling-Koppelvlakstandaard-REST-API/Toevoegen-API-58/)| Toevoegen API-58 regel aan het REST-API profiel. <BR> Zie [RFC-Toevoegen API-58 No sensitive information in URIs ](https://github.com/Logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API/issues/15)|(19-9-2022)<BR>_Consultatie nog niet gestart_|
 
 <!-- (Op dit moment lopen er geen openbare consultaties  -->
 
