@@ -11,7 +11,7 @@
 
 ## Op- en Aanmerkingen
 
-U kunt op- en aanmerkingen aanbrengen op de onderstaande dossiers, via de [issues](https://github.com/Logius-standaarden/Openbare-Consultaties/issues) pagina van deze repository (Openbare-consultaties). Gebruik het aangegeven `Label` bij uw commentaar. Voor instructie zie [onderaan deze pagina](https://github.com/Logius-standaarden/Openbare-Consultaties#issues-en-pull-requests-opmerkingen-maken-of-tekstvoorstellen-indienen).
+U kunt op- en aanmerkingen aanbrengen via de [issues](https://github.com/Logius-standaarden/Openbare-Consultaties/issues) pagina van deze repository (Openbare-consultaties). Gebruik het aangegeven `Label` bij uw commentaar. Voor instructie zie [onderaan deze pagina](https://github.com/Logius-standaarden/Openbare-Consultaties#issues-en-pull-requests-opmerkingen-maken-of-tekstvoorstellen-indienen).
 
 U kunt natuurlijk ook op- en aanmerkingen aanbrengen op de issues pagina van de respositories van de specifieke dossiers.
 ### Commentaar per email
