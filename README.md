@@ -1,4 +1,4 @@
-# Openbare Consultaties van het Logius Centrum voor Standaarden
+# Openbare Consultaties van Logius afdeling Standaarden
 
 ## Lopende Consultaties
 
