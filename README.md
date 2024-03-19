@@ -42,7 +42,7 @@ Met uw account kunt u Issues of Pull Request maken in een repository of reageren
 
 |Onderwerp|Link|  
 |---|---|
-|Aanmaken Github Account| [Create account](https://github.com/join?plan=free&ref_cta=Join%2520for%2520free&ref_loc=topcarousel&ref_page=%2Fpricing&source=pricing-card-free)|
+|Aanmaken Github Account| [Create account](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)|
 |Aanmaken Issue| [Creating an issue](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/creating-an-issue)|
 |Aanmaken Pull request| [Creating an issue or pull request](https://docs.github.com/en/free-pro-team@latest/desktop/contributing-and-collaborating-using-github-desktop/creating-an-issue-or-pull-request)|
 
