@@ -25,7 +25,7 @@ Het is ook mogelijk uw commentaar te sturen per email naar digikoppeling[@]logiu
 
 |Onderwerp|Locatie|Omschrijving|Consultatie geëindigd op|
 |---|---|---|---|
-|Digikoppeling|[Digikoppeling REST-API Koppelvlakstandaard](https://logius-standaarden.github.io/Publicatie-Preview/Digikoppeling-Koppelvlakstandaard-REST-API/Toevoegen-API-58/)| Toevoegen API-58 regel aan het REST-API profiel. <BR> Zie [RFC-Toevoegen API-58 No sensitive information in URIs ](https://github.com/Logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API/issues/15)|(19-9-2022)<BR>|
+|Digikoppeling|[Digikoppeling REST-API Koppelvlakstandaard](https://logius-standaarden.github.io/Publicatie-Preview/Digikoppeling-Koppelvlakstandaard-REST-API/Toevoegen-API-58/)| Toevoegen API-58 regel aan het REST-API profiel. <BR> Zie [RFC-Toevoegen API-58 No sensitive information in URIs ](https://github.com/Logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API/issues/15)| 19-9-2022|
 |Toevoeging Digikoppeling REST API profiel|[Digikoppeling REST API profiel](https://github.com/centrumvoorstandaarden/DigikoppelingRestfulApiProfiel)| Opname van een REST API profiel (op basis van de API Design Rules) in Digikoppeling |3 maart 2021|
 |Wijziging Digikoppeling Architectuur|[Digikoppeling Architectuur](https://github.com/centrumvoorstandaarden/Architectuur2.0-metRestfulAPI)| De aanleiding van de vernieuwing is tweeledig: in 2019 is een RFC ingediend over de relatie van de Digikoppeling profielen met bevragen en melden. Daarnaast is een Rest API profiel uitgewerkt voor de Digikoppeling Standaard op basis van de API Design Rules (zie hierboven)|3 maart 2021|
 |Wijziging Digikoppeling WUS - 2020|[Digikoppeling Koppelvlakstandaard WUS](https://github.com/Logius-standaarden/Openbare-Consultaties/tree/master/20201007_Digikoppeling_WUS-gereed)|RFC 2020-2 wsa-to, RFC 2020-3 mtom| 18 november 2020|
@@ -54,6 +54,7 @@ Met uw account kunt u Issues of Pull Request maken in een repository of reageren
 
 **De Issues pagina van een Repository**
 ![Issue Pagina van een repository](media/MenuBalk.png)
+
 figuur 1. Klik op de Issues tab van een repository
 
 <br>
@@ -61,5 +62,6 @@ figuur 1. Klik op de Issues tab van een repository
 
 **Issues aanmaken of reageren op bestaande issues**
 ![Aanmaken of bekijken issue](media/KiesIssue.png)
+
 figuur 2. Klik in een Issues pagina op *New issue* of bekijk een bestaande issue en discussieer mee
 
