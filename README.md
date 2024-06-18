@@ -5,6 +5,7 @@
 |Label|Locatie|Omschrijving|Consultatie loopt tot|
 |---|---|---|---|
 |NLGOV profiel CloudEvents | [ NL-GOV-profile-for-CloudEvents](https://github.com/Logius-standaarden/NL-GOV-profile-for-CloudEvents) | Het NL GOV profile for CloudEvents is een specificatie voor het gestandaardiseerd beschrijven en uitwisselen van plaatsgevonden gebeurtenissen tussen applicaties. | 20-4-2024 |
+Digikoppeling REST API profiel | [Federatieve Service Connectiviteit (FSC) opnemen in het Digikoppeling REST API profiel](https://github.com/Logius-standaarden/Openbare-Consultaties/tree/master/Digikoppeling%20REST-API%20profiel%20-%20Opnemen%20FSC%20Standaard) | Federatieve Service Connectiviteit (FSC) opnemen in het Digikoppeling REST API profiel. De FSC standaard beschrijft hoe op een uniforme wijze koppelingen te maken en te beheren zijn. | consultatie in voorbereiding |
 
 <!-- (Op dit moment lopen er geen openbare consultaties  -->
 
