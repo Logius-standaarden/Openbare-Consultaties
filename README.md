@@ -4,7 +4,7 @@
 
 |Label|Locatie|Omschrijving|Consultatie loopt tot|
 |---|---|---|---|
-Digikoppeling REST API profiel | [Federatieve Service Connectiviteit (FSC) opnemen in het Digikoppeling REST API profiel](https://github.com/Logius-standaarden/Openbare-Consultaties/tree/master/Digikoppeling%20REST-API%20profiel%20-%20Opnemen%20FSC%20Standaard) | Federatieve Service Connectiviteit (FSC) opnemen in het Digikoppeling REST API profiel. De FSC standaard beschrijft hoe op een uniforme wijze koppelingen te maken en te beheren zijn. | consultatie in voorbereiding |
+Digikoppeling REST API profiel | [Federatieve Service Connectiviteit (FSC) opnemen in het Digikoppeling REST API profiel](https://github.com/Logius-standaarden/Openbare-Consultaties/tree/master/Digikoppeling%20REST-API%20profiel%20-%20Opnemen%20FSC%20Standaard) | Federatieve Service Connectiviteit (FSC) opnemen in het Digikoppeling REST API profiel. De FSC standaard beschrijft hoe op een uniforme wijze koppelingen te maken en te beheren zijn. | 3/8/2024 - consultatie in voorbereiding |
 
 <!-- (Op dit moment lopen er geen openbare consultaties  -->
 
