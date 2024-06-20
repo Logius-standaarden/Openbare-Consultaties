@@ -4,7 +4,8 @@
 
 ## Inleiding
 
-In het kader van het vernieuwingsvoorstel 'Digikoppeling voor API's' van VNG Realisatie en RINIS is de [Federated Service Connectivity (FSC) Standaard](https://nlx.io/) (door)ontwikkeld. Voor het Digikoppeling REST API profiel is een wijzigingsvoorstel ingebracht om de FSC standaard aan dit profiel toe te voegen.
+In het kader van het vernieuwingsvoorstel 'Digikoppeling voor API's' van VNG Realisatie en RINIS is de [Federated Service Connectivity (FSC) Standaard](
+http://fsc-standaard.nl) (door)ontwikkeld. Voor het Digikoppeling REST API profiel is een wijzigingsvoorstel ingebracht om de FSC standaard aan dit profiel toe te voegen.
 
 ## Consultatie
 
