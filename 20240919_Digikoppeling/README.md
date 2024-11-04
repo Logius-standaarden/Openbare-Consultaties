@@ -1,5 +1,7 @@
 # Consultatie Digikoppeling release 2024
 
+De volgende wijzgingen zijn onderdeel van de voorgestelde volgende release:
+
 ## Digikoppeling Koppelvlakstandaard REST-API
 Consultatieversie 19 september 2024: https://gitdocumentatie.logius.nl/publicatie/dk/restapi/rc202410/
 
