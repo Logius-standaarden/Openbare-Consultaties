@@ -1,6 +1,22 @@
 # Consultatie Digikoppeling release 2024
 
 De volgende wijzgingen zijn onderdeel van de voorgestelde volgende release:
+- Digikoppeling Koppelvlakstandaard REST-API
+
+  - Toevoegen Signing & Encryptie
+  - Standaard baseren op ADR versie 2.0
+  
+- Digikoppeling Beveiligingstandaarden en voorschriften 
+
+  - Uitfaseren 3DES encryptie
+
+- Digikoppeling Architectuur
+
+  - Tekstaanpassingen nav periodieke review
+  - Toevoegingen mbt API Architectuur
+  
+- Digikoppeling Identificatie en Authenticatie
+  -  OIN baseren op KVK-nummer
 
 ## Digikoppeling Koppelvlakstandaard REST-API
 Consultatieversie 19 september 2024: https://gitdocumentatie.logius.nl/publicatie/dk/restapi/rc202410/
