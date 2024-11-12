@@ -42,3 +42,7 @@ Consultatieversie 19 september 2024: https://gitdocumentatie.logius.nl/publicati
 
 Wijzigingen:
 * [Review Q1-Q2 2024](https://github.com/Logius-standaarden/Digikoppeling-Architectuur/pull/15/files)
+
+___
+Voor meer informatie zie [Digikoppeling Documentatie](https://www.logius.nl/domeinen/gegevensuitwisseling/digikoppeling/documentatie)
+  
