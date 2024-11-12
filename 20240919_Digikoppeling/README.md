@@ -12,8 +12,8 @@ De volgende wijzgingen zijn onderdeel van de voorgestelde volgende release:
 
 - Digikoppeling Architectuur
 
-  - Tekstaanpassingen nav periodieke review
-  - Toevoegingen mbt API Architectuur
+  - Tekstaanpassingen n.a.v. periodieke review
+  - Toevoegingen m.b.t. API Architectuur
   
 - Digikoppeling Identificatie en Authenticatie
   -  OIN baseren op KVK-nummer
