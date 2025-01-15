@@ -4,7 +4,7 @@
 
 |Label|Locatie|Omschrijving|Consultatie loopt tot|
 |---|---|---|---|
-Digikoppeling Standaard 2024 | [Consultatie Digikoppeling Standaard 2024 ](./20240919_Digikoppeling) | Wijzigingen Release 2024 - Onderdelen Architectuur, Beveiligingsvoorschriften, REST-API Koppelvlakstandaard, Identificatie & Authenticatie| 4/12/2024  |
+(Op dit moment lopen er geen openbare consultaties )
 
 <!-- (Op dit moment lopen er geen openbare consultaties  -->
 
@@ -25,7 +25,8 @@ Het is ook mogelijk uw commentaar te sturen per email naar api[@]logius.nl.
 
 |Onderwerp|Locatie|Omschrijving|Consultatie geëindigd op|
 |---|---|---|---|
-Digikoppeling REST API profiel | [Federatieve Service Connectiviteit (FSC) opnemen in het Digikoppeling REST API profiel](https://github.com/Logius-standaarden/Openbare-Consultaties/tree/master/Digikoppeling%20REST-API%20profiel%20-%20Opnemen%20FSC%20Standaard) | Federatieve Service Connectiviteit (FSC) opnemen in het Digikoppeling REST API profiel. De FSC standaard beschrijft hoe op een uniforme wijze koppelingen te maken en te beheren zijn. | 3/8/2024  |
+| Digikoppeling Standaard 2024 | [Consultatie Digikoppeling Standaard 2024 ](./20240919_Digikoppeling) | Wijzigingen Release 2024 - Onderdelen Architectuur, Beveiligingsvoorschriften, REST-API Koppelvlakstandaard, Identificatie & Authenticatie| 4/12/2024  |
+| Digikoppeling REST API profiel | [Federatieve Service Connectiviteit (FSC) opnemen in het Digikoppeling REST API profiel](https://github.com/Logius-standaarden/Openbare-Consultaties/tree/master/Digikoppeling%20REST-API%20profiel%20-%20Opnemen%20FSC%20Standaard) | Federatieve Service Connectiviteit (FSC) opnemen in het Digikoppeling REST API profiel. De FSC standaard beschrijft hoe op een uniforme wijze koppelingen te maken en te beheren zijn. | 3/8/2024  |
 |NLGOV profiel CloudEvents | [ NL-GOV-profile-for-CloudEvents](https://github.com/Logius-standaarden/NL-GOV-profile-for-CloudEvents) | Het NL GOV profile for CloudEvents is een specificatie voor het gestandaardiseerd beschrijven en uitwisselen van plaatsgevonden gebeurtenissen tussen applicaties. | 20-4-2024 |
 |Digikoppeling|[Digikoppeling REST-API Koppelvlakstandaard](https://logius-standaarden.github.io/Publicatie-Preview/Digikoppeling-Koppelvlakstandaard-REST-API/Toevoegen-API-58/)| Toevoegen API-58 regel aan het REST-API profiel. <BR> Zie [RFC-Toevoegen API-58 No sensitive information in URIs ](https://github.com/Logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API/issues/15)| 19-9-2022|
 |Toevoeging Digikoppeling REST API profiel|[Digikoppeling REST API profiel](https://github.com/centrumvoorstandaarden/DigikoppelingRestfulApiProfiel)| Opname van een REST API profiel (op basis van de API Design Rules) in Digikoppeling |3 maart 2021|
