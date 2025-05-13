@@ -1,4 +1,5 @@
 # Consultatie FSC release 2025
+FSC is veranderd, maar heeft nog steeds impact op de DK-REST profiel.
 
 De volgende wijzigingen zijn onderdeel van de voorgestelde release:
 
