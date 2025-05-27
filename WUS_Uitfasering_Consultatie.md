@@ -9,10 +9,9 @@ Met deze openbare consultatie bieden wij belanghebbenden de gelegenheid om kenni
 
 ## Wijzigingen
 
-- In het hoofdstuk **Architectuur** van het WUS-document is een duidelijke _noot over de uitfasering_ opgenomen.
-- In het onderdeel **State of the Document** is een statusmelding toegevoegd.
-- De **Best Practices** voor WUS bevatten een extra toelichting, zodat gebruikers direct worden geattendeerd op de uitfasering.
-- Er is een nieuw visueel **statusplaatje** opgenomen in de relevante documenten waarin WUS wordt genoemd, waarin de uitfasering van DK-WUS uitgefaseerd wordt.
+- In het document [Digikoppeling-Architectuur](https://github.com/Logius-standaarden/Digikoppeling-Architectuur/pull/23) is een duidelijke _noot over de uitfasering_ van DK-WUS opgenomen.
+- In het document Digikoppeling-Koppelvlakstandaard-WUS in de [State of this Document](https://github.com/Logius-standaarden/Digikoppeling-Koppelvlakstandaard-WUS/pull/9) is de uitfasering opgenomen.
+- Er is een nieuwe [DK-Specificatie-structuur](https://github.com/Logius-standaarden/Digikoppeling-Overzicht-Actuele-Documentatie-en-Compliance/pull/14) opgenomen in de relevante documenten waarin WUS wordt genoemd om gebruikers attent te maken op de uitfasering van DK-WUS.
 
 ## Reageren?
 
