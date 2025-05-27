@@ -19,4 +19,4 @@ Met deze openbare consultatie bieden wij belanghebbenden de gelegenheid om kenni
 Reageren kan via een [issue](https://github.com/Logius-standaarden/Digikoppeling-Algemeen/issues) of [pull request](https://github.com/Logius-standaarden/Digikoppeling-Algemeen/pulls) op deze repository,  
 of per e-mail aan api@logius.nl.
 
-Wij ontvangen graag inhoudelijke opmerkingen, vragen of suggesties **uiterlijk _[datum]_**.
+Wij ontvangen graag inhoudelijke opmerkingen, vragen of suggesties **uiterlijk 03 juli 2025**.
