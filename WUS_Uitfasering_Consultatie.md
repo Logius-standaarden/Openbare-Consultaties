@@ -12,7 +12,7 @@ Met deze openbare consultatie bieden wij belanghebbenden de gelegenheid om kenni
 - In het hoofdstuk **Architectuur** van het WUS-document is een duidelijke _noot over de uitfasering_ opgenomen.
 - In het onderdeel **State of the Document** is een statusmelding toegevoegd.
 - De **Best Practices** voor WUS bevatten een extra toelichting, zodat gebruikers direct worden geattendeerd op de uitfasering.
-- Er is een nieuw visueel **statusplaatje** opgenomen in de relevante documenten waarin WUS wordt genoemd.
+- Er is een nieuw visueel **statusplaatje** opgenomen in de relevante documenten waarin WUS wordt genoemd, waarin de uitfasering van DK-WUS uitgefaseerd wordt.
 
 ## Reageren?
 
