@@ -19,7 +19,7 @@ Met deze openbare consultatie bieden wij belanghebbenden de gelegenheid om kenni
 |------------------------|----------------|--------------------------------------------------|---------------------|----------------|
 | Digikoppeling WUS      | Uit te faseren | Het DK WUS-koppelvlak dient te worden uitgefaseerd | 01-01-2028          | 01-01-2033     |
 
-> • Na 01-01-2028 is gebruik nog toegestaan voor legacy-applicaties tot 01-01-2033 — echter, organisaties zijn na 2028 zelf verantwoordelijk voor functionele en security-updates.
+• Na 01-01-2028 is gebruik nog toegestaan voor legacy-applicaties tot 01-01-2033 — echter, organisaties zijn na 2028 zelf verantwoordelijk voor functionele en security-updates.
 
 ## Reageren?
 
