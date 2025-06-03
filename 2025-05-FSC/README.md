@@ -1,6 +1,9 @@
 # Consultatie FSC release 2025
-FSC is veranderd, maar dit heeft nog steeds impact op de DK-REST profiel.
 
+## Context
+De FSC-standaard beschrijft hoe op een uniforme wijze koppelingen te maken en te beheren zijn binnen de overheidsarchitectuur. Hoewel de standaard inmiddels is gewijzigd, heeft dit nog steeds impact op het DK-REST profiel.
+
+## Wat verandert er?
 De volgende wijzigingen zijn onderdeel van de voorgestelde release:
 
 - **FSC Core**
