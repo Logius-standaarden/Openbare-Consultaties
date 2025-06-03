@@ -6,7 +6,7 @@ De volgende wijzigingen zijn onderdeel van de voorgestelde release:
 - **FSC Core**
   - Toevoegen van een OpenAPI-specificatie
   - Correctie van een typfout in de abstract
-  - Toevoegen van niet-normatieve richtlijnen voor het creëren van een Group
+  - Toevoegen van (niet-normatieve) richtlijnen voor het creëren van een Group
   - Verduidelijking van meerdere Trust Anchors en toevoeging van de definitie van een Trust Anchor List
   - Samenvoegen van de concepten Group en Profile tot één Group
   - Toestaan van meerdere directories per Group
