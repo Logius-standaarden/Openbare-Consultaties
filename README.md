@@ -4,9 +4,9 @@
 
 | Label | Locatie | Omschrijving | Consultatie loopt tot |
 |---|---|---|---|
-| WUS | [Link naar WUS-consultatiedocument] | Voorgenomen uitfasering van het Digikoppeling WUS-koppelvlak | [datum invullen] |
-| FSC | [Link naar FSC-consultatiedocument] | Nieuwe versie van de Federated Service Connectivity (FSC) standaard | [datum invullen] |
-| ADR | [Link naar ADR-consultatiedocument] | Nieuwe versie van de API Design Rules (ADR) | [datum invullen] |
+| DK-WUS | [Consultatie: Uitfasering van het Digikoppeling WUS-koppelvlak](https://github.com/Logius-standaarden/Openbare-Consultaties/tree/master/2025-06-WUS_Uitfasering) | Voorgenomen uitfasering van het Digikoppeling WUS-koppelvlak | 03/07/2025 |
+| FSC | [Consultatie FSC release 2025](https://github.com/Logius-standaarden/Openbare-Consultaties/tree/master/2025-05-FSC) | Nieuwe versie van de Federated Service Connectivity (FSC) standaard | 03/07/2025 |
+| ADR | [Consultatie API Design Rules versie 2.1](https://github.com/Logius-standaarden/Openbare-Consultaties/blob/master/2025-05-API-design-rules-2-1/README.md)| Nieuwe versie van de API Design Rules (ADR) | 03/07/2025 |
 
 <!-- (Op dit moment lopen er geen openbare consultaties) -->
 
