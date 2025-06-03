@@ -2,11 +2,14 @@
 
 ## Lopende Consultaties
 
-|Label|Locatie|Omschrijving|Consultatie loopt tot|
+| Label | Locatie | Omschrijving | Consultatie loopt tot |
 |---|---|---|---|
-(Op dit moment lopen er geen openbare consultaties )
+| WUS | [Link naar WUS-consultatiedocument] | Voorgenomen uitfasering van het Digikoppeling WUS-koppelvlak | [datum invullen] |
+| FSC | [Link naar FSC-consultatiedocument] | Nieuwe versie van de Federated Service Connectivity (FSC) standaard | [datum invullen] |
+| ADR | [Link naar ADR-consultatiedocument] | Nieuwe versie van de API Design Rules (ADR) | [datum invullen] |
 
-<!-- (Op dit moment lopen er geen openbare consultaties  -->
+<!-- (Op dit moment lopen er geen openbare consultaties) -->
+
 
 
 ## Op- en Aanmerkingen
