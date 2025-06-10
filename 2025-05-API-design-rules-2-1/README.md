@@ -1,11 +1,5 @@
 # Consultatie API Design Rules versie 2.1
 
-**Status: concept**
-
-Startdatum: TBD
-
-Einddatum: TBD
-
 De volgende wijzgingen zijn onderdeel van de voorgestelde volgende release:
 
 ## Normatieve wijzigingen
