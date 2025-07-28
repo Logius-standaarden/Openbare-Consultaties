@@ -7,6 +7,7 @@
 | DK-WUS | [Consultatie: Uitfasering van het Digikoppeling WUS-koppelvlak](https://github.com/Logius-standaarden/Openbare-Consultaties/tree/master/2025-06-WUS_Uitfasering) | Voorgenomen uitfasering van het Digikoppeling WUS-koppelvlak | 21/07/2025 |
 | FSC | [Consultatie FSC release 2025](https://github.com/Logius-standaarden/Openbare-Consultaties/tree/master/2025-05-FSC) | Nieuwe versie van de Federated Service Connectivity (FSC) standaard | 21/07/2025 |
 | ADR | [Consultatie API Design Rules versie 2.1](https://github.com/Logius-standaarden/Openbare-Consultaties/blob/master/2025-05-API-design-rules-2-1/README.md)| Nieuwe versie van de API Design Rules (ADR) | 21/07/2025 |
+| OAuth | [Consultatie OAuth NL GOV Profiel versie 1.2](https://github.com/Logius-standaarden/Openbare-Consultaties/blob/master/2025-07-25%20OAuth%20v1.2/README.md)| Nieuwe versie van de OAuth 2.0 NL GOV Profiel (OAuth) | 05/09/2025 |
 
 <!-- (Op dit moment lopen er geen openbare consultaties) -->
 
