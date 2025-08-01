@@ -4,9 +4,6 @@
 
 | Label | Locatie | Omschrijving | Consultatie loopt tot |
 |---|---|---|---|
-| DK-WUS | [Consultatie: Uitfasering van het Digikoppeling WUS-koppelvlak](https://github.com/Logius-standaarden/Openbare-Consultaties/tree/master/2025-06-WUS_Uitfasering) | Voorgenomen uitfasering van het Digikoppeling WUS-koppelvlak | 21/07/2025 |
-| FSC | [Consultatie FSC release 2025](https://github.com/Logius-standaarden/Openbare-Consultaties/tree/master/2025-05-FSC) | Nieuwe versie van de Federated Service Connectivity (FSC) standaard | 21/07/2025 |
-| ADR | [Consultatie API Design Rules versie 2.1](https://github.com/Logius-standaarden/Openbare-Consultaties/blob/master/2025-05-API-design-rules-2-1/README.md)| Nieuwe versie van de API Design Rules (ADR) | 21/07/2025 |
 | OAuth | [Consultatie OAuth NL GOV Profiel versie 1.2](https://github.com/Logius-standaarden/Openbare-Consultaties/blob/master/2025-07-25%20OAuth%20v1.2/README.md)| Nieuwe versie van de OAuth 2.0 NL GOV Profiel (OAuth) | 05/09/2025 |
 
 <!-- (Op dit moment lopen er geen openbare consultaties) -->
@@ -29,6 +26,9 @@ Het is ook mogelijk uw commentaar te sturen per email naar api[@]logius.nl.
 
 |Onderwerp|Locatie|Omschrijving|Consultatie geëindigd op|
 |---|---|---|---|
+| DK-WUS | [Consultatie: Uitfasering van het Digikoppeling WUS-koppelvlak](https://github.com/Logius-standaarden/Openbare-Consultaties/tree/master/2025-06-WUS_Uitfasering) | Voorgenomen uitfasering van het Digikoppeling WUS-koppelvlak | 21/07/2025 |
+| FSC | [Consultatie FSC release 2025](https://github.com/Logius-standaarden/Openbare-Consultaties/tree/master/2025-05-FSC) | Nieuwe versie van de Federated Service Connectivity (FSC) standaard | 21/07/2025 |
+| ADR | [Consultatie API Design Rules versie 2.1](https://github.com/Logius-standaarden/Openbare-Consultaties/blob/master/2025-05-API-design-rules-2-1/README.md)| Nieuwe versie van de API Design Rules (ADR) | 21/07/2025 |
 | Digikoppeling Standaard 2024 | [Consultatie Digikoppeling Standaard 2024 ](./20240919_Digikoppeling) | Wijzigingen Release 2024 - Onderdelen Architectuur, Beveiligingsvoorschriften, REST-API Koppelvlakstandaard, Identificatie & Authenticatie| 4/12/2024  |
 | Digikoppeling REST API profiel | [Federatieve Service Connectiviteit (FSC) opnemen in het Digikoppeling REST API profiel](https://github.com/Logius-standaarden/Openbare-Consultaties/tree/master/Digikoppeling%20REST-API%20profiel%20-%20Opnemen%20FSC%20Standaard) | Federatieve Service Connectiviteit (FSC) opnemen in het Digikoppeling REST API profiel. De FSC standaard beschrijft hoe op een uniforme wijze koppelingen te maken en te beheren zijn. | 3/8/2024  |
 |NLGOV profiel CloudEvents | [ NL-GOV-profile-for-CloudEvents](https://github.com/Logius-standaarden/NL-GOV-profile-for-CloudEvents) | Het NL GOV profile for CloudEvents is een specificatie voor het gestandaardiseerd beschrijven en uitwisselen van plaatsgevonden gebeurtenissen tussen applicaties. | 20-4-2024 |
