@@ -9,6 +9,9 @@ Nu Logius het predikaat _'Uitstekend Beheer'_ heeft gekregen, willen wij z.s.m. 
 Met deze openbare consultatie bieden wij belanghebbenden de gelegenheid om kennis te nemen van dit besluit en te reageren op de bijbehorende documentwijzigingen.
 
 ## Standaard
+Dit is een profiel op een CNCF CloudEvents specificatie, welke bedoeld is om  interoperabiliteit van systemen en services, welkeom events/gebeurtenissen produceren en/of verwerken, te bevorderen.
+Met nadruk op het feit dat middels deze afspraken een producer en consumer los van elkaar kunnen worden ontwikkeld en ingezet.
+Dit ondersteunt loose coupling van systemen en een betere, meer event-gedreven samenwerking, met optimaal gebruik van internationale standaarden.
 
 ## Wijzigingen
 
