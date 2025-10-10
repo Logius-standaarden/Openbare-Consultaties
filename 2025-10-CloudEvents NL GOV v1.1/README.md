@@ -4,7 +4,7 @@
 ## Context
 Het **CloudEvents NL GOV** profiel is op 24 september 2025 vastgesteld als een standaard op de PTOLU van het Forum van Standardisatie.
 Echter liep dit traject al sinds 2024 en hadden wij met het Terchnisch Overlag een aantal wijzigingen verwerkt.
-Nu Logius het predikaat _'Uitstekend Beheer'_ heeft gekregen, willen wij z.s.m. de wijzigingen actualiseren door middel van een [nieuwe release](https://github.com/Logius-standaarden/NL-GOV-profile-for-CloudEvents/pull/28).
+Nu Logius het predikaat _'Uitstekend Beheer'_ heeft gekregen, willen wij z.s.m. de wijzigingen actualiseren door middel van een [versie 1.1](https://logius-standaarden.github.io/Publicatie-Preview/NL-GOV-profile-for-CloudEvents/rc-2025/).
 
 Met deze openbare consultatie bieden wij belanghebbenden de gelegenheid om kennis te nemen van dit besluit en te reageren op de bijbehorende documentwijzigingen.
 
@@ -32,3 +32,4 @@ Reageren kan via een [issue](https://github.com/Logius-standaarden/NL-GOV-profil
 of per e-mail aan [api@logius.nl](mailto:api@logius.nl).
 
 Wij ontvangen graag inhoudelijke opmerkingen, vragen of suggesties **uiterlijk 10 november 2025**.
+
