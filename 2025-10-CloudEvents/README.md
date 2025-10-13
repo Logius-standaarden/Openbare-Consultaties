@@ -9,13 +9,13 @@ Nu Logius het predikaat _'Uitstekend Beheer'_ heeft gekregen, willen wij z.s.m. 
 Met deze openbare consultatie bieden wij belanghebbenden de gelegenheid om kennis te nemen van dit besluit en te reageren op de bijbehorende documentwijzigingen.
 
 ## Standaard
-Dit is een profiel op een CNCF CloudEvents specificatie, welke bedoeld is om  interoperabiliteit van systemen en services, welkeom events/gebeurtenissen produceren en/of verwerken, te bevorderen.
+Dit is een profiel op een CNCF CloudEvents specificatie, welke bedoeld is om  interoperabiliteit van systemen en services, welke events/gebeurtenissen produceren en/of verwerken, te bevorderen.
 Met nadruk op het feit dat middels deze afspraken een producer en consumer los van elkaar kunnen worden ontwikkeld en ingezet.
 Dit ondersteunt loose coupling van systemen en een betere, meer event-gedreven samenwerking, met optimaal gebruik van internationale standaarden.
 
 ## Wijzigingen
 
-[Deze update](https://github.com/Logius-standaarden/NL-GOV-profile-for-CloudEvents/pull/28) van het CloudEvents NL GOV profiel verbetert de leesbaarheid, consistentie en zorgt voor betere aansluiting the CloudEvents specification. Ook is het meer in lijn met de meest actuele afspraken en materiaal voor Logius documentatie.
+[Deze update](https://github.com/Logius-standaarden/NL-GOV-profile-for-CloudEvents/pull/28) van het CloudEvents NL GOV profiel verbetert de leesbaarheid, consistentie en zorgt voor betere aansluiting op de CloudEvents specification. Ook is het meer in lijn met de meest actuele afspraken en Logius documentatie.
 
 - Reviewen en aanscherpen van NL GOV constraints op attributen in de CloudEvent spec. [#21](https://github.com/Logius-standaarden/NL-GOV-profile-for-CloudEvents/pull/21)
 
@@ -23,7 +23,7 @@ Dit ondersteunt loose coupling van systemen en een betere, meer event-gedreven s
 
 - Data schema attribuut toegevoegd (uit v1.0.2 van de CloudEvents spec vna CNCF)
 
-- Documentonderhoud
+- Document onderhoud
 
 
 ## Reageren?
@@ -32,5 +32,6 @@ Reageren kan via een [issue](https://github.com/Logius-standaarden/NL-GOV-profil
 of per e-mail aan [api@logius.nl](mailto:api@logius.nl).
 
 Wij ontvangen graag inhoudelijke opmerkingen, vragen of suggesties **uiterlijk 10 november 2025**.
+
 
 
