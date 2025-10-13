@@ -21,7 +21,7 @@ Dit ondersteunt loose coupling van systemen en een betere, meer event-gedreven s
 
 - Verwerken van feedback uit de consultatie van het Forum (internet.nl). [#27](https://github.com/Logius-standaarden/NL-GOV-profile-for-CloudEvents/pull/27)
 
-- Data schema attribuut toegevoegd (uit v1.0.2 van de CloudEvents spec vna CNCF)
+- Data schema attribuut toegevoegd (uit v1.0.2 van de CloudEvents spec van CNCF)
 
 - Document onderhoud
 
@@ -32,6 +32,7 @@ Reageren kan via een [issue](https://github.com/Logius-standaarden/NL-GOV-profil
 of per e-mail aan [api@logius.nl](mailto:api@logius.nl).
 
 Wij ontvangen graag inhoudelijke opmerkingen, vragen of suggesties **uiterlijk 10 november 2025**.
+
 
 
 
