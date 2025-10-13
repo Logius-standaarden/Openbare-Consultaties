@@ -31,7 +31,8 @@ Dit ondersteunt loose coupling van systemen en een betere, meer event-gedreven s
 Reageren kan via een [issue](https://github.com/Logius-standaarden/NL-GOV-profile-for-CloudEvents/issues) of [pull request](https://github.com/Logius-standaarden/NL-GOV-profile-for-CloudEvents/pulls) op deze repository (en dan het liefst op de rc-2025 branch),  
 of per e-mail aan [api@logius.nl](mailto:api@logius.nl).
 
-Wij ontvangen graag inhoudelijke opmerkingen, vragen of suggesties **uiterlijk 10 november 2025**.
+Wij ontvangen graag inhoudelijke opmerkingen, vragen of suggesties **uiterlijk 20 november 2025**.
+
 
 
 
