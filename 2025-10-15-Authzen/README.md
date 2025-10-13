@@ -39,4 +39,4 @@ Deze consultatie betreft de publicatie van een nieuw profiel.
 Reageren kan door middel van een issue op wijzigingsvoorstel op de [repository](https://github.com/Logius-standaarden/authzen-nlgov)
 of per e-mail aan <api@logius.nl>
 
-Wij ontvangen graag inhoudelijke opmerkingen, vragen of suggesties **uiterlijk 28 november 2025**.
+Wij ontvangen graag inhoudelijke opmerkingen, vragen of suggesties **uiterlijk 20 november 2025**.
