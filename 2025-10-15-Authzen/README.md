@@ -1,6 +1,6 @@
 # NLGov Profile for OpenID AuthZEN Authorization API
 
-De Consultatie loopt van 16-10 t/m 28-11-2025.
+De Consultatie loopt van 16-10 t/m 20-11-2025.
 
 Zie voor de documentatie van de standaard: [Consultatieversie](https://logius-standaarden.github.io/Openbare-Consultaties/2025-10-15-Authzen/)
 
