@@ -22,6 +22,14 @@ Dit profiel standaardiseert de Autorisatie API en maakt het mogelijk dat in een 
 
 De AuthZEN standaard beschrijft de basis die op elke uitwisseling van toepassing is. Daarbovenop kunnen er voor meer specifieke situatie aanvullende afspraken vastgelegd worden in een zogenaamd profiel.
 
+## Functioneel toepassingsgebied
+
+Het voorgestelde functioneel toepassingsgebied van de standaard is:
+
+> AuthZEN wordt toegepast wanneer de toegangsbeslissing tot een API aanroep in een ander component wordt afgedwongen (PEP) dan waar de beslissing gemaakt wordt (PDP).
+
+Tijdens de consultatie kan hier ook op gereageerd worden.
+
 ## Wijzigingen
 
 Deze consultatie betreft de publicatie van een nieuw profiel.
