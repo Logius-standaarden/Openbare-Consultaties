@@ -1,4 +1,4 @@
-# Publieke Consultatie : NLGov AuthZEN Authorization API v1.0.0
+# Publieke Consultatie : NLGov AuthZEN Authorization API v1.0
 
 Logius houdt een publieke consultatie voor NLGov Profile for OpenID AuthZEN Authorization API. Het profiel is ontwikkeld vanuit het vernieuwingsproject FTV (Federatieve Toegangsverlening) voor de Generieke Digitale Infrastructuur (GDI) en sluit aan bij bredere programma’s zoals het Federatief Datastelsel (FDS) en de Interbestuurlijke Datastrategie (IBDS). De Consultatie loopt van 16-10 t/m 20-11-2025. Feedback en suggesties zijn welkom via api@logius.nl of via issues op GitHub. Help mee dit profiel klaar te maken voor de definitieve v1.0.0 .
 
