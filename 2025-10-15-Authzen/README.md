@@ -1,20 +1,28 @@
 # NLGov Profile for OpenID AuthZEN Authorization API
 
-De Consultatie loopt van 16-10 t/m 20-11-2025.
+Logius houdt een publieke consultatie voor NLGov Profile for OpenID AuthZEN Authorization API. Het profiel is ontwikkeld vanuit het vernieuwingsproject FTV (Federatieve Toegangsverlening) voor de Generieke Digitale Infrastructuur (GDI) en sluit aan bij bredere programma’s zoals het Federatief Datastelsel (FDS) en de Interbestuurlijke Datastrategie (IBDS). De Consultatie loopt van 16-10 t/m 20-11-2025.. Feedback en suggesties zijn welkom via api@logius.nl of via issues op GitHub. Help mee dit profiel klaar te maken voor de definitieve v1.0.0 .
 
 Zie voor de documentatie van de standaard: [Consultatieversie](https://logius-standaarden.github.io/Openbare-Consultaties/2025-10-15-Authzen/)
 
 ## Context
 
-NLGov Profile for OpenID AuthZEN Authorization API is een nieuwe standaard die momenteel door Logius in beheer wordt genomen;
-
-Het profiel is ontwikkeld vanuit het vernieuwingsproject FTV (Federatieve Toegangsverlening) voor de Generieke Digitale Infrastructuur (GDI) en sluit aan bij bredere programma’s zoals het Federatief Datastelsel (FDS) en de Interbestuurlijke Datastrategie (IBDS).
-
-De [AuthZEN standaard versie 1.0](https://openid.net/specs/authorization-api-1_0-01.html) heeft nu de status Implementers Draft. Deze versie bevat een informatiemodel zoals boven beschreven en de drie APIs. Deze versie zal eind 2025 aangeboden worden ter consultatie.
+De [AuthZEN standaard versie 1.0](https://openid.net/specs/authorization-api-1_0-01.html) van OpenID Foundation heeft op dit moment de status Final Draft. Deze versie bevat een informatiemodel zoals boven beschreven en de drie APIs. Deze versie zal eind 2025 aangeboden worden ter consultatie.
 
 Diverse commerciële toegangsverleningsproducten en API-gateways implementeren deze versie inmiddels. De [AuthZEN interop](https://authzen-interop.net/) laat zien welke partijen dat zijn, en legt uit welk niveau van commitment elke leverancier toezegt.
 
 Meer informatie op de [pagina van VNG Realisatie](https://vng-realisatie.github.io/ftv/methodiek/authzen-nlgov/).
+
+### Wat levert het op?
+- Toegangsbeheer en samenwerking tussen systemen en in domeinen wordt makkelijker.
+- Toegangsregels zijn makkelijker aan te passen zonder de software te wijzigen.
+- Alle toegangsbeslissingen zijn traceerbaar wat verantwoording mogelijk maakt.
+- Organisaties kunnen makkelijker van leverancier wisselen omdat FTV werkt met open standaarden die onder overheidsbeheer vallen.
+
+### Voor wie relevant?
+- **Bestuurders en beleidsmakers**: FTV helpt organisaties om gegevensuitwisseling beheersbaar en verantwoord te organiseren, ook als samenwerkingen groeien of regels veranderen.
+- **Juristen**: FTV maakt het mogelijk om juridische kaders en beleidsafspraken te vertalen naar uitvoerbare toegangsregels, binnen een transparant en controleerbaar systeem.
+- **IT-managers en architecten**: Dankzij open standaarden en scheiding van techniek en beleid is FTV flexibel in te richten en leveranciersonafhankelijk.
+- **Developers**: FTV is gebaseerd op internationale standaarden voor toegangsbeheer. Voor toegangsverlening binnen de Nederlandse overheid wordt een profiel ontwikkeld op de internationale AuthZEN-standaard.
 
 ## Standaard
 
