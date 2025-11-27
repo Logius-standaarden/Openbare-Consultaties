@@ -1,4 +1,4 @@
-# Consultatie LDV release 2025
+# Consultatie Versie ter Vaststelling Logboek Dataverwerkingen
 
 ## Context
 De standaard Logboek Dataverwerkingen beschrijft een manier om technisch interoperabele functionaliteit voor het loggen van Dataverwerkingen te implementeren, door voor de volgende functionaliteit de interface en het gedrag voor te schrijven:
