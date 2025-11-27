@@ -13,12 +13,12 @@ Met deze openbare consultatie bieden wij belanghebbenden de gelegenheid om kenni
 ## Standaard (toepassingsgebied)
 Functioneel toepassingsgebied: De standaard kan worden toegepast bij het uitvoeren van dataverwerkingen en het aan elkaar relateren van dataverwerkingen van verschillende verwerkingsverantwoordelijken.
 
-Beoogd voor de lijst "Aanbevolen standaarden" bij Forum Standaardisatie
+Beoogd voor de lijst "Aanbevolen standaarden" bij Forum Standaardisatie.
 
 Organisatorisch werkingsgebied: Nederlandse overheden (Rijk, provincies, gemeenten en waterschappen) en instellingen uit de (semi-) publieke sector.
 
 ## Wijzigingen
-Deze consultatie bevat een aantal documenten die onderdeel zijn van de LDV core-standaard. Vanuit Logius vragen wij u om de LDV standaard te consulteren op de volgende vier documenten:
+Deze consultatie bevat een aantal documenten die onderdeel zijn van de LDV core-standaard die wij ter vaststelling willen aanbieden aan het [MIDO](https://www.digitaleoverheid.nl/mido/wat-is-het-mido/). Vanuit Logius vragen wij u om de LDV standaard te consulteren op de volgende vier documenten:
 - [Het normatief document](CONSULTATIE_LINK_DOCUMENT)
 - [De algemene inleiding](CONSULTATIE_LINK_DOCUMENT)
 - [Het juridisch beleidskader](CONSULTATIE_LINK_DOCUMENT)
