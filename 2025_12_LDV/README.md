@@ -12,7 +12,7 @@ Zie voor de documentatie van de standaard: [placeholder consultatieversie docume
 
 Met deze openbare consultatie bieden wij belanghebbenden de gelegenheid om kennis te nemen van dit besluit en te reageren op de bijbehorende documenten.
 
-## Standaard
+## Standaard (toepassingsgebied)
 Functioneel toepassingsgebied: De standaard kan worden toegepast bij het uitvoeren van dataverwerkingen en het aan elkaar relateren van dataverwerkingen van verschillende verwerkingsverantwoordelijken.
 
 Beoogd voor de lijst "Aanbevolen standaarden" bij Forum Standaardisatie
@@ -27,7 +27,6 @@ Vanuit Logius vragen wij u om de LDV standaard te consulteren op de volgende vie
 - [LDV Guideline voor extensies](https://logius-standaarden.github.io/logboek-extensie-template/)
 
 ## Reageren?
-Reageren kan via een issue of pull request op deze repository,
-of per e-mail aan api@logius.nl.
+Reageren kan via een issue of pull request op deze repository, of per e-mail aan api@logius.nl.
 
 Wij ontvangen graag inhoudelijke opmerkingen, vragen of suggesties uiterlijk 30 januari 2026.
