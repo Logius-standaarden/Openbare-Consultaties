@@ -11,6 +11,8 @@ De standaard Logboek Dataverwerkingen beschrijft een manier om technisch interop
 ## Werkingsgebied
 Functioneel toepassingsgebied: De standaard kan worden toegepast bij het uitvoeren van dataverwerkingen en het aan elkaar relateren van dataverwerkingen van verschillende verwerkingsverantwoordelijken.
 
+Beoogd voor de lijst "Aanbevolen standaarden" bij Forum Standaardisatie
+
 Organisatorisch werkingsgebied: Nederlandse overheden (Rijk, provincies, gemeenten en waterschappen) en instellingen uit de (semi-) publieke sector.
 
 ## Consultatie
