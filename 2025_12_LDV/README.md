@@ -19,10 +19,10 @@ Organisatorisch werkingsgebied: Nederlandse overheden (Rijk, provincies, gemeent
 
 ## Wijzigingen
 Deze consultatie bevat een aantal documenten die onderdeel zijn van de LDV core-standaard die wij ter vaststelling willen aanbieden aan het [MIDO](https://www.digitaleoverheid.nl/mido/wat-is-het-mido/). Vanuit Logius vragen wij u om de LDV standaard te consulteren op de volgende vier documenten:
-- [Het normatief document](CONSULTATIE_LINK_DOCUMENT)
-- [De algemene inleiding](CONSULTATIE_LINK_DOCUMENT)
-- [Het juridisch beleidskader](CONSULTATIE_LINK_DOCUMENT)
-- [LDV Guideline voor extensies](CONSULTATIE_LINK_DOCUMENT)
+- [Het normatief document](./logboek-dataverwerkingen/)
+- [De algemene inleiding](./logboek-dataverwerkingen-inleiding/)
+- [Het juridisch beleidskader](./logboek-dataverwerkingen-juridisch-beleidskader/)
+- [LDV Guideline voor extensies](./logboek-extensie-template/)
 
 ## Reageren?
 Reageren kan via een issue of pull request op deze repository, of per e-mail aan api@logius.nl.
