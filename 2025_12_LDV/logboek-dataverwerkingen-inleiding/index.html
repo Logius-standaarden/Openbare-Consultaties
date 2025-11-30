@@ -1,0 +1,1507 @@
+<!DOCTYPE html><html lang="nl"><head>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
+<meta name="generator" content="ReSpec 35.4.1">
+<style>
+dfn{cursor:pointer}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;background:var(--indextable-hover-bg,#fff);color:#000;color:var(--text,#000);box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);box-shadow:0 1em 3em -.4em var(--tocsidebar-shadow,rgba(0,0,0,.3)),0 0 1px 1px var(--tocsidebar-shadow,rgba(0,0,0,.05));border-radius:2px}
+.dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;border-bottom-color:var(--indextable-hover-bg,#fff);top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1;border-bottom-color:var(--indextable-hover-bg,#a2a9b1)}
+.dfn-panel *{margin:0}
+.dfn-panel b{display:block;color:#000;color:var(--text,#000);margin-top:.25em}
+.dfn-panel ul a[href]{color:#333;color:var(--text,#333)}
+.dfn-panel>div{display:flex}
+.dfn-panel a.self-link{font-weight:700;margin-right:auto}
+.dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
+.dfn-panel .marker.dfn-exported{background:#d1edfd;box-shadow:0 0 0 .125em #1ca5f940}
+.dfn-panel .marker.idl-block{background:#8ccbf2;box-shadow:0 0 0 .125em #0670b161}
+.dfn-panel a:not(:hover){text-decoration:none!important;border-bottom:none!important}
+.dfn-panel a[href]:hover{border-bottom-width:1px}
+.dfn-panel ul{padding:0}
+.dfn-panel li{margin-left:1em}
+.dfn-panel.docked{position:fixed;left:.5em;top:unset;bottom:2em;margin:0 auto;max-width:calc(100vw - .75em * 2 - .5em - .2em * 2);max-height:30vh;overflow:auto}
+</style>
+  
+  
+  
+<title>Inleiding Logboek dataverwerkingen 1.0.0</title>
+  
+<link href="./media/style.css" rel="stylesheet" type="text/css">
+  
+<link rel="shortcut icon" type="image/x-icon" href="https://gitdocumentatie.logius.nl/publicatie/respec/style/logos/logius.ico">
+  
+
+<style id="respec-mainstyle">
+@keyframes pop{
+0%{transform:scale(1,1)}
+25%{transform:scale(1.25,1.25);opacity:.75}
+100%{transform:scale(1,1)}
+}
+a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
+a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
+a.bibref{text-decoration:none}
+.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}
+.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}
+@supports not (text-decoration:red wavy underline){
+.respec-offending-element:not(pre){display:inline-block}
+.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}
+}
+#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
+cite .bibref{font-style:italic}
+a[href].orcid{padding-left:4px;padding-right:4px}
+a[href].orcid>svg{margin-bottom:-2px}
+ol.tof,ul.tof{list-style:none outside none}
+.caption{margin-top:.5em;font-style:italic}
+#issue-summary>ul{column-count:2}
+#issue-summary li{list-style:none;display:inline-block}
+details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
+details.respec-tests-details>*{padding-right:2em}
+details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}
+details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}
+details.respec-tests-details>ul{width:100%;margin-top:-.3em}
+details.respec-tests-details>li{padding-left:1em}
+.self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
+aside.example .marker>a.self-link{color:inherit}
+.header-wrapper{display:flex;align-items:baseline;position:relative;left:-.5em}
+:is(h2,h3,h4,h5,h6):not(#toch2)+a.self-link{color:inherit;order:-1;position:relative;left:-.7em;font-size:1rem;opacity:.5}
+:is(h2,h3,h4,h5,h6)+a.self-link::before{content:"§";text-decoration:none;color:var(--heading-text)}
+:is(h2,h3)+a.self-link{top:-.2em}
+:is(h4,h5,h6)+a.self-link::before{color:#000}
+@media (max-width:767px){
+dd{margin-left:0}
+}
+@media print{
+.removeOnSave{display:none}
+}
+</style>
+<style id="respec-nlgov">
+img.license{float:left;padding-right:5px;background:0 0}
+</style>
+<meta name="color-scheme" content="light">
+<meta name="description" content="De overheid wil voor burgers en bedrijven zo transparant mogelijk zijn in de omgang met hun data. Daarom is het bij de informatieverwerking in datasets belangrijk om voor elke mutatie of raadpleging vast te leggen wie deze actie wanneer uitvoert, en waarom. Voor een optimale samenwerking over organisaties en bronnen heen is voor deze logging een algemene standaard nodig.">
+<style>
+
+  .sidelabel {
+    position: fixed;
+    -webkit-transform-origin: top right;
+    right: 100%;
+    top: 0;
+    -webkit-transform: rotate(-90deg);
+    padding: 4px 50px 4px 10px;
+    color: white;
+    white-space: nowrap;
+    z-index: 1;
+    background-color: #000000;
+  }
+</style>
+<script id="initialUserConfig" type="application/json">{
+  "nl_organisationName": "Logius",
+  "nl_organisationStylesURL": "https://gitdocumentatie.logius.nl/publicatie/respec/style/",
+  "nl_organisationPublishURL": "https://gitdocumentatie.logius.nl/publicatie/",
+  "logos": [
+    {
+      "src": "https://gitdocumentatie.logius.nl/publicatie/respec/style/logos/figure-logius.svg",
+      "alt": "Logius",
+      "id": "Logius",
+      "height": 77,
+      "width": 44,
+      "url": "https://www.logius.nl/onze-dienstverlening/standaarden"
+    }
+  ],
+  "useLogo": true,
+  "fileName": "",
+  "latestVersion": "https://logius-standaarden.github.io/logboek-dataverwerkingen-inleiding/",
+  "thisVersion": [
+    "nl_organisationPublishURL",
+    "pubDomain",
+    "/",
+    "shortName",
+    "/",
+    "publishVersion",
+    "/",
+    "fileName"
+  ],
+  "prevVersion": [],
+  "addSectionLinks": true,
+  "localizationStrings": {
+    "en": {
+      "wv": "Draft",
+      "cv": "Consultation version",
+      "vv": "Proposed version",
+      "def": "Definitive version",
+      "basis": "Document",
+      "eo": "Outdated version",
+      "tg": "Rescinded version",
+      "no": "Norm",
+      "st": "Standard",
+      "im": "Information model",
+      "pr": "Guideline",
+      "hr": "Guide",
+      "wa": "Proposed recommendation",
+      "al": "General",
+      "bd": "Governance documentation",
+      "bp": "Best practice"
+    },
+    "nl": {
+      "wv": "Werkversie",
+      "cv": "Consultatieversie",
+      "vv": "Versie ter vaststelling",
+      "def": "Vastgestelde versie",
+      "basis": "Document",
+      "eo": "Verouderde versie",
+      "tg": "Teruggetrokken versie",
+      "no": "Norm",
+      "st": "Standaard",
+      "im": "Informatiemodel",
+      "pr": "Praktijkrichtlijn",
+      "hr": "Handreiking",
+      "wa": "Werkafspraak",
+      "al": "Algemeen",
+      "bd": "Beheerdocumentatie",
+      "bp": "Best practice"
+    }
+  },
+  "sotdText": {
+    "nl": {
+      "sotd": "Status van dit document",
+      "cv": "Dit is een consultatieversie. We moedigen gebruikers aan om meldingen of suggesties aan te maken via GitHub. Mocht dit niet mogelijk zijn, dan kunt u ook een e-mail sturen naar api@logius.nl"
+    }
+  },
+  "labelColor": {
+    "def": "#154273",
+    "wv": "#39870c",
+    "cv": "#000000",
+    "vv": "#000000"
+  },
+  "useLabel": true,
+  "licenses": {
+    "cc0": {
+      "name": "Creative Commons 0 Public Domain Dedication",
+      "short": "CC0",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "image": "https://gitdocumentatie.logius.nl/publicatie/respec/media/logos/cc-zero.svg"
+    },
+    "cc-by": {
+      "name": "Creative Commons Attribution 4.0 International Public License",
+      "short": "CC-BY",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "image": "https://gitdocumentatie.logius.nl/publicatie/respec/media/logos/cc-by.svg"
+    },
+    "cc-by-nd": {
+      "name": "Creative Commons Naamsvermelding-GeenAfgeleideWerken 4.0 Internationaal",
+      "short": "CC-BY-ND",
+      "url": "https://creativecommons.org/licenses/by-nd/4.0/legalcode.nl",
+      "image": "https://gitdocumentatie.logius.nl/publicatie/respec/media/logos/cc-by-nd.svg"
+    }
+  },
+  "license": "cc-by",
+  "localBiblio": {
+    "ADR": {
+      "authors": [
+        "Jasper Roes",
+        "Joost Farla"
+      ],
+      "href": "https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0",
+      "publisher": "Logius",
+      "title": "API Design Rules"
+    },
+    "ADR1": {
+      "authors": [
+        "Jasper Roes",
+        "Joost Farla"
+      ],
+      "href": "https://gitdocumentatie.logius.nl/publicatie/api/adr/1.0",
+      "publisher": "Logius",
+      "title": "API Design Rules"
+    },
+    "ADR-ext": {
+      "authors": [
+        "Jasper Roes",
+        "Linda van den Brink"
+      ],
+      "date": "Januari 2020",
+      "href": "https://docs.geostandaarden.nl/api/API-Strategie-ext",
+      "publisher": "Geonovum/Kennisplatform APi's",
+      "title": "API Designrules Extensions (Nederlandse API Strategie IIb)"
+    },
+    "Algemene Voorwaarden Logius": {
+      "date": "12 juni 2018",
+      "href": "https://www.logius.nl/onze-organisatie/zakendoen-met-logius/voorwaarden/algemene-voorwaarden-logius",
+      "publisher": "Logius",
+      "title": "Algemene voorwaarden Logius"
+    },
+    "AuthZEN": {
+      "date": "6 September 2024 ",
+      "href": "https://openid.net/specs/authorization-api-1_0-01.html",
+      "publisher": "OpenID",
+      "title": "Authorization API 1.0 – draft 01"
+    },
+    "AVG": {
+      "date": "27 april 2016",
+      "href": "https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX%3A32016R0679",
+      "publisher": "Verordening (EU) 2016/679 van het Europees Parlement",
+      "title": "Algemene Verordening Gegevensbescherming"
+    },
+    "BCP195": {
+      "authors": [
+        "Y. Sheffer",
+        "R. Holz",
+        "P. Saint-Andre"
+      ],
+      "date": "May 2015",
+      "href": "https://tools.ietf.org/html/bcp195",
+      "publisher": "IETF",
+      "title": "Recommendations for Secure Use of Transport Layer Security (TLS) and Datagram Transport Layer Security (DTLS)"
+    },
+    "DK-beveiliging": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/dk/beveilig/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Beveiligingsstandaarden en voorschriften"
+    },
+    "CloudEvents": {
+      "authors": [
+        "@@@"
+      ],
+      "date": "May 2011",
+      "href": "https://github.com/cloudevents/spec/blob/v1.0.1/spec.md",
+      "publisher": "@@@",
+      "title": "CloudEvents - Version 1.0.1"
+    },
+    "NLGOV-CloudEvents": {
+      "authors": [
+        "Werkgroep Berichtenstandaard (Project Notificatieservices)"
+      ],
+      "href": "https://logius-standaarden.github.io/NL-GOV-profile-for-CloudEvents/",
+      "publisher": "Logius",
+      "title": "NL GOV profile for CloudEvents"
+    },
+    "DK-CV": {
+      "href": "https://gitlab.com/logius/digikoppeling-compliance",
+      "publisher": "Logius",
+      "title": "Digikoppeling Compliance Voorziening"
+    },
+    "DK-Portaal": {
+      "href": "https://oinregister.logius.nl/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Portaal"
+    },
+    "DK-WUS-voorbeeld": {
+      "href": "https://www.logius.nl/sites/default/files/public/bestanden/diensten/DigiKoppeling/Overig/Digikoppeling-Koppelvlakstandaard-WUS-Voorbeeldberichten.zip",
+      "publisher": "Logius",
+      "title": "Set voorbeeldberichten (zip)"
+    },
+    "Deployment Guide 1.1": {
+      "authors": [
+        "Pete Wenzel",
+        "Jacques Durand"
+      ],
+      "date": "June 2005",
+      "href": "http://www.oasis-open.org/apps/org/workgroup/ebxml-iic-deployment-profile-template-intro-100406.doc",
+      "publisher": "OASIS",
+      "title": "Deployment Profile Template For OASIS ebXML Message Service 2.0"
+    },
+    "DK": {
+      "href": "https://www.logius.nl/domeinen/gegevensuitwisseling/digikoppeling",
+      "publisher": "Logius",
+      "title": "Logius | Digikoppeling"
+    },
+    "DK-Doc": {
+      "href": "https://www.logius.nl/domeinen/gegevensuitwisseling/digikoppeling/documentatie",
+      "publisher": "Logius",
+      "title": "Digikoppeling documentatie"
+    },
+    "DK-Beheermodel": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/dk/beheer/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Beheermodel"
+    },
+    "DK-BPebMS": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/dk/bpebms/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Best Practices ebMS2"
+    },
+    "DK-BPGB": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/dk/bpgb/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Best Practices Grote Berichten"
+    },
+    "DK-BPWUS": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/dk/bpwus/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Best Practices WUS"
+    },
+    "DK-Beveiliging": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/dk/beveilig/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Beveiligingsstandaarden en voorschriften"
+    },
+    "DK-gbachtcert": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/dk/ebms/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Koppelvlakstandaard ebMS2"
+    },
+    "DK-ebMS": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/dk/ebms/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Koppelvlakstandaard ebMS2"
+    },
+    "DK-GB": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/dk/gb/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Koppelvlakstandaard Grote Berichten"
+    },
+    "DK-WUS": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/dk/wus/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Koppelvlakstandaard WUS"
+    },
+    "DK-RESTAPI": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/dk/restapi/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Koppelvlakstandaard REST-API"
+    },
+    "DK-Architectuur": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/dk/architectuur/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Architectuur"
+    },
+    "DK-IDAuth": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/dk/idauth/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Identificatie en Authenticatie"
+    },
+    "DK-WI": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/dk/watisdk/",
+      "publisher": "Logius",
+      "title": "Wat is Digikoppeling?"
+    },
+    "BOMOSFundament": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/bomos/fundament/",
+      "date": "2 november 2023",
+      "publisher": "Logius",
+      "title": "BOMOS, het fundament"
+    },
+    "BOMOSVerdieping": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/bomos/verdieping/",
+      "date": "2 november 2023",
+      "publisher": "Logius",
+      "title": "BOMOS, de verdieping"
+    },
+    "ebCPP": {
+      "authors": [
+        "Oasis"
+      ],
+      "date": "september 2002",
+      "href": "http://www.ebxml.org/specs/ebcpp-2.0.pdf",
+      "publisher": "Oasis",
+      "title": "Collaboration-Protocol Profile and Agreement Specification Version 2.0"
+    },
+    "ebMS3": {
+      "authors": [
+        "Ian Jones",
+        "Pete Wenzel"
+      ],
+      "date": "October 2007",
+      "href": "https://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/os/ebms_core-3.0-spec-os.html",
+      "publisher": "Oasis",
+      "title": "Collaboration-Protocol Profile and Agreement Specification Version 2.0"
+    },
+    "eDelivery API4IPS": {
+      "authors": [
+        "J. Dimitriou, V. Veduta, B. Dumitriu"
+      ],
+      "date": "sept 8 2022",
+      "href": "https://ec.europa.eu/digital-building-blocks/wikis/display/EDELCOMMUNITY/Project+deliverables",
+      "publisher": "OpenID foundation",
+      "title": "(ISA2).(eDelivery).(Piloting a REST API extension of CEF eDelivery).(ISA² IPS REST API Profile).(v1.0).pdf"
+    },
+    "Expert": {
+      "authors": [
+        "@@@"
+      ],
+      "date": "@@@",
+      "href": "https://www.forumstandaardisatie.nl/sites/bfs/files/@@@.pdf",
+      "publisher": "Forum Standaardisatie",
+      "title": "Expertadvies CloudEvents 1.0"
+    },
+    "folmer2011": {
+      "href": "https://research.utwente.nl/en/publications/management-and-development-model-for-open-standards-bomos-version",
+      "title": "Management and Development Model for Open Standards (BOMOS) version 2",
+      "keywords": "IR-76837",
+      "authors": [
+        "ErwinFolmer",
+        "Matthijs Punter"
+      ],
+      "date": "2011",
+      "language": "English",
+      "publisher": "Programmabureau NOiV"
+    },
+    "folmer2012": {
+      "href": "https://research.utwente.nl/en/publications/quality-of-semantic-standards",
+      "title": "Quality of Semantic Standards",
+      "authors": [
+        "Erwin Folmer"
+      ],
+      "date": "2012",
+      "publisher": "Universiteit Twente"
+    },
+    "DK-Gebruiksvoorwaarden": {
+      "date": "1 januari 2021",
+      "href": "https://www.logius.nl/domeinen/gegevensuitwisseling/digikoppeling/documentatie/gebruiksvoorwaarden-digikoppeling",
+      "publisher": "Logius",
+      "title": "Gebruiksvoorwaarden Digikoppeling"
+    },
+    "ADR-GEO": {
+      "authors": [
+        "L. van den Brink, P. Bresters, P. van Genuchten, G. Mathijssen, M. Strijker"
+      ],
+      "date": "March 07, 2024",
+      "href": "https://gitdocumentatie.logius.nl/publicatie/api/mod-geo/",
+      "publisher": "Geonovum",
+      "title": "API Design Rules Module: Geospatial"
+    },
+    "HTTPS-factsheet NCSC": {
+      "date": "Nov 2014",
+      "href": "https://www.ncsc.nl/documenten/factsheets/2019/juni/01/factsheet-https-kan-een-stuk-veiliger",
+      "publisher": "NCSC",
+      "title": "Factsheet HTTPS kan een stuk veiliger"
+    },
+    "iGOV.OpenID": {
+      "authors": [
+        "M. Varley, P. Grassi"
+      ],
+      "date": "October 5 2018",
+      "href": "https://openid.net/specs/openid-igov-openid-connect-1_0.html",
+      "publisher": "OpenID foundation",
+      "title": "International Government Assurance Profile (iGov) for OpenID Connect 1.0 - draft 3"
+    },
+    "NLGOV.OpenID": {
+      "authors": [
+        "Remco Schaar, Frank van Es, Joris Joosten, Jan Geert Koops"
+      ],
+      "href": "https://gitdocumentatie.logius.nl/publicatie/api/oidc/",
+      "publisher": "Logius",
+      "title": "OpenID NLGov"
+    },
+    "Introspection": {
+      "authors": [
+        "J. Richer"
+      ],
+      "date": "October 2015",
+      "href": "https://tools.ietf.org/html/rfc7662",
+      "publisher": "IETF",
+      "title": "OAuth 2.0 Token Introspection"
+    },
+    "JWA": {
+      "authors": [
+        "M. Jones"
+      ],
+      "date": "may 2015",
+      "href": "https://tools.ietf.org/html/rfc7518",
+      "publisher": "IETF",
+      "title": "JSON Web Algorithms (JWA)"
+    },
+    "JWE": {
+      "authors": [
+        "M. Jones, J. Hildebrand"
+      ],
+      "date": "may 2015",
+      "href": "https://tools.ietf.org/html/rfc7516",
+      "publisher": "IETF",
+      "title": "JSON Web Encryption (JWE)"
+    },
+    "JWK": {
+      "authors": [
+        "M. Jones"
+      ],
+      "date": "may 2015",
+      "href": "https://tools.ietf.org/html/rfc7517",
+      "publisher": "IETF",
+      "title": "JSON Web Key (JWK))"
+    },
+    "JWS": {
+      "authors": [
+        "M. Jones, J. Bradley, N. Sakimura"
+      ],
+      "date": "may 2015",
+      "href": "https://tools.ietf.org/html/rfc7515",
+      "publisher": "IETF",
+      "title": "JSON Web Signature (JWS)"
+    },
+    "JWT": {
+      "authors": [
+        "M. Jones, J. Bradley, N. Sakimura"
+      ],
+      "date": "may 2015",
+      "href": "https://tools.ietf.org/html/rfc7519",
+      "publisher": "IETF",
+      "title": "JSON Web Token (JWT)"
+    },
+    "NCSC 2019": {
+      "date": "April 2019",
+      "href": "https://www.ncsc.nl/documenten/publicaties/2019/mei/01/ict-beveiligingsrichtlijnen-voor-transport-layer-security-tls",
+      "publisher": "NCSC",
+      "title": "ICT-beveiligingsrichtlijnen voor Transport Layer Security (TLS) v2.0"
+    },
+    "NCSC 2021": {
+      "date": "Jan 2021",
+      "href": "https://www.ncsc.nl/documenten/publicaties/2021/januari/19/ict-beveiligingsrichtlijnen-voor-transport-layer-security-2.1",
+      "publisher": "NCSC",
+      "title": "ICT-beveiligingsrichtlijnen voor Transport Layer Security (TLS) v2.1"
+    },
+    "NCSC 2025": {
+      "date": "June 2025",
+      "href": "https://www.ncsc.nl/wat-kun-je-zelf-doen/documenten/publicaties/2025/juni/01/ict-beveiligingsrichtlijnen-voor-transport-layer-security-2025-05",
+      "publisher": "NCSC",
+      "title": "ICT-beveiligingsrichtlijnen voor Transport Layer Security (TLS) v2.1"
+    },
+    "NEN3610": {
+      "authors": [
+        ""
+      ],
+      "date": "Maart 2011",
+      "href": "https://www.nen.nl/nen-3610-2011-a1-2016-nl-217738",
+      "publisher": "Nederlands Normalisatie-instituut",
+      "title": "Basismodel Geo-informatie - Termen, definities, relaties en algemene regels voor de uitwisseling van informatie over aan de aarde gerelateerde ruimtelijke objecten"
+    },
+    "no-Reliable-messaging": {
+      "authors": [
+        "Marc de Graauw"
+      ],
+      "date": "June 18, 2010",
+      "href": "https://www.infoq.com/articles/no-reliable-messaging/",
+      "publisher": "infoQ",
+      "title": "Nobody Needs Reliable Messaging"
+    },
+    "OAuth2": {
+      "authors": [
+        "D. Hardt"
+      ],
+      "date": "October 2012",
+      "href": "https://tools.ietf.org/html/rfc6749",
+      "publisher": "The Internet Engineering Task Force",
+      "title": "The OAuth 2.0 Authorization Framework"
+    },
+    "OpenID.Core": {
+      "authors": [
+        "N. Sakimura, J. Bradley, M. Jones, B. de Medeiros, C. Mortimore"
+      ],
+      "date": "November 8 2014",
+      "href": "https://openid.net/specs/openid-connect-core-1_0.html",
+      "publisher": "OpenID foundation",
+      "title": "OpenID Connect Core 1.0"
+    },
+    "OpenID.Discovery": {
+      "authors": [
+        "N. Sakimura, J. Bradley, M. Jones, E. Jay"
+      ],
+      "date": "November 8 2014",
+      "href": "https://openid.net/specs/openid-connect-discovery-1_0.html",
+      "publisher": "OpenID foundation",
+      "title": "OpenID Connect Discovery 1.0"
+    },
+    "Pas-toe-of-leg-uit": {
+      "href": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht",
+      "publisher": "Forum Standaardisatie",
+      "title": "Lijst Verplichte standaarden"
+    },
+    "PKIO-PvE": {
+      "href": "https://por.pkioverheid.nl/",
+      "publisher": "Logius",
+      "title": "Certificate Policy/Programme of Requirements PKIoverheid"
+    },
+    "PKI-CA": {
+      "href": "https://www.logius.nl/domeinen/toegang/aansluiten-als-trust-service-provider",
+      "publisher": "Logius",
+      "title": "Aansluiten als Trust Service Provider"
+    },
+    "PKIoverheid": {
+      "href": "https://www.logius.nl/domeinen/toegang/pkioverheid",
+      "publisher": "Logius",
+      "title": "PKIoverheid"
+    },
+    "PKIO-Cert": {
+      "href": "https://cert.pkioverheid.nl/",
+      "publisher": "Logius",
+      "title": "Overzicht PKIoverheid certificaten"
+    },
+    "SemVer": {
+      "authors": [
+        "T. Preston-Werner"
+      ],
+      "date": "June 2013",
+      "href": "https://semver.org",
+      "title": "Semantic Versioning 2.0.0"
+    },
+    "ADR-TS": {
+      "authors": [
+        ""
+      ],
+      "date": "March 07, 2024",
+      "href": "https://gitdocumentatie.logius.nl/publicatie/api/mod-ts/",
+      "publisher": "Kennisplatform API's",
+      "title": "API Design Rules Module: Transport Security"
+    },
+    "UMMR10": {
+      "authors": [
+        ""
+      ],
+      "date": "2001",
+      "href": "https://unece.org/DAM/cefact/umm/UMM_Revision_10_2001.zip",
+      "publisher": "UN/CEFACT",
+      "title": "UMM Revision 10"
+    },
+    "UMMUG": {
+      "authors": [
+        ""
+      ],
+      "date": "2003",
+      "href": "https://www.unece.org/fileadmin/DAM/cefact/umm/UMM_userguide_220606.pdf",
+      "publisher": "UN/CEFACT",
+      "title": "UN/CEFACT Modeling Methodology (UMM) User Guide"
+    },
+    "UUID": {
+      "authors": [
+        "P. Leach",
+        "M. Mealling",
+        "R. Salz"
+      ],
+      "date": "July 2005",
+      "href": "https://tools.ietf.org/html/rfc4122",
+      "publisher": "The Internet Engineering Task Force",
+      "title": "A Universally Unique IDentifier (UUID) URN Namespace"
+    },
+    "DK-Voorwaarden": {
+      "date": "1 januari 2021",
+      "href": "https://www.logius.nl/domeinen/gegevensuitwisseling/digikoppeling/documentatie/voorwaarden-digikoppeling",
+      "publisher": "Logius",
+      "title": "Voorwaarden Digikoppeling"
+    },
+    "X520": {
+      "href": "https://www.iso.org/standard/43796.html",
+      "publisher": "ISO",
+      "title": "ITU-T Recommendation X.520 (2001) ISO/IEC 9594-6"
+    },
+    "ADR-Validator": {
+      "href": "https://gitlab.com/commonground/don/adr-validator/-/tree/v0.5.0/pkg/rulesets",
+      "title": "Technical ADR Validation rule testset 0.5.0",
+      "authors": [
+        "H. Stijns"
+      ],
+      "publisher": "Geonovum",
+      "date": "November 2023"
+    },
+    "JRC117836": {
+      "href": "https://op.europa.eu/en/publication-detail/-/publication/6521f427-01df-11ea-8c1f-01aa75ed71a1",
+      "title": "The Relationship Between Open Source Software and Standard Setting",
+      "authors": [
+        "Knut Blind",
+        "Mirko Böhm"
+      ],
+      "editors": [
+        "Nikolaus Thumm"
+      ],
+      "publisher": "Joint Research Center",
+      "id": "JRC117836",
+      "date": "2019"
+    },
+    "Krechmer2002": {
+      "href": "https://www.isology.com/pdf/cathedrals.pdf",
+      "title": "Cathedrals, Libraries and Bazaars",
+      "authors": [
+        "Ken Krechmer"
+      ],
+      "publisher": "Association of Computing Machinery (ACM)",
+      "date": "March 2002"
+    },
+    "FSC-Core": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/fsc/core/1.0.0/",
+      "title": "FSC - Core",
+      "authors": [
+        "Eelco Hotting",
+        "Ronald Koster",
+        "Henk van Maanen",
+        "Niels Dequeker",
+        "Edward van Gelderen",
+        "Pim Gaemers"
+      ],
+      "publisher": "Logius"
+    },
+    "FSC-Logging": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/fsc/logging/1.0.0/",
+      "title": "FSC - Logging",
+      "authors": [
+        "Eelco Hotting",
+        "Ronald Koster",
+        "Henk van Maanen",
+        "Niels Dequeker",
+        "Edward van Gelderen",
+        "Pim Gaemers"
+      ],
+      "publisher": "Logius"
+    },
+    "HEART.OAuth2": {
+      "authors": [
+        "J. Richer"
+      ],
+      "date": "April 25, 2017",
+      "href": "https://openid.net/specs/openid-heart-oauth2-1_0.html",
+      "publisher": "OpenID foundation",
+      "title": "Health Relationship Trust Profile for OAuth 2.0"
+    },
+    "JWS.JWE.Algs": {
+      "authors": [
+        "Jim Schaad, Jeff Hodges, Joe Hildebrand, Sean Turner"
+      ],
+      "date": "",
+      "href": "https://www.iana.org/assignments/jose/jose.xhtml#web-signature-encryption-algorithms",
+      "publisher": "IANA",
+      "title": "IANA JSON Web Signatures and Encryption Algorithms registry"
+    },
+    "I-D.ietf-oauth-pop-architecture": {
+      "authors": [
+        "P. Hunt, J. Richer, W. Mills, P. Mishra, H. Tschofenig"
+      ],
+      "date": "July 8, 2016",
+      "href": "https://tools.ietf.org/html/draft-ietf-oauth-pop-architecture-08",
+      "publisher": "IETF",
+      "title": "OAuth 2.0 Proof-of-Possession (PoP) Security Architecture"
+    },
+    "iGOV.OAuth2": {
+      "authors": [
+        "J. Richer, M. Varley, P. Grassi"
+      ],
+      "date": "October 5 2018",
+      "href": "https://openid.net/specs/openid-igov-oauth2-1_0-03.html",
+      "publisher": "OpenID foundation",
+      "title": "International Government Assurance Profile (iGov) for OAuth 2.0"
+    },
+    "NLGOV.OAuth2": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/api/oauth/",
+      "publisher": "Logius",
+      "title": "NL GOV Assurance profile for OAuth 2.0"
+    },
+    "ietf-oauth-v2-1-10-refresh-token-grant": {
+      "authors": [
+        "Dick Hardt, Aaron Parecki, Torsten Lodderstedt"
+      ],
+      "date": "January 9, 2024",
+      "href": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1-10#name-refresh-token-grant",
+      "publisher": "IETF",
+      "title": "The OAuth 2.1 Authorization Framework: Refresh Token Grant"
+    },
+    "OpenID.FAPI2.0": {
+      "authors": [
+        "D. Fett, D. Tonge, J. Heenan"
+      ],
+      "date": "February 22 2025",
+      "href": "https://openid.net/specs/fapi-security-profile-2_0-final.html",
+      "publisher": "OpenID foundation",
+      "title": "FAPI 2.0 Security Profile"
+    },
+    "logboek-extensie-guideline": {
+      "href": "https://logius-standaarden.github.io/logboek-extensie-template/",
+      "publisher": "Logius",
+      "title": "LDV Extensie Guideline"
+    },
+    "logboek dataverwerkingen": {
+      "href": "https://logius-standaarden.github.io/logboek-dataverwerkingen/",
+      "publisher": "Logius",
+      "title": "Logboek Dataverwerkingen"
+    }
+  },
+  "maxTocLevel": 2,
+  "specStatus": "CV",
+  "specType": "PR",
+  "pubDomain": "logboek",
+  "shortName": "inleiding",
+  "publishDate": "2025-11-27",
+  "publishVersion": "1.0.0",
+  "authors": [
+    {
+      "name": "Vedran Bilanovic",
+      "company": "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties",
+      "companyURL": "https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties"
+    },
+    {
+      "name": "Eelco Hotting",
+      "company": "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties",
+      "companyURL": "https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties"
+    },
+    {
+      "name": "Jeroen Mulder",
+      "company": "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties",
+      "companyURL": "https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties"
+    }
+  ],
+  "editors": [
+    {
+      "name": "Nil Barua",
+      "company": "Logius",
+      "companyURL": "https://logius.nl"
+    },
+    {
+      "name": "Martin van der Plas",
+      "company": "Logius",
+      "companyURL": "https://logius.nl"
+    },
+    {
+      "name": "Tim van der Lippe",
+      "company": "Logius",
+      "companyURL": "https://logius.nl"
+    }
+  ],
+  "github": "https://github.com/Logius-standaarden/logboek-dataverwerkingen-inleiding/",
+  "preProcess": [
+    null,
+    null
+  ]
+}</script>
+<link rel="stylesheet" href="https://gitdocumentatie.logius.nl/publicatie/respec/style/base.css"></head>
+
+<body class="h-entry toc-inline"><div class="head">
+    <a class="logo" href="https://www.logius.nl/onze-dienstverlening/standaarden"><img alt="Logius" height="77" id="Logius" src="https://gitdocumentatie.logius.nl/publicatie/respec/style/logos/figure-logius.svg" width="44">
+  </a> <h1 id="title" class="title">Inleiding Logboek dataverwerkingen 1.0.0</h1>
+    
+    <h2>
+      Logius Praktijkrichtlijn<br>
+      Consultatieversie
+      <time class="dt-published" datetime="2025-11-27">27 november 2025</time>
+    </h2>
+    <dl>
+      <dt>Deze versie:</dt><dd class="status">
+              <a class="u-url status" href="https://gitdocumentatie.logius.nl/publicatie/logboek/inleiding/1.0.0/">https://gitdocumentatie.logius.nl/publicatie/logboek/inleiding/1.0.0/</a>
+            </dd>
+      <dt>Laatst gepubliceerde versie:</dt><dd>
+              <a href="https://logius-standaarden.github.io/logboek-dataverwerkingen-inleiding/">https://logius-standaarden.github.io/logboek-dataverwerkingen-inleiding/</a>
+            </dd>
+      <dt>Laatste werkversie:</dt><dd><a href="https://logius-standaarden.github.io/logboek-dataverwerkingen-inleiding/">https://logius-standaarden.github.io/logboek-dataverwerkingen-inleiding/</a></dd>
+      
+      
+      
+      
+      
+      <dt>Redacteurs:</dt>
+      <dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Nil Barua</span> (<a class="p-org org h-org" href="https://logius.nl">Logius</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Martin van der Plas</span> (<a class="p-org org h-org" href="https://logius.nl">Logius</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Tim van der Lippe</span> (<a class="p-org org h-org" href="https://logius.nl">Logius</a>)
+  </dd>
+      
+      <dt>Auteurs:</dt><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Vedran Bilanovic</span> (<a class="p-org org h-org" href="https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties">Ministerie van Binnenlandse Zaken en Koninkrijksrelaties</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Eelco Hotting</span> (<a class="p-org org h-org" href="https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties">Ministerie van Binnenlandse Zaken en Koninkrijksrelaties</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Jeroen Mulder</span> (<a class="p-org org h-org" href="https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties">Ministerie van Binnenlandse Zaken en Koninkrijksrelaties</a>)
+  </dd>
+      <dt>Doe mee:</dt><dd>
+    <a href="https://github.com/Logius-standaarden/logboek-dataverwerkingen-inleiding/">GitHub Logius-standaarden/logboek-dataverwerkingen-inleiding</a>
+  </dd><dd>
+    <a href="https://github.com/Logius-standaarden/logboek-dataverwerkingen-inleiding/issues/">Dien een melding in</a>
+  </dd><dd>
+    <a href="https://github.com/Logius-standaarden/logboek-dataverwerkingen-inleiding/commits/">Revisiehistorie</a>
+  </dd><dd>
+    <a href="https://github.com/Logius-standaarden/logboek-dataverwerkingen-inleiding/pulls/">Pull requests</a>
+  </dd>
+    </dl>
+    
+    
+    <p>
+          Dit document is ook beschikbaar in dit niet-normatieve formaat:
+          <a rel="alternate" href="logboek-inleiding-1.0.0.pdf">PDF</a>
+        </p>
+    <p class="copyright">
+            Dit document valt onder de volgende licentie: 
+            <a rel="license" href="https://creativecommons.org/licenses/by/4.0/legalcode" class="subfoot"><img class="license" src="https://gitdocumentatie.logius.nl/publicatie/respec/media/logos/cc-by.svg" alt="Logo Creative Commons Attribution 4.0 International Public License"><br> Creative Commons Attribution 4.0 International Public License</a>
+          </p>
+    <hr title="Separator for header">
+  </div><section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is een consultatieversie. We moedigen gebruikers aan om meldingen of suggesties aan te maken via GitHub. Mocht dit niet mogelijk zijn, dan kunt u ook een e-mail sturen naar api@logius.nl</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#conformance">Conformiteit</a></li><li class="tocline"><a class="tocxref" href="#abstract">Context bij de standaard</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#verwijzingen">Verwijzingen</a></li></ol></li><li class="tocline"><a class="tocxref" href="#aanleiding-en-context-van-logboek-dataverwerkingen"><bdi class="secno">1. </bdi>Aanleiding en context van Logboek dataverwerkingen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#standaard-als-technisch-middel"><bdi class="secno">1.1 </bdi>Standaard als technisch middel</a></li><li class="tocline"><a class="tocxref" href="#scope-van-de-standaard-logboek-dataverwerkingen"><bdi class="secno">1.2 </bdi>Scope van de Standaard Logboek dataverwerkingen</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#totstandkoming-van-de-standaard"><bdi class="secno">1.3 </bdi>Totstandkoming van de standaard</a><ol class="toc"></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#architectuur"><bdi class="secno">2. </bdi>Architectuur</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#bedrijfsarchitectuur"><bdi class="secno">2.1 </bdi>Bedrijfsarchitectuur</a></li><li class="tocline"><a class="tocxref" href="#informatie-architectuur"><bdi class="secno">2.2 </bdi>Informatie­architectuur</a></li><li class="tocline"><a class="tocxref" href="#technische-architectuur"><bdi class="secno">2.3 </bdi>Technische architectuur</a></li><li class="tocline"><a class="tocxref" href="#software-architectuur"><bdi class="secno">2.4 </bdi>Software architectuur</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#relaties-gdi-architectuurprincipes-en-de-standaard"><bdi class="secno">2.5 </bdi>Relaties GDI architectuurprincipes  en de standaard</a></li></ol></li><li class="tocline"><a class="tocxref" href="#de-relatie-tussen-logboekelementen-waarom-eigenlijk"><bdi class="secno">3. </bdi>De relatie tussen logboekelementen, waarom eigenlijk?</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#welke-relatiedata-moeten-er-dan-worden-opgeslagen-per-logregel"><bdi class="secno">3.1 </bdi>Welke relatiedata moeten er dan worden opgeslagen per Logregel?</a></li><li class="tocline"><a class="tocxref" href="#het-logboek-en-het-register-van-verwerkingsactiviteiten"><bdi class="secno">3.2 </bdi>Het logboek en het Register van Verwerkingsactiviteiten</a></li><li class="tocline"><a class="tocxref" href="#trace_id-als-grootste-gemene-deler"><bdi class="secno">3.3 </bdi>trace_id als grootste gemene deler</a></li><li class="tocline"><a class="tocxref" href="#relatie-tussen-sub-operations"><bdi class="secno">3.4 </bdi>Relatie tussen (sub)Operations</a></li><li class="tocline"><a class="tocxref" href="#voorbeeld-van-een-traceringsconstructie"><bdi class="secno">3.5 </bdi>Voorbeeld van een traceringsconstructie</a><ol class="toc"></ol></li></ol></li></ol></nav><section id="conformance" class="introductory"><div class="header-wrapper"><h2 id="conformiteit">Conformiteit</h2><a class="self-link" href="#conformance" aria-label="Permalink for this Section"></a></div><p>Naast onderdelen die als niet normatief gemarkeerd zijn, zijn ook alle diagrammen, voorbeelden, en noten in dit document niet normatief. Verder is alles in dit document normatief.</p></section>
+  
+  
+  <section id="abstract" class="introductory"><h2>Context bij de standaard</h2>
+<p>De overheid wil voor burgers en bedrijven zo transparant mogelijk zijn in de omgang met hun data. Daarom is het bij de informatieverwerking in datasets belangrijk om voor elke mutatie of raadpleging vast te leggen wie deze actie wanneer uitvoert, en waarom. Voor een optimale samenwerking over organisaties en bronnen heen is voor deze logging een algemene standaard nodig.</p>
+<p>Transparantie en verantwoording naar burgers is één van de drijfveren voor ontwikkeling van deze logging standaard maar geen onderdeel van de standaard. De standaard richt zich op vastlegging van de logging en deze eenduidige vastlegging maakt het mogelijk om, indien daar later behoefte aan is, inzage mogelijk te maken.</p>
+<section id="verwijzingen"><div class="header-wrapper"><h3 id="verwijzingen-0">Verwijzingen</h3><a class="self-link" href="#verwijzingen" aria-label="Permalink for this Section"></a></div>
+<p>De Logboek Dataverwerkingen (LDV) standaard bestaat uit de volgende vier documenten:</p>
+<table>
+<thead>
+<tr>
+<th>Beschrijving van het document</th>
+<th>Gepubliceerde versie</th>
+<th>Werk versie</th>
+<th>Repository</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1. De LDV Normatieve Standaard</td>
+<td>-</td>
+<td><a href="https://logius-standaarden.github.io/logboek-dataverwerkingen/">Logboek dataverwerkingen (werkversie)</a></td>
+<td><a href="https://github.com/Logius-standaarden/logboek-dataverwerkingen">logboek-dataverwerkingen</a></td>
+</tr>
+<tr>
+<td>2. De Algemene Inleiding</td>
+<td>-</td>
+<td><a href="https://logius-standaarden.github.io/logboek-dataverwerkingen-inleiding/">De Algemene Inleiding (werkversie)</a></td>
+<td><a href="https://github.com/Logius-standaarden/logboek-dataverwerkingen-inleiding">logboek-dataverwerkingen-inleiding</a></td>
+</tr>
+<tr>
+<td>3. Het Juridische Beleidskader</td>
+<td>-</td>
+<td><a href="https://logius-standaarden.github.io/logboek-dataverwerkingen-juridisch-beleidskader/">Juridisch Beleidskader (werkversie)</a></td>
+<td><a href="https://github.com/Logius-standaarden/logboek-dataverwerkingen-juridisch-beleidskader/">logboek-dataverwerkingen-juridisch-beleidskader</a></td>
+</tr>
+<tr>
+<td>4. LDV Extensie Guideline</td>
+<td>-</td>
+<td><a href="https://logius-standaarden.github.io/logboek-extensie-template/">Guideline voor het schrijven van een extensie voor LDV (werkversie)</a></td>
+<td><a href="https://github.com/Logius-standaarden/logboek-extensie-template">logboek-extensie-template</a></td>
+</tr>
+</tbody></table>
+</section></section>
+  <section id="aanleiding-en-context-van-logboek-dataverwerkingen"><div class="header-wrapper"><h2 id="x1-aanleiding-en-context-van-logboek-dataverwerkingen"><bdi class="secno">1. </bdi>Aanleiding en context van Logboek dataverwerkingen</h2><a class="self-link" href="#aanleiding-en-context-van-logboek-dataverwerkingen" aria-label="Permalink for Section 1."></a></div>
+<p><em>Informatiehuishouding van de overheid moet op orde worden gebracht.</em> De overheid werkt ten dienste van burgers en bedrijven. De overheid verwerkt daarvoor informatie van deze burgers en bedrijven. Het is belangrijk dat de informatiehuishouding van de overheid op orde is, zodat de overheid transparant en aanspreekbaar is, en zich daarover goed kan verantwoorden.</p>
+<p>Dat werkt als een soort vliegwiel, omdat daardoor ook de kwaliteit van de informatie beter wordt. De overheid kan daarmee betere dienstverlening bieden en ook zorgen dat de burger minder met fouten wordt geconfronteerd, of dat overheden fouten beter en sneller kunnen herstellen als deze zich onverhoopt voordoen.</p>
+<p><em>Eenduidige en integrale verantwoording over dataverwerkingen door de overheid.</em> Belangrijk is dat overheidsorganisaties op een eenduidige manier met informatie omgaan en op een eenduidige manier informatie met elkaar uitwisselen.</p>
+<p>Voorafgaand aan informatie-uitwisseling is het belangrijk dat transparant is waarom dat gebeurt en, achteraf moet de overheid verantwoording kunnen afleggen over de data en de wijze waarop de data is verwerkt. Zo kunnen eventuele fouten of onregelmatigheden worden hersteld en kunnen burgers hun rechten op grond van de AVG geldend maken (oa. inzage en correctie). Het gaat daarbij niet alleen om overheidsorganisaties afzonderlijk, maar het gaat er ook – juist - om dat “dé overheid” zich als geheel ten opzichte van de burger kan verantwoorden.</p>
+<p>Een belangrijk instrument om verbetering van de informatiehuishouding te bereiken is standaardisatie. Op diverse aspecten is daarom standaardisatie nodig en worden deze ontwikkeld. Een van deze aspecten is de wijze waarop overheden zich verantwoorden. Standaardisatie daarvan vormt daarmee een puzzelstukje in het bredere geheel. Hiermee kunnen overheden hun dataverwerkingen op dezelfde wijze verantwoorden en deze verantwoording onderling relateren, zodat de keten van dataverwerkingen tussen organisaties compleet inzichtelijk kan worden gemaakt.</p>
+<section id="standaard-als-technisch-middel"><div class="header-wrapper"><h3 id="x1-1-standaard-als-technisch-middel"><bdi class="secno">1.1 </bdi>Standaard als technisch middel</h3><a class="self-link" href="#standaard-als-technisch-middel" aria-label="Permalink for Section 1.1"></a></div>
+<p>De standaard Logboek Dataverwerkingen is een technische randvoorwaarde (een enabler) die organisaties in staat stelt om hun bredere doelen op het gebied van verantwoording en transparantie te bereiken. De standaard is niet het doel op zich, maar een middel om de verantwoordingsplicht van de overheid waar te kunnen maken.</p>
+<p>Het onderscheid tussen de beleidsmatige doelen van het bredere beleidsinstrument en de technische doelen van de standaard is als volgt:</p>
+<p><strong>Beleidsmatige doelen</strong> (het waarom):</p>
+<ul>
+<li>Het verbeteren van de transparantie en verantwoordelijkheid van de overheid ten opzichte van burgers en bedrijven</li>
+<li>Het faciliteren van inzagerechten en het nakomen van wettelijke verplichtingen</li>
+<li>Het mogelijk maken van auditing, toezicht en kwaliteitsverbetering van de informatiehuishouding</li>
+<li>Het herstellen van fouten en onregelmatigheden</li>
+</ul>
+<p>Deze beleidsmatige doelen worden bereikt door middel van de technische mogelijkheden die de standaard biedt.
+<strong>Technische doelen</strong> (beschreven in de <a href="https://logius-standaarden.github.io/logboek-dataverwerkingen/">normatieve standaard</a>):</p>
+<ul>
+<li>Het bieden van interoperabele functionaliteit voor het loggen van dataverwerkingen</li>
+<li>Het aan elkaar relateren van logs binnen en tussen systemen</li>
+<li>Het specificeren van uniforme interfaces en gedrag voor logging-componenten</li>
+</ul>
+<p>Deze technische doelen zijn gericht op het hoe: hoe organisaties dataverwerkingen kunnen loggen op een eenduidige en interoperabele manier.</p>
+<p>De standaard vormt daarmee een bouwsteen binnen een groter geheel van wet- en regelgeving (zoals de AVG en AWB), organisatorische maatregelen en beleidsafspraken die samen de verantwoording van de overheid vormgeven.</p>
+</section><section id="scope-van-de-standaard-logboek-dataverwerkingen"><div class="header-wrapper"><h3 id="x1-2-scope-van-de-standaard-logboek-dataverwerkingen"><bdi class="secno">1.2 </bdi>Scope van de Standaard Logboek dataverwerkingen</h3><a class="self-link" href="#scope-van-de-standaard-logboek-dataverwerkingen" aria-label="Permalink for Section 1.2"></a></div>
+<p>Dit beschrijft een overzicht van de scope van de standaard, inclusief de zaken die wel en niet binnen de scope van de standaard vallen.</p>
+<section id="in-scope-van-deze-standaard"><div class="header-wrapper"><h4 id="x1-2-1-in-scope-van-deze-standaard"><bdi class="secno">1.2.1 </bdi>In scope van deze standaard</h4><a class="self-link" href="#in-scope-van-deze-standaard" aria-label="Permalink for Section 1.2.1"></a></div>
+<p>Logging over dataverwerkingen in overheidssystemen. Het uitgangspunt van deze standaard is de verantwoordingsplicht van de overheid over de uitvoering van haar taken en de wetten en kaders die daarbij horen.</p>
+</section><section id="buiten-scope-van-deze-standaard"><div class="header-wrapper"><h4 id="x1-2-2-buiten-scope-van-deze-standaard"><bdi class="secno">1.2.2 </bdi>Buiten scope van deze standaard</h4><a class="self-link" href="#buiten-scope-van-deze-standaard" aria-label="Permalink for Section 1.2.2"></a></div>
+<p>De volgende zaken worden <strong>niet</strong> behandeld in deze standaard:</p>
+<ul>
+<li><strong>Toegangsbeheer</strong>: Logging rondom toegang tot systemen en data, waarbij zowel succesvolle als mislukte pogingen om toegang te krijgen worden vastgelegd. Deze logs zijn bedoeld voor het controleren van wie toegang heeft tot gevoelige informatie en voor het detecteren van ongeautoriseerde toegang.</li>
+<li><strong>Toegangsverlening Logboek</strong>: De standaard specificeert geen functionaliteit rondom het aanmaken en beheren van toegangs- en onderhoudsprofielen ten behoeve van het logboek. Voor meer informatie zie <a href="https://digilab.overheid.nl/projecten/toegangsverleningmethodiek-api/">Federatieve Toegangsverlening</a>.</li>
+<li><strong>Gebruikersactiviteiten</strong>: Logging van namen van gebruikers die data gebruiken of verwerken.</li>
+<li><strong>Beveiligingsincidenten</strong>: Specifieke logs voor incidenten die de beveiliging kunnen beïnvloeden, zoals malware-detectie, aanvallen of misbruik. Dit soort logging is van groot belang voor het identificeren van bedreigingen en het kunnen reageren op incidenten.</li>
+<li><strong>Technische en Systeemlogs</strong>: Logging van systeemfouten, configuratiewijzigingen en technische problemen. Deze logs helpen bij het waarborgen van de stabiliteit en betrouwbaarheid van IT-systemen en ondersteunen het oplossen van technische problemen.</li>
+<li><strong>Logging ten behoeve van motivatie totstandkoming besluitvorming</strong>: anders dan uitgevoerde  dataverwerkingen (niet: beslisregels, algoritmes, et cetera).</li>
+<li><strong>Correcties op- en verwijdering van verwerkte data</strong>: dit wordt gezien als verwerking en volgt de gewone route van datalogging. Voor meer informatie zie <a href="https://logius-standaarden.github.io/logboek-dataverwerkingen-inleiding/#standaard-beschrijft-geen-interface-voor-verwijderen-van-logs">besluit 4.5</a>.</li>
+<li><strong>Beperkingen op informatieplichten (bijvoorbeeld indien er een strafrechtelijk onderzoek plaatsvindt)</strong>: het is aan de organisatie zelf om procedures te implementeren om beperking van inzage uit te voeren. Voor meer informatie zie <a href="https://logius-standaarden.github.io/logboek-dataverwerkingen-inleiding/#vertrouwelijkheid-wordt-vastgelegd-per-verwerkingsactiviteit">besluit 4.6</a>.</li>
+</ul>
+</section></section><section id="totstandkoming-van-de-standaard"><div class="header-wrapper"><h3 id="x1-3-totstandkoming-van-de-standaard"><bdi class="secno">1.3 </bdi>Totstandkoming van de standaard</h3><a class="self-link" href="#totstandkoming-van-de-standaard" aria-label="Permalink for Section 1.3"></a></div>
+<p>Het Logboek Dataverwerkingen is een doorontwikkeling van de conceptstandaard GEMMA Verwerkingenlogging, die door VNG Realisatie is gemaakt met als doel de naleving van AVG-verplichtingen rondom de verwerking van persoonsdata te verbeteren.</p>
+<p>In 2023 heeft het Ministerie van Binnenlandse Zaken, in samenwerking met verschillende overheidspartijen, een project gestart om de GEMMA Verwerkingenlogging-standaard verder te ontwikkelen. Het uitgangspunt was het vergroten van de transparantie van de overheid en het verbeteren van de informatiepositie van de burger. Vanaf 2024 werd breder gekeken dan alleen de AVG; wettelijke kaders, zoals verantwoordingsverplichtingen, werden als uitgangspunt genomen voor het vormgeven van de standaard. Om aan deze eisen te voldoen, is de standaard aangepast en hernoemd tot Logboek Dataverwerkingen.</p>
+<section id="interdisciplinaire-aanpak"><div class="header-wrapper"><h4 id="x1-3-1-interdisciplinaire-aanpak"><bdi class="secno">1.3.1 </bdi>Interdisciplinaire aanpak</h4><a class="self-link" href="#interdisciplinaire-aanpak" aria-label="Permalink for Section 1.3.1"></a></div>
+<p>Voor de ontwikkeling van de standaard Logboek Dataverwerkingen was het essentieel dat de verschillende aspecten (juridische beleidskaders, techniek, inhoud en beheer) goed op elkaar werden afgestemd. Daartoe werkte het project met een interdisciplinair team: juristen, beleidsmakers en adviseurs van BZK werkten nauw samen met technische experts van Digilab en medewerkers van Logius, de beoogde beheerder. Deze interdisciplinaire aanpak zorgde ervoor dat de standaard aansluit op juridische randvoorwaarden, eenvoudig te beheren en te implementeren is, én effectief functioneert in de praktijk. Dit laatste aspect werd getest in Digilab, waar de standaard in verschillende simulatieomgevingen (Fieldlabs) werd ingebouwd en beproefd op praktische toepasbaarheid.</p>
+</section><section id="beheer-en-doorontwikkeling"><div class="header-wrapper"><h4 id="x1-3-2-beheer-en-doorontwikkeling"><bdi class="secno">1.3.2 </bdi>Beheer en doorontwikkeling</h4><a class="self-link" href="#beheer-en-doorontwikkeling" aria-label="Permalink for Section 1.3.2"></a></div>
+<p>Om de overgang tussen ontwikkeling en beheer soepel te laten verlopen, was Logius vanaf een vroeg stadium betrokken bij het project. De inzet van Logius is in de loop van de tijd uitgebreid, zodat in 2025 het beheer van de standaard volledig kan worden overgedragen. Dit beheer wordt ingericht volgens de BOMOS-methodologie (Beheer- en OntwikkelModel voor Open Standaarden). Het opzetten van een goede governance-structuur is een integraal onderdeel van het beheer. Hierbij zullen, naast de gebruikers van de standaard, belangrijke rollen zijn weggelegd voor MIDO (Meerjarenprogramma Infrastructuur Digitale Overheid) en het Forum Standaardisatie. Deze gremia zullen naar verwachting respectievelijk de standaard vaststellen en deze opnemen op de Pas-Toe-Of-Leg-Uit-lijst. Het Ministerie van Binnenlandse Zaken blijft opdrachtgever voor het beheer van de standaard.</p>
+</section></section></section>
+  <section id="architectuur"><div class="header-wrapper"><h2 id="x2-architectuur"><bdi class="secno">2. </bdi>Architectuur</h2><a class="self-link" href="#architectuur" aria-label="Permalink for Section 2."></a></div>
+<p>De standaard Logboek dataverwerkingen levert geen kant-en-klare softwareoplossing. Wel biedt de standaard richtlijnen waar het Logboek dataverwerkingen van een applicatie aan moet voldoen. Dit document geeft aan hoe de standaard zich verhoudt tot de <a href="https://www.digitaleoverheid.nl/nieuws/architectuur-digitale-overheid-2030-vastgesteld-2/">Architectuur Digitale Overheid 2030</a> en de <em>Domeinarchitectuur Gegevensuitwisseling</em></p>
+<section id="bedrijfsarchitectuur"><div class="header-wrapper"><h3 id="x2-1-bedrijfsarchitectuur"><bdi class="secno">2.1 </bdi>Bedrijfsarchitectuur</h3><a class="self-link" href="#bedrijfsarchitectuur" aria-label="Permalink for Section 2.1"></a></div>
+<ul>
+<li><em>Diensten en producten</em><ul>
+<li>De standaard Logboek dataverwerkingen is als product voornamelijk gericht op het verantwoorden van dataverwerkingen door overheden in het kader van hun taken (<strong>Regie op Gegevens</strong> en de <strong>Transparante Overheid)</strong>. Dit betekent dat het gebruik van deze standaard door overheidsorganisaties de informatiepositie van burgers en bedrijven ten opzichte van de overheid sterk verbetert zodat zij meer grip op en inzicht in hun persoonsgebonden data hebben (<strong>inzicht in data over jezelf</strong>). Daarnaast draagt deze standaard aan bij <strong>Verantwoord datagebruik en ruimer meervoudig gebruik data</strong>. Implementatie van deze standaard draagt bij aan de verantwoording over, en het doelmatig gebruik van data.</li>
+</ul>
+</li>
+<li><em>Kanalen</em><ul>
+<li>Het Logboek dataverwerkingen is een service behorend bij een applicatie die specifieke data verwerkt waarover uiteindelijk verantwoording moet kunnen worden afgelegd (bijvoorbeeld persoonsdata of data over geografische objecten). De standaard geeft geen richtlijnen ten aanzien de ontsluiting van deze logdata richting belanghebbenden, wel geeft het een richting ten aanzien van de inrichting en het gedrag van het Logboek dataverwerkingen.</li>
+</ul>
+</li>
+<li><em>Organisatie</em><ul>
+<li>De Overheid bestaat uit vele (semi)autonome organisaties. Door gezamenlijke afspraken te maken ten aanzien van logging van verwerkte data, ondersteunt de standaard het doel om naar de burger toe als één organisatie te kunnen verantwoorden.</li>
+</ul>
+</li>
+<li><em>Processen</em><ul>
+<li>Voor het verwerken van data zijn vaak ook data nodig van andere (overheids)organisaties. De implementatie van de standaard Logboek dataverwerkingen zorgt er voor dat loggings tracing-metadata bevat zodat altijd kan worden nagegaan wat de bron van specifieke data was. De standaard ondersteunt hiermee het uitgangspunt dat (overheids)organisaties zorgen voor onderlinge samenhang van data.</li>
+</ul>
+</li>
+<li><em>Bedrijfsfuncties</em><ul>
+<li>Overheidsfuncties moeten eenduidig een helder belegd zijn, het moet helder zijn welke (overheids)organisaties verantwoordelijk zijn voor het leveren van product of dienst. Door het gebruiken van de standaard Logboek datalogverwerkingen door alle dataverwerkende (overheids)organisaties op een soortgelijke manier wordt het duidelijk welke data gebruikt zijn en door wie.</li>
+</ul>
+</li>
+</ul>
+</section><section id="informatie-architectuur"><div class="header-wrapper"><h3 id="x2-2-informatie-architectuur"><bdi class="secno">2.2 </bdi>Informatie­architectuur</h3><a class="self-link" href="#informatie-architectuur" aria-label="Permalink for Section 2.2"></a></div>
+<ul>
+<li><em>Api's / Services</em><ul>
+<li>Naast richtlijnen voor de inrichting en het gedrag van het Logboek dataverwerkingen, biedt deze standaard ook een aantal voorbeeld API's:</li>
+<li><strong>Inzicht API:</strong> deze service geeft de mogelijkheid een query uit te voeren op loggings van dataverwerkingen (nog niet beschikbaar).</li>
+<li><strong>Register van de Verwerkingsactiviteiten:</strong> deze service geeft de mogelijkheid de data van een Register van Verwerkingsactiviteiten te bekijken (nog niet beschikbaar).</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>De API's zijn ontworpen en ontwikkeld volgens de standaard <a href="https://www.forumstandaardisatie.nl/open-standaarden/rest-api-design-rules">Rest-API Design Rules</a>.</p>
+</blockquote>
+<ul>
+<li><p><em>Applicaties</em></p>
+<ul>
+<li>De standaard biedt geen applicatie aan, wel biedt het richtlijnen ten aanzien van het gedrag en invulling van het Logboek dataverwerkingen. Hiermee geeft de standaard de vrijheid aan organisaties om zelf op basis van de specifieke implementatie van een dataverwerkende Applicatie een Logboek te ontwikkelen wat qua gedrag en (meta)data gelijkvormig is over alle (overheids)organisaties heen.</li>
+</ul>
+</li>
+<li><p><em>Berichtenverkeer / datauitwisseling</em></p>
+<ul>
+<li>Het berichten verkeer met betrekking tot het Logboek dataverwerkingen heeft geen directe connectie met de burger. Wel is het van belang bij opvraag van data bij andere organisaties traceringsdata worden verstuurd en opgeslagen in het Logboek zodat altijd duidelijk wat de bron is van data die verwerkt zijn. Deze standaard biedt een traceringsmethodiek aan zodat de datauitwisseling tussen organisaties <em>vastgelegd en verantwoord</em> kan worden.</li>
+</ul>
+</li>
+<li><p><em>Data</em></p>
+<ul>
+<li>De Nederlandse Basisregistraties vervullen een essentiële rol in het vastleggen en gecontroleerd beheren van data. Organisaties kunnen aan elkaar data ter beschikking te stellen vanuit 'kernregistraties'. De standaard Logboek dataverwerkingen biedt een richtlijn voor het loggen van verwerkte data van al deze basisregistraties.</li>
+</ul>
+</li>
+</ul>
+<p>Onderstaande stelselplaat geeft een globaal overzicht van de bronhouders, de aanbieders en afnemers van data.</p>
+<p><img src="./media/stelselplaat.png" alt="Architectuur Digitale Overheid 2030"></p>
+<p><em>[bron: Architectuur Digitale Overheid 2030]</em></p>
+<p>Een belangrijk kader voor de standaard Logboek dataverwerkingen is de uitwerking van het <a href="https://github.com/minbzk/gdi-gegevensuitwisseling">GDI meerjarenvisie</a> op basis van de <a href="https://www.digitaleoverheid.nl/nieuws/architectuur-digitale-overheid-2030-vastgesteld-2/">Architectuur Digitale Overheid 2030</a> met als specifiek onderwerp Gegevensuitwisseling. De standaard Logboek dataverwerking kan gepositioneerd worden in de GDI Gegevensuitwisseling als standaard waarin een 'Uitwisselingsafspraak' geformaliseerd wordt. Waarbij de daadwerkelijke logging betrekking heeft op de 'Operatie' in de modelplaat <a href="https://minbzk.github.io/gdi-gegevensuitwisseling/?view=id-efc531031d114860a309f6eeacdad289">GDI-Gegevensuitwisseling</a>.</p>
+<p><img src="./media/metadatamodel.png" alt="Bedrijfsobjectenmodel"></p>
+<p><em>[Bron: GDI – Gegevensuitwisseling]</em></p>
+<p>Onderstaand figuur geeft een overzicht van de architectuurprincipes uit het <a href="https://github.com/minbzk/gdi-gegevensuitwisseling">GDI meerjarenvisie</a> en hun relatie met de belangrijkste functie voor data uitwisseling.</p>
+<p><img src="./media/architectuurprincipes.png" alt="architectuurprincipes "></p>
+<p><em>[Bron: MIDO/GDI Domeinarchitectuur Gegevensuitwisseling]</em></p>
+<p>De relatie en invulling van de standaard Logboek dataverwerkingen staat uitgewerkt in de volgende paragraaf.</p>
+</section><section id="technische-architectuur"><div class="header-wrapper"><h3 id="x2-3-technische-architectuur"><bdi class="secno">2.3 </bdi>Technische architectuur</h3><a class="self-link" href="#technische-architectuur" aria-label="Permalink for Section 2.3"></a></div>
+<p>De standaard Logboek dataverwerkingen kan ook worden toegepast in een middleware- of cloud-omgeving. Het netwerkcomponent logt binnenkomende en uitgaande berichten.</p>
+<p><img src="./media/technische_architectuur.png" alt="technische architectuur"></p>
+<p>Ook voor mobiele Apps en IoT (Internet of Things) geldt dat het netwerkcomponent de databerichten logt.</p>
+</section><section id="software-architectuur"><div class="header-wrapper"><h3 id="x2-4-software-architectuur"><bdi class="secno">2.4 </bdi>Software architectuur</h3><a class="self-link" href="#software-architectuur" aria-label="Permalink for Section 2.4"></a></div>
+<p>Hoofdstuk <a href="https://logius-standaarden.github.io/logboek-dataverwerkingen/#componenten">2.2 Componenten</a> geeft een globaal overzicht van de benodigde softwarecomponenten om de standaard te implementeren.</p>
+<section id="platformen-voor-dagelijkse-exploitatie-en-huisvesting"><div class="header-wrapper"><h4 id="x2-4-1-platformen-voor-dagelijkse-exploitatie-en-huisvesting"><bdi class="secno">2.4.1 </bdi>Platformen voor dagelijkse exploitatie en huisvesting</h4><a class="self-link" href="#platformen-voor-dagelijkse-exploitatie-en-huisvesting" aria-label="Permalink for Section 2.4.1"></a></div>
+<p>De standaard Logboek dataverwerkingen gaat er vanuit dat de het Logboekcomponent op een beveiligd platform in een beveiligd datacenter is geïnstalleerd.</p>
+</section><section id="aspectgebieden"><div class="header-wrapper"><h4 id="x2-4-2-aspectgebieden"><bdi class="secno">2.4.2 </bdi>Aspectgebieden</h4><a class="self-link" href="#aspectgebieden" aria-label="Permalink for Section 2.4.2"></a></div>
+<ul>
+<li><em>Informatiebeveiliging</em><ul>
+<li>De standaard Logboek dataverwerkingen gaat er vanuit dat zowel het Logboekcomponent als de data in het Logboek beveiligd zijn volgens de BIO (=Baseline Informatiebeveiliging Overheid) – zie ook <a href="https://logius-standaarden.github.io/logboek-dataverwerkingen-juridisch-beleidskader/#beleidskader">Beleidskader</a>.</li>
+</ul>
+</li>
+<li><em>Beheer en exploitatie</em><ul>
+<li>Logius verzorgt het beheer en onderhoud van deze standaard volgens het <a href="https://www.logius.nl/domeinen/infrastructuur/bomos">BOMOS</a>-model.</li>
+</ul>
+</li>
+</ul>
+</section></section><section id="relaties-gdi-architectuurprincipes-en-de-standaard"><div class="header-wrapper"><h3 id="x2-5-relaties-gdi-architectuurprincipes-en-de-standaard"><bdi class="secno">2.5 </bdi>Relaties GDI architectuurprincipes  en de standaard</h3><a class="self-link" href="#relaties-gdi-architectuurprincipes-en-de-standaard" aria-label="Permalink for Section 2.5"></a></div>
+
+
+<table>
+<thead>
+<tr>
+<th><strong>Architectuurprincipe</strong></th>
+<th><strong>Relatie met de standaard</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1.1. Data die kunnen worden gedeeld zijn vindbaar, toegankelijk,  interoperabel en herbruikbaar</td>
+<td>- Logregels  zijn voorzien van metadata ten aanzien van tracering zodat gerelateerde  Logregels altijd gevonden kunnen worden.<br> - Identificatoren  worden aangemaakt zodat deze over de gehele wereld uniek zijn.<br> - Het <code>processing_activity_id</code> is gerelateerd aan het  Register van Verwerkingsactiviteiten zodat per Logregel altijd verwezen kan  worden naar een activiteit van een (overheids)organisatie en daarmee de  context direct duidelijk wordt.</td>
+</tr>
+<tr>
+<td>1.2. Datauitwisseling is gebaseerd op open standaarden</td>
+<td>- API's  gerelateerd aan deze standaard moeten worden ontworpen en gebouwd volgens de  standaarden <a href="https://www.forumstandaardisatie.nl/open-standaarden/rest-api-design-rules">REST-API   Design Rules</a>, <a href="https://www.openapis.org/">OpenAPI</a> en <a href="https://www.logius.nl/domeinen/gegevensuitwisseling/digikoppeling">DigiKoppeling</a>.<br> - Het  metadatamodel van deze standaard is gebaseerd op <a href="https://opentelemetry.io/">OpenTelemetry</a>. Dit is een internationale  standaard voor het genereren, verzamelen en exporteren van telemetrie  data (metrieken, logging en tracering).</td>
+</tr>
+<tr>
+<td>1.3 De kwaliteit van data is afgestemd op het gebruik</td>
+<td>- Door de  registratie van verwerkte data in een Logboek kan er op een later moment  inzicht gegeven worden aan andere (overheids)organisaties en burgers.  Eventuele foutieve data komen dan direct aan het licht en kunnen hersteld  worden.</td>
+</tr>
+<tr>
+<td>1.4. Datadiensten zijn afgestemd op de behoeften van afnemers</td>
+<td>- Data  die gelogd worden bij een dataverwerking zijn afgestemd op het doel  waarvoor er gelogd moet worden (bijvoorbeeld de data die gevraagd worden  op basis van de AVG-wetgeving). Er wordt niet minder opgeslagen, meer zeker  niet meer dan nodig is.<br> - Het ontwerp  van het datamodel van deze standaard is gebaseerd op OpenTelemetry,  vertaling van data is dus niet nodig.</td>
+</tr>
+<tr>
+<td>1.5. De bron van de data is leidend</td>
+<td>- Overheidsapplicaties  moeten rekening houden met de onderhoud van data bij de <a href="https://www.digitaleoverheid.nl/data-bij-de-bron/">bron</a>. Dit  betekent dat data niet zonder meer gekopieerd opgeslagen mogen worden.  Bij sommige dataverwerkingen zijn data nodig van andere databronnen (in de  eigen organisatie of bij een andere organisatie). De standaard Logboek  Dataverwerkingen schrijft een traceringsmechanisme voor zodat kopiëren van  specifieke data naar het Logboek niet nodig is, er kan altijd nagegaan worden  waar data vandaan kwamen en welke data er gebruikt werden.<br> - De  standaard verwijst zo veel mogelijk naar bestaande databronnen elders in  plaats van de data te dupliceren (zie besluit <a href="#logregels-bevatten-geen-gegevens-die-al-vastliggen-in-een-register">4.2</a>  en <a href="#geen-data-over-gebruikers-in-logregels">4.4</a>)</td>
+</tr>
+<tr>
+<td>1.6. Burgers en organisaties hebben regie over hun eigen data</td>
+<td>- Burgers,  (overheids)organisaties en parlement hebben recht om inzicht te krijgen in  verwerkte data. Door toepassing van deze standaard kan er een rapportage  gemaakt worden die voldoet aan die informatiebehoefte.<br> - De  standaard Logboek dataverwerkingen biedt geen handreiking ten aanzien van de manier  waarop datainzicht plaats moet vinden richting belanghebbende, wel op de  in de inhoud van het datainzicht.</td>
+</tr>
+<tr>
+<td>1.7. Persoonsdata zijn beschermd bij het uitwisselen van data</td>
+<td>- Deze  standaard gaat er vanuit dat autorisatie- en beveiligingsmechanismen worden  toegepast rondom Applicatie en Logboek, daarom zijn er geen extra richtlijnen  op dit vlak. Zie ook <a href="https://logius-standaarden.github.io/logboek-dataverwerkingen-juridisch-beleidskader/#beleidskader">Beleidskader</a>.</td>
+</tr>
+<tr>
+<td>1.8. Uitwisseling van data wordt gelogd als deze later  aantoonbaar moet   zijn</td>
+<td>- Logging van  verwerkte data is de kern van deze standaard. Door gebruikt te maken van een  traceringsmechanisme en unieke identificatoren, kan er altijd worden voldaan  aan de eis dat ontvangen en verzonden data aan elkaar gerelateerd kunnen  worden.</td>
+</tr>
+<tr>
+<td>2.1. Datauitwisseling is federatief georganiseerd</td>
+<td>- Logboek  Dataverwerkingen maakt het mogelijk om in een gefedereerde omgeving en in  informatieketens verantwoording te kunnen afleggen over datauitwisseling.  Hiervoor wordt tracing ingezet, een concept dat gebaseerd op de open  standaard OpenTelemetry. Zie voor enkele juridische en beleidsmatige  uitgangspunten het Juridisch Beleidskader <a href="https://logius-standaarden.github.io/logboek-dataverwerkingen-juridisch-beleidskader/#een-standaard-opstellen-om-deze-kaders-te-faciliteren">hoofdstuk   6</a> en <a href="https://logius-standaarden.github.io/logboek-dataverwerkingen-juridisch-beleidskader/#beleidskader">hoofdstuk   8</a>.<br> - Nadere  invulling t.a.v. datauitwisseling in het kader van inzage zal volgen als  de extensie voor inzage wordt gemaakt.</td>
+</tr>
+<tr>
+<td>2.2. Voorwaarden en afspraken zijn expliciet en inzichtelijk</td>
+<td>- Afspraken  in het kader van deze standaard zullen vooral gemaakt worden op het gebied  van tracering van data binnen organisaties en over organisaties heen.</td>
+</tr>
+<tr>
+<td>3.1. Gemeenschappelijke begripsvorming is het startpunt</td>
+<td>- De data die  gebruikt worden in deze standaard, staan vermeld en uitgelegd in het Canoniek datamodel. Het is van belang dat alle (overheids)organisatie die  gebruik maken van de standaard hetzelfde beeld hebben ten aanzien specifieke data  en uitwisseling daarvan om foutsituaties en verwarring te voorkomen.</td>
+</tr>
+<tr>
+<td>3.2. Metadata zijn begrijpelijk voor mensen</td>
+<td>- De  metadata zijn veelal ontstaan op basis van de internationale standaard OpenTelemetry. Daarnaast worden de begrippen ook uitgelegd in het Canoniek Datamodel.</td>
+</tr>
+<tr>
+<td>3.3. Data worden contextrijk vastgelegd</td>
+<td>- Het gebruik  van metadata in deze standaard is essentieel. De context wordt uitgelegd in  het Canoniek Datamodel.</td>
+</tr>
+<tr>
+<td>3.4. Metadata zijn aan elkaar verbonden</td>
+<td>- Metadata  tussen de verschillende Logboeken zijn aan elkaar gerelateerd middels de  beschrijvingen en afspraken zoals gespecifieerd in de standaard .</td>
+</tr>
+<tr>
+<td>3.5. Metadata zijn beschikbaar als Linked Data</td>
+<td>- De  gedefinieerde metadata is gerelateerd aan de standaard <a href="https://docs.geostandaarden.nl/nl-sbb/nl-sbb/">NL-SBB   – standaard voor het beschrijven van begrippen</a>.</td>
+</tr>
+<tr>
+<td>4.1. Data worden geleverd vanuit herbruikbare datadiensten</td>
+<td>- Nadere  invulling volgt bij het ontwerp van de Inzage extensie.</td>
+</tr>
+<tr>
+<td>4.2. Registraties bieden historische data aan</td>
+<td>- Data in het  Logboek mogen niet fysiek worden verwijderd; als ze niet meer geldig zijn dan  wordt alleen vastgelegd dat ze niet meer geldig zijn (tenzij ze om juridische  redenen vernietigd moeten worden).<br> - De  historische integriteit van Logboekdata is geborgd; oude data mogen niet worden  niet overschreven.  <br> - Nieuwe  formele overheidsregistraties die worden ontwikkeld, moeten de formele  historie van datawerking vastleggen  conform de standaard Logboek dataverwerking.  Ook de wijzigingen in Register van  Verwerkingsactiviteiten worden toevoegd als nieuwe verwerkingsactiviteiten  met een eigen unieke identificator. Bestaande verwerkingsactiviteiten mogen  niet wijzigen of verwijderd worden. Hierdoor blijven de oude verwijzingen uit  de Logboek Dataverwerking intact.</td>
+</tr>
+<tr>
+<td>4.3. Aanbieders kunnen notificeren over belangrijke gebeurtenissen</td>
+<td>- N.v.t.  Standaard beschrijft geen notificatiemechanisme voor wijzigingen in de Log.</td>
+</tr>
+<tr>
+<td>5.1. Informatieproducten zijn herleidbaar naar de onderliggende  data en  regels</td>
+<td>- Door  gebruikt te maken van een traceringsmechanisme en unieke identificatoren, kan  er altijd worden voldaan aan de eis dat ontvangen en verzonden data aan  elkaar gerelateerd kunnen worden. De bron, en daarmee de kwaliteit en  betrouwbaarheid van verwerkte data, kunnen snel en eenvoudig worden  opgehaald.  <br>- Wordt  eventueel nader ingevuld bij de ontwikkeling van een Inzage extensie.</td>
+</tr>
+<tr>
+<td>6.1. Data worden zo vroeg mogelijk gevalideerd</td>
+<td>- Validatie  van logdata is een taak van de Applicatie zelf, deze standaard geeft hiervoor  geen handreiking.</td>
+</tr>
+</tbody></table>
+</section></section>
+  <section id="de-relatie-tussen-logboekelementen-waarom-eigenlijk"><div class="header-wrapper"><h2 id="x3-de-relatie-tussen-logboekelementen-waarom-eigenlijk"><bdi class="secno">3. </bdi>De relatie tussen logboekelementen, waarom eigenlijk?</h2><a class="self-link" href="#de-relatie-tussen-logboekelementen-waarom-eigenlijk" aria-label="Permalink for Section 3."></a></div>
+<p>Logging van dataverwerkingen kunnen vaak en veelvuldig plaatsvinden. Het geheel kan groot en complex worden want sommige Logregels zijn aan elkaar gerelateerd. Deze relaties kunnen gelegd worden met Logregels met andere applicaties binnen dezelfde organisatie of met logregels van applicaties van andere organisaties.</p>
+<p>Maar ook zijn er relaties nodig met activiteiten in het Register van Verwerkingsactiviteiten.
+Wat nu als alle Logregels zonder relaties worden opgeslagen? Bij een rapportage (bijvoorbeeld een verzoek tot inzage van een burger) moet nu handmatig worden uitgezocht welke dataverwerkingen bij elkaar horen en er moet, in het ernstigste geval, ook contact worden gezocht moet andere organisaties om te onderzoeken of daar ook de nodige dataverwerkingen zijn uitgevoerd. Als er bij elke Logregel de nodige relatiedata worden bijgevoegd, kan de rapportage snel en accuraat worden gegenereerd.</p>
+<section id="welke-relatiedata-moeten-er-dan-worden-opgeslagen-per-logregel"><div class="header-wrapper"><h3 id="x3-1-welke-relatiedata-moeten-er-dan-worden-opgeslagen-per-logregel"><bdi class="secno">3.1 </bdi>Welke relatiedata moeten er dan worden opgeslagen per Logregel?</h3><a class="self-link" href="#welke-relatiedata-moeten-er-dan-worden-opgeslagen-per-logregel" aria-label="Permalink for Section 3.1"></a></div>
+<p>Om er zeker van te zijn dat de relatie tussen Logregels gelegd kan worden, moeten de volgende data worden geregistreerd per Logregel:</p>
+<ul>
+<li><p><code>processing_activity_id</code>: elke dataverwerking die een organisatie doet, moet bekend zijn in het Register van Verwerkingsactiviteiten. Het processingActivity legt de relatie tussen de dataverwerking door een applicatie, en de activiteit gedefinieerd in het Register.</p>
+</li>
+<li><p><code>trace_id</code>: alle logregels die voor een specifieke dataverwerking bij elkaar horen, krijgen een <code>trace_id</code>. De <code>trace_id</code>-waarde voor alle Logregels die bij elkaar horen is hetzelfde.</p>
+</li>
+<li><p><code>span_id</code>: elke individuele Logregel (Operation) krijgt een eigen, unieke <code>span_id</code> (net zoals elk databaserecord dat ook krijgt).</p>
+</li>
+</ul>
+<p>In werkelijkheid worden alle relaties door de Applicatie in een fractie van een seconde (in parallel)  gelegd. Om het grote geheel beter te begrijpen, worden alle relaties hieronder stap voor stap uitgelegd.</p>
+</section><section id="het-logboek-en-het-register-van-verwerkingsactiviteiten"><div class="header-wrapper"><h3 id="x3-2-het-logboek-en-het-register-van-verwerkingsactiviteiten"><bdi class="secno">3.2 </bdi>Het logboek en het Register van Verwerkingsactiviteiten</h3><a class="self-link" href="#het-logboek-en-het-register-van-verwerkingsactiviteiten" aria-label="Permalink for Section 3.2"></a></div>
+<p>Als er een Dataverwerking plaatsvindt, moet dit altijd een relatie hebben met het Register van Verwerkingsactiviteiten. In dit Register staat informatie over de data die een organisatie verwerkt. Het Register is verplicht, een geautomatiseerde koppeling met het Logboek niet.</p>
+<p>Bij elke Dataverwerking wordt door het Logboek een relatie gelegd met het Register door middel van het <code>processing_activity_id</code>.
+Als er meerdere dezelfde Dataverwerkingen ('Operations') zijn, krijgen deze dus allemaal dezelfde <code>processing_activity_id</code>.</p>
+<p><img src="./media/relatie_logboekelementen_afbeelding1.svg" alt="Afbeelding relaties processing_activity_id"></p>
+<p>In het geval er een Dataverwerking plaatsvindt ter ondersteuning van een andere Dataverwerking (suboperation), dan kan deze ondersteunende Dataverwerking een eigen <code>processing_activity_id</code> krijgen. Deze kan anders zijn dan het <code>processing_activity_id</code> van de 'hoofdprocessingActivity'.</p>
+<p><img src="./media/relatie_logboekelementen_afbeelding2.svg" alt="Afbeelding relaties processing_activity_id tussen Logboek en Register"></p>
+<p>De subOperation heeft nu een eigen <code>processing_activity_id</code> gekregen, maar het is nog niet duidelijk aan welke hoofdprocessingActivityId deze gekoppeld is. Om dit op te lossen, wordt ook een 'parentProcessingActivityId' geregistreerd.</p>
+<p>Bij de subOperation wordt in dit geval naast de <code>processing_activity_id</code> ook een parentProcessingActivityId geregistreerd. De waarde van deze parentProcessingActivityId is gelijk aan de waarde van het hoofdProcessingActivityId.</p>
+<p><img src="./media/relatie_logboekelementen_afbeelding3.svg" alt="Afbeelding relaties processing_activity_id tussen Logboek en Register met parent_processing_activity_id"></p>
+<p>Bij een Dataverwerking kan het zijn dat data moeten worden opgevraagd bij een andere organisatie. Deze organisatie heeft zelf ook een Register van Verwerkingsactiviteiten. In dit Register staat beschreven dat een specifieke organisatie specifieke gegevens mag opvragen als aparte operation.</p>
+<p>Bij het verstrekken van deze data aan de aanvragende organisatie, wordt het <code>processing_activity_id</code> van de gegevensverstrekkende organisatie geregistreerd. Er is dus GEEN rechtstreekse koppeling tussen het Register van de aanvragende en het Register van de verstrekkende organisatie.</p>
+<p><img src="./media/relatie_logboekelementen_afbeelding4.svg" alt="Afbeelding relaties processing_activity_id tussen Logboek en Register met parent_processing_activity_id en meerdere organisaties"></p>
+</section><section id="trace_id-als-grootste-gemene-deler"><div class="header-wrapper"><h3 id="x3-3-trace_id-als-grootste-gemene-deler"><bdi class="secno">3.3 </bdi>trace_id als grootste gemene deler</h3><a class="self-link" href="#trace_id-als-grootste-gemene-deler" aria-label="Permalink for Section 3.3"></a></div>
+<p>Operations kunnen bestaan uit meerdere (sub)Operations binnen de eigen organisatie maar ook over organisaties heen. Het geheel kan een grote en ingewikkelde constructie worden. Om toch het overzicht te kunnen behouden, is het noodzakelijk een <code>trace_id</code> te introduceren per (sub)Operation.</p>
+<p>Het <code>trace_id</code> is als het ware de 'lijm' tussen alle  (sub)Operations. Als er nog geen <code>trace_id</code> bekend is, wordt deze automatisch gegenereerd voor de eerste Operation.</p>
+<p><img src="./media/relatie_logboekelementen_afbeelding5.svg" alt="Afbeelding trace_id"></p>
+<p>Alle bij elkaar horende (sub)Operations, krijgen vervolgens dezelfde <code>trace_id</code>-waarde.</p>
+<p><img src="./media/relatie_logboekelementen_afbeelding6.svg" alt="Afbeelding relaties trace_id"></p>
+<p>In het geval er data wordt opgevraagd aan een andere organisatie, krijgt elke operation bij verstrekkende organisatie een <code>trace_id</code>. Om de relatie te leggen tussen de vragende en de verstrekkende organisatie, wordt bij elke Operation van de verstrekkende organisatie een <code>trace_id</code> geregistreerd. De waarde van de <code>trace_id</code> van de verstrekkende organisatie is gelijk aan de waarde van <code>trace_id</code> van de vragende organisatie.</p>
+<p><img src="./media/relatie_logboekelementen_afbeelding7.svg" alt="Afbeelding relaties trace_id en foreign_trace_id en meerdere organisaties "></p>
+</section><section id="relatie-tussen-sub-operations"><div class="header-wrapper"><h3 id="x3-4-relatie-tussen-sub-operations"><bdi class="secno">3.4 </bdi>Relatie tussen (sub)Operations</h3><a class="self-link" href="#relatie-tussen-sub-operations" aria-label="Permalink for Section 3.4"></a></div>
+<p>Elke (sub)Operation krijgt een eigen, unieke <code>span_id</code>. Hiermee zijn alle loggings altijd uniek traceerbeer. Ook subOperations krijgen een eigen, unieke <code>span_id</code>.</p>
+<p><img src="./media/relatie_logboekelementen_afbeelding8.svg" alt="Afbeelding span_id"></p>
+<p>Als er ook subOperations plaatsvinden, moet er ook een <code>parent_span_id</code> worden geregistreerd om de koppeling met de hoofdOperation te realiseren.</p>
+<p><img src="./media/relatie_logboekelementen_afbeelding9.svg" alt="Afbeelding span_id en parent_span_id"></p>
+<p>In het geval er data nodig is van een andere organisatie, krijgt de Operation van de verstrekkende organisatie ook een eigen, unieke <code>span_id</code>.</p>
+<p>Daarnaast wordt bij deze Operation ook het <code>span_id</code> geregistreerd die het verzoek voor informatie geïnitieerd heeft (vanuit de vragende organisatie). Deze specifieke <code>span_id</code> wordt het <code>foreign_operation._span_id</code> genoemd en krijgt de waarde gelijk aan het <code>span_id</code> van de initiërende Operation van de vragende organisatie.</p>
+<p><img src="./media/relatie_logboekelementen_afbeelding10.svg" alt="Afbeelding span_id, parent_span_id en foreign_span_id"></p>
+</section><section id="voorbeeld-van-een-traceringsconstructie"><div class="header-wrapper"><h3 id="x3-5-voorbeeld-van-een-traceringsconstructie"><bdi class="secno">3.5 </bdi>Voorbeeld van een traceringsconstructie</h3><a class="self-link" href="#voorbeeld-van-een-traceringsconstructie" aria-label="Permalink for Section 3.5"></a></div>
+<p>Het nu volgende voorbeeld is volledig fictief en is puur bedoeld om een beeld te schetsen ten behoeve van een traceringsconstructie in een logboek.</p>
+<section id="situatieschets"><div class="header-wrapper"><h4 id="x3-5-1-situatieschets"><bdi class="secno">3.5.1 </bdi>Situatieschets</h4><a class="self-link" href="#situatieschets" aria-label="Permalink for Section 3.5.1"></a></div>
+<p>Een persoon heeft een parkeervergunning in een gemeente. Er is een nieuwe auto aangeschaft, het kenteken moet worden aangepast ten behoeve van de vergunning. De persoon kan het kenteken online wijzigen in de 'mijnGemeente' applicatie. Om het voorbeeld eenvoudig te houden, worden foutsituaties buiten beschouwing gelaten.</p>
+</section><section id="procesgang"><div class="header-wrapper"><h4 id="x3-5-2-procesgang"><bdi class="secno">3.5.2 </bdi>Procesgang</h4><a class="self-link" href="#procesgang" aria-label="Permalink for Section 3.5.2"></a></div>
+<ol>
+<li>Persoon logt in gemeenteapplicatie.</li>
+<li>Gemeente toont huidige parkeervergunning.</li>
+<li>Persoon wijzigt kenteken in de gemeenteapplicatie.</li>
+<li>Gemeenteapplicatie vraagt het RDW om data op basis van de tenaamstelling.</li>
+<li>RDW geeft de gevraagde data terug aan de gemeenteapplicatie.</li>
+<li>Gemeenteapplicatie accepteert de wijziging van de persoon.</li>
+</ol>
+<p>De traceringsdata worden als volgt vastgelegd:</p>
+</section><section id="processing_activity_id"><div class="header-wrapper"><h4 id="x3-5-3-processing_activity_id"><bdi class="secno">3.5.3 </bdi>processing_activity_id</h4><a class="self-link" href="#processing_activity_id" aria-label="Permalink for Section 3.5.3"></a></div>
+<p>In de gemeenteapplicatie worden de volgende Operations uitgevoerd die een relatie hebben met het Register van Verwerkingsactiviteiten van de gemeente:</p>
+<ul>
+<li><p><strong>Toon alle vergunningen</strong>: na het inloggen, worden de parkeervergunningen van de persoon getoond. Deze Operation is gerelateerd aan de processingActivity     <strong>Parkeervergunningadministratie voeren</strong>.</p>
+</li>
+<li><p><strong>Wijzig kenteken</strong>: het wijzigen van het kenteken valt ook onder de processingActivity <strong>Parkeervergunningadministratie</strong> voeren. Hierdoor is het <code>processing_activity_id</code> hetzelfde als die van de Operation <strong>Toon alle vergunningen</strong>.</p>
+</li>
+<li><p><strong>Controleer tenaamstelling:</strong> deze Operation zorgt voor de aanvraag van data richting het RDW en controle van de terugontvangen data. Deze Operation is een subOperation van <strong>Wijzig kenteken</strong> en krijgt een processingActivity wat hoort bij de processingActivity in het Register genaamd <strong>Tenaamstelling controleren</strong>. De processingActivity is op zijn beurt weer een subprocessingActivity van <strong>Parkeeradministratie voeren</strong>. Om deze relatie te leggen, moet ook een parentProcessingActivityId worden geregistreerd. De waarde hiervan is gelijk aan de waarde van het <code>processing_activity_id</code> van <strong>Parkeervergunningadministratie voeren</strong>.</p>
+</li>
+</ul>
+<p>In de RDW-applicatie wordt het verstrekken van data aan de gemeenteapplicatie ook geregistreerd. De Operation <strong>Verstrek houdergegevens</strong> is gerelateerd aan de processingActivity <strong>Kentekenhoudergegevens verstrekken</strong>. Merk op dat er hier dus GEEN directe relatie is tussen het Register van Verwerkingsactiviteiten van de gemeente en die van het RDW.</p>
+<p><img src="./media/relatie_logboekelementen_afbeelding11.svg" alt="Afbeelding voorbeeld processing_activity_id en parent_processing_activity_id bij Gemeente en RDW"></p>
+</section><section id="trace_id"><div class="header-wrapper"><h4 id="x3-5-4-trace_id"><bdi class="secno">3.5.4 </bdi>trace_id</h4><a class="self-link" href="#trace_id" aria-label="Permalink for Section 3.5.4"></a></div>
+<ul>
+<li>De gemeenteOperations <strong>Toon alle vergunningen, Wijzig kenteken en Controleer tenaamstelling</strong> behoren tot dezelfde handeling (met als eindresultaat het wijzigingen van het kenteken op de vergunning). Deze Operations krijgen allemaal dezelfde <code>trace_id</code>.</li>
+<li>De RDW-Operation <strong>Verstrek houdergegevens</strong> krijgt een eigen <code>trace_id</code>.</li>
+<li>Om het geheel te koppelen over de organisaties heen, wordt bij het RDW ook een <code>trace_id</code> opgeslagen, de waarde hier van is gelijk aan de waarde van de <code>trace_id</code> van de Operation <strong>Controleer tenaamstelling</strong>.</li>
+</ul>
+<p><img src="./media/relatie_logboekelementen_afbeelding12.svg" alt="Afbeelding voorbeeld trace_id en foreign_trace_id bij Gemeente en RDW"></p>
+</section><section id="span_id"><div class="header-wrapper"><h4 id="x3-5-5-span_id"><bdi class="secno">3.5.5 </bdi>span_id</h4><a class="self-link" href="#span_id" aria-label="Permalink for Section 3.5.5"></a></div>
+<p>In de gemeente-applicatie krijgt elke (sub)Operation een eigen, unieke <code>span_id</code>.</p>
+<ul>
+<li>De (sub)Operation <strong>Controleer tenaamstelling</strong> krijgt daarnaast ook nog een <code>parent_span_id</code> met de waarde van <code>span_id</code> van de <strong>Operation Wijzig</strong> kenteken om een relatie te leggen.</li>
+<li>Ook de RDW-Operation <strong>Verstrek houdergegevens</strong> krijgt een eigen unieke <code>span_id</code>.</li>
+<li>Om de relatie over de organisaties heen te leggen, wordt er bij de RDW-Operation <strong>Verstrek houdergegevens</strong> ook een <code>foreign_operation.span_id</code> moeten worden vastgelegd. De waarde van deze <code>foreign_operation.span_id</code> is gelijk aan de waarde van de <code>span_id</code> van de gemeente-Operation <strong>Controleer tenaamstelling</strong>.</li>
+</ul>
+<p><img src="./media/relatie_logboekelementen_afbeelding13.svg" alt="Afbeelding voorbeeld span_id, parent_span_id en foreign_span_id bij Gemeente en RDW"></p>
+</section><section id="totaalbeeld"><div class="header-wrapper"><h4 id="x3-5-6-totaalbeeld"><bdi class="secno">3.5.6 </bdi>Totaalbeeld</h4><a class="self-link" href="#totaalbeeld" aria-label="Permalink for Section 3.5.6"></a></div>
+<p>Als alle relaties gelegd zijn, ziet de traceringsconstructie er als volgt uit:</p>
+<p><img src="./media/relatie_logboekelementen_afbeelding14.svg" alt="Afbeelding Voorbeeld met alle span, trace en processing elementen"></p>
+<p>Meer gedetailleerde voorbeelden staan beschreven op <a href="https://developer.overheid.nl/kennisbank/data/standaarden/logboek-dataverwerkingen/voorbeelden">developer.overheid.nl</a>.</p>
+</section></section></section>
+
+
+
+
+<p role="navigation" id="back-to-top">
+    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+  </p><script id="respec-dfn-panel">(() => {
+// @ts-check
+if (document.respec) {
+  document.respec.ready.then(setupPanel);
+} else {
+  setupPanel();
+}
+
+function setupPanel() {
+  const listener = panelListener();
+  document.body.addEventListener("keydown", listener);
+  document.body.addEventListener("click", listener);
+}
+
+function panelListener() {
+  /** @type {HTMLElement} */
+  let panel = null;
+  return event => {
+    const { target, type } = event;
+
+    if (!(target instanceof HTMLElement)) return;
+
+    // For keys, we only care about Enter key to activate the panel
+    // otherwise it's activated via a click.
+    if (type === "keydown" && event.key !== "Enter") return;
+
+    const action = deriveAction(event);
+
+    switch (action) {
+      case "show": {
+        hidePanel(panel);
+        /** @type {HTMLElement} */
+        const dfn = target.closest("dfn, .index-term");
+        panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
+        const coords = deriveCoordinates(event);
+        displayPanel(dfn, panel, coords);
+        break;
+      }
+      case "dock": {
+        panel.style.left = null;
+        panel.style.top = null;
+        panel.classList.add("docked");
+        break;
+      }
+      case "hide": {
+        hidePanel(panel);
+        panel = null;
+        break;
+      }
+    }
+  };
+}
+
+/**
+ * @param {MouseEvent|KeyboardEvent} event
+ */
+function deriveCoordinates(event) {
+  const target = /** @type HTMLElement */ (event.target);
+
+  // We prevent synthetic AT clicks from putting
+  // the dialog in a weird place. The AT events sometimes
+  // lack coordinates, so they have clientX/Y = 0
+  const rect = target.getBoundingClientRect();
+  if (
+    event instanceof MouseEvent &&
+    event.clientX >= rect.left &&
+    event.clientY >= rect.top
+  ) {
+    // The event probably happened inside the bounding rect...
+    return { x: event.clientX, y: event.clientY };
+  }
+
+  // Offset to the middle of the element
+  const x = rect.x + rect.width / 2;
+  // Placed at the bottom of the element
+  const y = rect.y + rect.height;
+  return { x, y };
+}
+
+/**
+ * @param {Event} event
+ */
+function deriveAction(event) {
+  const target = /** @type {HTMLElement} */ (event.target);
+  const hitALink = !!target.closest("a");
+  if (target.closest("dfn:not([data-cite]), .index-term")) {
+    return hitALink ? "none" : "show";
+  }
+  if (target.closest(".dfn-panel")) {
+    if (hitALink) {
+      return target.classList.contains("self-link") ? "hide" : "dock";
+    }
+    const panel = target.closest(".dfn-panel");
+    return panel.classList.contains("docked") ? "hide" : "none";
+  }
+  if (document.querySelector(".dfn-panel:not([hidden])")) {
+    return "hide";
+  }
+  return "none";
+}
+
+/**
+ * @param {HTMLElement} dfn
+ * @param {HTMLElement} panel
+ * @param {{ x: number, y: number }} clickPosition
+ */
+function displayPanel(dfn, panel, { x, y }) {
+  panel.hidden = false;
+  // distance (px) between edge of panel and the pointing triangle (caret)
+  const MARGIN = 20;
+
+  const dfnRects = dfn.getClientRects();
+  // Find the `top` offset when the `dfn` can be spread across multiple lines
+  let closestTop = 0;
+  let minDiff = Infinity;
+  for (const rect of dfnRects) {
+    const { top, bottom } = rect;
+    const diffFromClickY = Math.abs((top + bottom) / 2 - y);
+    if (diffFromClickY < minDiff) {
+      minDiff = diffFromClickY;
+      closestTop = top;
+    }
+  }
+
+  const top = window.scrollY + closestTop + dfnRects[0].height;
+  const left = x - MARGIN;
+  panel.style.left = `${left}px`;
+  panel.style.top = `${top}px`;
+
+  // Find if the panel is flowing out of the window
+  const panelRect = panel.getBoundingClientRect();
+  const SCREEN_WIDTH = Math.min(window.innerWidth, window.screen.width);
+  if (panelRect.right > SCREEN_WIDTH) {
+    const newLeft = Math.max(MARGIN, x + MARGIN - panelRect.width);
+    const newCaretOffset = left - newLeft;
+    panel.style.left = `${newLeft}px`;
+    /** @type {HTMLElement} */
+    const caret = panel.querySelector(".caret");
+    caret.style.left = `${newCaretOffset}px`;
+  }
+
+  // As it's a dialog, we trap focus.
+  // TODO: when <dialog> becomes a implemented, we should really
+  // use that.
+  trapFocus(panel, dfn);
+}
+
+/**
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function trapFocus(panel, dfn) {
+  /** @type NodeListOf<HTMLAnchorElement> elements */
+  const anchors = panel.querySelectorAll("a[href]");
+  // No need to trap focus
+  if (!anchors.length) return;
+
+  // Move focus to first anchor element
+  const first = anchors.item(0);
+  first.focus();
+
+  const trapListener = createTrapListener(anchors, panel, dfn);
+  panel.addEventListener("keydown", trapListener);
+
+  // Hiding the panel releases the trap
+  const mo = new MutationObserver(records => {
+    const [record] = records;
+    const target = /** @type HTMLElement */ (record.target);
+    if (target.hidden) {
+      panel.removeEventListener("keydown", trapListener);
+      mo.disconnect();
+    }
+  });
+  mo.observe(panel, { attributes: true, attributeFilter: ["hidden"] });
+}
+
+/**
+ *
+ * @param {NodeListOf<HTMLAnchorElement>} anchors
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function createTrapListener(anchors, panel, dfn) {
+  const lastIndex = anchors.length - 1;
+  let currentIndex = 0;
+  return event => {
+    switch (event.key) {
+      // Hitting "Tab" traps us in a nice loop around elements.
+      case "Tab": {
+        event.preventDefault();
+        currentIndex += event.shiftKey ? -1 : +1;
+        if (currentIndex < 0) {
+          currentIndex = lastIndex;
+        } else if (currentIndex > lastIndex) {
+          currentIndex = 0;
+        }
+        anchors.item(currentIndex).focus();
+        break;
+      }
+
+      // Hitting "Enter" on an anchor releases the trap.
+      case "Enter":
+        hidePanel(panel);
+        break;
+
+      // Hitting "Escape" returns focus to dfn.
+      case "Escape":
+        hidePanel(panel);
+        dfn.focus();
+        return;
+    }
+  };
+}
+
+/** @param {HTMLElement} panel */
+function hidePanel(panel) {
+  if (!panel) return;
+  panel.hidden = true;
+  panel.classList.remove("docked");
+}
+})()</script><div class="sidelabel">Logius Praktijkrichtlijn - Consultatieversie</div><script src="https://gitdocumentatie.logius.nl/publicatie/respec/fixup.js"></script></body></html>
