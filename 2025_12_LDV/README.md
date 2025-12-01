@@ -8,7 +8,7 @@ De standaard Logboek Dataverwerkingen beschrijft een manier om technisch interop
 - het aan elkaar relateren van dataverwerkingen over de grenzen van systemen
 - Door Dataverwerkingen te loggen volgens de standaard kunnen organisaties het datagebruik verantwoorden.
 
-Met deze openbare consultatie bieden wij belanghebbenden de gelegenheid om kennis te nemen van dit besluit en te reageren op de bijbehorende documenten.
+Met deze openbare consultatie bieden wij belanghebbenden de gelegenheid om kennis te nemen van deze standaard en te reageren op de bijbehorende documenten.
 
 ## Standaard (toepassingsgebied)
 Functioneel toepassingsgebied: De standaard kan worden toegepast bij het uitvoeren van dataverwerkingen en het aan elkaar relateren van dataverwerkingen van verschillende verwerkingsverantwoordelijken.
