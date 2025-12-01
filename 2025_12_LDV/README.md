@@ -17,7 +17,7 @@ Beoogd voor de lijst "Aanbevolen standaarden" bij Forum Standaardisatie.
 
 Organisatorisch werkingsgebied: Nederlandse overheden (Rijk, provincies, gemeenten en waterschappen) en instellingen uit de (semi-) publieke sector.
 
-## Wijzigingen
+## Documenten
 Deze consultatie bevat een aantal documenten die onderdeel zijn van de LDV core-standaard die wij ter vaststelling willen aanbieden aan het [MIDO](https://www.digitaleoverheid.nl/mido/wat-is-het-mido/). Vanuit Logius vragen wij u om de LDV standaard te consulteren op de volgende vier documenten:
 - [Het normatief document](./logboek-dataverwerkingen/)
 - [De algemene inleiding](./logboek-dataverwerkingen-inleiding/)
