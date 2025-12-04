@@ -1,0 +1,1480 @@
+<!DOCTYPE html><html lang="nl"><head>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
+<meta name="generator" content="ReSpec 35.4.1">
+<style>
+dfn{cursor:pointer}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;background:var(--indextable-hover-bg,#fff);color:#000;color:var(--text,#000);box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);box-shadow:0 1em 3em -.4em var(--tocsidebar-shadow,rgba(0,0,0,.3)),0 0 1px 1px var(--tocsidebar-shadow,rgba(0,0,0,.05));border-radius:2px}
+.dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;border-bottom-color:var(--indextable-hover-bg,#fff);top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1;border-bottom-color:var(--indextable-hover-bg,#a2a9b1)}
+.dfn-panel *{margin:0}
+.dfn-panel b{display:block;color:#000;color:var(--text,#000);margin-top:.25em}
+.dfn-panel ul a[href]{color:#333;color:var(--text,#333)}
+.dfn-panel>div{display:flex}
+.dfn-panel a.self-link{font-weight:700;margin-right:auto}
+.dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
+.dfn-panel .marker.dfn-exported{background:#d1edfd;box-shadow:0 0 0 .125em #1ca5f940}
+.dfn-panel .marker.idl-block{background:#8ccbf2;box-shadow:0 0 0 .125em #0670b161}
+.dfn-panel a:not(:hover){text-decoration:none!important;border-bottom:none!important}
+.dfn-panel a[href]:hover{border-bottom-width:1px}
+.dfn-panel ul{padding:0}
+.dfn-panel li{margin-left:1em}
+.dfn-panel.docked{position:fixed;left:.5em;top:unset;bottom:2em;margin:0 auto;max-width:calc(100vw - .75em * 2 - .5em - .2em * 2);max-height:30vh;overflow:auto}
+</style>
+  
+  
+  
+<title>Logboek dataverwerkingen - Juridisch beleidskader 1.0.0</title>
+  
+<link rel="shortcut icon" type="image/x-icon" href="https://gitdocumentatie.logius.nl/publicatie/respec/style/logos/logius.ico">
+  
+
+<style id="respec-mainstyle">
+@keyframes pop{
+0%{transform:scale(1,1)}
+25%{transform:scale(1.25,1.25);opacity:.75}
+100%{transform:scale(1,1)}
+}
+a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
+a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
+a.bibref{text-decoration:none}
+.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}
+.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}
+@supports not (text-decoration:red wavy underline){
+.respec-offending-element:not(pre){display:inline-block}
+.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}
+}
+#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
+cite .bibref{font-style:italic}
+a[href].orcid{padding-left:4px;padding-right:4px}
+a[href].orcid>svg{margin-bottom:-2px}
+ol.tof,ul.tof{list-style:none outside none}
+.caption{margin-top:.5em;font-style:italic}
+#issue-summary>ul{column-count:2}
+#issue-summary li{list-style:none;display:inline-block}
+details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
+details.respec-tests-details>*{padding-right:2em}
+details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}
+details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}
+details.respec-tests-details>ul{width:100%;margin-top:-.3em}
+details.respec-tests-details>li{padding-left:1em}
+.self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
+aside.example .marker>a.self-link{color:inherit}
+.header-wrapper{display:flex;align-items:baseline;position:relative;left:-.5em}
+:is(h2,h3,h4,h5,h6):not(#toch2)+a.self-link{color:inherit;order:-1;position:relative;left:-.7em;font-size:1rem;opacity:.5}
+:is(h2,h3,h4,h5,h6)+a.self-link::before{content:"§";text-decoration:none;color:var(--heading-text)}
+:is(h2,h3)+a.self-link{top:-.2em}
+:is(h4,h5,h6)+a.self-link::before{color:#000}
+@media (max-width:767px){
+dd{margin-left:0}
+}
+@media print{
+.removeOnSave{display:none}
+}
+</style>
+<style id="respec-nlgov">
+img.license{float:left;padding-right:5px;background:0 0}
+</style>
+<meta name="color-scheme" content="light">
+<meta name="description" content="De overheid wil voor burgers en bedrijven zo transparant mogelijk zijn in de omgang met hun data. Daarom is het bij de informatieverwerking in datasets belangrijk om voor elke mutatie of raadpleging vast te leggen wie deze actie wanneer uitvoert, en waarom. Voor een optimale samenwerking over organisaties en bronnen heen is voor deze logging een algemene standaard nodig.">
+<style>
+
+  .sidelabel {
+    position: fixed;
+    -webkit-transform-origin: top right;
+    right: 100%;
+    top: 0;
+    -webkit-transform: rotate(-90deg);
+    padding: 4px 50px 4px 10px;
+    color: white;
+    white-space: nowrap;
+    z-index: 1;
+    background-color: #000000;
+  }
+</style>
+<script id="initialUserConfig" type="application/json">{
+  "nl_organisationName": "Logius",
+  "nl_organisationStylesURL": "https://gitdocumentatie.logius.nl/publicatie/respec/style/",
+  "nl_organisationPublishURL": "https://gitdocumentatie.logius.nl/publicatie/",
+  "logos": [
+    {
+      "src": "https://gitdocumentatie.logius.nl/publicatie/respec/style/logos/figure-logius.svg",
+      "alt": "Logius",
+      "id": "Logius",
+      "height": 77,
+      "width": 44,
+      "url": "https://www.logius.nl/onze-dienstverlening/standaarden"
+    }
+  ],
+  "useLogo": true,
+  "fileName": "",
+  "latestVersion": "https://logius-standaarden.github.io/logboek-dataverwerkingen-juridisch-beleidskader/",
+  "thisVersion": [
+    "nl_organisationPublishURL",
+    "pubDomain",
+    "/",
+    "shortName",
+    "/",
+    "publishVersion",
+    "/",
+    "fileName"
+  ],
+  "prevVersion": [],
+  "addSectionLinks": true,
+  "localizationStrings": {
+    "en": {
+      "wv": "Draft",
+      "cv": "Consultation version",
+      "vv": "Proposed version",
+      "def": "Definitive version",
+      "basis": "Document",
+      "eo": "Outdated version",
+      "tg": "Rescinded version",
+      "no": "Norm",
+      "st": "Standard",
+      "im": "Information model",
+      "pr": "Guideline",
+      "hr": "Guide",
+      "wa": "Proposed recommendation",
+      "al": "General",
+      "bd": "Governance documentation",
+      "bp": "Best practice"
+    },
+    "nl": {
+      "wv": "Werkversie",
+      "cv": "Consultatieversie",
+      "vv": "Versie ter vaststelling",
+      "def": "Vastgestelde versie",
+      "basis": "Document",
+      "eo": "Verouderde versie",
+      "tg": "Teruggetrokken versie",
+      "no": "Norm",
+      "st": "Standaard",
+      "im": "Informatiemodel",
+      "pr": "Praktijkrichtlijn",
+      "hr": "Handreiking",
+      "wa": "Werkafspraak",
+      "al": "Algemeen",
+      "bd": "Beheerdocumentatie",
+      "bp": "Best practice"
+    }
+  },
+  "sotdText": {
+    "nl": {
+      "sotd": "Status van dit document",
+      "cv": "Dit is een consultatieversie. We moedigen gebruikers aan om meldingen of suggesties aan te maken via GitHub. Mocht dit niet mogelijk zijn, dan kunt u ook een e-mail sturen naar api@logius.nl"
+    }
+  },
+  "labelColor": {
+    "def": "#154273",
+    "wv": "#39870c",
+    "cv": "#000000",
+    "vv": "#000000"
+  },
+  "useLabel": true,
+  "licenses": {
+    "cc0": {
+      "name": "Creative Commons 0 Public Domain Dedication",
+      "short": "CC0",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "image": "https://gitdocumentatie.logius.nl/publicatie/respec/media/logos/cc-zero.svg"
+    },
+    "cc-by": {
+      "name": "Creative Commons Attribution 4.0 International Public License",
+      "short": "CC-BY",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "image": "https://gitdocumentatie.logius.nl/publicatie/respec/media/logos/cc-by.svg"
+    },
+    "cc-by-nd": {
+      "name": "Creative Commons Naamsvermelding-GeenAfgeleideWerken 4.0 Internationaal",
+      "short": "CC-BY-ND",
+      "url": "https://creativecommons.org/licenses/by-nd/4.0/legalcode.nl",
+      "image": "https://gitdocumentatie.logius.nl/publicatie/respec/media/logos/cc-by-nd.svg"
+    }
+  },
+  "license": "cc-by",
+  "localBiblio": {
+    "ADR": {
+      "authors": [
+        "Jasper Roes",
+        "Joost Farla"
+      ],
+      "href": "https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0",
+      "publisher": "Logius",
+      "title": "API Design Rules"
+    },
+    "ADR1": {
+      "authors": [
+        "Jasper Roes",
+        "Joost Farla"
+      ],
+      "href": "https://gitdocumentatie.logius.nl/publicatie/api/adr/1.0",
+      "publisher": "Logius",
+      "title": "API Design Rules"
+    },
+    "ADR-ext": {
+      "authors": [
+        "Jasper Roes",
+        "Linda van den Brink"
+      ],
+      "date": "Januari 2020",
+      "href": "https://docs.geostandaarden.nl/api/API-Strategie-ext",
+      "publisher": "Geonovum/Kennisplatform APi's",
+      "title": "API Designrules Extensions (Nederlandse API Strategie IIb)"
+    },
+    "Algemene Voorwaarden Logius": {
+      "date": "12 juni 2018",
+      "href": "https://www.logius.nl/onze-organisatie/zakendoen-met-logius/voorwaarden/algemene-voorwaarden-logius",
+      "publisher": "Logius",
+      "title": "Algemene voorwaarden Logius"
+    },
+    "AuthZEN": {
+      "date": "6 September 2024 ",
+      "href": "https://openid.net/specs/authorization-api-1_0-01.html",
+      "publisher": "OpenID",
+      "title": "Authorization API 1.0 – draft 01"
+    },
+    "AVG": {
+      "date": "27 april 2016",
+      "href": "https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX%3A32016R0679",
+      "publisher": "Verordening (EU) 2016/679 van het Europees Parlement",
+      "title": "Algemene Verordening Gegevensbescherming"
+    },
+    "BCP195": {
+      "authors": [
+        "Y. Sheffer",
+        "R. Holz",
+        "P. Saint-Andre"
+      ],
+      "date": "May 2015",
+      "href": "https://tools.ietf.org/html/bcp195",
+      "publisher": "IETF",
+      "title": "Recommendations for Secure Use of Transport Layer Security (TLS) and Datagram Transport Layer Security (DTLS)"
+    },
+    "DK-beveiliging": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/dk/beveilig/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Beveiligingsstandaarden en voorschriften"
+    },
+    "CloudEvents": {
+      "authors": [
+        "@@@"
+      ],
+      "date": "May 2011",
+      "href": "https://github.com/cloudevents/spec/blob/v1.0.1/spec.md",
+      "publisher": "@@@",
+      "title": "CloudEvents - Version 1.0.1"
+    },
+    "NLGOV-CloudEvents": {
+      "authors": [
+        "Werkgroep Berichtenstandaard (Project Notificatieservices)"
+      ],
+      "href": "https://logius-standaarden.github.io/NL-GOV-profile-for-CloudEvents/",
+      "publisher": "Logius",
+      "title": "NL GOV profile for CloudEvents"
+    },
+    "DK-CV": {
+      "href": "https://gitlab.com/logius/digikoppeling-compliance",
+      "publisher": "Logius",
+      "title": "Digikoppeling Compliance Voorziening"
+    },
+    "DK-Portaal": {
+      "href": "https://oinregister.logius.nl/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Portaal"
+    },
+    "DK-WUS-voorbeeld": {
+      "href": "https://www.logius.nl/sites/default/files/public/bestanden/diensten/DigiKoppeling/Overig/Digikoppeling-Koppelvlakstandaard-WUS-Voorbeeldberichten.zip",
+      "publisher": "Logius",
+      "title": "Set voorbeeldberichten (zip)"
+    },
+    "Deployment Guide 1.1": {
+      "authors": [
+        "Pete Wenzel",
+        "Jacques Durand"
+      ],
+      "date": "June 2005",
+      "href": "http://www.oasis-open.org/apps/org/workgroup/ebxml-iic-deployment-profile-template-intro-100406.doc",
+      "publisher": "OASIS",
+      "title": "Deployment Profile Template For OASIS ebXML Message Service 2.0"
+    },
+    "DK": {
+      "href": "https://www.logius.nl/domeinen/gegevensuitwisseling/digikoppeling",
+      "publisher": "Logius",
+      "title": "Logius | Digikoppeling"
+    },
+    "DK-Doc": {
+      "href": "https://www.logius.nl/domeinen/gegevensuitwisseling/digikoppeling/documentatie",
+      "publisher": "Logius",
+      "title": "Digikoppeling documentatie"
+    },
+    "DK-Beheermodel": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/dk/beheer/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Beheermodel"
+    },
+    "DK-BPebMS": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/dk/bpebms/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Best Practices ebMS2"
+    },
+    "DK-BPGB": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/dk/bpgb/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Best Practices Grote Berichten"
+    },
+    "DK-BPWUS": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/dk/bpwus/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Best Practices WUS"
+    },
+    "DK-Beveiliging": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/dk/beveilig/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Beveiligingsstandaarden en voorschriften"
+    },
+    "DK-gbachtcert": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/dk/ebms/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Koppelvlakstandaard ebMS2"
+    },
+    "DK-ebMS": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/dk/ebms/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Koppelvlakstandaard ebMS2"
+    },
+    "DK-GB": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/dk/gb/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Koppelvlakstandaard Grote Berichten"
+    },
+    "DK-WUS": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/dk/wus/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Koppelvlakstandaard WUS"
+    },
+    "DK-RESTAPI": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/dk/restapi/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Koppelvlakstandaard REST-API"
+    },
+    "DK-Architectuur": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/dk/architectuur/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Architectuur"
+    },
+    "DK-IDAuth": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/dk/idauth/",
+      "publisher": "Logius",
+      "title": "Digikoppeling Identificatie en Authenticatie"
+    },
+    "DK-WI": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/dk/watisdk/",
+      "publisher": "Logius",
+      "title": "Wat is Digikoppeling?"
+    },
+    "BOMOSFundament": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/bomos/fundament/",
+      "date": "2 november 2023",
+      "publisher": "Logius",
+      "title": "BOMOS, het fundament"
+    },
+    "BOMOSVerdieping": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/bomos/verdieping/",
+      "date": "2 november 2023",
+      "publisher": "Logius",
+      "title": "BOMOS, de verdieping"
+    },
+    "ebCPP": {
+      "authors": [
+        "Oasis"
+      ],
+      "date": "september 2002",
+      "href": "http://www.ebxml.org/specs/ebcpp-2.0.pdf",
+      "publisher": "Oasis",
+      "title": "Collaboration-Protocol Profile and Agreement Specification Version 2.0"
+    },
+    "ebMS3": {
+      "authors": [
+        "Ian Jones",
+        "Pete Wenzel"
+      ],
+      "date": "October 2007",
+      "href": "https://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/os/ebms_core-3.0-spec-os.html",
+      "publisher": "Oasis",
+      "title": "Collaboration-Protocol Profile and Agreement Specification Version 2.0"
+    },
+    "eDelivery API4IPS": {
+      "authors": [
+        "J. Dimitriou, V. Veduta, B. Dumitriu"
+      ],
+      "date": "sept 8 2022",
+      "href": "https://ec.europa.eu/digital-building-blocks/wikis/display/EDELCOMMUNITY/Project+deliverables",
+      "publisher": "OpenID foundation",
+      "title": "(ISA2).(eDelivery).(Piloting a REST API extension of CEF eDelivery).(ISA² IPS REST API Profile).(v1.0).pdf"
+    },
+    "Expert": {
+      "authors": [
+        "@@@"
+      ],
+      "date": "@@@",
+      "href": "https://www.forumstandaardisatie.nl/sites/bfs/files/@@@.pdf",
+      "publisher": "Forum Standaardisatie",
+      "title": "Expertadvies CloudEvents 1.0"
+    },
+    "folmer2011": {
+      "href": "https://research.utwente.nl/en/publications/management-and-development-model-for-open-standards-bomos-version",
+      "title": "Management and Development Model for Open Standards (BOMOS) version 2",
+      "keywords": "IR-76837",
+      "authors": [
+        "ErwinFolmer",
+        "Matthijs Punter"
+      ],
+      "date": "2011",
+      "language": "English",
+      "publisher": "Programmabureau NOiV"
+    },
+    "folmer2012": {
+      "href": "https://research.utwente.nl/en/publications/quality-of-semantic-standards",
+      "title": "Quality of Semantic Standards",
+      "authors": [
+        "Erwin Folmer"
+      ],
+      "date": "2012",
+      "publisher": "Universiteit Twente"
+    },
+    "DK-Gebruiksvoorwaarden": {
+      "date": "1 januari 2021",
+      "href": "https://www.logius.nl/domeinen/gegevensuitwisseling/digikoppeling/documentatie/gebruiksvoorwaarden-digikoppeling",
+      "publisher": "Logius",
+      "title": "Gebruiksvoorwaarden Digikoppeling"
+    },
+    "ADR-GEO": {
+      "authors": [
+        "L. van den Brink, P. Bresters, P. van Genuchten, G. Mathijssen, M. Strijker"
+      ],
+      "date": "March 07, 2024",
+      "href": "https://gitdocumentatie.logius.nl/publicatie/api/mod-geo/",
+      "publisher": "Geonovum",
+      "title": "API Design Rules Module: Geospatial"
+    },
+    "HTTPS-factsheet NCSC": {
+      "date": "Nov 2014",
+      "href": "https://www.ncsc.nl/documenten/factsheets/2019/juni/01/factsheet-https-kan-een-stuk-veiliger",
+      "publisher": "NCSC",
+      "title": "Factsheet HTTPS kan een stuk veiliger"
+    },
+    "iGOV.OpenID": {
+      "authors": [
+        "M. Varley, P. Grassi"
+      ],
+      "date": "October 5 2018",
+      "href": "https://openid.net/specs/openid-igov-openid-connect-1_0.html",
+      "publisher": "OpenID foundation",
+      "title": "International Government Assurance Profile (iGov) for OpenID Connect 1.0 - draft 3"
+    },
+    "NLGOV.OpenID": {
+      "authors": [
+        "Remco Schaar, Frank van Es, Joris Joosten, Jan Geert Koops"
+      ],
+      "href": "https://gitdocumentatie.logius.nl/publicatie/api/oidc/",
+      "publisher": "Logius",
+      "title": "OpenID NLGov"
+    },
+    "Introspection": {
+      "authors": [
+        "J. Richer"
+      ],
+      "date": "October 2015",
+      "href": "https://tools.ietf.org/html/rfc7662",
+      "publisher": "IETF",
+      "title": "OAuth 2.0 Token Introspection"
+    },
+    "JWA": {
+      "authors": [
+        "M. Jones"
+      ],
+      "date": "may 2015",
+      "href": "https://tools.ietf.org/html/rfc7518",
+      "publisher": "IETF",
+      "title": "JSON Web Algorithms (JWA)"
+    },
+    "JWE": {
+      "authors": [
+        "M. Jones, J. Hildebrand"
+      ],
+      "date": "may 2015",
+      "href": "https://tools.ietf.org/html/rfc7516",
+      "publisher": "IETF",
+      "title": "JSON Web Encryption (JWE)"
+    },
+    "JWK": {
+      "authors": [
+        "M. Jones"
+      ],
+      "date": "may 2015",
+      "href": "https://tools.ietf.org/html/rfc7517",
+      "publisher": "IETF",
+      "title": "JSON Web Key (JWK))"
+    },
+    "JWS": {
+      "authors": [
+        "M. Jones, J. Bradley, N. Sakimura"
+      ],
+      "date": "may 2015",
+      "href": "https://tools.ietf.org/html/rfc7515",
+      "publisher": "IETF",
+      "title": "JSON Web Signature (JWS)"
+    },
+    "JWT": {
+      "authors": [
+        "M. Jones, J. Bradley, N. Sakimura"
+      ],
+      "date": "may 2015",
+      "href": "https://tools.ietf.org/html/rfc7519",
+      "publisher": "IETF",
+      "title": "JSON Web Token (JWT)"
+    },
+    "NCSC 2019": {
+      "date": "April 2019",
+      "href": "https://www.ncsc.nl/documenten/publicaties/2019/mei/01/ict-beveiligingsrichtlijnen-voor-transport-layer-security-tls",
+      "publisher": "NCSC",
+      "title": "ICT-beveiligingsrichtlijnen voor Transport Layer Security (TLS) v2.0"
+    },
+    "NCSC 2021": {
+      "date": "Jan 2021",
+      "href": "https://www.ncsc.nl/documenten/publicaties/2021/januari/19/ict-beveiligingsrichtlijnen-voor-transport-layer-security-2.1",
+      "publisher": "NCSC",
+      "title": "ICT-beveiligingsrichtlijnen voor Transport Layer Security (TLS) v2.1"
+    },
+    "NCSC 2025": {
+      "date": "June 2025",
+      "href": "https://www.ncsc.nl/wat-kun-je-zelf-doen/documenten/publicaties/2025/juni/01/ict-beveiligingsrichtlijnen-voor-transport-layer-security-2025-05",
+      "publisher": "NCSC",
+      "title": "ICT-beveiligingsrichtlijnen voor Transport Layer Security (TLS) v2.1"
+    },
+    "NEN3610": {
+      "authors": [
+        ""
+      ],
+      "date": "Maart 2011",
+      "href": "https://www.nen.nl/nen-3610-2011-a1-2016-nl-217738",
+      "publisher": "Nederlands Normalisatie-instituut",
+      "title": "Basismodel Geo-informatie - Termen, definities, relaties en algemene regels voor de uitwisseling van informatie over aan de aarde gerelateerde ruimtelijke objecten"
+    },
+    "no-Reliable-messaging": {
+      "authors": [
+        "Marc de Graauw"
+      ],
+      "date": "June 18, 2010",
+      "href": "https://www.infoq.com/articles/no-reliable-messaging/",
+      "publisher": "infoQ",
+      "title": "Nobody Needs Reliable Messaging"
+    },
+    "OAuth2": {
+      "authors": [
+        "D. Hardt"
+      ],
+      "date": "October 2012",
+      "href": "https://tools.ietf.org/html/rfc6749",
+      "publisher": "The Internet Engineering Task Force",
+      "title": "The OAuth 2.0 Authorization Framework"
+    },
+    "OpenID.Core": {
+      "authors": [
+        "N. Sakimura, J. Bradley, M. Jones, B. de Medeiros, C. Mortimore"
+      ],
+      "date": "November 8 2014",
+      "href": "https://openid.net/specs/openid-connect-core-1_0.html",
+      "publisher": "OpenID foundation",
+      "title": "OpenID Connect Core 1.0"
+    },
+    "OpenID.Discovery": {
+      "authors": [
+        "N. Sakimura, J. Bradley, M. Jones, E. Jay"
+      ],
+      "date": "November 8 2014",
+      "href": "https://openid.net/specs/openid-connect-discovery-1_0.html",
+      "publisher": "OpenID foundation",
+      "title": "OpenID Connect Discovery 1.0"
+    },
+    "Pas-toe-of-leg-uit": {
+      "href": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht",
+      "publisher": "Forum Standaardisatie",
+      "title": "Lijst Verplichte standaarden"
+    },
+    "PKIO-PvE": {
+      "href": "https://por.pkioverheid.nl/",
+      "publisher": "Logius",
+      "title": "Certificate Policy/Programme of Requirements PKIoverheid"
+    },
+    "PKI-CA": {
+      "href": "https://www.logius.nl/domeinen/toegang/aansluiten-als-trust-service-provider",
+      "publisher": "Logius",
+      "title": "Aansluiten als Trust Service Provider"
+    },
+    "PKIoverheid": {
+      "href": "https://www.logius.nl/domeinen/toegang/pkioverheid",
+      "publisher": "Logius",
+      "title": "PKIoverheid"
+    },
+    "PKIO-Cert": {
+      "href": "https://cert.pkioverheid.nl/",
+      "publisher": "Logius",
+      "title": "Overzicht PKIoverheid certificaten"
+    },
+    "SemVer": {
+      "authors": [
+        "T. Preston-Werner"
+      ],
+      "date": "June 2013",
+      "href": "https://semver.org",
+      "title": "Semantic Versioning 2.0.0"
+    },
+    "ADR-TS": {
+      "authors": [
+        ""
+      ],
+      "date": "March 07, 2024",
+      "href": "https://gitdocumentatie.logius.nl/publicatie/api/mod-ts/",
+      "publisher": "Kennisplatform API's",
+      "title": "API Design Rules Module: Transport Security"
+    },
+    "UMMR10": {
+      "authors": [
+        ""
+      ],
+      "date": "2001",
+      "href": "https://unece.org/DAM/cefact/umm/UMM_Revision_10_2001.zip",
+      "publisher": "UN/CEFACT",
+      "title": "UMM Revision 10"
+    },
+    "UMMUG": {
+      "authors": [
+        ""
+      ],
+      "date": "2003",
+      "href": "https://www.unece.org/fileadmin/DAM/cefact/umm/UMM_userguide_220606.pdf",
+      "publisher": "UN/CEFACT",
+      "title": "UN/CEFACT Modeling Methodology (UMM) User Guide"
+    },
+    "UUID": {
+      "authors": [
+        "P. Leach",
+        "M. Mealling",
+        "R. Salz"
+      ],
+      "date": "July 2005",
+      "href": "https://tools.ietf.org/html/rfc4122",
+      "publisher": "The Internet Engineering Task Force",
+      "title": "A Universally Unique IDentifier (UUID) URN Namespace"
+    },
+    "DK-Voorwaarden": {
+      "date": "1 januari 2021",
+      "href": "https://www.logius.nl/domeinen/gegevensuitwisseling/digikoppeling/documentatie/voorwaarden-digikoppeling",
+      "publisher": "Logius",
+      "title": "Voorwaarden Digikoppeling"
+    },
+    "X520": {
+      "href": "https://www.iso.org/standard/43796.html",
+      "publisher": "ISO",
+      "title": "ITU-T Recommendation X.520 (2001) ISO/IEC 9594-6"
+    },
+    "ADR-Validator": {
+      "href": "https://gitlab.com/commonground/don/adr-validator/-/tree/v0.5.0/pkg/rulesets",
+      "title": "Technical ADR Validation rule testset 0.5.0",
+      "authors": [
+        "H. Stijns"
+      ],
+      "publisher": "Geonovum",
+      "date": "November 2023"
+    },
+    "JRC117836": {
+      "href": "https://op.europa.eu/en/publication-detail/-/publication/6521f427-01df-11ea-8c1f-01aa75ed71a1",
+      "title": "The Relationship Between Open Source Software and Standard Setting",
+      "authors": [
+        "Knut Blind",
+        "Mirko Böhm"
+      ],
+      "editors": [
+        "Nikolaus Thumm"
+      ],
+      "publisher": "Joint Research Center",
+      "id": "JRC117836",
+      "date": "2019"
+    },
+    "Krechmer2002": {
+      "href": "https://www.isology.com/pdf/cathedrals.pdf",
+      "title": "Cathedrals, Libraries and Bazaars",
+      "authors": [
+        "Ken Krechmer"
+      ],
+      "publisher": "Association of Computing Machinery (ACM)",
+      "date": "March 2002"
+    },
+    "FSC-Core": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/fsc/core/1.0.0/",
+      "title": "FSC - Core",
+      "authors": [
+        "Eelco Hotting",
+        "Ronald Koster",
+        "Henk van Maanen",
+        "Niels Dequeker",
+        "Edward van Gelderen",
+        "Pim Gaemers"
+      ],
+      "publisher": "Logius"
+    },
+    "FSC-Logging": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/fsc/logging/1.0.0/",
+      "title": "FSC - Logging",
+      "authors": [
+        "Eelco Hotting",
+        "Ronald Koster",
+        "Henk van Maanen",
+        "Niels Dequeker",
+        "Edward van Gelderen",
+        "Pim Gaemers"
+      ],
+      "publisher": "Logius"
+    },
+    "HEART.OAuth2": {
+      "authors": [
+        "J. Richer"
+      ],
+      "date": "April 25, 2017",
+      "href": "https://openid.net/specs/openid-heart-oauth2-1_0.html",
+      "publisher": "OpenID foundation",
+      "title": "Health Relationship Trust Profile for OAuth 2.0"
+    },
+    "JWS.JWE.Algs": {
+      "authors": [
+        "Jim Schaad, Jeff Hodges, Joe Hildebrand, Sean Turner"
+      ],
+      "date": "",
+      "href": "https://www.iana.org/assignments/jose/jose.xhtml#web-signature-encryption-algorithms",
+      "publisher": "IANA",
+      "title": "IANA JSON Web Signatures and Encryption Algorithms registry"
+    },
+    "I-D.ietf-oauth-pop-architecture": {
+      "authors": [
+        "P. Hunt, J. Richer, W. Mills, P. Mishra, H. Tschofenig"
+      ],
+      "date": "July 8, 2016",
+      "href": "https://tools.ietf.org/html/draft-ietf-oauth-pop-architecture-08",
+      "publisher": "IETF",
+      "title": "OAuth 2.0 Proof-of-Possession (PoP) Security Architecture"
+    },
+    "iGOV.OAuth2": {
+      "authors": [
+        "J. Richer, M. Varley, P. Grassi"
+      ],
+      "date": "October 5 2018",
+      "href": "https://openid.net/specs/openid-igov-oauth2-1_0-03.html",
+      "publisher": "OpenID foundation",
+      "title": "International Government Assurance Profile (iGov) for OAuth 2.0"
+    },
+    "NLGOV.OAuth2": {
+      "href": "https://gitdocumentatie.logius.nl/publicatie/api/oauth/",
+      "publisher": "Logius",
+      "title": "NL GOV Assurance profile for OAuth 2.0"
+    },
+    "ietf-oauth-v2-1-10-refresh-token-grant": {
+      "authors": [
+        "Dick Hardt, Aaron Parecki, Torsten Lodderstedt"
+      ],
+      "date": "January 9, 2024",
+      "href": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1-10#name-refresh-token-grant",
+      "publisher": "IETF",
+      "title": "The OAuth 2.1 Authorization Framework: Refresh Token Grant"
+    },
+    "OpenID.FAPI2.0": {
+      "authors": [
+        "D. Fett, D. Tonge, J. Heenan"
+      ],
+      "date": "February 22 2025",
+      "href": "https://openid.net/specs/fapi-security-profile-2_0-final.html",
+      "publisher": "OpenID foundation",
+      "title": "FAPI 2.0 Security Profile"
+    },
+    "logboek-extensie-guideline": {
+      "href": "https://logius-standaarden.github.io/logboek-extensie-template/",
+      "publisher": "Logius",
+      "title": "LDV Extensie Guideline"
+    },
+    "logboek dataverwerkingen": {
+      "href": "https://logius-standaarden.github.io/logboek-dataverwerkingen/",
+      "publisher": "Logius",
+      "title": "Logboek Dataverwerkingen"
+    }
+  },
+  "specStatus": "CV",
+  "specType": "PR",
+  "pubDomain": "logboek",
+  "shortName": "juridisch",
+  "publishDate": "2025-11-27",
+  "publishVersion": "1.0.0",
+  "edDraftURI": "https://logius-standaarden.github.io/logboek-dataverwerkingen-juridisch-beleidskader/",
+  "editors": [
+    {
+      "name": "Vedran Bilanovic",
+      "company": "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties",
+      "companyURL": "https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties"
+    },
+    {
+      "name": "Eelco Hotting",
+      "company": "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties",
+      "companyURL": "https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties"
+    },
+    {
+      "name": "Jeroen Mulder",
+      "company": "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties",
+      "companyURL": "https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties"
+    },
+    {
+      "name": "Pieter Teekens",
+      "company": "Ministerie van Binnelandse Zaken en Koninkrijksrelaties",
+      "companyURL": "https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties"
+    },
+    {
+      "name": "Nil Barua",
+      "company": "Logius",
+      "companyURL": "https://logius.nl"
+    },
+    {
+      "name": "Martin van der Plas",
+      "company": "Logius",
+      "companyURL": "https://logius.nl"
+    },
+    {
+      "name": "Tim van der Lippe",
+      "company": "Logius",
+      "companyURL": "https://logius.nl"
+    }
+  ],
+  "authors": [
+    {
+      "name": "Wouter Diephuis",
+      "company": "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties",
+      "companyURL": "https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties"
+    },
+    {
+      "name": "Mirian van Ansem",
+      "company": "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties",
+      "companyURL": "https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties"
+    }
+  ],
+  "github": "https://github.com/Logius-standaarden/logboek-dataverwerkingen-juridisch-beleidskader",
+  "preProcess": [
+    null,
+    null
+  ]
+}</script>
+<link rel="stylesheet" href="https://gitdocumentatie.logius.nl/publicatie/respec/style/base.css"></head>
+
+<body class="h-entry toc-inline"><div class="head">
+    <a class="logo" href="https://www.logius.nl/onze-dienstverlening/standaarden"><img alt="Logius" height="77" id="Logius" src="https://gitdocumentatie.logius.nl/publicatie/respec/style/logos/figure-logius.svg" width="44">
+  </a> <h1 id="title" class="title">Logboek dataverwerkingen - Juridisch beleidskader 1.0.0</h1>
+    
+    <h2>
+      Logius Praktijkrichtlijn<br>
+      Consultatieversie
+      <time class="dt-published" datetime="2025-11-27">27 november 2025</time>
+    </h2>
+    <dl>
+      <dt>Deze versie:</dt><dd class="status">
+              <a class="u-url status" href="https://gitdocumentatie.logius.nl/publicatie/logboek/juridisch/1.0.0/">https://gitdocumentatie.logius.nl/publicatie/logboek/juridisch/1.0.0/</a>
+            </dd>
+      <dt>Laatst gepubliceerde versie:</dt><dd>
+              <a href="https://logius-standaarden.github.io/logboek-dataverwerkingen-juridisch-beleidskader/">https://logius-standaarden.github.io/logboek-dataverwerkingen-juridisch-beleidskader/</a>
+            </dd>
+      <dt>Laatste werkversie:</dt><dd><a href="https://logius-standaarden.github.io/logboek-dataverwerkingen-juridisch-beleidskader/">https://logius-standaarden.github.io/logboek-dataverwerkingen-juridisch-beleidskader/</a></dd>
+      
+      
+      
+      
+      
+      <dt>Redacteurs:</dt>
+      <dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Vedran Bilanovic</span> (<a class="p-org org h-org" href="https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties">Ministerie van Binnenlandse Zaken en Koninkrijksrelaties</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Eelco Hotting</span> (<a class="p-org org h-org" href="https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties">Ministerie van Binnenlandse Zaken en Koninkrijksrelaties</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Jeroen Mulder</span> (<a class="p-org org h-org" href="https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties">Ministerie van Binnenlandse Zaken en Koninkrijksrelaties</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Pieter Teekens</span> (<a class="p-org org h-org" href="https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties">Ministerie van Binnelandse Zaken en Koninkrijksrelaties</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Nil Barua</span> (<a class="p-org org h-org" href="https://logius.nl">Logius</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Martin van der Plas</span> (<a class="p-org org h-org" href="https://logius.nl">Logius</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Tim van der Lippe</span> (<a class="p-org org h-org" href="https://logius.nl">Logius</a>)
+  </dd>
+      
+      <dt>Auteurs:</dt><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Wouter Diephuis</span> (<a class="p-org org h-org" href="https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties">Ministerie van Binnenlandse Zaken en Koninkrijksrelaties</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Mirian van Ansem</span> (<a class="p-org org h-org" href="https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties">Ministerie van Binnenlandse Zaken en Koninkrijksrelaties</a>)
+  </dd>
+      <dt>Doe mee:</dt><dd>
+    <a href="https://github.com/Logius-standaarden/logboek-dataverwerkingen-juridisch-beleidskader/">GitHub Logius-standaarden/logboek-dataverwerkingen-juridisch-beleidskader</a>
+  </dd><dd>
+    <a href="https://github.com/Logius-standaarden/logboek-dataverwerkingen-juridisch-beleidskader/issues/">Dien een melding in</a>
+  </dd><dd>
+    <a href="https://github.com/Logius-standaarden/logboek-dataverwerkingen-juridisch-beleidskader/commits/">Revisiehistorie</a>
+  </dd><dd>
+    <a href="https://github.com/Logius-standaarden/logboek-dataverwerkingen-juridisch-beleidskader/pulls/">Pull requests</a>
+  </dd>
+    </dl>
+    
+    
+    <p>
+          Dit document is ook beschikbaar in dit niet-normatieve formaat:
+          <a rel="alternate" href="logboek-juridisch-1.0.0.pdf">PDF</a>
+        </p>
+    <p class="copyright">
+            Dit document valt onder de volgende licentie: 
+            <a rel="license" href="https://creativecommons.org/licenses/by/4.0/legalcode" class="subfoot"><img class="license" src="https://gitdocumentatie.logius.nl/publicatie/respec/media/logos/cc-by.svg" alt="Logo Creative Commons Attribution 4.0 International Public License"><br> Creative Commons Attribution 4.0 International Public License</a>
+          </p>
+    <hr title="Separator for header">
+  </div><section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is een consultatieversie. We moedigen gebruikers aan om meldingen of suggesties aan te maken via GitHub. Mocht dit niet mogelijk zijn, dan kunt u ook een e-mail sturen naar api@logius.nl</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#conformance">Conformiteit</a></li><li class="tocline"><a class="tocxref" href="#abstract">Context bij de standaard</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#verwijzingen">Verwijzingen</a></li></ol></li><li class="tocline"><a class="tocxref" href="#inleiding"><bdi class="secno">1. </bdi>Inleiding</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#scope-van-dit-verantwoordingsdocument"><bdi class="secno">1.1 </bdi>Scope van dit verantwoordingsdocument</a></li><li class="tocline"><a class="tocxref" href="#de-overheid-moet-zich-verantwoorden-over-de-uitvoering-van-haar-taken"><bdi class="secno">1.2 </bdi>De overheid moet zich verantwoorden over de uitvoering van haar taken</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#algemene-verplichtingen-tot-verantwoording"><bdi class="secno">1.2.1 </bdi>Algemene verplichtingen tot verantwoording</a></li><li class="tocline"><a class="tocxref" href="#specifieke-verantwoording"><bdi class="secno">1.2.2 </bdi>Specifieke verantwoording</a></li></ol></li><li class="tocline"><a class="tocxref" href="#de-overheid-verwerkt-voor-haar-taken-informatie"><bdi class="secno">1.3 </bdi>De overheid verwerkt voor haar taken informatie</a></li><li class="tocline"><a class="tocxref" href="#de-overheid-moet-zich-kunnen-verantwoorden-over-de-wijze-waarop-informatie-wordt-verwerkt"><bdi class="secno">1.4 </bdi>De overheid moet zich kunnen verantwoorden over de wijze waarop informatie wordt verwerkt</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informatie-als-middel-om-te-verantwoorden"><bdi class="secno">1.4.1 </bdi>Informatie als middel om te verantwoorden</a></li><li class="tocline"><a class="tocxref" href="#verantwoording-over-de-rechtmatige-verwerking-van-informatie"><bdi class="secno">1.4.2 </bdi>Verantwoording over de rechtmatige verwerking van informatie</a></li></ol></li><li class="tocline"><a class="tocxref" href="#belang-van-goede-verantwoording-en-verbetering-daarvan"><bdi class="secno">1.5 </bdi>Belang van goede verantwoording en verbetering daarvan</a></li><li class="tocline"><a class="tocxref" href="#tussenconclusie"><bdi class="secno">1.6 </bdi>Tussenconclusie</a></li></ol></li><li class="tocline"><a class="tocxref" href="#verschillende-overheidsorganisaties-en-eenduidige-verantwoording"><bdi class="secno">2. </bdi>Verschillende overheidsorganisaties en eenduidige verantwoording</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#inrichting-van-de-overheid-divers-en-verschillend"><bdi class="secno">2.1 </bdi>Inrichting van de overheid: divers en verschillend</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#verschillen-in-verantwoordelijkheden-taken"><bdi class="secno">2.1.1 </bdi>Verschillen in verantwoordelijkheden, taken</a></li><li class="tocline"><a class="tocxref" href="#verschillende-taken-en-verantwoordingsplichten"><bdi class="secno">2.1.2 </bdi>Verschillende taken en verantwoordingsplichten</a></li><li class="tocline"><a class="tocxref" href="#verschillende-informatieverwerkingen"><bdi class="secno">2.1.3 </bdi>Verschillende informatieverwerkingen</a></li></ol></li><li class="tocline"><a class="tocxref" href="#eenduidige-verantwoording"><bdi class="secno">2.2 </bdi>Eenduidige verantwoording</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#verantwoordingsplicht"><bdi class="secno">2.2.1 </bdi>Verantwoordingsplicht</a></li></ol></li><li class="tocline"><a class="tocxref" href="#tussenconclusie-0"><bdi class="secno">2.3 </bdi>Tussenconclusie</a></li></ol></li><li class="tocline"><a class="tocxref" href="#logging-als-verantwoordingsinstrument"><bdi class="secno">3. </bdi>Logging als verantwoordingsinstrument</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kaders-voor-logging-per-organisatie"><bdi class="secno">3.1 </bdi>Kaders voor logging per organisatie</a></li><li class="tocline"><a class="tocxref" href="#kaders-voor-logging-tussen-organisaties-onderling"><bdi class="secno">3.2 </bdi>Kaders voor logging tussen organisaties onderling</a></li><li class="tocline"><a class="tocxref" href="#soorten-logging"><bdi class="secno">3.3 </bdi>Soorten logging</a></li><li class="tocline"><a class="tocxref" href="#tussenconclusie-1"><bdi class="secno">3.4 </bdi>Tussenconclusie</a></li></ol></li><li class="tocline"><a class="tocxref" href="#eenduidige-verantwoording-en-logging-ten-behoeve-van-de-uitvoering-van-verplichtingen"><bdi class="secno">4. </bdi>Eenduidige verantwoording en logging ten behoeve van de uitvoering van verplichtingen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#overheidsbreed-verantwoorden-is-samenwerken"><bdi class="secno">4.1 </bdi>Overheidsbreed verantwoorden is samenwerken</a></li><li class="tocline"><a class="tocxref" href="#informatieverplichtingen"><bdi class="secno">4.2 </bdi>Informatieverplichtingen</a></li><li class="tocline"><a class="tocxref" href="#informatieverplichtingen-in-de-avg"><bdi class="secno">4.3 </bdi>Informatieverplichtingen in de AVG</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#recht-op-informatie-bij-verzamelen-persoonsdata"><bdi class="secno">4.3.1 </bdi>Recht op informatie (bij verzamelen persoonsdata)</a></li><li class="tocline"><a class="tocxref" href="#actieve-informatieplicht-recht-op-informatie-bij-verzamelen-art-13-en-14-avg"><bdi class="secno">4.3.2 </bdi>Actieve informatieplicht (recht op informatie bij verzamelen, art. 13 en 14 AVG)</a></li><li class="tocline"><a class="tocxref" href="#inzagerecht-art-15-avg"><bdi class="secno">4.3.3 </bdi>Inzagerecht (art. 15 AVG)</a></li><li class="tocline"><a class="tocxref" href="#correctierecht"><bdi class="secno">4.3.4 </bdi>Correctierecht</a></li><li class="tocline"><a class="tocxref" href="#beperkingen-op-informatieplichten"><bdi class="secno">4.3.5 </bdi>Beperkingen op informatieplichten</a></li><li class="tocline"><a class="tocxref" href="#inbreuken-op-persoonsgegevens-datalekken-en-melding"><bdi class="secno">4.3.6 </bdi>Inbreuken op persoonsgegevens (datalekken) en melding</a></li></ol></li><li class="tocline"><a class="tocxref" href="#zorgvuldigheidsverplichtingen"><bdi class="secno">4.4 </bdi>Zorgvuldigheidsverplichtingen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#inleiding-0"><bdi class="secno">4.4.1 </bdi>Inleiding</a></li><li class="tocline"><a class="tocxref" href="#belanghebbenden-burgers-en-bedrijven"><bdi class="secno">4.4.2 </bdi>Belanghebbenden: burgers en bedrijven</a></li><li class="tocline"><a class="tocxref" href="#zorgvuldige-voorbereiding-en-belangenafweging"><bdi class="secno">4.4.3 </bdi>Zorgvuldige voorbereiding en belangenafweging</a></li><li class="tocline"><a class="tocxref" href="#motiveringsbeginsel"><bdi class="secno">4.4.4 </bdi>Motiveringsbeginsel</a></li><li class="tocline"><a class="tocxref" href="#de-beginselen-in-de-context-van-verwerkingenlogging"><bdi class="secno">4.4.5 </bdi>De beginselen in de context van verwerkingenlogging</a></li></ol></li><li class="tocline"><a class="tocxref" href="#informatiebeveiligingsverplichtingen"><bdi class="secno">4.5 </bdi>Informatiebeveiligingsverplichtingen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#baseline-informatiebeveiliging-overheid-bio"><bdi class="secno">4.5.1 </bdi>Baseline Informatiebeveiliging Overheid (BIO)</a></li><li class="tocline"><a class="tocxref" href="#toegangsbeveiliging-en-beheer"><bdi class="secno">4.5.2 </bdi>Toegangsbeveiliging en beheer</a></li></ol></li><li class="tocline"><a class="tocxref" href="#verantwoordingsbehoeften-van-toezichthouders"><bdi class="secno">4.6 </bdi>Verantwoordingsbehoeften van toezichthouders</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#verantwoording-over-verschillende-onderwerpen"><bdi class="secno">4.6.1 </bdi>Verantwoording over verschillende onderwerpen</a></li></ol></li><li class="tocline"><a class="tocxref" href="#tussenconclusie-2"><bdi class="secno">4.7 </bdi>Tussenconclusie</a></li></ol></li><li class="tocline"><a class="tocxref" href="#eenduidigheid-bevorderen-is-standaardiseren"><bdi class="secno">5. </bdi>Eenduidigheid bevorderen is standaardiseren</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#standaardisatie-van-logging-binnen-organisaties"><bdi class="secno">5.1 </bdi>Standaardisatie van logging binnen organisaties</a></li><li class="tocline"><a class="tocxref" href="#standaardisatie-van-logging-tussen-organisaties-informatie-uitwisseling"><bdi class="secno">5.2 </bdi>Standaardisatie van logging tussen organisaties (informatie-uitwisseling)</a></li><li class="tocline"><a class="tocxref" href="#tussenconclusie-3"><bdi class="secno">5.3 </bdi>Tussenconclusie</a></li></ol></li><li class="tocline"><a class="tocxref" href="#een-standaard-opstellen-om-deze-kaders-te-faciliteren"><bdi class="secno">6. </bdi>Een standaard opstellen om deze kaders te faciliteren</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#afspraken-over-logging-maken"><bdi class="secno">6.1 </bdi>Afspraken over logging maken</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#behoud-van-verantwoordelijkheid-van-elk-overheidsorgaan"><bdi class="secno">6.1.1 </bdi>Behoud van verantwoordelijkheid van elk overheidsorgaan</a></li><li class="tocline"><a class="tocxref" href="#grote-gemene-deler-in-verplichtingen-zoeken"><bdi class="secno">6.1.2 </bdi>Grote gemene deler in verplichtingen zoeken</a></li><li class="tocline"><a class="tocxref" href="#baseline-voor-logging-voor-organisaties"><bdi class="secno">6.1.3 </bdi>Baseline voor logging voor organisaties</a></li></ol></li><li class="tocline"><a class="tocxref" href="#logging-van-informatie-uitwisseling"><bdi class="secno">6.2 </bdi>Logging van informatie-uitwisseling</a></li><li class="tocline"><a class="tocxref" href="#ketenlogging"><bdi class="secno">6.3 </bdi>Ketenlogging</a></li><li class="tocline"><a class="tocxref" href="#functionele-invulling"><bdi class="secno">6.4 </bdi>Functionele invulling</a></li><li class="tocline"><a class="tocxref" href="#technisch-operationele-invulling"><bdi class="secno">6.5 </bdi>Technisch operationele invulling</a></li><li class="tocline"><a class="tocxref" href="#tussenconclusie-4"><bdi class="secno">6.6 </bdi>Tussenconclusie</a></li></ol></li><li class="tocline"><a class="tocxref" href="#beschrijving-van-de-standaard"><bdi class="secno">7. </bdi>Beschrijving van de standaard</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#doel-van-de-standaard"><bdi class="secno">7.1 </bdi>Doel van de standaard</a></li><li class="tocline"><a class="tocxref" href="#beschrijving-van-systematiek-van-processen-in-organisaties"><bdi class="secno">7.2 </bdi>Beschrijving van systematiek van processen in organisaties</a></li><li class="tocline"><a class="tocxref" href="#standaard-als-basis-voor-verantwoording-logging-is-neutraal"><bdi class="secno">7.3 </bdi>Standaard als basis voor verantwoording: logging is "neutraal"</a></li><li class="tocline"><a class="tocxref" href="#extensies-het-gebruik-van-logging-voor-verschillende-doeleinden"><bdi class="secno">7.4 </bdi>Extensies: Het gebruik van logging voor verschillende doeleinden</a></li><li class="tocline"><a class="tocxref" href="#profielen-beperkingen-en-verplichtingen-in-het-gebruik-van-de-standaard"><bdi class="secno">7.5 </bdi>Profielen: beperkingen en verplichtingen in het gebruik van de standaard</a></li><li class="tocline"><a class="tocxref" href="#integriteit-van-logging"><bdi class="secno">7.6 </bdi>Integriteit van logging</a></li><li class="tocline"><a class="tocxref" href="#tussenconclusie-5"><bdi class="secno">7.7 </bdi>Tussenconclusie</a></li></ol></li><li class="tocline"><a class="tocxref" href="#beleidskader"><bdi class="secno">8. </bdi>Beleidskader</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#leidende-principes"><bdi class="secno">8.1 </bdi>Leidende principes</a></li><li class="tocline"><a class="tocxref" href="#toepassing-van-de-standaard-ten-behoeve-van-reguliere-processen"><bdi class="secno">8.2 </bdi>Toepassing van de standaard ten behoeve van reguliere processen:</a></li></ol></li></ol></nav><section id="conformance" class="introductory"><div class="header-wrapper"><h2 id="conformiteit">Conformiteit</h2><a class="self-link" href="#conformance" aria-label="Permalink for this Section"></a></div><p>Naast onderdelen die als niet normatief gemarkeerd zijn, zijn ook alle diagrammen, voorbeelden, en noten in dit document niet normatief. Verder is alles in dit document normatief.</p></section>
+  <section id="abstract" class="introductory"><h2>Context bij de standaard</h2>
+<p>De overheid wil voor burgers en bedrijven zo transparant mogelijk zijn in de omgang met hun data. Daarom is het bij de informatieverwerking in datasets belangrijk om voor elke mutatie of raadpleging vast te leggen wie deze actie wanneer uitvoert, en waarom. Voor een optimale samenwerking over organisaties en bronnen heen is voor deze logging een algemene standaard nodig.</p>
+<p>Transparantie en verantwoording naar burgers is één van de drijfveren voor ontwikkeling van deze logging standaard maar geen onderdeel van de standaard. De standaard richt zich op vastlegging van de logging en deze eenduidige vastlegging maakt het mogelijk om, indien daar later behoefte aan is, inzage mogelijk te maken.</p>
+<section id="verwijzingen"><div class="header-wrapper"><h3 id="verwijzingen-0">Verwijzingen</h3><a class="self-link" href="#verwijzingen" aria-label="Permalink for this Section"></a></div>
+<p>De Logboek Dataverwerkingen (LDV) standaard bestaat uit de volgende vier documenten:</p>
+<table>
+<thead>
+<tr>
+<th>Beschrijving van het document</th>
+<th>Gepubliceerde versie</th>
+<th>Werk versie</th>
+<th>Repository</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1. De LDV Normatieve Standaard</td>
+<td>-</td>
+<td><a href="https://logius-standaarden.github.io/logboek-dataverwerkingen/">Logboek dataverwerkingen (werkversie)</a></td>
+<td><a href="https://github.com/Logius-standaarden/logboek-dataverwerkingen">logboek-dataverwerkingen</a></td>
+</tr>
+<tr>
+<td>2. De Algemene Inleiding</td>
+<td>-</td>
+<td><a href="https://logius-standaarden.github.io/logboek-dataverwerkingen-inleiding/">De Algemene Inleiding (werkversie)</a></td>
+<td><a href="https://github.com/Logius-standaarden/logboek-dataverwerkingen-inleiding">logboek-dataverwerkingen-inleiding</a></td>
+</tr>
+<tr>
+<td>3. Het Juridische Beleidskader</td>
+<td>-</td>
+<td><a href="https://logius-standaarden.github.io/logboek-dataverwerkingen-juridisch-beleidskader/">Juridisch Beleidskader (werkversie)</a></td>
+<td><a href="https://github.com/Logius-standaarden/logboek-dataverwerkingen-juridisch-beleidskader/">logboek-dataverwerkingen-juridisch-beleidskader</a></td>
+</tr>
+<tr>
+<td>4. LDV Extensie Guideline</td>
+<td>-</td>
+<td><a href="https://logius-standaarden.github.io/logboek-extensie-template/">Guideline voor het schrijven van een extensie voor LDV (werkversie)</a></td>
+<td><a href="https://github.com/Logius-standaarden/logboek-extensie-template">logboek-extensie-template</a></td>
+</tr>
+</tbody></table>
+</section></section>
+  
+  <section id="inleiding"><div class="header-wrapper"><h2 id="x1-inleiding"><bdi class="secno">1. </bdi>Inleiding</h2><a class="self-link" href="#inleiding" aria-label="Permalink for Section 1."></a></div>
+<p>Dit juridisch beleidskader biedt het overzicht van de (juridische) verantwoording die de overheid over haar handelen moet afleggen en is opgesteld ten behoeve van de Logboek Dataverwerkingen standaard. Er wordt toegelicht hoe de standaard vanuit het denken over verantwoording is opgebouwd. Het doel daarvan is dat het Logboek Dataverwerkingen een basis biedt om te zorgen dat de overheid precies de data logt die zij nodig heeft om verantwoording af te leggen over haar taken. Niet meer, maar ook niet minder. En om te zorgen dat organisaties data zodanig loggen dat zij zich niet alleen over het eigen handelen kunnen verantwoorden, maar ook over hun gezamenlijk handelen als "de overheid". Als in het document wordt gesproken over "verantwoording" of  "verantwoorden" dan wordt verantwoorden in brede zin bedoeld. Zo gaat het bijvoorbeeld niet alleen over de verantwoording van de overheid als verantwoordelijke voor de verwerking van persoonsgegevens richting betrokkenen, maar over het gegevensgebruik voor haar taken in brede zin.</p>
+<p>Met "de overheid", of "overheidsorganisaties" wordt in dit document bedoeld organisaties met een publieke taak. Dat zijn bestuursorganen, maar ook organisaties met "enig openbaar gezag" bekleed en zich daarover dienen te verantwoorden. Met "overheidssystemen" wordt bedoeld de (technische) systemen die zij inzetten voor de verwerking van informatie.</p>
+<section id="scope-van-dit-verantwoordingsdocument"><div class="header-wrapper"><h3 id="x1-1-scope-van-dit-verantwoordingsdocument"><bdi class="secno">1.1 </bdi>Scope van dit verantwoordingsdocument</h3><a class="self-link" href="#scope-van-dit-verantwoordingsdocument" aria-label="Permalink for Section 1.1"></a></div>
+<p>Dit document beschrijft de wijze waarop de overheid zich moet verantwoorden in brede zin en de informatie die daarvoor beschikbaar moet zijn. De standaard beoogt – initieel – niet alle aspecten te adresseren, maar biedt wel de basis om te zorgen dat <strong>eenduidigheid en relateerbaarheid</strong> van (log)informatie geborgd is. Deze aspecten bepalen de scope van dit document.</p>
+<p>Dit document en - de standaard – staan daarin (bewust) neutraal ten opzichte van de termijnen die gelden voor het bewaren van logging. Deze termijnen kunnen en zullen verschillen afhankelijk van de taak en het doel waarvoor zij beschikbaar moeten blijven. Dit document gaat hierop daarom niet in. De standaard biedt wel een manier om hiermee om te gaan (profiel).</p>
+<p>Dit geldt bijvoorbeeld ook voor het bewaren van data in het kader van de Archiefwet. De logging die voorhanden is kan daarvoor gebruikt worden, maar dit document heeft geen oordeel over de vraag óf data in het kader van de Archiefwet bewaard dienen te blijven, noch over de termijn daarvan.</p>
+<p>Omdat het document neutraal staat ten opzichte van de doelen waarvoor de logging wordt benut, zijn ook eventuele maatregelen als gevolg van specifiek gebruik, bijvoorbeeld gelimiteerde toegang bij monitoring / soc of extra beveiligingsmaatregelen op de logging buiten de scope.</p>
+<p>In het laatste hoofdstuk van dit document is het beleid voor de standaard Logboek Dataverwerkingen opgenomen in de vorm van ‘leidende principes’. Hiermee kunnen gebruikers binnen de context van hun specifieke situatie de bedoeling van de standaard interpreteren en toepassen. Dit beleid sluit aan bij dit verantwoordingsdocument en bouwt daarop voort.</p>
+</section><section id="de-overheid-moet-zich-verantwoorden-over-de-uitvoering-van-haar-taken"><div class="header-wrapper"><h3 id="x1-2-de-overheid-moet-zich-verantwoorden-over-de-uitvoering-van-haar-taken"><bdi class="secno">1.2 </bdi>De overheid moet zich verantwoorden over de uitvoering van haar taken</h3><a class="self-link" href="#de-overheid-moet-zich-verantwoorden-over-de-uitvoering-van-haar-taken" aria-label="Permalink for Section 1.2"></a></div>
+<p>In een democratische rechtsstaat staat de overheid bij de uitvoering van haar taken steeds in dienst van het algemeen belang. Het is daarom essentieel dat zij zich kan verantwoorden over haar handelen. Dit waarborgt de legitimiteit van het overheidsoptreden en de naleving van rechtsstatelijke beginselen.</p>
+<p>Verantwoording dient om:</p>
+<ul>
+<li>Rechtmatigheid en transparantie te garanderen, zodat het handelen van de overheid kan worden gecontroleerd.</li>
+<li>Machtsmisbruik te voorkomen en individuele rechten te beschermen.</li>
+<li>Vertrouwen van burgers in de overheid te versterken.</li>
+<li>Beleidsverbetering mogelijk te maken door leerprocessen.</li>
+</ul>
+<p>Verantwoording is derhalve een kernprincipe van goed bestuur, dat wordt gekenmerkt door transparantie, verantwoordelijkheid, democratische controle en rechtszekerheid. Zonder verantwoording ontbreekt effectieve controle, wat de werking van de rechtsstaat ondermijnt.</p>
+<p>De overheid en de daarmee verbonden organen leggen publieke verantwoording af over:</p>
+<ul>
+<li>de rechtmatigheid van de inning, het beheer en de besteding van publieke middelen;</li>
+<li>de effectiviteit en doelmatigheid van beleid en de behartiging van publieke taken, waaronder de besluiten die zij neemt;</li>
+<li>de integriteit van de organisatie en haar medewerkers, en het ‘in control’ zijn.</li>
+</ul>
+<p>Er is niet op één centrale plek in de wet een verantwoordingsplicht voor overheden opgenomen. Verantwoordingsplichten vloeien voort uit een breed scala van wetten en beginselen, waaruit volgt dat verantwoorden in zijn algemeenheid belangrijk is.</p>
+<section id="algemene-verplichtingen-tot-verantwoording"><div class="header-wrapper"><h4 id="x1-2-1-algemene-verplichtingen-tot-verantwoording"><bdi class="secno">1.2.1 </bdi>Algemene verplichtingen tot verantwoording</h4><a class="self-link" href="#algemene-verplichtingen-tot-verantwoording" aria-label="Permalink for Section 1.2.1"></a></div>
+<p>Een belangrijke wet in dit verband die generieke verantwoording vereist is de Comptabiliteitswet, op basis waarvan de overheid zich dient te verantwoorden over de doelmatige inzet van toegekende financiële middelen.</p>
+<p>Ook van belang is de Algemene wet bestuursrecht (hierna: Awb), waarin onder meer is vastgelegd dat overheden bij besluitvorming zorgvuldig te werk moeten gaan en hun (individuele) handelingen deugdelijk moeten motiveren.</p>
+<p>Tevens dient de overheid te verantwoorden dat de informatie waarmee zij werkt om haar taken te vervullen, goed is beveiligd. Regels over informatiebeveiliging worden gesteld in de Baseline Informatiebeveiliging Overheid en op basis van de implementatie van de NIS2-richtlijn. Tevens gelden de regels van de AI- en datagovernanceverordening.</p>
+<p>Omdat de overheid bij de uitvoering van haar taken persoonsdata verwerkt, geldt dat zij de zorgvuldige en transparante verwerking van persoonsdata op basis van de Algemene Verordening Gegevensbescherming (hierna: AVG) dient te verantwoorden en de uitoefening van de rechten van betrokkenen ten aanzien van hun persoonsdata dient te waarborgen.</p>
+<p>Deze verplichtingen richten zich op de bedrijfsvoering van de individuele overheden (want daar wordt de informatie verwerkt) en de wijze waarop zij met elkaar samenwerken in het publieke belang.</p>
+</section><section id="specifieke-verantwoording"><div class="header-wrapper"><h4 id="x1-2-2-specifieke-verantwoording"><bdi class="secno">1.2.2 </bdi>Specifieke verantwoording</h4><a class="self-link" href="#specifieke-verantwoording" aria-label="Permalink for Section 1.2.2"></a></div>
+<p>Naast de bovengenoemde verantwoordingsverplichtingen die voor de bedrijfsvoering van elke overheidsorganisaties gelden, bestaan er domeinspecifieke verantwoordingsverplichtingen in domeinwetgeving (bijvoorbeeld zorg), of verantwoordingsverplichtingen op basis van specifieke problematiek (bijvoorbeeld mededingingsvraagstukken).</p>
+</section></section><section id="de-overheid-verwerkt-voor-haar-taken-informatie"><div class="header-wrapper"><h3 id="x1-3-de-overheid-verwerkt-voor-haar-taken-informatie"><bdi class="secno">1.3 </bdi>De overheid verwerkt voor haar taken informatie</h3><a class="self-link" href="#de-overheid-verwerkt-voor-haar-taken-informatie" aria-label="Permalink for Section 1.3"></a></div>
+<p>Om taken te kunnen vervullen is het voor overheidsorganisaties noodzakelijk om informatie te verwerken. Informatie en de wijze waarop deze wordt gebruikt ligt daarmee aan de basis voor een goed openbaar bestuur.</p>
+<p>Daarnaast is een goede informatiehuishouding van belang om burgers en bedrijven van betrouwbare informatie te kunnen voorzien en om als overheid efficiënt en effectief te kunnen werken.</p>
+</section><section id="de-overheid-moet-zich-kunnen-verantwoorden-over-de-wijze-waarop-informatie-wordt-verwerkt"><div class="header-wrapper"><h3 id="x1-4-de-overheid-moet-zich-kunnen-verantwoorden-over-de-wijze-waarop-informatie-wordt-verwerkt"><bdi class="secno">1.4 </bdi>De overheid moet zich kunnen verantwoorden over de wijze waarop informatie wordt verwerkt</h3><a class="self-link" href="#de-overheid-moet-zich-kunnen-verantwoorden-over-de-wijze-waarop-informatie-wordt-verwerkt" aria-label="Permalink for Section 1.4"></a></div>
+<section id="informatie-als-middel-om-te-verantwoorden"><div class="header-wrapper"><h4 id="x1-4-1-informatie-als-middel-om-te-verantwoorden"><bdi class="secno">1.4.1 </bdi>Informatie als middel om te verantwoorden</h4><a class="self-link" href="#informatie-als-middel-om-te-verantwoorden" aria-label="Permalink for Section 1.4.1"></a></div>
+<p>Uit het voorgaande volgt dat, wil een overheidsorganisatie zich adequaat kunnen verantwoorden over haar taken, de informatiehuishouding op orde moet zijn en dat inzichtelijk moet zijn welke informatie zij bij de invulling van haar taken heeft gebruikt, hoe deze informatie is vergaard en hoe deze informatie bij de beslissingen is (af)gewogen.</p>
+<p>Dit geldt op alle niveaus van informatieverwerking. Het dient inzichtelijk te zijn hoe bijvoorbeeld beleidsvorming – vaak op hoofdlijnen – tot stand is gekomen. Ook is het bij individuele besluiten die gevolgen hebben voor burgers belangrijk dat voor de burger inzichtelijk is welke data een overheidsorganisatie bij het besluit heeft gebruikt, hoe deze data zijn gebruikt en bij welke overheidsorganisatie op welk moment deze zijn verzameld.</p>
+</section><section id="verantwoording-over-de-rechtmatige-verwerking-van-informatie"><div class="header-wrapper"><h4 id="x1-4-2-verantwoording-over-de-rechtmatige-verwerking-van-informatie"><bdi class="secno">1.4.2 </bdi>Verantwoording over de rechtmatige verwerking van informatie</h4><a class="self-link" href="#verantwoording-over-de-rechtmatige-verwerking-van-informatie" aria-label="Permalink for Section 1.4.2"></a></div>
+<p>Wettelijk is geregeld welke informatie – zeker daar waar het persoonsdata betreft – overheden voor de uitvoering van hun taken mogen verwerken. Welke informatie dat is, zal per overheidsorganisatie verschillen. Immers, hun taken verschillen, en de informatie om deze taken uit te voeren dus ook.</p>
+<p>Iedere overheidsorganisatie dient te verantwoorden dat informatie binnen de grenzen van het toepasselijke wettelijk kader is verwerkt. Voor de verwerking van persoonsdata geldt dat hiervoor een juridische grondslag aanwezig is. Naast de rechtmatigheid dienen overheidsorganisaties aan te tonen dat voldaan is aan andere geldende verplichtingen, bijvoorbeeld ten aanzien van de verwerking of beveiliging van persoonsdata en de vertrouwelijkheid van bedrijfsinformatie.</p>
+</section></section><section id="belang-van-goede-verantwoording-en-verbetering-daarvan"><div class="header-wrapper"><h3 id="x1-5-belang-van-goede-verantwoording-en-verbetering-daarvan"><bdi class="secno">1.5 </bdi>Belang van goede verantwoording en verbetering daarvan</h3><a class="self-link" href="#belang-van-goede-verantwoording-en-verbetering-daarvan" aria-label="Permalink for Section 1.5"></a></div>
+<p>Digitalisering biedt kansen voor een efficiëntere en effectievere werkende overheid. Dat komt door de toenemende mogelijkheden om data te gebruiken om hun eigen taken beter uit te kunnen voeren en beter als één overheid samen te werken. Dienstverlening aan burgers en bedrijven kan sneller, efficiënter en meer op maat plaatsvinden.</p>
+<p>Aan deze mogelijkheden zit ook een andere kant, die vergt dat de overheid goed inzicht houdt – ook over organisaties heen - in hoe deze informatieverwerking en uitwisseling heeft plaatsgevonden. Dat is nodig om de steeds verder toenemende informatie-uitwisseling te kunnen verantwoorden. Maar ook om – op het moment dat zich in deze dienstverlening problemen voordoen – goed in staat te zijn om deze op te lossen. Want problemen in dienstverlening kunnen door automatisering in korte tijd ontstaan en omvangrijk worden.</p>
+<p>Een voorbeeld daarvan is de situatie rond de toeslagenproblematiek. Nadat deze problematiek is ontdekt, vergt het vermoedelijk nog jaren om de gevolgen hiervan te herstellen, omdat de puzzel in het overheidshandelen niet eenduidig gelegd kan worden.</p>
+<p>Daarnaast moeten bijvoorbeeld (individuele) burgers die slachtoffer worden van fraude of misbruik van hun data beter geholpen kunnen worden. Immers, problemen kunnen zeer snel uitwaaieren over verschillende overheidsorganisaties. Daarbij past dat ook snel kan worden gereageerd, dat gereconstrueerd kan worden wat er is gebeurd en dat de burgers snel en effectief geholpen kunnen worden.</p>
+</section><section id="tussenconclusie"><div class="header-wrapper"><h3 id="x1-6-tussenconclusie"><bdi class="secno">1.6 </bdi>Tussenconclusie</h3><a class="self-link" href="#tussenconclusie" aria-label="Permalink for Section 1.6"></a></div>
+<p>De overheid moet zich verantwoorden over de aan haar toegekende taken. Dat geldt niet alleen per overheidsorganisatie, maar ook voor "de overheid" als geheel.</p>
+<p>Voor de uitvoering van haar taken verwerkt de overheid informatie. De wijze waarop informatie wordt verwerkt en waarop die verwerking wordt vastgelegd, speelt daarom een belangrijke rol bij de verantwoording door overheden. Daarnaast speelt een goede vastlegging van data een belangrijke rol bij het oplossen van problemen als deze zich voordoen als gevolg van informatie-uitwisseling.</p>
+<p>Dit betekent dat de wijze waarop de verslaglegging gebeurt, bij de benodigde verantwoording moet aansluiten. De verantwoording is daarmee kaderend.</p>
+</section></section>
+  <section id="verschillende-overheidsorganisaties-en-eenduidige-verantwoording"><div class="header-wrapper"><h2 id="x2-verschillende-overheidsorganisaties-en-eenduidige-verantwoording"><bdi class="secno">2. </bdi>Verschillende overheidsorganisaties en eenduidige verantwoording</h2><a class="self-link" href="#verschillende-overheidsorganisaties-en-eenduidige-verantwoording" aria-label="Permalink for Section 2."></a></div>
+<section id="inrichting-van-de-overheid-divers-en-verschillend"><div class="header-wrapper"><h3 id="x2-1-inrichting-van-de-overheid-divers-en-verschillend"><bdi class="secno">2.1 </bdi>Inrichting van de overheid: divers en verschillend</h3><a class="self-link" href="#inrichting-van-de-overheid-divers-en-verschillend" aria-label="Permalink for Section 2.1"></a></div>
+<section id="verschillen-in-verantwoordelijkheden-taken"><div class="header-wrapper"><h4 id="x2-1-1-verschillen-in-verantwoordelijkheden-taken"><bdi class="secno">2.1.1 </bdi>Verschillen in verantwoordelijkheden, taken</h4><a class="self-link" href="#verschillen-in-verantwoordelijkheden-taken" aria-label="Permalink for Section 2.1.1"></a></div>
+<p>Overheidsorganisaties zijn er in alle soorten en maten. Zo verschilt de Belastingdienst van DUO of de RDW, en verschillen dergelijke organisaties weer van gemeenten.</p>
+<p>Dat komt doordat overheidsorganisaties verschillende taken en verantwoordelijkheden toebedeeld hebben gekregen. Er zijn wel groepen organisaties, zoals gemeenten, die vanwege de vergelijkbare taakuitoefening en organisatie-inrichting veel overeenkomstige kenmerken zullen hebben. Echter, overheidsbreed zullen er verschillen zijn.</p>
+</section><section id="verschillende-taken-en-verantwoordingsplichten"><div class="header-wrapper"><h4 id="x2-1-2-verschillende-taken-en-verantwoordingsplichten"><bdi class="secno">2.1.2 </bdi>Verschillende taken en verantwoordingsplichten</h4><a class="self-link" href="#verschillende-taken-en-verantwoordingsplichten" aria-label="Permalink for Section 2.1.2"></a></div>
+<p>Hoe een overheidsorganisatie is georganiseerd en zich moet verantwoorden, hangt af van de opgedragen wettelijke taken die de organisatie heeft gekregen en vaak ook van de bestuurslaag waarbinnen de organisatie is gepositioneerd (Rijks-, provinciaal, gemeentelijk of waterschapsniveau).</p>
+<p>In wet- en regelgeving is nauwgezet vastgelegd wat hun verantwoordelijkheid is, welke taken daarvoor dienen te worden uitgevoerd, en meestal ook welke (persoons)data daarvoor gebruikt mogen worden. Deze kadering bepaalt de wijze waarop overheden zich organiseren en hun processen vormgeven. En, in het verlengde daarvan, de processen waarover zij zich moeten verantwoorden.</p>
+</section><section id="verschillende-informatieverwerkingen"><div class="header-wrapper"><h4 id="x2-1-3-verschillende-informatieverwerkingen"><bdi class="secno">2.1.3 </bdi>Verschillende informatieverwerkingen</h4><a class="self-link" href="#verschillende-informatieverwerkingen" aria-label="Permalink for Section 2.1.3"></a></div>
+<p>De verschillende verantwoordelijkheden en taken leiden tot verschillende soorten informatieverwerkingen. Welke (persoons)data mogen worden verwerkt voor de realisatie van een taak, wordt bij wet vastgelegd. Immers, DUO heeft voor de verwezenlijking van de taken andere data nodig dan bijvoorbeeld UWV. Welke dat zijn en waarvoor informatie mag worden gebruikt is nauwgezet vastgelegd in wet- en regelgeving. Overigens zal er voor wat betreft de informatieverwerking ook overlap zijn en zullen organisaties ook informatie van elkaar gebruiken (data-uitwisseling/data bij de bron).</p>
+</section></section><section id="eenduidige-verantwoording"><div class="header-wrapper"><h3 id="x2-2-eenduidige-verantwoording"><bdi class="secno">2.2 </bdi>Eenduidige verantwoording</h3><a class="self-link" href="#eenduidige-verantwoording" aria-label="Permalink for Section 2.2"></a></div>
+<p>Om het mogelijk te maken dat "overheidsbreed" verantwoording kan worden afgelegd over de uitvoering van publieke taken en de onderlinge samenwerking die overheidsorganisaties daarin hebben, is het nodig dat de informatieverwerking die daarvoor plaatsvindt op een eenduidige manier wordt vastgelegd. Dat vergt dat tussen overheidsorganisaties wordt afgesproken / geregeld welke informatie wordt vastgelegd en ook wat onder bepaalde informatie wordt verstaan.</p>
+<section id="verantwoordingsplicht"><div class="header-wrapper"><h4 id="x2-2-1-verantwoordingsplicht"><bdi class="secno">2.2.1 </bdi>Verantwoordingsplicht</h4><a class="self-link" href="#verantwoordingsplicht" aria-label="Permalink for Section 2.2.1"></a></div>
+<p>Overheden zullen zich in eerste instantie over de uitvoering van hun eigen taken moeten verantwoorden. Dat betekent dat zij moeten kunnen aantonen welke (geautomatiseerde) activiteiten zij hebben verricht, en dat ook hebben vastgelegd. Dat gaat ook over de vraag hoe concrete beslissingen zijn genomen. Het gaat zowel over welke informatie is gebruikt, hoe deze informatie is gebruikt, en tot welke beslissingen of acties dat heeft geleid. Ook moeten overheden transparant zijn over de ontvangers van persoonsdata en kunnen verantwoorden aan wie de persoonsdata zijn verstrekt.</p>
+</section></section><section id="tussenconclusie-0"><div class="header-wrapper"><h3 id="x2-3-tussenconclusie"><bdi class="secno">2.3 </bdi>Tussenconclusie</h3><a class="self-link" href="#tussenconclusie-0" aria-label="Permalink for Section 2.3"></a></div>
+<p>Overheden hebben verschillende taken en verschillende bestuurlijke inrichtingen. Voor de taken moet verschillende informatie worden verwerkt en kunnen verschillende verantwoordingsverplichtingen gelden. Dat maakt dat organisaties hun processen verschillend "op maat" zullen inrichten. </p>
+<p>Bij het streven om eenduidigheid in de verslaglegging te realiseren zal hiermee rekening worden gehouden. Dat zal betekenen dat afspraken op conceptueel niveau zullen moeten zijn, en niet context- of taakafhankelijk moeten worden ingevuld.</p>
+</section></section>
+  <section id="logging-als-verantwoordingsinstrument"><div class="header-wrapper"><h2 id="x3-logging-als-verantwoordingsinstrument"><bdi class="secno">3. </bdi>Logging als verantwoordingsinstrument</h2><a class="self-link" href="#logging-als-verantwoordingsinstrument" aria-label="Permalink for Section 3."></a></div>
+<section id="kaders-voor-logging-per-organisatie"><div class="header-wrapper"><h3 id="x3-1-kaders-voor-logging-per-organisatie"><bdi class="secno">3.1 </bdi>Kaders voor logging per organisatie</h3><a class="self-link" href="#kaders-voor-logging-per-organisatie" aria-label="Permalink for Section 3.1"></a></div>
+<p>Om zich te kunnen verantwoorden zal een organisatie inzichtelijk moeten kunnen maken dat zij de taken die zij heeft, heeft uitgevoerd in overeenstemming met de voor de betreffende organisatie geldende kaders. Er zal gereproduceerd moeten kunnen worden welk besluit op een bepaald moment is genomen, welke informatie daarvoor is gebruikt, en of deze informatie (waaronder persoonsdata) is gebruikt op een wijze die voldoet aan de daarvoor gestelde kaders.</p>
+<p>Dit is noodzakelijk voor (interne) verantwoording aan bijvoorbeeld toezichthouders, en om richting burgers en bedrijven te kunnen aantonen dat besluiten zorgvuldig zijn genomen en adequaat gemotiveerd zijn.</p>
+</section><section id="kaders-voor-logging-tussen-organisaties-onderling"><div class="header-wrapper"><h3 id="x3-2-kaders-voor-logging-tussen-organisaties-onderling"><bdi class="secno">3.2 </bdi>Kaders voor logging tussen organisaties onderling</h3><a class="self-link" href="#kaders-voor-logging-tussen-organisaties-onderling" aria-label="Permalink for Section 3.2"></a></div>
+<p>Een belangrijk beleidsmatig uitgangspunt is dat overheidsorganisaties burgers en bedrijven niet naar de bekende weg vragen. Er geldt dat informatie die reeds bij de overheid beschikbaar is in principe niet opnieuw aan burgers wordt gevraagd. Dit betekent in veel gevallen dat overheidsorganisaties gebruik (moeten) maken van elkaars informatie en daarop moeten kunnen vertrouwen.</p>
+<p>Om te kunnen aantonen dat overheidsorganisaties besluiten zorgvuldig en met de juiste informatie hebben genomen, dienen ze daarom vast te leggen welke informatie zij op welk moment van welke organisatie hebben verkregen. Vice versa vergt dit dat bij de organisatie die heeft geleverd wordt bijgehouden aan welke andere organisaties is geleverd, zodat verantwoording volledig kan worden teruggeleid naar de bron van de informatie.</p>
+<p>Dit vergt dat de handelingen worden gelogd, en dat afspraken worden gemaakt om te zorgen dat de logging over overheidsorganisaties heen adequaat is vormgegeven om reproductie overheidsbreed mogelijk te maken.</p>
+<p>De hier beschreven kaders dragen tevens bij aan de benodigde interoperabiliteit die tussen organisaties moet worden bewerkstelligd.</p>
+</section><section id="soorten-logging"><div class="header-wrapper"><h3 id="x3-3-soorten-logging"><bdi class="secno">3.3 </bdi>Soorten logging</h3><a class="self-link" href="#soorten-logging" aria-label="Permalink for Section 3.3"></a></div>
+<p>Met logging in het kader van dit document wordt de logging bedoeld die nodig is om verantwoording af te leggen over de processen en beslissingen die de overheid neemt (functionele logging). Organisaties zullen daarnaast ook logging hebben die de technische werking van systemen of de werking van applicaties betreft. Deze typen logging kunnen overlap vertonen met de functionele logging, maar dat hoeft niet zo te zijn.</p>
+<blockquote>
+<p>Als in dit document gesproken wordt over applicatie wordt verwezen naar de definitie van het woord "applicatie" in de standaard Logboek Dataverwerkingen.</p>
+</blockquote>
+</section><section id="tussenconclusie-1"><div class="header-wrapper"><h3 id="x3-4-tussenconclusie"><bdi class="secno">3.4 </bdi>Tussenconclusie</h3><a class="self-link" href="#tussenconclusie-1" aria-label="Permalink for Section 3.4"></a></div>
+<p>Voor een goede inrichting van logging als verantwoordingsmogelijkheid is het van belang dat binnen organisaties logging op eenduidige wijze – conceptueel – wordt ingericht. Daarnaast is het van belang dat de wijzen van vastlegging van handelingen ten aanzien van informatie adequaat op elkaar aansluiten.</p>
+</section></section>
+  <section id="eenduidige-verantwoording-en-logging-ten-behoeve-van-de-uitvoering-van-verplichtingen"><div class="header-wrapper"><h2 id="x4-eenduidige-verantwoording-en-logging-ten-behoeve-van-de-uitvoering-van-verplichtingen"><bdi class="secno">4. </bdi>Eenduidige verantwoording en logging ten behoeve van de uitvoering van verplichtingen</h2><a class="self-link" href="#eenduidige-verantwoording-en-logging-ten-behoeve-van-de-uitvoering-van-verplichtingen" aria-label="Permalink for Section 4."></a></div>
+<section id="overheidsbreed-verantwoorden-is-samenwerken"><div class="header-wrapper"><h3 id="x4-1-overheidsbreed-verantwoorden-is-samenwerken"><bdi class="secno">4.1 </bdi>Overheidsbreed verantwoorden is samenwerken</h3><a class="self-link" href="#overheidsbreed-verantwoorden-is-samenwerken" aria-label="Permalink for Section 4.1"></a></div>
+<p>Organisaties hebben informatie nodig van elkaar om zichzelf te kunnen verantwoorden.</p>
+<p>In de eerste plaats dienen zij zelf vast te leggen welke handelingen zij verrichten bij het nemen van besluiten of het uitvoeren van feitelijke handelingen.</p>
+<p>Daarnaast zullen zij vastleggen welke informatie zij op welk moment van een andere overheidsorganisatie (de "verstrekkende" organisaties) hebben ontvangen om een bepaald besluit te nemen. Eenduidige logging kan helpen bij de uitvoering van verschillende plichten, door te zorgen dat de verstrekkende organisatie op dezelfde wijze de verstrekking logt. Zo zijn de "datavraag" en de "datalevering" als dat nodig is te koppelen en te verantwoorden. Deze verplichtingen kaderen de logging en daarmee de standaardisatie van logging.</p>
+</section><section id="informatieverplichtingen"><div class="header-wrapper"><h3 id="x4-2-informatieverplichtingen"><bdi class="secno">4.2 </bdi>Informatieverplichtingen</h3><a class="self-link" href="#informatieverplichtingen" aria-label="Permalink for Section 4.2"></a></div>
+<p>In het voorgaande is besproken welke data organisaties nodig hebben om hun taken uit te voeren en zich over deze taken te verantwoorden. Dit "begrenst" de data waarover zij mogen beschikken.</p>
+<p>Ten aanzien van de data waarover zij mogen beschikken in het kader van reguliere taken kunnen, naast verantwoording, nog andere verplichtingen rusten. Persoonsdata vormen een belangrijke categorie binnen de totale set aan data die voorhanden zijn. Op deze data is de AVG van toepassing. Dit betekent dat diverse informatieverplichtingen, zoals bij het inzagerecht, van toepassing zijn. Deze verplichtingen, die van invloed kunnen zijn op de wijze waarop data worden gelogd, worden hieronder besproken.</p>
+</section><section id="informatieverplichtingen-in-de-avg"><div class="header-wrapper"><h3 id="x4-3-informatieverplichtingen-in-de-avg"><bdi class="secno">4.3 </bdi>Informatieverplichtingen in de AVG</h3><a class="self-link" href="#informatieverplichtingen-in-de-avg" aria-label="Permalink for Section 4.3"></a></div>
+<p>De AVG geeft aan betrokkenen – degenen over wie de persoonsdata gaan - verschillende rechten in het kader van inzage en correctie. Denk hierbij aan het recht op informatie (art. 13 en 14 AVG), het recht op inzage (art. 15 AVG), het recht op rectificatie (art. 16 AVG) en het recht op gegevenswissing (art. 17 AVG).</p>
+<p>Deze rechten kan de betrokkene inroepen tegenover de zogenoemde ‘verwerkingsverantwoordelijke’, dat is de organisatie die het doel en de middelen van de dataverwerking bepaalt.</p>
+<p>Hieronder worden deze rechten kort besproken, waarbij wordt toegelicht welke invloed deze rechten hebben op de wijze waarop data gelogd moeten worden. Belangrijke notitie is dat er geen extra data mogen worden gelogd om uitvoering te geven aan deze rechten. Dat is op grond van de AVG niet toegestaan, omdat de uitvoering van de AVG op zichzelf geen extra verwerkingen mag veroorzaken. Echter, het kan wel zo zijn dat de rechten, om deze adequaat te kunnen uitvoeren, van invloed zijn op de wijze waarop de handelingen ten aanzien van persoonsdata worden gelogd.</p>
+<section id="recht-op-informatie-bij-verzamelen-persoonsdata"><div class="header-wrapper"><h4 id="x4-3-1-recht-op-informatie-bij-verzamelen-persoonsdata"><bdi class="secno">4.3.1 </bdi>Recht op informatie (bij verzamelen persoonsdata)</h4><a class="self-link" href="#recht-op-informatie-bij-verzamelen-persoonsdata" aria-label="Permalink for Section 4.3.1"></a></div>
+<p>De informatie die een verwerkingsverantwoordelijke moet aanleveren op basis van het recht op informatie (ex. artikel 13 en 14 AVG) dient uit eigen beweging door verwerkingsverantwoordelijke te worden aangeleverd aan de betrokkene. Voor de andere rechten geldt dat deze uitgaan van een verzoek van betrokkene.</p>
+</section><section id="actieve-informatieplicht-recht-op-informatie-bij-verzamelen-art-13-en-14-avg"><div class="header-wrapper"><h4 id="x4-3-2-actieve-informatieplicht-recht-op-informatie-bij-verzamelen-art-13-en-14-avg"><bdi class="secno">4.3.2 </bdi>Actieve informatieplicht (recht op informatie bij verzamelen, art. 13 en 14 AVG)</h4><a class="self-link" href="#actieve-informatieplicht-recht-op-informatie-bij-verzamelen-art-13-en-14-avg" aria-label="Permalink for Section 4.3.2"></a></div>
+<p>Een verwerkingsverantwoordelijke is verplicht een betrokkene te informeren over wat ze doet met de persoonsdata van betrokkene.</p>
+<p><strong>Data direct afkomstig van betrokkene zelf (art. 13 AVG)</strong><br>Als de data van betrokkene zelf afkomstig zijn, dan moet de informatie worden gegeven voordat de betrokkene de data verstrekt. De verwerkingsverantwoordelijke moet kunnen aantonen dat een betrokkene actief is geïnformeerd. De informatieplicht geldt niet in het geval dat de betrokkene al op de hoogte is van alle informatie. Dit moet een organisatie zeker weten om zich hierop te mogen beroepen en om dat te kunnen aantonen, moet de organisatie dit vastleggen.</p>
+<p><strong>Data niet direct afkomstig van betrokkene (art. 14 AVG)</strong><br>Als de data niet afkomstig zijn van de betrokkene zelf, maar van een andere organisatie, dan moet de betrokkene ook worden geïnformeerd. De manier waarop hangt af van hoe groot de groep mensen is waarvan de data zijn doorgekregen en wat de meest adequate manier is om te informeren. Gaat het om een kleine groep mensen, dan moet de organisatie ieder van deze betrokkenen persoonlijk informeren. Bij een grote groep is het voldoende als de organisatie informatie geeft via bijvoorbeeld een krant of online middel. Maar dan moet de organisatie wel iedereen van de groep bereiken. Als de persoonsdata zullen worden gebruikt voor communicatie met de betrokkene, moet de informatie worden gegeven uiterlijk op het moment van het eerste contact met de betrokkene; of indien verstrekking van de data aan een andere ontvanger wordt overwogen, uiterlijk op het tijdstip waarop de persoonsdata voor het eerst worden verstrekt.</p>
+<p>Als de persoonsdata niet direct afkomstig zijn van betrokkene, kan het zijn dat het onevenredig veel inspanning kost om de betrokkene te bereiken. Bijvoorbeeld indien het adres van betrokkene achterhaald moet worden. De verwerkingsverantwoordelijke moet dan wel vastleggen waar de betreffende persoonsdata vandaan komen.</p>
+<p>Ook hiervoor geldt dat de verwerkingsverantwoordelijke dit moet kunnen aantonen, en dus vastleggen.</p>
+</section><section id="inzagerecht-art-15-avg"><div class="header-wrapper"><h4 id="x4-3-3-inzagerecht-art-15-avg"><bdi class="secno">4.3.3 </bdi>Inzagerecht (art. 15 AVG)</h4><a class="self-link" href="#inzagerecht-art-15-avg" aria-label="Permalink for Section 4.3.3"></a></div>
+<p>Iedereen heeft recht op inzage in de persoonsdata die organisaties over hen verwerken. De verzoeker heeft bij een inzageverzoek in principe recht op alle persoonsdata die worden verwerkt, waaronder persoonsdata in registraties, maar ook persoonsdata in correspondentie, zoals e-mails. De overheidsorganisatie moet daarbij inzage bieden in de doelen waarvoor de data worden verwerkt (de wettelijke taken), aan welke (soorten) organisaties de persoonsdata zijn doorgegeven, hoe data verzameld zijn en lang deze worden bewaard. Ook moet de organisatie inzicht bieden in of de persoonsdata gebruikt worden voor automatische besluitvorming, wat de logica daarvan is en welke gevolgen dat heeft.</p>
+<p>Om dit inzicht in concrete gevallen te kunnen bieden is het nodig dat de verwerkingen van de specifieke persoonsdata van de betrokkenen gelogd worden. Let op: het gaat hierbij om de verwerkingen die ten aanzien van data zijn uitgevoerd.</p>
+</section><section id="correctierecht"><div class="header-wrapper"><h4 id="x4-3-4-correctierecht"><bdi class="secno">4.3.4 </bdi>Correctierecht</h4><a class="self-link" href="#correctierecht" aria-label="Permalink for Section 4.3.4"></a></div>
+<p>Een betrokkene heeft het recht om data die niet (meer) kloppen te corrigeren. Ook heeft de betrokkene het recht om de data aan te laten vullen wanneer deze incompleet zijn. Het gaat dus om het recht op het corrigeren van incorrecte of incomplete data.</p>
+<p>Om te kunnen vaststellen of data (niet) kloppen, dient vastgesteld te zijn wat de kwaliteit van de data is (welke controles zijn uitgevoerd). En indien aan de orde, wat de herkomst van de data is (van welke organisaties zij de data verkregen, op welk moment, en welke controles zijn gedaan). De conclusie van de vaststelling kan ook zijn dat de correctie niet wordt doorgevoerd.</p>
+<p>Om dit te kunnen doen is het nodig dat de verwerkingshandelingen worden vastgelegd. Om deze wijze kunnen ook (doorwerkende) gevolgen van de onjuiste data worden gecorrigeerd.</p>
+<p>De verwerkingsverantwoordelijke moet, indien er redenen zijn om data te wijzigen, ook eventuele ontvangers van de data (andere organisaties waaraan de data zijn verstrekt) informeren over de wijziging (kennisgevingsplicht). Om dit te kunnen doen moet de verwerkingsverantwoordelijke weten aan welke organisatie en op welk moment data zijn verstrekt. Deze data zal dan ook gelogd moeten worden.</p>
+<p>In de sectorspecifieke wetgeving omtrent een openbaar register zijn bepalingen opgenomen over correctie van data. In zo’n geval zal in de betreffende wetgeving gekeken moeten worden hoe correctie doorgevoerd kan worden. <a href="https://www.autoriteitpersoonsgegevens.nl/themas/basis-avg/privacyrechten-avg/recht-op-rectificatie">zie ook het recht op rectificatie</a></p>
+<p>Dit correctierecht is van groot belang in het kader van het herstel van dienstverlening en de bestrijding van identiteitsdiefstal.</p>
+</section><section id="beperkingen-op-informatieplichten"><div class="header-wrapper"><h4 id="x4-3-5-beperkingen-op-informatieplichten"><bdi class="secno">4.3.5 </bdi>Beperkingen op informatieplichten</h4><a class="self-link" href="#beperkingen-op-informatieplichten" aria-label="Permalink for Section 4.3.5"></a></div>
+<p><strong>Zwaar(der)wegende algemene belangen</strong><br>De rechten van betrokkenen gelden niet als er een zwaarwegend belang is om niet te informeren, bijvoorbeeld om strafbare feiten te voorkomen of om de vrijheden van anderen te beschermen. Dit is mogelijk als wordt voldaan aan een van de uitzonderingen uit artikel 41 UAVG. Dit betreft situaties waarin (kort samengevat) nationale/openbare veiligheid of de opsporing van strafbare feiten zwaarder moet wegen.</p>
+<p>Om te kunnen weten of er (mogelijk) sprake is van een algemeen belang dat zwaarder moet wegen dan het belang van de betrokkene op informatie, dient de verwerkingsverantwoordelijke dit te kunnen achterhalen. Dit houdt in dat de situatie waarin daar mogelijk sprake van kan zijn, zoals verstrekking van data aan bijvoorbeeld een opsporingsinstanties, voor de verwerkingsverantwoordelijke herleidbaar moet zijn. Dit betekent dat dit op enige manier moet zijn vastgelegd.</p>
+<p>Ook moet de verwerkingsverantwoordelijke kunnen vaststellen of er – bijvoorbeeld door tijdsverloop - nog wel reden is om de beperking op informatie te handhaven, of dat het belang niet meer aan de orde is (bijvoorbeeld als een strafrechtelijk onderzoek is afgerond).</p>
+<p><strong>Zwaar(der) wegende belangen van betrokkene of rechten van anderen</strong><br>Het kan voorkomen dat persoonsdata van een betrokkene, als deze ter inzage worden aangeboden, ook informatie over een ander persoon (een derde) bevat, en deze derde daardoor in zijn recht of vrijheid kan worden aangetast, bijvoorbeeld in het geval van informatie over een verblijfplaats. Het kan dan in voorkomende gevallen noodzakelijk zijn om informatie dan niet aan een betrokkene ter inzage te bieden.</p>
+<p>Echter, om deze afweging te kunnen maken zal nodig zijn dat is vastgelegd of daarvan sprake zou kunnen zijn. Dit is bijvoorbeeld het geval als informatie is verstrekt aan of verkregen is van instanties die zich bezighouden met de uitvoering of het waarborgen van beschermende maatregelen.</p>
+</section><section id="inbreuken-op-persoonsgegevens-datalekken-en-melding"><div class="header-wrapper"><h4 id="x4-3-6-inbreuken-op-persoonsgegevens-datalekken-en-melding"><bdi class="secno">4.3.6 </bdi>Inbreuken op persoonsgegevens (datalekken) en melding</h4><a class="self-link" href="#inbreuken-op-persoonsgegevens-datalekken-en-melding" aria-label="Permalink for Section 4.3.6"></a></div>
+<p>Als er sprake is van een datalek, dan moet dat bij de Autoriteit Persoonsgegevens (AP) gemeld worden. In sommige gevallen moet ook informatie verstrekt worden aan betrokkenen.</p>
+<p>Bij een datalek gaat het om toegang tot persoonsgegevens zonder dat dit mag of zonder dat dit de bedoeling is, waarbij de oorzaak een inbreuk op de beveiliging van deze data is. Ook het ongewenst vernietigen, verliezen, wijzigen of verstrekken van persoonsdata door zo’n inbreuk valt onder een datalek.</p>
+<p>De verplichtingen ten aanzien van een datalek veronderstellen dat een organisatie maatregelen heeft genomen om te kunnen constateren dat een datalek heeft plaatsgevonden, wanneer dat heeft plaatsgevonden en welke (onrechtmatige) verwerkingen van persoonsdata dat tot gevolg heeft gehad. Dit betekent dat het doorbreken van beveiligingsmaatregelen dient te worden gelogd, en ook de verwerkingshandelingen die ten aanzien van de persoonsgegevens hebben plaatsgevonden. Organisaties dienen maatregelen te treffen om ingeval van problemen deze zo snel mogelijk te kunnen herkennen, en in het verlengde daarvan, ook te kunnen herstellen. Ook dit vergt dat wordt vastgelegd welke data op welk moment zijn verwerkt, ontvangen, verstrekt, et cetera. Op deze wijze kunnen organisaties in gevallen waarbij voor betrokkene mogelijk ook schade kan ontstaan, daarmee rekening houden en zo nodig maatregelen treffen.</p>
+</section></section><section id="zorgvuldigheidsverplichtingen"><div class="header-wrapper"><h3 id="x4-4-zorgvuldigheidsverplichtingen"><bdi class="secno">4.4 </bdi>Zorgvuldigheidsverplichtingen</h3><a class="self-link" href="#zorgvuldigheidsverplichtingen" aria-label="Permalink for Section 4.4"></a></div>
+<section id="inleiding-0"><div class="header-wrapper"><h4 id="x4-4-1-inleiding"><bdi class="secno">4.4.1 </bdi>Inleiding</h4><a class="self-link" href="#inleiding-0" aria-label="Permalink for Section 4.4.1"></a></div>
+<p>Bij het verkeer tussen bestuursorganen en burgers, vormen de algemene beginselen van behoorlijk bestuur een belangrijk fundament. Deze deels geschreven, deels ongeschreven algemene rechtsbeginselen zijn gedragsregels voor de overheid. Ze gaan bijvoorbeeld over de manier waarop de overheid besluiten neemt, maar ook op overig handelen van de overheid zijn ze in principe van toepassing (art. 3:1, tweede lid, Awb). Voorbeelden van deze beginselen zijn de beginselen van zorgvuldige voorbereiding en belangenafweging (art. 3:2 respectievelijk art. 3:4 Awb) en het motiveringsbeginsel van besluiten (art. 3:46 Awb).</p>
+</section><section id="belanghebbenden-burgers-en-bedrijven"><div class="header-wrapper"><h4 id="x4-4-2-belanghebbenden-burgers-en-bedrijven"><bdi class="secno">4.4.2 </bdi>Belanghebbenden: burgers en bedrijven</h4><a class="self-link" href="#belanghebbenden-burgers-en-bedrijven" aria-label="Permalink for Section 4.4.2"></a></div>
+<p>Voor de toepassing van de Awb is het begrip belanghebbende van belang. Een belanghebbende is iemand die direct belang heeft bij de beslissing. Dit kunnen natuurlijke, maar ook rechtspersonen zijn. Dit betekent dat de zorgvuldigheidsnormen, zoals deugdelijke motivering van besluiten en informatieverstrekking daarbij, ook richting rechtspersonen (bedrijven en organisaties) geldt.</p>
+</section><section id="zorgvuldige-voorbereiding-en-belangenafweging"><div class="header-wrapper"><h4 id="x4-4-3-zorgvuldige-voorbereiding-en-belangenafweging"><bdi class="secno">4.4.3 </bdi>Zorgvuldige voorbereiding en belangenafweging</h4><a class="self-link" href="#zorgvuldige-voorbereiding-en-belangenafweging" aria-label="Permalink for Section 4.4.3"></a></div>
+<p>Bestuursorganen dienen besluiten zorgvuldig voor te bereiden. Bij de voorbereiding van besluiten worden vaak (persoons)data van burgers en bedrijven gebruikt. Verder zijn die data vaak afkomstig van veel verschillende instanties. Bij de aanvraag van een parkeervergunning komen er bijvoorbeeld data over de wijk waarin je woont uit de BRP en komen er data over de auto die je bezit uit het kentekenregister. Ook moeten bestuursorganen zorgvuldig alle betrokken belangen afwegen. Hierbij mogen de gevolgen voor een specifieke persoon (of groep) niet onevenredig zijn. Ook om deze afweging zorgvuldig te kunnen maken, verwerkt de overheid (persoons)data.</p>
+</section><section id="motiveringsbeginsel"><div class="header-wrapper"><h4 id="x4-4-4-motiveringsbeginsel"><bdi class="secno">4.4.4 </bdi>Motiveringsbeginsel</h4><a class="self-link" href="#motiveringsbeginsel" aria-label="Permalink for Section 4.4.4"></a></div>
+<p>Verder dient een bestuursorgaan een besluit goed te motiveren. Burgers en bedrijven moeten kunnen weten welke factoren hebben meegewogen bij het nemen van een besluit. Dit gaat om welke argumenten zijn gebruikt, en welke juridische grondslagen het besluit op is gebaseerd, maar ook om welke data de basis vormen voor het besluit.</p>
+</section><section id="de-beginselen-in-de-context-van-verwerkingenlogging"><div class="header-wrapper"><h4 id="x4-4-5-de-beginselen-in-de-context-van-verwerkingenlogging"><bdi class="secno">4.4.5 </bdi>De beginselen in de context van verwerkingenlogging</h4><a class="self-link" href="#de-beginselen-in-de-context-van-verwerkingenlogging" aria-label="Permalink for Section 4.4.5"></a></div>
+<p>In de context van verwerkingenlogging is het van belang om de hierboven genoemde beginselen in samenhang te bezien. Het goed kunnen voldoen aan een van de verplichtingen, is noodzakelijk voor het voldoen aan de andere. Chronologisch wordt een besluit eerst zorgvuldig voorbereid, waarbij alle betrokken belangen zorgvuldig worden afgewogen en onevenredig benadeelde groepen niet uit het oog worden verloren. De motivering gebeurt gedurende het gehele proces, en vormt een volledige en betrouwbare reconstructie wanneer het proces is afgerond. Een gestandaardiseerde manier van verwerkingenlogging ondersteunt dit hele proces. Tijdens de voorbereiding van een besluit wordt goed bijgehouden welke data worden gebruikt, waar ze vandaan komen en voor welke reden ze zijn opgevraagd. Zo is achteraf altijd goed duidelijk hoe een besluit tot stand is gekomen en kan het bestuursorgaan dit altijd goed motiveren. Verwerkingenlogging helpt de bestuursorganen om zich goed te kunnen verantwoorden.</p>
+</section></section><section id="informatiebeveiligingsverplichtingen"><div class="header-wrapper"><h3 id="x4-5-informatiebeveiligingsverplichtingen"><bdi class="secno">4.5 </bdi>Informatiebeveiligingsverplichtingen</h3><a class="self-link" href="#informatiebeveiligingsverplichtingen" aria-label="Permalink for Section 4.5"></a></div>
+<section id="baseline-informatiebeveiliging-overheid-bio"><div class="header-wrapper"><h4 id="x4-5-1-baseline-informatiebeveiliging-overheid-bio"><bdi class="secno">4.5.1 </bdi>Baseline Informatiebeveiliging Overheid (BIO)</h4><a class="self-link" href="#baseline-informatiebeveiliging-overheid-bio" aria-label="Permalink for Section 4.5.1"></a></div>
+<p>De BIO legt overheden diverse beveiligingsverplichtingen op, om de informatie te beschermen die wordt verwerkt. Informatie die wordt verwerkt om de taken, verantwoordelijkheden en informatieverplichtingen zoals in het voorgaande besproken goed te kunnen uitvoeren.</p>
+<p>De BIO verplicht om bepaalde gebeurtenissen in informatiesystemen vast te leggen (par. 12.4). Daarbij gaat het om logbestanden van gebeurtenissen die gebruikersactiviteiten, uitzonderingen daarop en informatiebeveiligingsgebeurtenissen (beveiligingsincidenten) vastleggen.</p>
+<p>Dit betreft systeemgebeurtenissen, maar deze zullen ook, op applicatieniveau, direct te relateren zijn aan verslaglegging die overheden in het kader van hun verantwoording (ook) moeten vastleggen. De standaard dekt in principe niet de BIO logging af, maar de standaard kan hierbij wel helpen.</p>
+<p>De BIO bepaalt de informatie die een logregel ten minste moet bevatten, waaronder de gebeurtenis, de informatie die nodig is om incidenten te herleiden tot natuurlijke personen, het resultaat van de gebeurtenis en het tijdstip.</p>
+<p>Deze informatie is nodig om in geval van problemen, deze tijdig te kunnen herkennen en te kunnen herstellen.</p>
+</section><section id="toegangsbeveiliging-en-beheer"><div class="header-wrapper"><h4 id="x4-5-2-toegangsbeveiliging-en-beheer"><bdi class="secno">4.5.2 </bdi>Toegangsbeveiliging en beheer</h4><a class="self-link" href="#toegangsbeveiliging-en-beheer" aria-label="Permalink for Section 4.5.2"></a></div>
+<p>Toegangsbeveiliging en het beheer van toegang is een algemeen beginsel dat voor alle dataverzamelingen en datauitwisseling cruciaal is. Het vormt de basis van het vertrouwen in de overheid en het spreekt voor zich dat dezelfde strenge wetten, regels, standaarden en normen die van toepassing zijn op de gegevens zelf en de uitwisseling van gegevens ook van toepassing zijn op de logs (en back-ups) die er zijn van de gegevens. Ook hiervoor geldt dat de standaard in principe niet de BIO logging afdekt, maar hierbij wel kan helpen.</p>
+</section></section><section id="verantwoordingsbehoeften-van-toezichthouders"><div class="header-wrapper"><h3 id="x4-6-verantwoordingsbehoeften-van-toezichthouders"><bdi class="secno">4.6 </bdi>Verantwoordingsbehoeften van toezichthouders</h3><a class="self-link" href="#verantwoordingsbehoeften-van-toezichthouders" aria-label="Permalink for Section 4.6"></a></div>
+<section id="verantwoording-over-verschillende-onderwerpen"><div class="header-wrapper"><h4 id="x4-6-1-verantwoording-over-verschillende-onderwerpen"><bdi class="secno">4.6.1 </bdi>Verantwoording over verschillende onderwerpen</h4><a class="self-link" href="#verantwoording-over-verschillende-onderwerpen" aria-label="Permalink for Section 4.6.1"></a></div>
+<p>Het verantwoorden over hun handelen doen overheidsorganisaties niet alleen publiekelijk of in de richting van (individuele) burgers en bedrijven of zaken die hen raken. Organisaties dienen zich ook met "algemene informatie" over beleidsvorming en onderbouwing daarvan, informatie over financiën, prestaties, bedrijfsvoering en maatschappelijke verantwoordingsinformatie te verantwoorden.</p>
+<p>Hoewel de verantwoording hier ook vaak zal gaan over de inhoudelijke onderbouwing van gemaakte keuzes en gevoerde beleidsrichting zal het ook gaan om informatie die op geaggregeerd niveau uit de (logging) van de dagelijkse handelingen van organisaties voortvloeien. Dat geldt bijvoorbeeld voor verantwoording over de prestaties.</p>
+<p>Het is wenselijk om waar mogelijk kengetallen te gebruiken om de prestaties van de instelling in beeld te brengen. Bij het gebruik van kengetallen is het van belang dat ze de juiste informatie overbrengen, dat het aantal kengetallen beperkt is, en dat ze worden toegelicht.</p>
+<p>De informatie over de prestaties moet zo concreet mogelijk zijn, dus afhankelijk van het soort prestatie, en moet inzicht geven in aantallen, omvang of bedragen. De waarde van deze informatie voor de gebruiker wordt groter als ze vergeleken kan worden met de prestaties en kosten in voorgaande jaren of met de prestaties van vergelijkbare instellingen. Het is ook wenselijk dat een relatie met de strategische doelstellingen wordt gelegd.</p>
+<p>Hoewel dergelijke verantwoordingsdoelen op het eerste gezicht niet direct een relatie lijken te hebben met de verslaglegging van de dagelijkse taken van de organisaties, vloeit de informatie om deze doelen te realiseren daar uiteindelijk wel uit voort.</p>
+</section></section><section id="tussenconclusie-2"><div class="header-wrapper"><h3 id="x4-7-tussenconclusie"><bdi class="secno">4.7 </bdi>Tussenconclusie</h3><a class="self-link" href="#tussenconclusie-2" aria-label="Permalink for Section 4.7"></a></div>
+<p>Logging die wordt vastgelegd kan vele verschillende doelen dienen, zoals de invulling van specifieke informatieverschaffing aan burgers, of de verantwoording over de zorgvuldigheid van overheidshandelen.</p>
+<p>Belangrijk is dat de conceptuele invulling van afspraken over logging zodanig wordt ingericht dat zij breed toepasbaar is, maar tegelijkertijd ruimte laat om specifieke invulling ("aanbouw") van afspraken op specifieke doelen te ondersteunen.</p>
+</section></section>
+  <section id="eenduidigheid-bevorderen-is-standaardiseren"><div class="header-wrapper"><h2 id="x5-eenduidigheid-bevorderen-is-standaardiseren"><bdi class="secno">5. </bdi>Eenduidigheid bevorderen is standaardiseren</h2><a class="self-link" href="#eenduidigheid-bevorderen-is-standaardiseren" aria-label="Permalink for Section 5."></a></div>
+<section id="standaardisatie-van-logging-binnen-organisaties"><div class="header-wrapper"><h3 id="x5-1-standaardisatie-van-logging-binnen-organisaties"><bdi class="secno">5.1 </bdi>Standaardisatie van logging binnen organisaties</h3><a class="self-link" href="#standaardisatie-van-logging-binnen-organisaties" aria-label="Permalink for Section 5.1"></a></div>
+<p>In het voorgaande is naar voren gekomen dat overheden bij de uitvoering van hun taken (persoons)data verwerken. Daarbij zullen zij data verwerken die zij zelf verzamelen en beheren, en op basis daarvan conclusies trekken en besluiten nemen.</p>
+<p>Hoewel organisaties verschillende taken kunnen hebben, en afhankelijk daarvan ook verschillende soorten data verwerken en verschillende soorten besluiten nemen, zal de wijze waarop zij zich over de uitvoering ervan moeten verantwoorden, minder divers zijn.</p>
+<p>Gelet op de verantwoordingsverplichtingen – zoals de beginselen van behoorlijk bestuur – die zijn vastgelegd in de Awb en bijvoorbeeld de AVG, maakt de wijze waarop de verwerkingen van data worden vastgelegd niet uit.</p>
+<p>In alle gevallen zal de herkomst van de data die worden gebruikt moeten worden gelogd, waaronder (meta)data over de kwaliteit van deze data. Ook het moment waarop de data worden gebruikt om te komen tot een besluit, en de wijze waarop de data worden gebruikt, zal moeten worden vastgelegd (motivering).</p>
+<p>Het zal bij organisaties vermoedelijk vaak voorkomen dat data die worden gebruikt, in verschillende (deel)verwerkingen worden vastgelegd. Een overzicht van de verschillende registraties die worden gebruikt (ook als daar geen persoonsdata in opgenomen zijn) zal daarom noodzakelijk zijn. Ook zal nodig zijn dat er over de verwerkingen heen een relatie kan worden gelegd tussen de data die ten behoeve van een specifiek besluit zijn gebruikt, en aan welke (natuurlijke) persoon dit besluit is gericht.</p>
+<p>Om te zorgen dat overheidsorganisaties dit op een eenduidige (gestandaardiseerde) wijze doen, ligt het voor de hand daarover regels te stellen in een op te leggen standaard.</p>
+</section><section id="standaardisatie-van-logging-tussen-organisaties-informatie-uitwisseling"><div class="header-wrapper"><h3 id="x5-2-standaardisatie-van-logging-tussen-organisaties-informatie-uitwisseling"><bdi class="secno">5.2 </bdi>Standaardisatie van logging tussen organisaties (informatie-uitwisseling)</h3><a class="self-link" href="#standaardisatie-van-logging-tussen-organisaties-informatie-uitwisseling" aria-label="Permalink for Section 5.2"></a></div>
+<p>Bij de uitvoering van hun taken zullen organisaties regelmatig gebruik maken van data van andere overheidsorganisaties. Onder meer omdat het uitgangspunt is dat data die bij de overheid bekend zijn, niet nogmaals bij burgers of bedrijven mogen worden uitgevraagd.</p>
+<p>Dit betekent dat overheden, naast de uitvoering van de eigen taken, met regelmaat ook ondersteunend voor de taakuitvoering voor collega-overheidsorganisaties zullen zijn. Zij zullen daarbij zowel ontvanger als leverancier van informatie zijn. En dat betekent dat de wijze van hun eigen verantwoording (en logging) van belang is voor de verantwoording van andere overheidsorganisaties. Daarom is het van belang om ook afspraken te maken over de wijze waarop data aan andere overheidsorganisaties worden verstrekt, of worden ontvangen.</p>
+<p>Om deze koppeling goed te kunnen leggen, en daarmee de overheidsbrede verantwoording goed te kunnen vormgeven, is het belangrijk om afspraken te maken over de gebeurtenissen waarvoor de data worden verstrekt, het tijdstip waarop dit gebeurt en de waarborgen die zijn getroffen. Overigens is dit niet alleen nodig ter verantwoording, maar ook om ingeval van problemen bij het gebruik van onjuiste data deze snel te kunnen herkennen en herstellen, ook als de problemen organisatie-overstijgend zijn.</p>
+</section><section id="tussenconclusie-3"><div class="header-wrapper"><h3 id="x5-3-tussenconclusie"><bdi class="secno">5.3 </bdi>Tussenconclusie</h3><a class="self-link" href="#tussenconclusie-3" aria-label="Permalink for Section 5.3"></a></div>
+<p>Om eenduidigheid te bevorderen, ook ten aanzien van de wijze van verslaglegging, is het nodig om afspraken te maken die zorgen dat verschillende organisaties logging op eenzelfde manier inrichten. Daarmee wordt een werkwijze of handeling gestandaardiseerd. Dat begint met afspraken over de wijze waarop organisaties zelf handelen binnen de eigen verantwoordelijkheid om verslaglegging te doen, maar ook hoe zij deze verslaglegging op elkaar laten aansluiten en waar de grenzen liggen.</p>
+</section></section>
+  <section id="een-standaard-opstellen-om-deze-kaders-te-faciliteren"><div class="header-wrapper"><h2 id="x6-een-standaard-opstellen-om-deze-kaders-te-faciliteren"><bdi class="secno">6. </bdi>Een standaard opstellen om deze kaders te faciliteren</h2><a class="self-link" href="#een-standaard-opstellen-om-deze-kaders-te-faciliteren" aria-label="Permalink for Section 6."></a></div>
+<section id="afspraken-over-logging-maken"><div class="header-wrapper"><h3 id="x6-1-afspraken-over-logging-maken"><bdi class="secno">6.1 </bdi>Afspraken over logging maken</h3><a class="self-link" href="#afspraken-over-logging-maken" aria-label="Permalink for Section 6.1"></a></div>
+<section id="behoud-van-verantwoordelijkheid-van-elk-overheidsorgaan"><div class="header-wrapper"><h4 id="x6-1-1-behoud-van-verantwoordelijkheid-van-elk-overheidsorgaan"><bdi class="secno">6.1.1 </bdi>Behoud van verantwoordelijkheid van elk overheidsorgaan</h4><a class="self-link" href="#behoud-van-verantwoordelijkheid-van-elk-overheidsorgaan" aria-label="Permalink for Section 6.1.1"></a></div>
+<p>Een belangrijk uitgangspunt is dat elke overheidsorganisatie verantwoordelijk is voor de uitvoering van haar eigen taken. Niet meer en niet minder. Dit is in de eerdere hoofdstukken ook vastgesteld. In het verlengde daarvan is het belangrijk dat dit ook voor de logging van de eigen taken wordt doorgevoerd. Organisaties loggen de dataverwerkingen die zij ten behoeve van zichzelf uitvoeren. Daaronder valt tevens de ontvangst van data van andere overheidsorganisaties, of data die zij aan andere organisaties geleverd hebben.</p>
+</section><section id="grote-gemene-deler-in-verplichtingen-zoeken"><div class="header-wrapper"><h4 id="x6-1-2-grote-gemene-deler-in-verplichtingen-zoeken"><bdi class="secno">6.1.2 </bdi>Grote gemene deler in verplichtingen zoeken</h4><a class="self-link" href="#grote-gemene-deler-in-verplichtingen-zoeken" aria-label="Permalink for Section 6.1.2"></a></div>
+<p>Standaardiseren betekent dat bezien moet worden welke afspraken voor elke organisatie zouden moeten gelden, en waarover het verstandig is om afspraken te maken. Zoals hiervoor beschreven heeft elke organisatie zijn eigen taak en op basis van die taak processen ingericht.</p>
+<p>De informatie die een organisatie verwerkt, en waarvoor moet worden gelogd ten behoeve van verantwoording, verschilt ook. De grote gemene deler zit dus niet in het voorschrijven van specifieke data die moeten worden gelogd, het doel waarvoor moet worden gelogd, of de termijn waarop moet worden gelogd.</p>
+<p>Wat echter voor elke organisatie op dezelfde wijze kan plaatsvinden, los van de taak of het doel, is de wijze waarop verwerkingen ten aanzien van data worden vastgelegd (het feit dat er een verwerking heeft plaatsgevonden), ten behoeve van onderlinge relateerbaarheid, zowel binnen als buiten de organisatiegrenzen.</p>
+</section><section id="baseline-voor-logging-voor-organisaties"><div class="header-wrapper"><h4 id="x6-1-3-baseline-voor-logging-voor-organisaties"><bdi class="secno">6.1.3 </bdi>Baseline voor logging voor organisaties</h4><a class="self-link" href="#baseline-voor-logging-voor-organisaties" aria-label="Permalink for Section 6.1.3"></a></div>
+<p>De standaard dient daarom interoperabiliteit van logging van dataverwerkingen te realiseren, door voor een aantal loghandelingen de koppelvlakken en werkwijze voor te schrijven. Daarmee wordt de basis gelegd voor een uniforme wijze van logging door verschillende systemen in de organisatie, die relateerbaar is.</p>
+<p>De standaard dient voorschriften te bevatten over het vastleggen van logs, over het aan elkaar relateren van deze logs en over het aan elkaar relateren van dataverwerkingen over grenzen van systemen (binnen organisaties).</p>
+<p>Op deze manier is de logging zelf "neutraal" (doel en toepassing maakt voor de logging en relateerbaarheid niet uit). De logging maakt het echter wel mogelijk om voor verschillende doelen of toepassingen te worden ingezet.</p>
+<p>Een organisatie kan desgewenst vanuit dit vertrekpunt extensies maken op de standaard op basis van de specifieke behoefte die zij heeft. Op deze manier kan een organisatie de eigen behoefte aan logging "op maat inrichten". Organisaties en sectoren die dit doen moeten deze extensie conform het beheerproces van de standaard laten vaststellen. Dit ter voorkoming van dialecten binnen de standaard en mogelijkheden tot breder gebruik.</p>
+</section></section><section id="logging-van-informatie-uitwisseling"><div class="header-wrapper"><h3 id="x6-2-logging-van-informatie-uitwisseling"><bdi class="secno">6.2 </bdi>Logging van informatie-uitwisseling</h3><a class="self-link" href="#logging-van-informatie-uitwisseling" aria-label="Permalink for Section 6.2"></a></div>
+<p>Zoals hiervoor is besproken kunnen dataverwerkingen ten behoeve van taken verschillende verantwoordelijkheden overstijgen (en dus organisatie-overstijgend zijn). Doordat elke organisatie op basis van de standaard op dezelfde wijze én binnen de reikwijdte van de eigen organisatie logt, vallen er in de logging geen gaten en is de onderlinge verbondenheid in verantwoordelijkheden geborgd.</p>
+<p>Immers vallen onder de verantwoordelijkheid om te loggen tevens de ontvangst van data van andere overheidsorganisaties, of de data die zij aan andere organisaties geleverd hebben. Daardoor is de informatie-uitwisseling als geheel gelogd en wordt voorkomen dat "dubbele logging" ontstaat. Dat brengt naast doelmatigheid ook een beperking van de kans op fouten of strijdige logging met zich mee.</p>
+</section><section id="ketenlogging"><div class="header-wrapper"><h3 id="x6-3-ketenlogging"><bdi class="secno">6.3 </bdi>Ketenlogging</h3><a class="self-link" href="#ketenlogging" aria-label="Permalink for Section 6.3"></a></div>
+<p>Zoals aangegeven is de logging op basis van de afspraken "neutraal". De logging zorgt voor uniforme vastlegging door organisaties van dataverwerkingen en voor onderlinge relateerbaarheid van deze verwerkingen. De logging is dus niet gebonden aan een specifieke organisatie of aan organisaties die met elkaar samenwerkingen ("ketens").</p>
+<p>Het is echter mogelijk om, als een organisatie dat wil, door middel van extensies op de standaard aanvullingen te doen op de logging, of aanvullende afspraken te maken met andere overheden waarmee specifiek wordt samengewerkt. Sectorale aanvullingen binnen "samenwerkende ketens van organisaties" zijn mogelijk bovenop de basis die de standaard legt.</p>
+</section><section id="functionele-invulling"><div class="header-wrapper"><h3 id="x6-4-functionele-invulling"><bdi class="secno">6.4 </bdi>Functionele invulling</h3><a class="self-link" href="#functionele-invulling" aria-label="Permalink for Section 6.4"></a></div>
+<p>Om de hiervoor besproken uitgangspunten – eenduidige wijze van logging, scope van logging en onderlinge relateerbaarheid van logging – te bereiken, zullen functionele afspraken gemaakt moeten worden. Door de functionele logging tot het niveau van relateerbaarheid te beperken betekent het ook dat de standaard in de basis deze aspecten dient te adresseren.</p>
+<p>Dit houdt in dat voor logging afspraken moeten worden gemaakt over de identificatie van transacties en/of mutaties (deze moeten functioneel herkenbaar of afgebakend zijn om als generieke basis voor logging te kunnen dienen).</p>
+<p>Verder moet de relatie met eerdere en onderliggende transacties of mutaties duidelijk zijn. Dat zorgt ervoor dat de transactie in de juiste context en onder de juiste verantwoordelijkheid geplaatst kan worden. Ook moet een referentienummer worden toegekend voor koppeling tussen verschillende organisaties.</p>
+</section><section id="technisch-operationele-invulling"><div class="header-wrapper"><h3 id="x6-5-technisch-operationele-invulling"><bdi class="secno">6.5 </bdi>Technisch operationele invulling</h3><a class="self-link" href="#technisch-operationele-invulling" aria-label="Permalink for Section 6.5"></a></div>
+<p>De technische en operationele invulling moet zodanig plaatsvinden dat de functionele behoefte adequaat wordt ingevuld. Daarnaast dient ervoor gezorgd te worden dat de niet-functionele randvoorwaarden (zoals privacy en beveiligingsvereisten, wet- en regelgeving) adequaat worden ingevuld. Deze niet-functionele randvoorwaarden liggen in feite besloten in dit document (kadering). Binnen deze ruimte is de technische invulling vrij, als middel om een aan het bovenliggend doel te voldoen.</p>
+</section><section id="tussenconclusie-4"><div class="header-wrapper"><h3 id="x6-6-tussenconclusie"><bdi class="secno">6.6 </bdi>Tussenconclusie</h3><a class="self-link" href="#tussenconclusie-4" aria-label="Permalink for Section 6.6"></a></div>
+<p>Bij de inrichting van een standaard die aan de basis ligt om verslaglegging (logging) te standaardiseren, is een belangrijk uitgangspunt dat de verantwoordelijkheid van elke organisatie als uitgangspunt wordt genomen, inclusief de grens daarvan. Dat vormt de "scope" per organisatie. Op basis daarvan kan een basis (baseline) worden afgesproken waarop kan worden voortgebouwd.</p>
+</section></section>
+  <section id="beschrijving-van-de-standaard"><div class="header-wrapper"><h2 id="x7-beschrijving-van-de-standaard"><bdi class="secno">7. </bdi>Beschrijving van de standaard</h2><a class="self-link" href="#beschrijving-van-de-standaard" aria-label="Permalink for Section 7."></a></div>
+<section id="doel-van-de-standaard"><div class="header-wrapper"><h3 id="x7-1-doel-van-de-standaard"><bdi class="secno">7.1 </bdi>Doel van de standaard</h3><a class="self-link" href="#doel-van-de-standaard" aria-label="Permalink for Section 7.1"></a></div>
+<p>Om verantwoording te kunnen afleggen, zowel als overheidsorganisatie, maar met name ook om als "de overheid" te kunnen verantwoorden, dat wil zeggen als "samenwerkende overheidsorganisaties", is het van belang dat de wijze waarop overheden verslag leggen van hun activiteiten eenduidig is, en dat de verschillende verslagleggingen aan elkaar te relateren zijn. Dat is de basis voor onderlinge samenwerking op dit terrein.</p>
+<p>De standaard "Logboek Dataverwerkingen" zorgt daarvoor.</p>
+<p>De standaard beoogt (technische) interoperabiliteit van loggen van dataverwerkingen te realiseren, door voor een aantal loghandelingen de koppelvlakken en werkwijze voor te schrijven:</p>
+<ul>
+<li>Het vastleggen van logs van dataverwerkingen</li>
+<li>Het aan elkaar relateren van deze logs.</li>
+<li>Het aan elkaar relateren van dataverwerkingen over grenzen van systemen (binnen organisaties) en verantwoordelijkheden (organisatie-overstijgend)</li>
+</ul>
+<p>De standaard is ontwikkeld vanuit de behoefte om als overheid eenduidige verantwoording over overheidsorganisaties heen te kunnen realiseren. Echter, de systematiek zoals beschreven is breder toepasbaar voor organisaties buiten de overheid, die de verslaglegging onderling willen afstemmen en relateren.</p>
+</section><section id="beschrijving-van-systematiek-van-processen-in-organisaties"><div class="header-wrapper"><h3 id="x7-2-beschrijving-van-systematiek-van-processen-in-organisaties"><bdi class="secno">7.2 </bdi>Beschrijving van systematiek van processen in organisaties</h3><a class="self-link" href="#beschrijving-van-systematiek-van-processen-in-organisaties" aria-label="Permalink for Section 7.2"></a></div>
+<p>Organisaties hebben taken toebedeeld gekregen. Om deze taken uit te voeren is het nodig om (persoons)data te verwerken.</p>
+<p>De standaard schrijft voor dat deze per taak als "verwerkingsactiviteit" worden onderkend. Om de verschillende taken uit te voeren heeft een organisatie in de regel meerdere verwerkingsactiviteiten onderkend.</p>
+<p>De standaard schrijft voor dat deze verwerkingsactiviteiten in een "register" moeten worden opgenomen. Daarin wordt onder meer het doel van de verwerkingen opgenomen, zoals dit bijvoorbeeld op grond van de AVG voor verwerkingen van persoonsdata al verplicht is. Registers in het kader van de standaard beogen een bredere reikwijdte dan persoonsdata.</p>
+<p>Vervolgens schrijft de standaard voor dat binnen de onderkende verwerkingsactiviteiten "dataverwerkingen" worden gelogd. Dit gebeurt door iedere applicatie die een dataverwerking uitvoert, op gestandaardiseerde manier een logregel te laten vastleggen in een Logboek dataverwerkingen.</p>
+<p>De handelingen die worden gelogd kunnen alle handelingen betreffen die met data plaatsvinden.</p>
+<p>Elke dataverwerking wordt apart gelogd en krijgt een kenmerk ("trace") toegekend, waardoor bij elkaar horende dataverwerkingen binnen de grenzen van een systeem worden gegroepeerd en kunnen worden gerelateerd. Dit betekent dat de handelingen die ten behoeve van een specifieke taak (context) zijn uitgevoerd aan elkaar te relateren zijn, en daarmee <strong>te verantwoorden</strong> zijn.</p>
+<p>Omdat dataverwerkingen kunnen of zullen plaatsvinden voor meerdere taken (contexten, verwerkingsactiviteiten), ook over organisaties heen, is het nodig dat ook de relatie (link) kan worden gelegd tussen de verschillende taken. De standaard realiseert dit door informatie over de "trace", "verwerkingsactiviteit" en registers (de statische informatie over de dataverwerking) mee te geven aan de uitwisseling van data. Op deze wijze zijn de dataverwerkingen te relateren over verschillende taken en organisaties heen, en kan <strong>verantwoording</strong> worden afgelegd.</p>
+</section><section id="standaard-als-basis-voor-verantwoording-logging-is-neutraal"><div class="header-wrapper"><h3 id="x7-3-standaard-als-basis-voor-verantwoording-logging-is-neutraal"><bdi class="secno">7.3 </bdi>Standaard als basis voor verantwoording: logging is "neutraal"</h3><a class="self-link" href="#standaard-als-basis-voor-verantwoording-logging-is-neutraal" aria-label="Permalink for Section 7.3"></a></div>
+<p>Op deze wijze wordt door de standaard geborgd dat de dataverwerkingen worden gelogd zonder dat relevant is in welke context of voor welk doel dat gebeurt (de wijze van logging is "neutraal").</p>
+<p>Echter op het moment dat doelen, context en onderlinge samenhang van belang is kan een verband worden gelegd en wordt de logging betekenisvol, bijvoorbeeld om verantwoording af te leggen over een specifieke handeling die is uitgevoerd in het kader van een taak door één of meerdere overheidsorganisaties (basale usecase).</p>
+</section><section id="extensies-het-gebruik-van-logging-voor-verschillende-doeleinden"><div class="header-wrapper"><h3 id="x7-4-extensies-het-gebruik-van-logging-voor-verschillende-doeleinden"><bdi class="secno">7.4 </bdi>Extensies: Het gebruik van logging voor verschillende doeleinden</h3><a class="self-link" href="#extensies-het-gebruik-van-logging-voor-verschillende-doeleinden" aria-label="Permalink for Section 7.4"></a></div>
+<p>Op basis van de algemene relateerbaarheid die de standaard realiseert over de logging van verschillende dataverwerkingen, is het - naast de algemene verantwoording die op basis daarvan kan worden afgelegd - mogelijk om diverse andere doeleinden en processen te faciliteren. De standaard maakt dat mogelijk door extensies toe te staan waarmee specifieke functionaliteit wordt toegevoegd aan de standaard.</p>
+<p>Een voorbeeld daarvan is de "Extensie Betrokkenen". Daarmee kan meer precies worden uitgewerkt hoe de identiteit van een betrokkene wordt gerelateerd aan een dataverwerking. Dat maakt het mogelijk om de koppeling te maken tussen de verwerkingen van persoonsdata, waarmee bijvoorbeeld inzageverzoeken geautomatiseerd mogelijk gemaakt kunnen worden. Een ander voorbeeld is de "Extensie Inzage", waarmee de wijze waarop op basis van de logs op een gestandaardiseerde manier de verwerkingen van data over een persoon ter inzage kunnen worden aangeboden (interface).</p>
+<p>Organisaties en sectoren die een extensie maken, moeten deze extensie conform het beheerproces van de standaard laten vaststellen waarmee extensie een optioneel onderdeel wordt van de standaard.</p>
+</section><section id="profielen-beperkingen-en-verplichtingen-in-het-gebruik-van-de-standaard"><div class="header-wrapper"><h3 id="x7-5-profielen-beperkingen-en-verplichtingen-in-het-gebruik-van-de-standaard"><bdi class="secno">7.5 </bdi>Profielen: beperkingen en verplichtingen in het gebruik van de standaard</h3><a class="self-link" href="#profielen-beperkingen-en-verplichtingen-in-het-gebruik-van-de-standaard" aria-label="Permalink for Section 7.5"></a></div>
+<p>De standaard zorgt ervoor dat eenduidige relaties gelegd kunnen worden tussen dataverwerkingen. De standaard legt daar in de basis geen beperkingen of aanvullingen aan op, en ook niet aan de tijdsduur waarbinnen de relaties moeten kunnen worden gelegd (bewaartermijn). Door middel van profielen kunnen dergelijke aanvullingen wel gemaakt worden, bijvoorbeeld door extensies, aanvullende eisen, of bewaartermijnen. Dit kan binnen een organisatie of binnen een groep van organisaties, bijvoorbeeld een sector die op een bepaalde wijze met elkaar samenwerking en afspraken wil maken.</p>
+</section><section id="integriteit-van-logging"><div class="header-wrapper"><h3 id="x7-6-integriteit-van-logging"><bdi class="secno">7.6 </bdi>Integriteit van logging</h3><a class="self-link" href="#integriteit-van-logging" aria-label="Permalink for Section 7.6"></a></div>
+<p>Een belangrijk aspect bij verantwoording is dat op de informatie kan worden vertrouwd. Dit betekent dat de wijze waarop logging wordt weggeschreven en bewaard zodanig is dat deze beschermd is en dat eventuele manipulaties van de logging kunnen worden aangetoond. Deze onweerlegbaarheid is belangrijk voor de bewijskracht van de logging. Als dit generiek is geregeld hoeven organisaties niet separaat meer aan te tonen of te regelen dat de logging ook daadwerkelijk klopt. Dit aspect zou als extensie kunnen worden toegevoegd.</p>
+</section><section id="tussenconclusie-5"><div class="header-wrapper"><h3 id="x7-7-tussenconclusie"><bdi class="secno">7.7 </bdi>Tussenconclusie</h3><a class="self-link" href="#tussenconclusie-5" aria-label="Permalink for Section 7.7"></a></div>
+<p>Het is van belang dat de wijze waarop overheden hun activiteiten vastleggen eenduidig is, en dat de verschillende verslagleggingen aan elkaar te relateren zijn. Dat is de basis om de onderlinge informatieuitwisseling te kunnen relateren. De standaard bevat om deze reden conceptuele afspraken, bedoeld om rekening te houden met verschillende processen, dataverwerkingen en de wijze waarop deze zijn worden gerelateerd. Dit vormt de basis waarmee het mogelijk is om voor verschillende toepassingen of doelen nadere toevoegingen op de standaard te maken. Daarbij is er ruimte om dit per organisatie of per groep organisaties (sector) aan te vullen afhankelijk van de specifieke behoeften.</p>
+</section></section>
+  <section id="beleidskader"><div class="header-wrapper"><h2 id="x8-beleidskader"><bdi class="secno">8. </bdi>Beleidskader</h2><a class="self-link" href="#beleidskader" aria-label="Permalink for Section 8."></a></div>
+<section id="leidende-principes"><div class="header-wrapper"><h3 id="x8-1-leidende-principes"><bdi class="secno">8.1 </bdi>Leidende principes</h3><a class="self-link" href="#leidende-principes" aria-label="Permalink for Section 8.1"></a></div>
+<p>Leidende principes bij gebruik en inrichting van de standaard</p>
+<p>Eigen verantwoordelijkheid:</p>
+<ol>
+<li>Iedere overheidsorganisatie verantwoordt zich vanuit goed openbaar bestuur op basis van de verwerkingsgrondslagen die zijn toegekend en toegespitst op de vervulling van de eigen taak, over de door haar zelf uitgevoerd verwerking van (persoons)data. Overheidsorganisaties die gebruik maken van de standaard Logboek dataverwerkingen om de verwerking van data gestandaardiseerd te loggen zijn zelf verantwoordelijk voor implementatie en inrichting van de standaard, de logs en de informatie die erin te vinden is. Dit betekent dat er een samenhang moet zijn tussen registers waarin verwerkingsactiviteiten worden benoemd, zoals het RvA, (art. 30 AVG) of het Algoritmeregister. Met deze registers kan worden herleid waarop de verwerking van data betrekking heeft.</li>
+<li>Enkel de data die voor verantwoording nodig zijn worden vastgelegd.</li>
+</ol>
+<p>Basis + extensies:</p>
+<ol start="3">
+<li>Ongeacht de verschillen in (taken van) overheidsorganisaties vindt de verantwoording van het loggen van verwerkingen middels de standaard Logboek dataverwerkingen op eenduidige wijze plaats. Organisaties en sectoren die de standaard gebruiken, kunnen deze aanvullen met (zelf ontwikkelde) specifieke extensies. Organisaties en sectoren die dit doen moeten deze extensie conform het beheerproces van de standaard laten vaststellen. Dit ter voorkoming van dialecten binnen de standaard. Het vaststellen van de extensie verloopt via de organisatie die de standaard beheerd.</li>
+</ol>
+<p>Logging van informatieketens:</p>
+<ol start="4">
+<li>Bij het loggen van de verwerking van data in ketens is elke overheidsorganisatie verantwoordelijk voor haar eigen deel van de keten met als afbakening de ontvangst van data van (een) ketenpartner(s) en het verstrekken van data aan (een) andere ketenpartner(s) of het nemen van het besluit. Door het uniformeren van de logging kunnen datavraag en datalevering aan elkaar gerelateerd worden. Hierbij worden door gebruik van de standaard Logboek dataverwerkingen afspraken gemaakt over de relateerbaarheid en herkenbaarheid van transacties.</li>
+</ol>
+<p>Wettelijke informatieverplichtingen:</p>
+<ol start="5">
+<li>De organisatie borgt dat de standaard Logboek Dataverwerkingen optimaal ingericht wordt ten behoeve van ondersteuning van aan een aantal wettelijke informatieverplichtingen, zoals:<ul>
+<li>de zorgvuldigheidsverplichting en het motiveringsbeginsel uit de AWB  </li>
+<li>het recht op informatie dat burgers en bedrijven hebben ten aanzien van het overheidshandelen waarbij geadresseerde of belanghebbende zijn, waaronder rechten die burgers toekomen op grond van de AVG</li>
+</ul>
+</li>
+<li>De standaard Logboek Dataverwerking dient zodanig ingericht te worden dat deze voldoet aan de inhoudelijke loggingsverplichtingen die volgen uit regels ten aanzien van informatieveiligheid</li>
+</ol>
+<p>Zwaarder wegende belangen:</p>
+<ol start="7">
+<li>Bij de inrichting van de standaard wordt rekening gehouden met zwaarder wegende algemene belangen (bijv nationale/openbare veiligheid, opsporing van strafbare feiten) of zwaarder wegende belangen van betrokkene of rechten van anderen (bijv bescherming persoon) waardoor bepaalde informatieverplichtingen niet gelden. Dit kan bijvoorbeeld door bij een verwerkingsactiviteit een vertrouwelijke en niet-vertrouwelijke variant op te nemen, waardoor het vanuit de logfile inzichtelijk of er bij de betreffende verwerking rekening moet worden gehouden met zwaarder wegende belangen.</li>
+</ol>
+</section><section id="toepassing-van-de-standaard-ten-behoeve-van-reguliere-processen"><div class="header-wrapper"><h3 id="x8-2-toepassing-van-de-standaard-ten-behoeve-van-reguliere-processen"><bdi class="secno">8.2 </bdi>Toepassing van de standaard ten behoeve van reguliere processen:</h3><a class="self-link" href="#toepassing-van-de-standaard-ten-behoeve-van-reguliere-processen" aria-label="Permalink for Section 8.2"></a></div>
+<ol start="8">
+<li>Neem ten aanzien van de gecreëerde logging het kader van de verantwoording alle wettelijke randvoorwaarden zoals beschreven in het beleidskader in acht en pas alle relevante processen en maatregelen die daarop anderszins van toepassing zijn, ook hierop toe (denk aan informatiebeveiliging, datalekken, pseudonimisering, correspondentie, inzage, correctie).</li>
+</ol>
+</section></section>
+
+
+
+<p role="navigation" id="back-to-top">
+    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+  </p><script id="respec-dfn-panel">(() => {
+// @ts-check
+if (document.respec) {
+  document.respec.ready.then(setupPanel);
+} else {
+  setupPanel();
+}
+
+function setupPanel() {
+  const listener = panelListener();
+  document.body.addEventListener("keydown", listener);
+  document.body.addEventListener("click", listener);
+}
+
+function panelListener() {
+  /** @type {HTMLElement} */
+  let panel = null;
+  return event => {
+    const { target, type } = event;
+
+    if (!(target instanceof HTMLElement)) return;
+
+    // For keys, we only care about Enter key to activate the panel
+    // otherwise it's activated via a click.
+    if (type === "keydown" && event.key !== "Enter") return;
+
+    const action = deriveAction(event);
+
+    switch (action) {
+      case "show": {
+        hidePanel(panel);
+        /** @type {HTMLElement} */
+        const dfn = target.closest("dfn, .index-term");
+        panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
+        const coords = deriveCoordinates(event);
+        displayPanel(dfn, panel, coords);
+        break;
+      }
+      case "dock": {
+        panel.style.left = null;
+        panel.style.top = null;
+        panel.classList.add("docked");
+        break;
+      }
+      case "hide": {
+        hidePanel(panel);
+        panel = null;
+        break;
+      }
+    }
+  };
+}
+
+/**
+ * @param {MouseEvent|KeyboardEvent} event
+ */
+function deriveCoordinates(event) {
+  const target = /** @type HTMLElement */ (event.target);
+
+  // We prevent synthetic AT clicks from putting
+  // the dialog in a weird place. The AT events sometimes
+  // lack coordinates, so they have clientX/Y = 0
+  const rect = target.getBoundingClientRect();
+  if (
+    event instanceof MouseEvent &&
+    event.clientX >= rect.left &&
+    event.clientY >= rect.top
+  ) {
+    // The event probably happened inside the bounding rect...
+    return { x: event.clientX, y: event.clientY };
+  }
+
+  // Offset to the middle of the element
+  const x = rect.x + rect.width / 2;
+  // Placed at the bottom of the element
+  const y = rect.y + rect.height;
+  return { x, y };
+}
+
+/**
+ * @param {Event} event
+ */
+function deriveAction(event) {
+  const target = /** @type {HTMLElement} */ (event.target);
+  const hitALink = !!target.closest("a");
+  if (target.closest("dfn:not([data-cite]), .index-term")) {
+    return hitALink ? "none" : "show";
+  }
+  if (target.closest(".dfn-panel")) {
+    if (hitALink) {
+      return target.classList.contains("self-link") ? "hide" : "dock";
+    }
+    const panel = target.closest(".dfn-panel");
+    return panel.classList.contains("docked") ? "hide" : "none";
+  }
+  if (document.querySelector(".dfn-panel:not([hidden])")) {
+    return "hide";
+  }
+  return "none";
+}
+
+/**
+ * @param {HTMLElement} dfn
+ * @param {HTMLElement} panel
+ * @param {{ x: number, y: number }} clickPosition
+ */
+function displayPanel(dfn, panel, { x, y }) {
+  panel.hidden = false;
+  // distance (px) between edge of panel and the pointing triangle (caret)
+  const MARGIN = 20;
+
+  const dfnRects = dfn.getClientRects();
+  // Find the `top` offset when the `dfn` can be spread across multiple lines
+  let closestTop = 0;
+  let minDiff = Infinity;
+  for (const rect of dfnRects) {
+    const { top, bottom } = rect;
+    const diffFromClickY = Math.abs((top + bottom) / 2 - y);
+    if (diffFromClickY < minDiff) {
+      minDiff = diffFromClickY;
+      closestTop = top;
+    }
+  }
+
+  const top = window.scrollY + closestTop + dfnRects[0].height;
+  const left = x - MARGIN;
+  panel.style.left = `${left}px`;
+  panel.style.top = `${top}px`;
+
+  // Find if the panel is flowing out of the window
+  const panelRect = panel.getBoundingClientRect();
+  const SCREEN_WIDTH = Math.min(window.innerWidth, window.screen.width);
+  if (panelRect.right > SCREEN_WIDTH) {
+    const newLeft = Math.max(MARGIN, x + MARGIN - panelRect.width);
+    const newCaretOffset = left - newLeft;
+    panel.style.left = `${newLeft}px`;
+    /** @type {HTMLElement} */
+    const caret = panel.querySelector(".caret");
+    caret.style.left = `${newCaretOffset}px`;
+  }
+
+  // As it's a dialog, we trap focus.
+  // TODO: when <dialog> becomes a implemented, we should really
+  // use that.
+  trapFocus(panel, dfn);
+}
+
+/**
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function trapFocus(panel, dfn) {
+  /** @type NodeListOf<HTMLAnchorElement> elements */
+  const anchors = panel.querySelectorAll("a[href]");
+  // No need to trap focus
+  if (!anchors.length) return;
+
+  // Move focus to first anchor element
+  const first = anchors.item(0);
+  first.focus();
+
+  const trapListener = createTrapListener(anchors, panel, dfn);
+  panel.addEventListener("keydown", trapListener);
+
+  // Hiding the panel releases the trap
+  const mo = new MutationObserver(records => {
+    const [record] = records;
+    const target = /** @type HTMLElement */ (record.target);
+    if (target.hidden) {
+      panel.removeEventListener("keydown", trapListener);
+      mo.disconnect();
+    }
+  });
+  mo.observe(panel, { attributes: true, attributeFilter: ["hidden"] });
+}
+
+/**
+ *
+ * @param {NodeListOf<HTMLAnchorElement>} anchors
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function createTrapListener(anchors, panel, dfn) {
+  const lastIndex = anchors.length - 1;
+  let currentIndex = 0;
+  return event => {
+    switch (event.key) {
+      // Hitting "Tab" traps us in a nice loop around elements.
+      case "Tab": {
+        event.preventDefault();
+        currentIndex += event.shiftKey ? -1 : +1;
+        if (currentIndex < 0) {
+          currentIndex = lastIndex;
+        } else if (currentIndex > lastIndex) {
+          currentIndex = 0;
+        }
+        anchors.item(currentIndex).focus();
+        break;
+      }
+
+      // Hitting "Enter" on an anchor releases the trap.
+      case "Enter":
+        hidePanel(panel);
+        break;
+
+      // Hitting "Escape" returns focus to dfn.
+      case "Escape":
+        hidePanel(panel);
+        dfn.focus();
+        return;
+    }
+  };
+}
+
+/** @param {HTMLElement} panel */
+function hidePanel(panel) {
+  if (!panel) return;
+  panel.hidden = true;
+  panel.classList.remove("docked");
+}
+})()</script><div class="sidelabel">Logius Praktijkrichtlijn - Consultatieversie</div><script src="https://gitdocumentatie.logius.nl/publicatie/respec/fixup.js"></script></body></html>
