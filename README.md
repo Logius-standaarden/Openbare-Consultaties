@@ -5,7 +5,7 @@
 | Label | Locatie | Omschrijving | Consultatie loopt tot |
 |---|---|---|---|
 | OAuth | [Consultatie OAuth NL GOV Profiel versie 1.2](https://github.com/Logius-standaarden/Openbare-Consultaties/blob/master/2025-07-25%20OAuth%20v1.2/README.md)| Nieuwe versie van de OAuth 2.0 NL GOV Profiel (OAuth) | 05/09/2025 |
-| Logboek Dataverwerkingen (LDV) | [Consultatie Logboek Dataverwerkingen](https://github.com/Logius-standaarden/Openbare-Consultaties/blob/Nil-NMB01-patch-1/2025_12_LDV/README.md)| Documenten ter vaststelling van de Logboek Dataverwerkingen Standaard | 30/01/2026 |
+| Logboek Dataverwerkingen (LDV) | [Consultatie Logboek Dataverwerkingen](https://logius-standaarden.github.io/Openbare-Consultaties/2025_12_LDV/)| Documenten ter vaststelling van de Logboek Dataverwerkingen Standaard | 30/01/2026 |
 
 <!-- (Op dit moment lopen er geen openbare consultaties) -->
 
