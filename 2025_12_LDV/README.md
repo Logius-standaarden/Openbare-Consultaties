@@ -1,5 +1,5 @@
 # Publieke Consultatie Versie ter Vaststelling Logboek Dataverwerkingen
-Logius houdt een publieke consultatie voor Logboek Dataverwerkingen (LDV). De consultatie loopt tot 30-01-2026. Feedback en suggesties zijn welkom via api@logius.nl of via issues op GitHub. Help mee deze standaard klaar te maken voor de versie ter vaststelling.
+Logius houdt een publieke consultatie voor Logboek Dataverwerkingen (LDV). De consultatie loopt tot 30-01-2026. Feedback en suggesties zijn welkom via api@logius.nl of via [issues](https://github.com/Logius-standaarden/logboek-dataverwerkingen/issues) op GitHub. Help mee deze standaard klaar te maken voor de versie ter vaststelling.
 
 De standaard Logboek Dataverwerkingen beschrijft een manier om technisch interoperabele functionaliteit voor het loggen van Dataverwerkingen te implementeren, door voor de volgende functionaliteit de interface en het gedrag voor te schrijven:
 
@@ -25,6 +25,6 @@ Deze consultatie bevat een aantal documenten die onderdeel zijn van de LDV core-
 - [LDV Guideline voor extensies](./logboek-extensie-template/)
 
 ## Reageren?
-Reageren kan via een issue of pull request op deze repository, of per e-mail aan api@logius.nl.
+Reageren kan via een issue of pull request op deze [repository](https://github.com/Logius-standaarden/logboek-dataverwerkingen/issues), of per e-mail aan api@logius.nl.
 
 Wij ontvangen graag inhoudelijke opmerkingen, vragen of suggesties uiterlijk 30 januari 2026.
