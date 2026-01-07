@@ -1,0 +1,237 @@
+�_�2k�l���!
+%PDF-1.4
+%����
+1 0 obj
+<</Title (NLGov REST API Design Rules 2.2.0)
+/Creator (Mozilla/5.0 \(X11; Linux x86_64\) AppleWebKit/537.36 \(KHTML, like Gecko\) HeadlessChrome/143.0.0.0 Safari/537.36)
+/Producer (Skia/PDF m143)
+/CreationDate (D:20251215143236+00'00')
+/ModDate (D:20251215143236+00'00')>>
+endobj
+3 0 obj
+<</ca 1
+/BM /Normal>>
+endobj
+4 0 obj
+<</CA 1
+/ca 1
+/LC 0
+/LJ 0
+/LW 1
+/ML 4
+/SA true
+/BM /Normal>>
+endobj
+11 0 obj
+<</Type /Annot
+/Subtype /Link
+/F 4
+/Border [0 0 0]
+/Rect [514.5 712.16998 547.5 775.16998]
+/A <</Type /Action
+/S /URI
+/URI (https://www.logius.nl/onze-dienstverlening/standaarden)>>
+/StructParent 100000>>
+endobj
+12 0 obj
+<</Type /Annot
+/Subtype /Link
+/F 4
+/Border [0 0 0]
+/Rect [93 661.91998 366 674.66998]
+/A <</Type /Action
+/S /URI
+/URI (https://gitdocumentatie.logius.nl/publicatie/api/adr/2.2.0/)>>
+/StructParent 100001>>
+endobj
+13 0 obj
+<</Type /Annot
+/Subtype /Link
+/F 4
+/Border [0 0 0]
+/Rect [93 623.66998 339 636.41998]
+/A <</Type /Action
+/S /URI
+/URI (https://gitdocumentatie.logius.nl/publicatie/api/adr/)>>
+/StructParent 100002>>
+endobj
+14 0 obj
+<</Type /Annot
+/Subtype /Link
+/F 4
+/Border [0 0 0]
+/Rect [93 585.41998 358.5 598.16998]
+/A <</Type /Action
+/S /URI
+/URI (https://logius-standaarden.github.io/API-Design-Rules/)>>
+/StructParent 100003>>
+endobj
+15 0 obj
+<</Type /Annot
+/Subtype /Link
+/F 4
+/Border [0 0 0]
+/Rect [93 547.16998 366 559.91998]
+/A <</Type /Action
+/S /URI
+/URI (https://gitdocumentatie.logius.nl/publicatie/api/adr/2.1.0/)>>
+/StructParent 100004>>
+endobj
+16 0 obj
+<</Type /Annot
+/Subtype /Link
+/F 4
+/Border [0 0 0]
+/Rect [170.25 508.16998 223.5 520.91998]
+/A <</Type /Action
+/S /URI
+/URI (https://www.geonovum.nl/)>>
+/StructParent 100005>>
+endobj
+17 0 obj
+<</Type /Annot
+/Subtype /Link
+/F 4
+/Border [0 0 0]
+/Rect [171.75 490.16998 225 502.91998]
+/A <</Type /Action
+/S /URI
+/URI (https://www.geonovum.nl/)>>
+/StructParent 100006>>
+endobj
+18 0 obj
+<</Type /Annot
+/Subtype /Link
+/F 4
+/Border [0 0 0]
+/Rect [182.25 472.16998 216 484.91998]
+/A <</Type /Action
+/S /URI
+/URI (https://www.logius.nl/)>>
+/StructParent 100007>>
+endobj
+19 0 obj
+<</Type /Annot
+/Subtype /Link
+/F 4
+/Border [0 0 0]
+/Rect [194.25 454.16998 228 466.91998]
+/A <</Type /Action
+/S /URI
+/URI (https://www.logius.nl/)>>
+/StructParent 100008>>
+endobj
+20 0 obj
+<</Type /Annot
+/Subtype /Link
+/F 4
+/Border [0 0 0]
+/Rect [189 436.16998 222.75 448.91998]
+/A <</Type /Action
+/S /URI
+/URI (https://www.logius.nl/)>>
+/StructParent 100009>>
+endobj
+21 0 obj
+<</Type /Annot
+/Subtype /Link
+/F 4
+/Border [0 0 0]
+/Rect [156.75 397.91998 219.75 410.66998]
+/A <</Type /Action
+/S /URI
+/URI (https://www.kadaster.nl/)>>
+/StructParent 100010>>
+endobj
+22 0 obj
+<</Type /Annot
+/Subtype /Link
+/F 4
+/Border [0 0 0]
+/Rect [152.25 379.91998 215.25 392.66998]
+/A <</Type /Action
+/S /URI
+/URI (https://www.kadaster.nl/)>>
+/StructParent 100011>>
+endobj
+23 0 obj
+<</Type /Annot
+/Subtype /Link
+/F 4
+/Border [0 0 0]
+/Rect [93 341.66998 318.75 354.41998]
+/A <</Type /Action
+/S /URI
+/URI (https://github.com/Logius-standaarden/API-Design-Rules/)>>
+/StructParent 100012>>
+endobj
+24 0 obj
+<</Type /Annot
+/Subtype /Link
+/F 4
+/Border [0 0 0]
+/Rect [93 323.66998 153 336.41998]
+/A <</Type /Action
+/S /URI
+/URI (https://github.com/Logius-standaarden/API-Design-Rules/issues/)>>
+/StructParent 100013>>
+endobj
+25 0 obj
+<</Type /Annot
+/Subtype /Link
+/F 4
+/Border [0 0 0]
+/Rect [93 305.66998 168.75 318.41998]
+/A <</Type /Action
+/S /URI
+/URI (https://github.com/Logius-standaarden/API-Design-Rules/commits/)>>
+/StructParent 100014>>
+endobj
+26 0 obj
+<</Type /Annot
+/Subtype /Link
+/F 4
+/Border [0 0 0]
+/Rect [93 287.66998 154.5 300.41998]
+/A <</Type /Action
+/S /URI
+/URI (https://github.com/Logius-standaarden/API-Design-Rules/pulls/)>>
+/StructParent 100015>>
+endobj
+27 0 obj
+<</Type /Annot
+/Subtype /Link
+/F 4
+/Border [0 0 0]
+/Rect [375 257.66998 397.5 270.41998]
+/A <</Type /Action
+/S /URI
+/URI (http://localhost:8080/api-adr-2.2.0.pdf)>>
+/StructParent 100016>>
+endobj
+28 0 obj
+<</Type /Annot
+/Subtype /Link
+/F 4
+/Border [0 0 0]
+/Rect [162.75 215.66998 410.25 226.91998]
+/A <</Type /Action
+/S /URI
+/URI (https://creativecommons.org/licenses/by/4.0/legalcode)>>
+/StructParent 100017>>
+endobj
+29 0 obj
+<</Type /Annot
+/Subtype /Link
+/F 4
+/Border [0 0 0]
+/Rect [69 211.16998 162.75 242.66998]
+/A <</Type /Action
+/S /URI
+/URI (https://creativecommons.org/licenses/by/4.0/legalcode)>>
+/StructParent 100018>>
+endobj
+30 0 obj
+<</Filter /FlateDecode
+/Length 18073>> stream
+x��}ێ%�q�����l�s�; ��h?Ȁd��:���24�0�VD0�������l�R�Ud�
