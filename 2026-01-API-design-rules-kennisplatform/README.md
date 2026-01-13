@@ -19,8 +19,17 @@ Vanuit Logius vragen wij u om dit document te consulteren op de volgende twee ho
 - [Date and time](./api-design-rules/#date-and-time)
 - [Error Handling](./api-design-rules/#error-handling)
 
+## Zelf testen
+
+Het is mogelijk om te checken of een API voldoet aan de voorgestelde regels.
+Gebruik daarvoor de [OpenAPI Specification Checker](https://developer-overheid-nl.github.io/oas-checker/#/adr-consult) van developer.overheid.nl.
+De "ADR Kennisplatform Consultatie 2026Q1" versie van deze checker checkt enkel de nieuwe regels en laat bestaande checks achterweg.
+Hierdoor is het mogelijk om alleen de impact van de nieuwe regels te zien, zonder die te verwarren met bestaande violations.
+Om te zien wat de resultaten zijn voor versie 2.1 van de ADR, selecteer "ADR 2.1" in de dropdown rechtsboven.
+
 ## Reageren?
 
 Reageren kan via een issue of pull request op de [repository](https://github.com/Logius-standaarden/API-Design-Rules/issues), of per e-mail aan api@logius.nl.
 
 Wij ontvangen graag inhoudelijke opmerkingen, vragen of suggesties uiterlijk 6 februari 2026.
+
