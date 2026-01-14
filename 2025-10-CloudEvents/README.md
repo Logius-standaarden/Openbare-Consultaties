@@ -3,7 +3,7 @@
 
 Logius houdt een publieke consultatie voor NLGov Profile CloudEvents. CloudEvents is een internationale standaard voor het uniform beschrijven van events in event-driven architecturen. In Nederland wordt CloudEvents nu voorzien van een nationaal profiel. Dankzij deze standaard kunnen applicaties eenvoudiger informatie uitwisselen over gebeurtenissen (bijvoorbeeld een adreswijziging of een vergunningaanvraag). De Consultatie loopt van 16-10 t/m 20-11-2025. Feedback en suggesties zijn welkom via api@logius.nl of via issues op GitHub. Help mee dit profiel klaar te maken voor de definitieve v1.1.0 .
 
-Zie voor de documentatie van de standaard: [Consultatieversie](https://logius-standaarden.github.io/Publicatie-Preview/NL-GOV-profile-for-CloudEvents/rc-2025/)
+Zie voor de documentatie van de standaard: [Consultatieversie](https://gitdocumentatie.logius.nl/publicatie/notificatieservices/cloudevents-nl/1.1/)
 
 ## Context
 Het **CloudEvents NL GOV** profiel is op 24 september 2025 vastgesteld als een standaard op de PTOLU van het Forum van Standardisatie.
@@ -36,6 +36,7 @@ Reageren kan via een [issue](https://github.com/Logius-standaarden/NL-GOV-profil
 of per e-mail aan [api@logius.nl](mailto:api@logius.nl).
 
 Wij ontvangen graag inhoudelijke opmerkingen, vragen of suggesties **uiterlijk 20 november 2025**.
+
 
 
 
