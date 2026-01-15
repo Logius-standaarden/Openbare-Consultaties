@@ -43,9 +43,9 @@ Het core van de FSC-standaard bereikt inter-organisationele, technische interope
 - om autorisaties aan te vragen en te beheren die nodig zijn om verbinding te maken met genoemde Services.
 - om de autorisatie te delegeren om verbinding te maken of Services te publiceren namens een andere organisatie.
 
-Consultatieversie FSC 19 jan 2026: https://logius-standaarden.github.io/Publicatie-Preview/fsc-core/rc2.0.0
-Consultatieversie FSC Logging 19 jan 2026: https://logius-standaarden.github.io/Publicatie-Preview/fsc-core/rc2.0.0
-Consultatieversie FSC external contract reference 19 jan 2026: https://logius-standaarden.github.io/Publicatie-Preview/fsc-core/rc2.0.0
+Consultatieversie FSC 19 jan 2026: https://logius-standaarden.github.io/Publicatie-Preview/fsc-core/rc2.0.0  
+Consultatieversie FSC Logging 19 jan 2026: https://logius-standaarden.github.io/Publicatie-Preview/fsc-logging/rc1.1.0  
+Consultatieversie FSC external contract reference 19 jan 2026: https://logius-standaarden.github.io/Publicatie-Preview/fsc-core/rc2.0.0  
 
 Wijzigingen:
 
