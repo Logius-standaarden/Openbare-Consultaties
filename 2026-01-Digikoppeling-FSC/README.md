@@ -66,7 +66,7 @@ Aanvullende functionaliteit wordt gestandaardiseerd in extensies en kunnen van t
 De FSC test suite bevat een lijst met testdocumentatie die ontwikkeld is om de conformiteit en interoperabiliteit van de implementaties van FSC-componenten te waarborgen. Daarom is er besloten om vanaf heden elke nieuwe feature/wijziging in de core standaard, gepaard moet gaan met een aantal testen die deze functionaliteit beschrijven in de test suite. De testen voor het nieuwe properties veld staan hieronder:
 
 - [Test-suite FSC](https://github.com/Logius-standaarden/fsc-test-suite)
-- [Bijbehorende test cases `Properties`](https://github.com/Logius-standaarden/fsc-test-suite/pull/3)
+- [Bijbehorende test cases Properties](https://github.com/Logius-standaarden/fsc-test-suite/pull/3)
 
 
 ### Digikoppeling Beveiligingstandaarden en voorschriften
