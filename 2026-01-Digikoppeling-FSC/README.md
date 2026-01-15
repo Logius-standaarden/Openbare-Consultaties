@@ -34,8 +34,6 @@ Wijzigingen:
 
 ##### Standaard
 
-Logius houdt een publieke consultatie voor Federative Service Connectivity (FSC). De consultatie loopt tot ... Feedback en suggesties zijn welkom via api@logius.nl of via issues op GitHub. Help mee deze standaard klaar te maken voor de versie 2.0
-
 De Federated Service Connectivity (FSC) standaard specificaties beschrijven een manier om technisch interoperabele API-gateway-functionaliteit te implementeren, die federatieve authenticatie en veilige verbindingen omvat in een grootschalig dynamisch API-landschap.
 
 Het core van de FSC-standaard bereikt inter-organisationele, technische interoperabiliteit:
