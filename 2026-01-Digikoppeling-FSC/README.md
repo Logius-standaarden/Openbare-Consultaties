@@ -75,8 +75,8 @@ De FSC test suite bevat een lijst met testdocumentatie die ontwikkeld is om de c
 Consultatieversie 19 jan 2026: https://gitdocumentatie.logius.nl/publicatie/dk/beveilig/rc202410/
 
 Wijzigingen:
-  - XML Signing parameters conform NCSC voorschriften
-  - TLS 1.3 status aangepast naar "Zeer aanbevolen"
+  - [XML Signing parameters conform NCSC voorschriften](https://github.com/Logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften/pull/17)
+  - [TLS 1.3 status aangescherpt naar "Zeer aanbevolen"](https://github.com/Logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften/pull/21)
 
 ## Reageren?
 Reageren kan door middel van een issue op wijzigingsvoorstel op de repository of per e-mail aan digikoppeling@logius.nl
