@@ -1,0 +1,48 @@
+@startuml
+title: Create a new service
+
+skinparam sequenceBoxBorderColor #transparent
+skinparam boxPadding 50
+hide footbox
+
+
+box "Municipality"
+actor "Administrator" as administrator
+participant "Management UI" as managementUI
+participant "Management API" as managementAPI
+participant "Inway" as inway
+participant "Contract Manager" as contractManager
+database "Contract database" as contractDatabase
+end box
+
+box "Directory"
+participant "Directory Peer" as directoryPeer
+participant "Directory DB" as directoryDatabase
+end box
+
+group add a new service
+
+administrator -> managementUI: create service
+managementUI -> managementAPI: add service
+managementAPI -> contractManager: create contract with a publication grant for the service
+contractManager -> contractManager: create contract
+contractManager -> contractManager: sign contract
+contractManager -> directoryPeer: propose contract
+directoryPeer -> directoryPeer: sign contract
+directoryPeer -> directoryDatabase: store service publication
+directoryPeer -> contractManager: return signature
+contractManager -> contractDatabase: store contract
+
+end
+
+group configure Inway
+
+inway -> contractManager: get config
+contractManager -> contractDatabase: get contracts with service publication grants
+contractDatabase -> contractManager: return contracts
+contractManager -> contractManager: generate config
+contractManager -> inway: return config
+
+end
+
+@enduml

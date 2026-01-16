@@ -1,0 +1,33 @@
+@startuml
+
+autonumber
+title: Delegate the authorization to publish a Service
+header: Core
+
+box "Delegator"
+  participant "Manager" as managerDelegator
+end box
+
+box "Directory"
+  participant "Manager" as managerDirectory
+end box
+
+box "Delegatee"
+  participant "Manager" as managerDelegatee
+end box
+
+managerDelegator -> managerDelegator: Create Contract with a \n__DelegateServicePublicationGrant__
+managerDelegator -> managerDelegator: Sign Contract
+managerDelegator -> managerDelegatee: Submit Contract
+managerDelegatee -> managerDelegatee: Sign Contract
+managerDelegatee -> managerDirectory: Accept Contract
+managerDelegatee -> managerDelegator: Accept Contract
+managerDelegator -> managerDirectory: Submit Contract
+managerDirectory -> managerDirectory: Sign Contract
+managerDirectory -> managerDelegator: Accept Contract
+managerDirectory -> managerDelegatee: Accept Contract
+
+skinparam sequenceBoxBorderColor #transparent
+skinparam boxPadding 50
+hide footbox
+@enduml

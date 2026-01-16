@@ -1,0 +1,48 @@
+@startuml
+title: The life of a Contract
+
+box "Peer 1"
+  participant "Contract Manager" as cm1
+end box
+
+box "Peer 2..n"
+  participant "Contract Manager" as cm2
+end box
+
+loop Peer 2..n
+  cm1 -> cm2      : Propose Contract (ContractProposal, signature)
+end
+== State: PROPOSED ==
+
+alt implicit or explicit rejection
+  alt explicit - Peer sends rejection
+    cm2 -> cm1      : Reject Contract (contractID, signature)
+    == State: REJECTED ==
+    loop Peer 2..n
+      cm1 -> cm2      : Withdraw Contract (contractID, status REJECTED, signature)
+    end
+  else implicit - End date passes
+  == State: REJECTED ==
+  end
+else everyone sends signature
+  cm2 -> cm1      : Sign Contract (contractID, signature)
+  == State: SIGNED   ==
+  loop Peer 2..n
+    cm1 -> cm2    : Send Contract (Contract, status SIGNED, signature)
+  end
+  alt peer revokes signature
+    cm2 -> cm1      : Terminate Contract (ContractID, signature)
+    loop Peer 2..n
+      cm2 -> cm2      : Terminate Contract (ContractID, signature)
+    end
+
+    == State: REVOKED ==
+
+  else end date passes
+    == State: EXPIRED  ==
+  end
+end
+
+skinparam sequenceBoxBorderColor #transparent
+hide footbox
+@enduml

@@ -1,0 +1,25 @@
+@startuml
+
+autonumber
+header: Core
+title: Create an authorization to connect to a Service
+
+box "Consuming Peer"
+  participant "Manager" as managerConsumingPeer
+end box
+
+box "Providing Peer"
+  participant "Manager" as managerProvidingPeer
+end box
+
+managerConsumingPeer -> managerConsumingPeer: Create Contract with a __ServiceConnectionGrant__
+managerConsumingPeer -> managerConsumingPeer: Add accept signature
+managerConsumingPeer -> managerProvidingPeer: Submit Contract
+managerProvidingPeer -> managerProvidingPeer: Add accept signature
+managerProvidingPeer -> managerConsumingPeer: Accept Contract
+
+skinparam sequenceBoxBorderColor #transparent
+skinparam boxPadding 50
+hide footbox
+
+@enduml

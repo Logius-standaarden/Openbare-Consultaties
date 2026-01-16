@@ -1,0 +1,34 @@
+@startuml
+
+autonumber
+header: Core
+title: Contract Management
+
+box "Initiating Peer"
+  participant "Manager" as m1
+end box
+box "Directory"
+  participant "Directory" as directory
+end box
+box "Receiving Peer"
+  participant "Manager" as m2
+end box
+
+loop For each Peer on the Contract
+m1 -> directory ++ : Get Manager address of Peer
+return Manager address of Peer
+m1 -> m2 ++ : Contract proposal
+note over directory: Signed by initiating Peer
+end loop
+
+loop For each Peer on the Contract
+m2 -> m1: Accept signature
+note over directory: Signed by receiving Peer(s)
+end loop
+
+note over directory: Signed by all Peers
+
+skinparam sequenceBoxBorderColor #transparent
+skinparam boxPadding 50
+hide footbox
+@enduml

@@ -1,0 +1,51 @@
+@startuml
+title: Sync 1 peer via Directory
+
+box "Peer A"
+  participant "Contract Manager" as cm1
+end box
+
+box "Directory"
+  participant "Directory" as dir
+end box
+
+box "Peer 1..n"
+  participant "Contract Manager" as cm2
+end box
+
+cm1 -> dir : Request signatures (attach contract)
+
+== State: PROPOSED ==
+
+loop Peer 1..n
+cm2 -> dir ++ : Query contract proposals for Peer x
+dir -> cm2 -- : Contract proposals
+
+alt sign
+  cm2 -> dir : signature
+else reject
+  cm2 -> dir : reject
+end
+
+end
+
+loop
+  cm1 -> dir ++: request proposal status
+  return proposal status
+end
+
+alt complete
+  cm1 -> dir ++ : get all signatures
+  return signatures
+else rejected
+  cm1 -> dir ++ : get rejections
+  return rejections
+end
+
+skinparam sequenceBoxBorderColor #transparent
+hide footbox
+@enduml
+
+
+
+

@@ -1,0 +1,1291 @@
+openapi: 3.0.3
+info:
+  title: FSC Core
+  version: 1.0.0
+  description: Manager REST API
+servers:
+  - url: https://{managerUrl}:8443/v1
+    variables:
+      managerUrl:
+        default: localhost
+        description: URL of the Manager
+paths:
+  /announce:
+    put:
+      operationId: announce
+      summary: Used to announce a Peer to the Manager
+      description: When the Manager address of a Peer changes, the Peer can announce the new address using this endpoint
+      parameters:
+        - $ref: "#/components/parameters/headerFscManagerAddress"
+      responses:
+        200:
+          description: announcement was a success
+  /contracts:
+    post:
+      operationId: submitContract
+      summary: Submit a new contract
+      parameters:
+        - $ref: "#/components/parameters/headerFscManagerAddress"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                content:
+                  $ref: "#/components/schemas/contractContent"
+                signature:
+                  description: An accept signature of the Peer submitting the contract
+                  type: string
+              required:
+                - content
+                - signature
+      responses:
+        201:
+          description: Contract created
+        422:
+          description: Unprocessable content
+          headers:
+            Fsc-Error-Code:
+              $ref: "#/components/headers/FscErrorCode"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/error"
+              examples:
+                peerNotPartOfContract:
+                  $ref: "#/components/examples/peerNotPartOfContract"
+                grantCombinationNotAllowed:
+                  $ref: "#/components/examples/grantCombinationNotAllowed"
+                signatureContentMismatch:
+                  $ref: "#/components/examples/signatureContentMismatch"
+                peerIDSignatureMismatch:
+                  $ref: "#/components/examples/peerIDSignatureMismatch"
+                signatureVerificationFailed:
+                  $ref: "#/components/examples/signatureVerificationFailed"
+        400:
+          description: Bad request
+          headers:
+            Fsc-Error-Code:
+              $ref: "#/components/headers/FscErrorCode"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/error"
+              examples:
+                peerCertificateVerificationFailed:
+                  $ref: "#/components/examples/peerCertificateVerificationFailed"
+    get:
+      summary: Returns Contracts sorted by their creation date.
+      parameters:
+        - $ref: "#/components/parameters/queryPaginationCursor"
+        - $ref: "#/components/parameters/queryPaginationLimit"
+        - $ref: "#/components/parameters/queryPaginationOrder"
+        - in: query
+          description: A Grant type on which to filter. Returns Contracts which contain a Grant of the Grant Type specified in the grant_type filter
+          name: grant_type
+          schema:
+            $ref: "#/components/schemas/grantType"
+          required: false
+          style: form
+          explode: false
+        - in: query
+          description: A list of Grant hashes on which to filter. Returns Contracts that contain a Grant with the same Grant hash as specified in the grant_hash filter.  When this query parameter is set the pagination parameters and the GrantType filter should be ignored
+          name: grant_hash
+          schema:
+            type: array
+            items:
+              type: string
+              description: The hash of a Grant
+              example: $1$4$-PQI7we01qIfEwq4O5UioLKzjGBgRva6F5-bUfDlKxUjcY5yX1MRsn6NKquDbL8VcklhYO9sk18rHD6La3w_mg
+              maxLength: 1024
+          required: false
+          style: form
+          explode: false
+      responses:
+        200:
+          description: Contracts
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  contracts:
+                    description: List of Contracts
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/contract"
+                  pagination:
+                    $ref: "#/components/schemas/paginationResult"
+                required:
+                  - contracts
+                  - pagination
+  /contracts/{hash}/accept:
+    put:
+      summary: Accept contract
+      operationId: acceptContract
+      parameters:
+        - $ref: "#/components/parameters/headerFscManagerAddress"
+        - $ref: "#/components/parameters/pathContractContentHash"
+      requestBody:
+        $ref: "#/components/requestBodies/signatureRequest"
+      responses:
+        201:
+          description: Signature created
+        422:
+          description: Unprocessable content
+          headers:
+            Fsc-Error-Code:
+              $ref: "#/components/headers/FscErrorCode"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/error"
+              examples:
+                signatureContentMismatch:
+                  $ref: "#/components/examples/signatureContentMismatch"
+                peerIDSignatureMismatch:
+                  $ref: "#/components/examples/peerIDSignatureMismatch"
+                signatureVerificationFailed:
+                  $ref: "#/components/examples/signatureVerificationFailed"
+        400:
+          description: Bad request
+          headers:
+            Fsc-Error-Code:
+              $ref: "#/components/headers/FscErrorCode"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/error"
+              examples:
+                peerCertificateVerificationFailed:
+                  $ref: "#/components/examples/peerCertificateVerificationFailed"
+  /contracts/{hash}/reject:
+    put:
+      summary: Reject contract
+      operationId: rejectContract
+      tags:
+        - manager
+      parameters:
+        - $ref: "#/components/parameters/headerFscManagerAddress"
+        - $ref: "#/components/parameters/pathContractContentHash"
+      requestBody:
+        $ref: "#/components/requestBodies/signatureRequest"
+      responses:
+        201:
+          description: Signature created
+        422:
+          description: Unprocessable content
+          headers:
+            Fsc-Error-Code:
+              $ref: "#/components/headers/FscErrorCode"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/error"
+              examples:
+                signatureContentMismatch:
+                  $ref: "#/components/examples/signatureContentMismatch"
+                peerIDSignatureMismatch:
+                  $ref: "#/components/examples/peerIDSignatureMismatch"
+                signatureVerificationFailed:
+                  $ref: "#/components/examples/signatureVerificationFailed"
+        400:
+          description: Bad request
+          headers:
+            Fsc-Error-Code:
+              $ref: "#/components/headers/FscErrorCode"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/error"
+              examples:
+                peerCertificateVerificationFailed:
+                  $ref: "#/components/examples/peerCertificateVerificationFailed"
+  /contracts/{hash}/revoke:
+    put:
+      summary: Revoke contract
+      operationId: revokeContract
+      tags:
+        - manager
+      parameters:
+        - $ref: "#/components/parameters/headerFscManagerAddress"
+        - $ref: "#/components/parameters/pathContractContentHash"
+      requestBody:
+        $ref: "#/components/requestBodies/signatureRequest"
+      responses:
+        201:
+          description: Signature created
+        422:
+          description: Unprocessable content
+          headers:
+            Fsc-Error-Code:
+              $ref: "#/components/headers/FscErrorCode"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/error"
+              examples:
+                signatureContentMismatch:
+                  $ref: "#/components/examples/signatureContentMismatch"
+                peerIDSignatureMismatch:
+                  $ref: "#/components/examples/peerIDSignatureMismatch"
+                signatureVerificationFailed:
+                  $ref: "#/components/examples/signatureVerificationFailed"
+        400:
+          description: Bad request
+          headers:
+            Fsc-Error-Code:
+              $ref: "#/components/headers/FscErrorCode"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/error"
+              examples:
+                peerCertificateVerificationFailed:
+                  $ref: "#/components/examples/peerCertificateVerificationFailed"
+  /token:
+    post:
+      summary: |
+        Used to obtain a JWT which can be used to authorize a connection to a Service.
+        The token is bound to the certificate used in the mTLS connection to this endpoint.
+      operationId: getToken
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              properties:
+                grant_type:
+                  $ref: "#/components/schemas/oAuthGrantType"
+                scope:
+                  description: The scope should contain the hash of the Grant that contains the authorization for a connection to a Service
+                  type: string
+                  example: $1$4$-PQI7we01qIfEwq4O5UioLKzjGBgRva6F5-bUfDlKxUjcY5yX1MRsn6NKquDbL8VcklhYO9sk18rHD6La3w_mg
+                  maxLength: 1024
+                client_id:
+                  description: The Peer ID of the connecting Peer
+                  $ref: "#/components/schemas/peerID"
+              required:
+                - grant_type
+                - scope
+                - client_id
+      responses:
+        200:
+          description: A token response
+          content:
+            application/json:
+              schema:
+                properties:
+                  access_token:
+                    description: The access token
+                    type: string
+                  token_type:
+                    $ref: "#/components/schemas/oAuthTokenType"
+                required:
+                  - access_token
+                  - token_type
+        400:
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                properties:
+                  error:
+                    $ref: "#/components/schemas/tokenErrorCode"
+                  error_description:
+                    description: A human-readable description of the error
+                    type: string
+                    example: contract containing the provided grant hash has been revoked
+                required:
+                  - error
+  /peer:
+    get:
+      summary: Returns info about the Peer who is providing the Manager
+      operationId: getPeerInfo
+      tags:
+        - manager
+      responses:
+        200:
+          description: Information about the Peer
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  peer_id:
+                    $ref: "#/components/schemas/peerID"
+                  peer_name:
+                    $ref: "#/components/schemas/peerName"
+                  fsc_version:
+                    $ref: "#/components/schemas/fscVersion"
+                  enabled_extensions:
+                    $ref: "#/components/schemas/enabledExtensions"
+                required:
+                  - peer_id
+                  - peer_name
+                  - fsc_version
+                  - enabled_extensions
+  /peers:
+    get:
+      summary: Returns the Peers who are known by the Manager
+      operationId: getPeers
+      parameters:
+        - $ref: "#/components/parameters/queryPaginationCursor"
+        - $ref: "#/components/parameters/queryPaginationLimit"
+        - $ref: "#/components/parameters/queryPaginationOrder"
+        - in: query
+          description: A Peer name on which to filter. The search is case insensitive. Return all Peers with a name that contains the peer_name filter
+          name: peer_name
+          schema:
+            $ref: "#/components/schemas/peerName"
+        - in: query
+          description: A list of Peer IDs on which to filter. When this query parameter is set the pagination parameters and other filters should be ignored
+          name: peer_id
+          schema:
+            type: array
+            items:
+              $ref: "#/components/schemas/peerID"
+          style: form
+          explode: false
+          required: false
+      responses:
+        200:
+          description: A list of Peers
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  peers:
+                    description: A list of Peers
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/peer"
+                  pagination:
+                    $ref: "#/components/schemas/paginationResult"
+                required:
+                  - peers
+                  - pagination
+  /services:
+    get:
+      summary: Returns Services for which the Manager has a valid Contract with a ServicePublicationGrant or DelegatedServicePublicationGrant
+      operationId: getServices
+      parameters:
+        - $ref: "#/components/parameters/queryPaginationCursor"
+        - $ref: "#/components/parameters/queryPaginationLimit"
+        - $ref: "#/components/parameters/queryPaginationOrder"
+        - in: query
+          description: A Peer ID on which to filter. Returns Services offered by the Peer defined in the PeerID filter. When multiple filters are used the Services where either condition is true should be returned
+          name: peer_id
+          schema:
+            $ref: "#/components/schemas/peerID"
+        - in: query
+          description: A Service name on which to filter. The search is case insensitive. Returns Services with a name that contains the Service name filter. When multiple filters are used the Services where either condition is true should be returned
+          name: service_name
+          schema:
+            $ref: "#/components/schemas/serviceName"
+      responses:
+        200:
+          description: A list of Services
+          content:
+            application/json:
+              schema:
+                properties:
+                  services:
+                    description: A list of Services
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/serviceListing"
+                  pagination:
+                    $ref: "#/components/schemas/paginationResult"
+                required:
+                  - services
+                  - pagination
+  /.well-known/jwks.json:
+    get:
+      summary: Return a JSON Web Key Set as defined in RFC 7517
+      operationId: getJSONWebKeySet
+      responses:
+        200:
+          description: "JSON Web Key Set to validate JSON Web Signatures, according to [RFC 7517](https://www.ietf.org/rfc/rfc7517.txt), with the additional restrictions on algorithms listed in the [FSC](https://commonground.gitlab.io/standards/fsc/core/draft-fsc-core-00.html#name-access-token)"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/jwks"
+components:
+  parameters:
+    pathContractContentHash:
+      in: path
+      name: hash
+      description: The hash of the Contract content
+      schema:
+        type: string
+        example: $1$1$ouqPHvHP9-ZDKo4YDNz4GGYENOQQ80knSVg6lJ_MjaTLE_o3GgD1Vzyzteu791X0rkX6FvlJzyBYdZuD6hlWrQ
+      required: true
+    headerFscManagerAddress:
+      in: header
+      name: fsc-manager-address
+      description: The URL of the Manager. The scheme must be https and the URL must contain the port.
+      schema:
+        type: string
+        example: https://manager.com:8443
+      required: true
+    queryPaginationCursor:
+      in: query
+      name: cursor
+      description: A cursor from which paginated results should be returned. Leave empty for the first page
+      schema:
+        type: string
+      required: false
+    queryPaginationLimit:
+      in: query
+      name: limit
+      description: The maximum number of results
+      schema:
+        type: integer
+        format: uint32
+        maximum: 1000
+        minimum: 1
+      required: false
+    queryPaginationOrder:
+      in: query
+      name: sort_order
+      description: The sorting order of the results
+      required: false
+      schema:
+        $ref: "#/components/schemas/sortOrder"
+  headers:
+    FscErrorCode:
+      schema:
+        $ref: "#/components/schemas/errorCode"
+      required: true
+  requestBodies:
+    signatureRequest:
+      description: A signature request
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              content:
+                $ref: "#/components/schemas/contractContent"
+              signature:
+                description: The signature
+                type: string
+                example: eyJhbGciOiJSUzUxMiIsIng1dCNTMjU2IjoiRzRYNEM0bmFXZmRERG5qSi9aV2RzNGFPcWhzVTZnUklPNlQxM1pMNEsyST0ifQ.eyJjb250ZW50SGFzaCI6IiQxJDEkWmFxbiszaWFoM2FkMmtuYjJKc2JhR2g2bi9rZ1UrUWpVK0pmTmhuVkdCd1RGbnN1TUNjOUlRcHlPM0xabmt0WUtaWWh4TnpKalh5RWlLMnVWZTZEZ3c9PSIsInR5cGUiOiJhY2NlcHQifQ.Qs7M3EBVWbrzhjPioDhbhNP8BJQqkxPOPq-Pm6oWL_ZO9m74TIeUHk1gQ1QcqZs_zGALjmDLuOSLLEgz3Qh4iK5jadex14z-i3xJObb5vcjVN326CxdJNzRZo60c9KWY4Nrh7ewziXJv8BQ3x4se62p5paCKdN8quWiG9J5gN4F5dmtZyae0rEhQsy-fy5ugLHPhR97cschr8OnlStVQKRYcUqn7obCnKLNOv-L9a02umsw6ha-G8CSMr3z9QZMfYcPABQAaR3XamUIR_T-ZGiZbpuTDaLfqztCP9jrZ7Q6g4J6SmQtxkcbzj4YdXXcwOr9aUO-07LZuH__tHGXU2bzgsObiClP5Fx13VT0zJzM5rdMtS5OnRwvznIFJUG1VkXXIRG9pVpffOM-kO-FsFW6BTWGi5nBJfi21nLUTh-bNVPB9O8WVfVBl8PwZ2HzjNy0asI_6I2jpweRh8-KNLM5ca18YS1VUS8cgfnc7qFcrnI8kxxDqyITOd2-LMRsngvmJpoJkmKjNIHbnJaoXdvMqFss7YHitJQi7wz3VUKLojK8XdaUc40KQtx7VIdBX9ClDdUFY1kXPxM_c0zLGsLn60a-4PLtUBZEPnBgxZd7-9st9ivBkPXylG9ZNqIe6aD4qxBtp91vI2w18X-MmYT-wb73PcF2IySAuzFk-uqI
+            required:
+              - content
+              - signature
+  schemas:
+    paginationResult:
+      type: object
+      properties:
+        next_cursor:
+          description: A cursor that can be used to retrieve the next page or an empty string if there are no more results
+          type: string
+    contract:
+      description: A Contract
+      type: object
+      properties:
+        content:
+          $ref: "#/components/schemas/contractContent"
+        signatures:
+          $ref: "#/components/schemas/signatures"
+      required:
+        - content
+        - signatures
+    contractContent:
+      description: The content of a Contract
+      type: object
+      properties:
+        fsc_version:
+          description: The version of the FSC specification that the Contract adheres to.  
+          type: string
+          example: 1.0.0
+        iv:
+          description: An Initialization vector for the Contract. Must be an UUID.
+          type: string
+          example: 06338364-8305-7b74-8000-de4963503139
+          minLength: 36
+          maxLength: 36
+        group_id:
+          description: The FSC Group ID
+          type: string
+          example: example.fsc.com
+        validity:
+          $ref: "#/components/schemas/validity"
+        grants:
+          description: The Grants of the Contract
+          type: array
+          items:
+            $ref: "#/components/schemas/grant"
+        hash_algorithm:
+          $ref: "#/components/schemas/hashAlgorithm"
+        created_at:
+          description: A Unix timestamp of the creation date of the Contract
+          type: integer
+          format: int64
+          example: 1672527600
+          minimum: 0
+      required:
+        - fsc_version
+        - iv
+        - group_id
+        - validity
+        - grants
+        - hash_algorithm
+        - created_at
+    validity:
+      type: object
+      properties:
+        not_before:
+          description: A Unix timestamp, the Contract is not valid before this date.
+          type: integer
+          format: int64
+          example: 1672527600
+          minimum: 0
+        not_after:
+          description: A Unix timestamp, the Contract is not valid after this date.
+          type: integer
+          format: int64
+          example: 1704063600
+          minimum: 0
+      required:
+        - not_before
+        - not_after
+    signatures:
+      type: object
+      description: The accept, reject and revoke signatures
+      properties:
+        accept:
+          $ref: "#/components/schemas/signatureMap"
+        reject:
+          $ref: "#/components/schemas/signatureMap"
+        revoke:
+          $ref: "#/components/schemas/signatureMap"
+      required:
+        - accept
+        - reject
+        - revoke
+    signatureMap:
+      description: Map of PeerIDs and accept signatures
+      type: object
+      additionalProperties:
+        description: signature
+        type: string
+      example:
+        "12345678901234567891": eyJhbGciOiJSUzUxMiIsIng1dCNTMjU2IjoiRzRYNEM0bmFXZmRERG5qSi9aV2RzNGFPcWhzVTZnUklPNlQxM1pMNEsyST0ifQ.eyJjb250ZW50SGFzaCI6IiQxJDEkWmFxbiszaWFoM2FkMmtuYjJKc2JhR2g2bi9rZ1UrUWpVK0pmTmhuVkdCd1RGbnN1TUNjOUlRcHlPM0xabmt0WUtaWWh4TnpKalh5RWlLMnVWZTZEZ3c9PSIsInR5cGUiOiJhY2NlcHQifQ.Qs7M3EBVWbrzhjPioDhbhNP8BJQqkxPOPq-Pm6oWL_ZO9m74TIeUHk1gQ1QcqZs_zGALjmDLuOSLLEgz3Qh4iK5jadex14z-i3xJObb5vcjVN326CxdJNzRZo60c9KWY4Nrh7ewziXJv8BQ3x4se62p5paCKdN8quWiG9J5gN4F5dmtZyae0rEhQsy-fy5ugLHPhR97cschr8OnlStVQKRYcUqn7obCnKLNOv-L9a02umsw6ha-G8CSMr3z9QZMfYcPABQAaR3XamUIR_T-ZGiZbpuTDaLfqztCP9jrZ7Q6g4J6SmQtxkcbzj4YdXXcwOr9aUO-07LZuH__tHGXU2bzgsObiClP5Fx13VT0zJzM5rdMtS5OnRwvznIFJUG1VkXXIRG9pVpffOM-kO-FsFW6BTWGi5nBJfi21nLUTh-bNVPB9O8WVfVBl8PwZ2HzjNy0asI_6I2jpweRh8-KNLM5ca18YS1VUS8cgfnc7qFcrnI8kxxDqyITOd2-LMRsngvmJpoJkmKjNIHbnJaoXdvMqFss7YHitJQi7wz3VUKLojK8XdaUc40KQtx7VIdBX9ClDdUFY1kXPxM_c0zLGsLn60a-4PLtUBZEPnBgxZd7-9st9ivBkPXylG9ZNqIe6aD4qxBtp91vI2w18X-MmYT-wb73PcF2IySAuzFk-uqI
+    grant:
+      description: A Grant
+      type: object
+      required:
+        - data
+      properties:
+        data:
+          description: The details of the Grant
+          oneOf:
+            - $ref: "#/components/schemas/grantServicePublication"
+            - $ref: "#/components/schemas/grantServiceConnection"
+            - $ref: "#/components/schemas/grantDelegatedServiceConnection"
+            - $ref: "#/components/schemas/grantDelegatedServicePublication"
+          discriminator:
+            propertyName: type
+            mapping:
+              GRANT_TYPE_SERVICE_PUBLICATION: "#/components/schemas/grantServicePublication"
+              GRANT_TYPE_SERVICE_CONNECTION: "#/components/schemas/grantServiceConnection"
+              GRANT_TYPE_DELEGATED_SERVICE_CONNECTION: "#/components/schemas/grantDelegatedServiceConnection"
+              GRANT_TYPE_DELEGATED_SERVICE_PUBLICATION: "#/components/schemas/grantDelegatedServicePublication"
+    grantServiceConnection:
+      description: A ServiceConnectionGrant
+      type: object
+      properties:
+        type:
+          $ref: "#/components/schemas/grantType"
+        outway:
+          $ref: "#/components/schemas/outway"
+        service:
+          oneOf:
+            - $ref: "#/components/schemas/service"
+            - $ref: "#/components/schemas/delegatedService"
+          discriminator:
+            propertyName: type
+            mapping:
+              SERVICE_TYPE_SERVICE: "#/components/schemas/service"
+              SERVICE_TYPE_DELEGATED_SERVICE: "#/components/schemas/delegatedService"
+        properties:
+          description: Optional JSON object with arbitrary key-value pairs
+          additionalProperties: true
+          type: object
+      required:
+        - type
+        - outway
+        - service
+    grantServicePublication:
+      description: A ServicePublicationGrant
+      type: object
+      properties:
+        type:
+          $ref: "#/components/schemas/grantType"
+        directory:
+          $ref: "#/components/schemas/directory"
+        service:
+          $ref: "#/components/schemas/servicePublication"
+        properties:
+          description: Optional JSON object with arbitrary key-value pairs
+          additionalProperties: true
+          type: object
+      required:
+        - type
+        - directory
+        - service
+    grantDelegatedServiceConnection:
+      description: A DelegatedServiceConnectionGrant
+      type: object
+      properties:
+        type:
+          $ref: "#/components/schemas/grantType"
+        outway:
+          $ref: "#/components/schemas/outway"
+        service:
+          oneOf:
+            - $ref: "#/components/schemas/service"
+            - $ref: "#/components/schemas/delegatedService"
+          discriminator:
+            propertyName: type
+            mapping:
+              SERVICE_TYPE_SERVICE: "#/components/schemas/service"
+              SERVICE_TYPE_DELEGATED_SERVICE: "#/components/schemas/delegatedService"
+        delegator:
+          $ref: "#/components/schemas/delegator"
+        properties:
+          description: Optional JSON object with arbitrary key-value pairs
+          additionalProperties: true
+          type: object
+      required:
+        - type
+        - outway
+        - service
+        - delegator
+    grantDelegatedServicePublication:
+      description: A DelegatedServicePublicationGrant
+      type: object
+      properties:
+        type:
+          $ref: "#/components/schemas/grantType"
+        directory:
+          $ref: "#/components/schemas/directory"
+        service:
+          $ref: "#/components/schemas/servicePublication"
+        delegator:
+          $ref: "#/components/schemas/delegator"
+        properties:
+          description: Optional JSON object with arbitrary key-value pairs
+          additionalProperties: true
+          type: object
+      required:
+        - type
+        - directory
+        - service
+        - delegator
+    outway:
+      type: object
+      properties:
+        peer_id:
+            $ref: "#/components/schemas/peerID"
+        identification:
+          oneOf:
+            - $ref: "#/components/schemas/outwayIdentificationDomainName"
+            - $ref: "#/components/schemas/outwayIdentificationPublicKeyThumbprint"
+          discriminator:
+            propertyName: type
+            mapping:
+              OUTWAY_IDENTIFICATION_TYPE_PUBLIC_KEY_THUMBPRINT: "#/components/schemas/outwayIdentificationPublicKeyThumbprint"
+              OUTWAY_IDENTIFICATION_TYPE_DOMAIN_NAME: "#/components/schemas/outwayIdentificationDomainName"
+      required:
+        - peer_id
+        - identification
+    outwayIdentificationPublicKeyThumbprint:
+      description: The details of the Outway based on a public key thumbprint for which a connection was authorized
+      type: object
+      properties:
+        type:
+          $ref: "#/components/schemas/outwayIdentificationType"
+        public_key_thumbprint:
+          $ref: "#/components/schemas/publicKeyThumbprint"
+      required:
+        - type
+        - public_key_thumbprint
+    outwayIdentificationDomainName:
+      description: The details of the Outway based on a domain name for which a connection was authorized
+      type: object 
+      properties:
+        type:
+          $ref: "#/components/schemas/outwayIdentificationType"
+        domain_name:
+          $ref: "#/components/schemas/domainName"
+      required:
+        - type
+        - domain_name
+    directory:
+      description: The details of the Directory
+      type: object
+      properties:
+        peer_id:
+          $ref: "#/components/schemas/peerID"
+      required:
+        - peer_id
+    service:
+      description: The details of a Service
+      type: object
+      properties:
+        type:
+          $ref: "#/components/schemas/serviceType"
+        peer_id:
+          $ref: "#/components/schemas/peerID"
+        name:
+          $ref: "#/components/schemas/serviceName"
+      required:
+        - type
+        - peer_id
+        - name
+    delegatedService:
+      description: The details of a Service that is offered on behalf of another Peer
+      type: object
+      properties:
+        type:
+          $ref: "#/components/schemas/serviceType"
+        peer_id:
+          $ref: "#/components/schemas/peerID"
+        name:
+          $ref: "#/components/schemas/serviceName"
+        delegator:
+          $ref: "#/components/schemas/delegator"
+      required:
+        - type
+        - peer_id
+        - name
+        - delegator
+    servicePublication:
+      description: The details of a Service publication
+      type: object
+      properties:
+        peer_id:
+          $ref: "#/components/schemas/peerID"
+        name:
+          $ref: "#/components/schemas/serviceName"
+        protocol:
+          $ref: "#/components/schemas/protocol"
+      required:
+        - name
+        - peer_id
+        - protocol
+    delegator:
+      description: The details of a Delegator
+      type: object
+      properties:
+        peer_id:
+          $ref: "#/components/schemas/peerID"
+      required:
+        - peer_id
+    delegatorServiceListing:
+      description: The details of a Delegator
+      type: object
+      properties:
+        peer_id:
+          $ref: "#/components/schemas/peerID"
+        peer_name:
+          $ref: "#/components/schemas/peerName"
+      required:
+        - peer_id
+        - peer_name
+    serviceListing:
+      properties:
+        data:
+          oneOf:
+            - $ref: "#/components/schemas/serviceListingService"
+            - $ref: "#/components/schemas/serviceListingDelegatedService"
+          discriminator:
+            propertyName: type
+            mapping:
+              SERVICE_TYPE_SERVICE: "#/components/schemas/serviceListingService"
+              SERVICE_TYPE_DELEGATED_SERVICE: "#/components/schemas/serviceListingDelegatedService"
+      required:
+        - type
+        - data
+    serviceListingService:
+      properties:
+        type:
+          $ref: "#/components/schemas/serviceType"
+        peer:
+          $ref: "#/components/schemas/peer"
+        name:
+          $ref: "#/components/schemas/serviceName"
+        protocol:
+          $ref: "#/components/schemas/protocol"
+        properties:
+          description: The properties as specified in the ServicePublicationGrant
+          additionalProperties: true
+          type: object
+      required:
+        - type
+        - peer
+        - name
+        - protocol
+    serviceListingDelegatedService:
+      properties:
+        type:
+          $ref: "#/components/schemas/serviceType"
+        delegator:
+          $ref: "#/components/schemas/delegatorServiceListing"
+        peer:
+          $ref: "#/components/schemas/peer"
+        name:
+          $ref: "#/components/schemas/serviceName"
+        protocol:
+          $ref: "#/components/schemas/protocol"
+        properties:
+          description: The properties as specified in the DelegatedServicePublicationGrant
+          additionalProperties: true
+          type: object
+      required:
+        - type
+        - delegator
+        - peer
+        - name
+        - protocol
+    serviceType:
+      description: The type of Service
+      type: string
+      enum:
+        - SERVICE_TYPE_SERVICE
+        - SERVICE_TYPE_DELEGATED_SERVICE
+    outwayIdentificationType:
+      description: The type of Outway identification
+      type: string
+      enum:
+        - OUTWAY_IDENTIFICATION_TYPE_PUBLIC_KEY_THUMBPRINT
+        - OUTWAY_IDENTIFICATION_TYPE_DOMAIN_NAME
+    hashType:
+      description: The type of hash
+      type: string
+      enum:
+        - HASH_TYPE_CONTRACT
+        - HASH_TYPE_SERVICE_PUBLICATION_GRANT
+        - HASH_TYPE_SERVICE_CONNECTION_GRANT
+        - HASH_TYPE_DELEGATED_SERVICE_CONNECTION_GRANT
+        - HASH_TYPE_DELEGATED_SERVICE_PUBLICATION_GRANT
+    grantType:
+      description: The type of Grant
+      type: string
+      enum:
+        - GRANT_TYPE_SERVICE_PUBLICATION
+        - GRANT_TYPE_SERVICE_CONNECTION
+        - GRANT_TYPE_DELEGATED_SERVICE_CONNECTION
+        - GRANT_TYPE_DELEGATED_SERVICE_PUBLICATION
+    sortOrder:
+      description: The order in which the results should be returned
+      type: string
+      default: SORT_ORDER_DESCENDING
+      enum:
+        - SORT_ORDER_ASCENDING
+        - SORT_ORDER_DESCENDING
+    hashAlgorithm:
+      description: The hashing algorithm
+      type: string
+      enum:
+        - HASH_ALGORITHM_SHA3_512
+    fscVersion:
+      description: The version of the FSC specification
+      type: string
+      enum:
+        - 1.0.0
+    delegationVersion:
+      description: The version of the Delegation extension
+      type: string
+      enum:
+        - 1.0.0
+    loggingVersion:
+      description: The version of the Logging extension
+      type: string
+      enum:
+        - 1.0.0
+    oAuthGrantType:
+      description: The grant_type of an access token request. FSC only uses client_credentials
+      type: string
+      enum:
+        - client_credentials
+    oAuthTokenType:
+      description: The type of token. FSC only uses Bearer
+      type: string
+      enum:
+        - bearer
+    peerID:
+      description: The ID of a Peer
+      type: string
+      example: "12345678901234567891"
+      minLength: 3
+      maxLength: 255
+    peerName:
+      description: The name of a Peer
+      type: string
+      example: "Peer A"
+      minLength: 3
+      maxLength: 255
+    serviceName:
+      description: The name of a service
+      type: string
+      example: random_service_name
+      minLength: 3
+      maxLength: 255
+    publicKeyThumbprint:
+      description: The SHA-256 thumbprint of the public key used in the certificate of the Outway in HEX-encoded format
+      type: string
+      example: 3a56f2e9269ac63f0d4394c46b96539da1625b6a985d38029ff89f34e490960c
+      maxLength: 64
+      minLength: 64
+    domainName:
+      description: A domain name according to RFC 1035
+      type: string
+      minLength: 1
+      maxLength: 255
+      example: example.com
+    peer:
+      type: object
+      properties:
+        id:
+          $ref: "#/components/schemas/peerID"
+        name:
+          $ref: "#/components/schemas/peerName"
+        manager_address:
+          description: The address of the Manager
+          type: string
+          example: https://manager.com:8443
+          maxLength: 255
+          minLength: 3
+      required:
+        - id
+        - name
+        - manager_address
+    enabledExtensions:
+      type: object
+      description: A map of extensions and versions
+      properties:
+        EXTENSION_DELEGATION:
+          $ref: "#/components/schemas/delegationVersion"
+        EXTENSION_TRANSACTION_LOGGING:
+          $ref: "#/components/schemas/loggingVersion"
+      example:
+        EXTENSION_DELEGATION: "1.0.0"
+        EXTENSION_TRANSACTION_LOGGING: "1.0.0"
+    tokenErrorCode:
+      description: one of the error codes described in https://www.rfc-editor.org/rfc/rfc6749#section-5.2
+      type: string
+      example: invalid_request
+      enum:
+        - invalid_request
+        - invalid_client
+        - invalid_grant
+        - invalid_scope
+        - unauthorized_client
+        - unsupported_grant_type
+    managerErrorCode:
+      description: Error reasons that can be produced by the Manager
+      type: string
+      enum:
+        - ERROR_CODE_INCORRECT_GROUP_ID
+        - ERROR_CODE_PEER_NOT_PART_OF_CONTRACT
+        - ERROR_CODE_SIGNATURE_CONTRACT_CONTENT_HASH_MISMATCH
+        - ERROR_CODE_PEER_CERTIFICATE_VERIFICATION_FAILED
+        - ERROR_CODE_PEER_ID_SIGNATURE_MISMATCH
+        - ERROR_CODE_SIGNATURE_VERIFICATION_FAILED
+        - ERROR_CODE_GRANT_COMBINATION_NOT_ALLOWED
+        - ERROR_CODE_URL_PATH_CONTENT_HASH_MISMATCH
+        - ERROR_CODE_UNKNOWN_HASH_ALGORITHM_HASH
+        - ERROR_CODE_UNKNOWN_ALGORITHM_SIGNATURE
+        - ERROR_CODE_INCORRECT_PUBLIC_KEY_THUMBPRINT
+    inwayErrorsCode:
+      description: Error reasons that can be produced by the Inway
+      type: string
+      enum:
+        - ERROR_CODE_ACCESS_TOKEN_MISSING
+        - ERROR_CODE_ACCESS_TOKEN_INVALID
+        - ERROR_CODE_ACCESS_TOKEN_EXPIRED
+        - ERROR_CODE_SERVICE_NOT_FOUND
+        - ERROR_CODE_SERVICE_UNREACHABLE
+        - ERROR_CODE_WRONG_GROUP_ID_IN_TOKEN
+    outwayErrorCode:
+      description: Error reasons that can be produced by the Outway
+      type: string
+      enum:
+        - ERROR_CODE_METHOD_UNSUPPORTED
+    errorDomain:
+      description: The FSC component in which the error occurred
+      type: string
+      enum:
+        - ERROR_DOMAIN_INWAY
+        - ERROR_DOMAIN_OUTWAY
+        - ERROR_DOMAIN_MANAGER
+    errorCode:
+      description: A unique code specifying the error
+      type: string
+      oneOf:
+        - $ref: "#/components/schemas/inwayErrorsCode"
+        - $ref: "#/components/schemas/outwayErrorCode"
+        - $ref: "#/components/schemas/managerErrorCode"
+    protocol:
+      description: application layer protocol supported
+      type: string
+      enum:
+        - PROTOCOL_TCP_HTTP_1.1
+        - PROTOCOL_TCP_HTTP_2
+    error:
+      type: object
+      properties:
+        message:
+          description: A message describing the error
+          type: string
+        domain:
+          $ref: "#/components/schemas/errorDomain"
+        code:
+          $ref: "#/components/schemas/errorCode"
+      required:
+        - message
+        - domain
+        - code
+    jwks:
+      description: "JSON Web Key Set to validate JSON Web Signatures, according to [RFC 7517](https://www.ietf.org/rfc/rfc7517.txt), with the additional restrictions on algorithms listed in the [FSC](https://commonground.gitlab.io/standards/fsc/core/draft-fsc-core-00.html#name-access-token)"
+      type: object
+      properties:
+        keys:
+          type: array
+          items:
+            $ref: "#/components/schemas/jwk"
+      required:
+        - keys
+    jwk:
+      type: object
+      description: 'The value of the "keys" parameter is an array of JWK values. By default, the order of the JWK values within the array does not imply an order of preference among them, although applications of JWK Sets can choose to assign a meaning to the order for their purposes, if desired.'
+      properties:
+        kty:
+          type: string
+          description: |
+            Public Key Type. This parameter identifies the cryptographic algorithm
+            family used with the key, such as "RSA" or "EC".  "kty" values should
+            either be registered in the IANA "JSON Web Key Types" registry
+            established by [JWA] or be a value that contains a Collision-
+            Resistant Name. The "kty" value is a case-sensitive string.  This
+            member MUST be present in a JWK.
+          enum:
+            - RSA
+            - EC
+        use:
+          type: string
+          description: |
+            Public Key Use. This parameter identifies the intended use of
+            the public key. The "use" parameter is employed to indicate whether
+            a public key is used for encrypting data or verifying the signature
+            on data.
+          enum:
+            - sig
+            - enc
+        key_ops:
+          type: array
+          items:
+            type: string
+            enum:
+              - sign
+              - verify
+              - encrypt
+              - decrypt
+              - wrapKey
+              - unwrapKey
+              - deriveKey
+              - deriveBits
+          description: |
+            Public Key Operations. This parameter identifies the operation(s)
+            for which the key is intended to be used. The "key_ops" parameter is
+            intended for use cases in which public, private, or symmetric keys
+            may be present.
+
+            Its value is an array of key operation values.
+        alg:
+          type: string
+          description: |
+            Public Key Algorithm. This parameter identifies the algorithm intended for
+            use with the key. The values used should either be registered in the
+            IANA "JSON Web Signature and Encryption Algorithms" registry
+            established by [JWA] or be a value that contains a Collision-
+            Resistant Name. The "alg" value is a case-sensitive ASCII string.
+            Use of this member is OPTIONAL.
+          enum:
+            - RS256
+            - RS384
+            - RS512
+            - ES256
+            - ES384
+            - ES512
+            - PS256
+            - PS384
+            - PS512
+        kid:
+          type: string
+          description: |
+            Public Key ID. This parameter is used to match a specific key.  This
+            is used, for instance, to choose among a set of keys within a JWK Set
+            during key rollover.  The structure of the "kid" value is
+            unspecified.  When "kid" values are used within a JWK Set, different
+            keys within the JWK Set SHOULD use distinct "kid" values.  (One
+            example in which different keys might use the same "kid" value is if
+            they have different "kty" (key type) values but are considered to be
+            equivalent alternatives by the application using them.)  The "kid"
+            value is a case-sensitive string.  Use of this member is OPTIONAL.
+            When used with JWS or JWE, the "kid" value is used to match a JWS or
+            JWE "kid" Header Parameter value.
+        x5u:
+          type: string
+          format: url
+          description: |
+            Public Key X.509 URL. This parameter is a URI [RFC3986] that refers to a
+            resource for an X.509 public key certificate or certificate chain
+            [RFC5280].  The identified resource MUST provide a representation of
+            the certificate or certificate chain that conforms to RFC 5280
+            [RFC5280] in PEM-encoded form, with each certificate delimited as
+            specified in Section 6.1 of RFC 4945 [RFC4945].  The key in the first
+            certificate MUST match the public key represented by other members of
+            the JWK.  The protocol used to acquire the resource MUST provide
+            integrity protection; an HTTP GET request to retrieve the certificate
+            MUST use TLS [RFC2818] [RFC5246]; the identity of the server MUST be
+            validated, as per Section 6 of RFC 6125 [RFC6125].  Use of this
+            member is OPTIONAL.
+        x5c:
+          type: array
+          description: |
+            Public Key X.509 certificate chain. This parameter contains a chain of one
+            or more PKIX certificates [RFC5280].  The certificate chain is
+            represented as a JSON array of certificate value strings.  Each
+            string in the array is a base64-encoded (Section 4 of [RFC4648] --
+            not base64url-encoded) DER [ITU.X690.1994] PKIX certificate value.
+            The PKIX certificate containing the key value MUST be the first
+            certificate.  This MAY be followed by additional certificates, with
+            each subsequent certificate being the one used to certify the
+            previous one.  The key in the first certificate MUST match the public
+            key represented by other members of the JWK.  Use of this member is
+            OPTIONAL.
+          items:
+            type: string
+        x5t:
+          type: string
+          description: |
+            Public Key X.509 certificate SHA-1 thumbprint. This parameter is a
+            base64url-encoded SHA-1 thumbprint (a.k.a. digest) of the DER
+            encoding of an X.509 certificate [RFC5280]. Note that certificate
+            thumbprints are also sometimes known as certificate fingerprints.
+            The key in the certificate MUST match the public key represented by
+            other members of the JWK. Use of this member is OPTIONAL.
+        x5t#s256:
+          type: string
+          description: |
+            Public Key X.509 certificate SHA-256 thumbprint. This parameter is a base64url-encoded SHA-256 thumbprint (a.k.a. digest)
+            of the DER encoding of the X.509 certificate [RFC5280] corresponding
+            to the key used to digitally sign the JWS. Note that certificate
+            thumbprints are also sometimes known as certificate fingerprints.
+            Use of this Header Parameter is OPTIONAL.
+      oneOf:
+        - $ref: "#/components/schemas/ecPublicKey"
+        - $ref: "#/components/schemas/rsaPublicKey"
+      required:
+        - kty
+    ecPublicKey:
+      type: object
+      properties:
+        crv:
+          type: string
+        x:
+          type: string
+          format: byte
+          description: |
+            Public Key x coordinate. This parameter contains the x coordinate for the
+            Elliptic Curve point. It is represented as the base64url encoding of
+            the octet string representation of the coordinate, as defined in
+            Section 2.3.5 of SEC1 [SEC1]. The length of this octet string MUST
+            be the full size of a coordinate for the curve specified in the "crv"
+            parameter. For example, if the value of "crv" is "P-521", the octet
+            string must be 66 octets long.
+        y:
+          type: string
+          format: byte
+          description: |
+            Public Key y coordinate. This parameter contains the y coordinate for the
+            Elliptic Curve point. It is represented as the base64url encoding of
+            the octet string representation of the coordinate, as defined in
+            Section 2.3.5 of SEC1 [SEC1]. The length of this octet string MUST
+            be the full size of a coordinate for the curve specified in the "crv"
+            parameter. For example, if the value of "crv" is "P-521", the octet
+            string must be 66 octets long.
+          minLength: 66
+          maxLength: 66
+    rsaPublicKey:
+      type: object
+      properties:
+        n:
+          type: string
+          format: byte
+          description: |
+            Public Key modulus. This parameter contains the modulus value for the RSA
+            public key. It is represented as a Base64urlUInt-encoded value.
+
+            Note that implementers have found that some cryptographic libraries
+            prefix an extra zero-valued octet to the modulus representations they
+            return, for instance, returning 257 octets for a 2048-bit key, rather
+            than 256. Implementations using such libraries will need to take
+            care to omit the extra octet from the base64url-encoded
+            representation.
+        e:
+          type: string
+          format: byte
+          description: |
+            Public Key exponent. This parameter contains the exponent value for the RSA
+            public key. It is represented as a Base64urlUInt-encoded value.
+
+            For instance, when representing the value 65537, the octet sequence
+            to be base64url-encoded MUST consist of the three octets [1, 0, 1];
+            the resulting representation for this value is "AQAB".
+  examples:
+    peerNotPartOfContract:
+      summary: "Peer not part of the Contract"
+      value:
+        code: "ERROR_CODE_PEER_NOT_PART_OF_CONTRACT"
+        message: "peer '0001' not part of the contract"
+        domain: "ERROR_DOMAIN_MANAGER"
+    signatureContentMismatch:
+      summary: "Signature Contract content mismatch"
+      value:
+        code: "ERROR_CODE_SIGNATURE_CONTRACT_CONTENT_HASH_MISMATCH"
+        message: "signature contract content hash '$1$1$ouqPHvHP9-ZDKo4YDNz4GGYENOQQ80knSVg6lJ_MjaTLE_o3GgD1Vzyzteu791X0rkX6FvlJzyBYdZuD6hlWrQ' does not match the contract content hash '$1$1$rrvHPvHP9-ZDKo4YDNz4GGYENOQQ80knSVg6lJ_MjaTLE_o3GgD1Vzyzteu791X0rkX6FvlJzyBYdZuD6hlrfL'"
+        domain: "ERROR_DOMAIN_MANAGER"
+    peerCertificateVerificationFailed:
+      summary: "Peer certificate verification failed"
+      value:
+        code: "ERROR_CODE_PEER_CERTIFICATE_VERIFICATION_FAILED"
+        message: "the peer id '0001' is in a incorrect format"
+        domain: "ERROR_DOMAIN_MANAGER"
+    peerIDSignatureMismatch:
+      summary: "Peer ID does not match signature"
+      value:
+        code: "ERROR_CODE_PEER_ID_SIGNATURE_MISMATCH"
+        message: "peer id '0001' does not match signature peer id '0002'"
+        domain: "ERROR_DOMAIN_MANAGER"
+    signatureVerificationFailed:
+      summary: "Signature verification failed"
+      value:
+        code: "ERROR_CODE_SIGNATURE_VERIFICATION_FAILED"
+        message: "unable to retrieve certificate with thumbprint 'h_CeVoeJ5vdaFGzNYPqiKWnGtDKB9UvIa_uk5Yvm7gs' from manager of peer '0001'"
+        domain: "ERROR_DOMAIN_MANAGER"
+    grantCombinationNotAllowed:
+      summary: "Grant combination not allowed"
+      value:
+        code: "ERROR_CODE_GRANT_COMBINATION_NOT_ALLOWED"
+        message: "cannot combine a service publication grant with any other grant type"
+        domain: "ERROR_DOMAIN_MANAGER"

@@ -1,0 +1,44 @@
+@startuml
+title: Request access to a service
+
+skinparam sequenceBoxBorderColor #transparent
+skinparam boxPadding 50
+hide footbox
+
+box "Organization A"
+actor "User" as userOrgA
+participant "NLX Management" as managementUIOrgA
+participant "Management API" as managementAPIOrgA
+database "Audit log database" as auditLogDatabaseOrgA
+database "Contract database" as contractDatabaseOrgA
+participant "Contract Manager" as contractManagerOrgA
+end box
+
+box "Organization B"
+participant "Contract Manager" as contractManagerOrgB
+database "Contract database" as contractDatabaseOrgB
+actor "User" as userOrgB
+participant "NLX Management" as managementUIOrgB
+participant "Management API" as managementAPIOrgB
+database "Audit log database" as auditLogDatabaseOrgB
+end box
+
+userOrgA -> managementUIOrgA: Request access to service X
+managementUIOrgA -> managementAPIOrgA: Request access to service X
+managementAPIOrgA -> auditLogDatabaseOrgA: Create audit log "User X requested access to service Y"
+auditLogDatabaseOrgA -> managementAPIOrgA: AuditLog created
+managementAPIOrgA -> contractManagerOrgA: Create contract proposal with a connection grant for service X
+contractManagerOrgA -> contractManagerOrgA: Sign proposal
+contractManagerOrgA -> contractDatabaseOrgA: Store contract
+contractManagerOrgA -> contractManagerOrgB: Contract proposal with a connection grant for service X
+contractManagerOrgB -> contractDatabaseOrgB: Store contract proposal
+userOrgB -> managementUIOrgB: Approve access
+managementUIOrgB -> managementAPIOrgB: Approve access
+managementAPIOrgB -> auditLogDatabaseOrgB: Create audit log "User X granted organisation Y access to service Z"
+auditLogDatabaseOrgB -> managementAPIOrgB: Audit log created
+managementAPIOrgB -> contractManagerOrgB: Sign contract proposal
+contractManagerOrgB -> contractDatabaseOrgB: Store signature
+contractManagerOrgB -> contractManagerOrgA: Submit signature
+contractManagerOrgA -> contractDatabaseOrgA: Store signature
+
+@enduml

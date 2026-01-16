@@ -1,0 +1,44 @@
+@startuml
+
+autonumber
+title: Delegate the authorization to connect to a Service published on behalf of another Peer
+header: Core
+
+box "Delegatee"
+  participant "Manager" as managerDelegatee
+end box
+
+box "Delegator"
+  participant "Manager" as managerDelegator
+end box
+
+box "Service Provider"
+  participant "Manager" as managerServiceProvider
+end box
+
+box "Delegator Service Publication"
+  participant "Manager" as managerDelegatorServicePublication
+end box
+
+managerDelegatee -> managerDelegatee: Create Contract with a \n__DelegatedServiceConnectionGrant__
+managerDelegatee -> managerDelegatee: Sign Contract
+managerDelegatee -> managerDelegator: Submit Contract
+managerDelegatee -> managerServiceProvider: Submit Contract
+managerDelegator -> managerDelegatorServicePublication: Submit Contract
+managerDelegator -> managerDelegator: Sign Contract
+managerDelegator -> managerDelegatee: Accept Contract
+managerDelegator -> managerServiceProvider: Accept Contract
+managerDelegator -> managerDelegatorServicePublication: Accept Contract
+managerServiceProvider -> managerServiceProvider: Sign Contract
+managerServiceProvider -> managerDelegatee: Accept Contract
+managerServiceProvider -> managerDelegator: Accept Contract
+managerServiceProvider -> managerDelegatorServicePublication: Accept Contract
+managerDelegatorServicePublication -> managerDelegatorServicePublication: Sign Contract
+managerDelegatorServicePublication -> managerDelegatee: Accept Contract
+managerDelegatorServicePublication -> managerDelegator: Accept Contract
+managerDelegatorServicePublication -> managerServiceProvider: Accept Contract
+
+skinparam sequenceBoxBorderColor #transparent
+skinparam boxPadding 50
+hide footbox
+@enduml

@@ -1,0 +1,17 @@
+@startuml
+title: Local Peer configuration
+
+box "Peer"
+  participant "Contract Manager" as manager
+  participant "Inway" as inway
+  participant "Outway" as outway
+end box
+inway -> manager : request configuration
+return
+outway -> manager : request configuration
+return
+
+skinparam sequenceBoxBorderColor #transparent
+skinparam boxPadding 50
+hide footbox
+@enduml

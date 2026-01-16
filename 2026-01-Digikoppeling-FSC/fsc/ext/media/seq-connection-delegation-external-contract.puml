@@ -1,0 +1,48 @@
+@startuml Service Connection with external Contract Reference
+title Service Connection with External Contract Reference
+header Figure 2: Service Connection Delegation Flow
+
+skinparam sequenceBoxBorderColor #transparent
+skinparam boxPadding 50
+autonumber
+
+box "API Consumer (Delegatee)" #LightBlue
+    participant "Manager" as ConsumerManager
+end box
+
+box "API Provider" #LightGreen
+    participant "Manager" as ProviderManager
+end box
+
+note over ConsumerManager
+    API Consumer acts on behalf
+    of Delegator organization
+    based on external contract
+end note
+
+ConsumerManager -> ConsumerManager: Create Contract with ServiceConnectionGrant\ncontaining Properties with the External Contract Reference\n(delegator_id, delegator_name, reference)
+
+ConsumerManager -> ConsumerManager: Sign Contract
+
+ConsumerManager -> ProviderManager: Send Contract with\nServiceConnectionGrant
+
+note over ProviderManager
+    Validation of external contract reference
+    (manually or automatically outside of FSC)
+end note
+
+ProviderManager -> ProviderManager: Validate external contract reference 
+
+alt Validation successful
+    ProviderManager -> ProviderManager: Accept Contract
+    ProviderManager -> ConsumerManager: Return Contract with Accept Signature
+
+    note over ConsumerManager, ProviderManager
+        Consumer can now access service
+        on behalf of Delegator organization
+    end note
+else Validation failed
+    ProviderManager -> ConsumerManager: Reject Contract
+end
+
+@enduml
