@@ -82,7 +82,7 @@ Wijzigingen:
 ## Reageren?
 Reageren kan door middel van een issue op wijzigingsvoorstel op de repository of per e-mail aan digikoppeling@logius.nl
 
-Wij ontvangen graag inhoudelijke opmerkingen, vragen of suggesties uiterlijk 6 februari 2026.
+Wij ontvangen graag inhoudelijke opmerkingen, vragen of suggesties uiterlijk 20 februari 2026.
 
 
 ## Meer informatie
