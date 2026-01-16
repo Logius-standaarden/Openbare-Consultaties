@@ -1,0 +1,29 @@
+@startuml
+
+header: Core
+title mTLS connections with Trust Anchor X.509 certificates
+
+frame "Group" {
+  frame "Consuming Peer" {
+    component Outway as outway
+    component "Manager" as managerConsumingPeer
+  }
+  frame "Providing Peer" {
+     Component Inway as inway
+     component "Manager" as managerProvidingPeer
+  }
+  component Directory as directory
+}
+
+managerConsumingPeer <-[bold,#green]l-> managerProvidingPeer
+managerProvidingPeer -[bold,#green]u-> directory
+managerConsumingPeer -[bold,#green]u-> directory
+outway -[bold,#green]l-> inway
+outway -[bold,#green]l-> managerProvidingPeer
+outway -[hidden]u-> managerConsumingPeer
+inway -[hidden]u-> managerProvidingPeer
+
+skinparam boxPadding 50
+skinparam linetype polyline
+skinparam linetype ortho
+@enduml

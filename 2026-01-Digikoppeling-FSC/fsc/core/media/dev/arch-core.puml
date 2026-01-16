@@ -1,0 +1,25 @@
+
+@startuml
+
+'skinparam componentStyle uml2
+skinparam sequenceBoxBorderColor #transparent
+
+title: NLX
+
+node "Requesting Peer" {
+    [HTTP Client] -right-> [Outway]
+} 
+
+node "Providing Peer" {
+    [Inway] -right-> [HTTP Service]  
+} 
+
+node "Central" {
+    [Directory]
+} 
+
+[Outway] -right-> [Inway]
+[Directory] -[#green]up-> [Outway]
+[Inway] -[#green]down-> [Directory]
+
+@enduml

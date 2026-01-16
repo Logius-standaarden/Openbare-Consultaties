@@ -1,0 +1,37 @@
+@startuml
+
+autonumber
+title: Write to the TransactionLog
+header: Logging
+autonumber
+
+box "Consumer"
+  participant "Client" as client
+  database "TransactionLog" as transactionLogConsumer
+  participant "Outway" as outway
+end box
+
+box "Provider"
+  participant "Inway" as inway
+  database "TransactionLog" as transactionLogProvider
+  participant "Service" as service
+end box
+
+client -> outway: Request
+outway -> outway: Generate a __TransactionID__
+outway -> transactionLogConsumer: Write record\nwith the __TransactionID__
+transactionLogConsumer --> outway: Record received
+outway -> inway: Request\nwith the __TransactionID__ in an HTTP header
+inway -> inway: Parse __TransactionID__ from request
+inway -> transactionLogProvider: Write record\nwith the __TransactionID__
+transactionLogProvider --> inway:  Record received
+inway -> service: Request\nwith the __TransactionID__ in an HTTP header
+service --> inway: Response
+inway --> outway: Response
+outway --> client: Response\nwith the __TransactionID__ in an HTTP header
+
+skinparam sequenceBoxBorderColor #transparent
+skinparam boxPadding 50
+hide footbox
+
+@enduml

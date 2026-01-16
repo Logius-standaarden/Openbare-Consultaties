@@ -1,0 +1,25 @@
+@startuml
+
+autonumber
+header: Core
+title: Obtaining an Access Token
+
+skinparam sequenceBoxBorderColor #transparent
+skinparam boxPadding 50
+hide footbox
+
+box "Service Consumer"
+    participant "Outway"
+end box
+
+box "Service Provider"
+    participant "Manager"
+end box
+
+"Outway" -> Manager: request Access token
+"Manager" -> "Manager": validate identity "Service Consumer"
+"Manager" -> "Manager": validate Contract Grant hash
+"Manager" --> "Outway": Access Token bound to client certificate "Outway"
+
+
+@enduml

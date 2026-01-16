@@ -1,0 +1,23 @@
+@startuml
+
+autonumber
+header: Core
+title: Providing a Service
+
+box "Peer"
+  participant "Manager" as managerPeer
+end box
+box "Directory"
+  participant "Manager" as managerDirectory
+end box
+
+managerPeer -> managerPeer: Create Contract with a  __ServicePublicationGrant__
+managerPeer -> managerPeer: Add accept signature
+managerPeer -> managerDirectory: Submit Contract
+managerDirectory -> managerDirectory: Add accept signature
+managerDirectory -> managerPeer: Accept Contract
+
+skinparam sequenceBoxBorderColor #transparent
+skinparam boxPadding 50
+hide footbox
+@enduml

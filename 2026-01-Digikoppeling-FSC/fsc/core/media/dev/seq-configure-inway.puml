@@ -1,0 +1,44 @@
+@startuml
+title: Configure Inway
+
+skinparam sequenceBoxBorderColor #transparent
+skinparam boxPadding 50
+hide footbox
+
+box "Peer offering a service"
+participant "Inway" as inway
+participant "Contract" as contract
+participant "Contract Manager" as contractController
+participant "Peers with access" as peersWithAccess
+end box
+
+box "Directory"
+participant "Directory API" as directoryAPI
+end box
+
+loop for each service the Inway is offering
+    inway -> contractController: get contracts for service
+    contractController -> inway: return contracts
+    loop for each contract
+        inway -> contract: get peers
+        contract -> inway: return peers
+        loop for each peer
+            inway -> contract: get signature of peer
+            contract -> inway: return signature
+            inway -> directoryAPI: get certificate of peer
+            directoryAPI -> inway: return certificate
+            inway -> inway: validate signature
+        end
+        alt each peer has a valid signature
+            inway -> contract: get grants
+            contract -> inway: return grants
+            loop for each grant
+                loop for each public key
+                    inway -> peersWithAccess: add peer subject serial number and public key
+                end
+            end
+        end
+    end
+end
+
+@enduml

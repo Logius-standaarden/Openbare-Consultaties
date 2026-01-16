@@ -1,0 +1,14 @@
+@startuml
+Title Contract States
+
+[*]      --> PROPOSED : Proposal sent to involved Peers
+PROPOSED --> REJECTED : End date passed
+PROPOSED --> REJECTED : Peer adds 'reject' signature
+PROPOSED --> VALID : All involved Peers add 'accept' signature
+VALID --> REVOKED  : Peer adds 'revoke' signature
+VALID --> EXPIRED  : End date passed
+REVOKED  --> [*]
+REJECTED --> [*]
+EXPIRED  --> [*]
+
+@enduml

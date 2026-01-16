@@ -1,0 +1,23 @@
+@startuml
+
+autonumber
+title: Provide the TransactionLog
+header: Logging
+autonumber
+
+box "Peer A"
+  participant "Client" as clientPeerA
+end box
+
+box "Peer B"
+  participant "Manager" as managerPeerB
+end box
+
+clientPeerA -> managerPeerB: Request TransactionLog
+managerPeerB --> clientPeerA: Return TransactionLog
+
+skinparam sequenceBoxBorderColor #transparent
+skinparam boxPadding 50
+hide footbox
+
+@enduml
