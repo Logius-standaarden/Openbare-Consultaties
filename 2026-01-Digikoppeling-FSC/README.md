@@ -43,13 +43,11 @@ Het core van de FSC-standaard bereikt inter-organisationele, technische interope
 - om autorisaties aan te vragen en te beheren die nodig zijn om verbinding te maken met genoemde Services.
 - om de autorisatie te delegeren om verbinding te maken of Services te publiceren namens een andere organisatie.
 
-Consultatieversie FSC 19 jan 2026: https://logius-standaarden.github.io/Publicatie-Preview/fsc-core/rc2.0.0  
-Consultatieversie FSC Logging 19 jan 2026: https://logius-standaarden.github.io/Publicatie-Preview/fsc-logging/rc1.1.0  
-Consultatieversie FSC external contract reference 19 jan 2026: https://logius-standaarden.github.io/Publicatie-Preview/fsc-core/rc2.0.0  
-
 Wijzigingen:
 
 ##### FSC Core
+Consultatieversie FSC 19 jan 2026: https://logius-standaarden.github.io/Publicatie-Preview/fsc-core/rc2.0.0  
+
 De core standaard FSC specificeert de basis voor de werking van de standaard.
 - [Add properties object to Grants & update hashing algorithm](https://github.com/Logius-standaarden/fsc-core/pull/25)
 - [Nieuwe error codes in Open FSC](https://github.com/Logius-standaarden/fsc-core/pull/55)
@@ -59,6 +57,9 @@ De core standaard FSC specificeert de basis voor de werking van de standaard.
 - [Certificate renewal](https://github.com/Logius-standaarden/fsc-core/pull/14)
 
 ##### Extensies
+Consultatieversie FSC Logging 19 jan 2026: https://logius-standaarden.github.io/Publicatie-Preview/fsc-logging/rc1.1.0  
+Consultatieversie FSC external contract reference 19 jan 2026: https://logius-standaarden.github.io/Publicatie-Preview/fsc-core/rc2.0.0  
+
 Aanvullende functionaliteit wordt gestandaardiseerd in extensies en kunnen van toepassing zijn indien je FSC op een bepaalde manier wilt toepassen die de core (bewust) niet ondersteunt.
 
 - [FSC logging update](https://github.com/Logius-standaarden/fsc-logging/pull/1)
