@@ -46,8 +46,8 @@ De core-standaard FSC specificeert de basis voor de werking van de standaard:
 - [Certificate renewal](https://github.com/Logius-standaarden/fsc-core/pull/14)
 
 ##### Extensies
-[:link: Consultatieversie 19 januari 2026](https://logius-standaarden.github.io/Openbare-Consultaties/2026-01-Digikoppeling-FSC/fsc/logging/)  
-[:link: Consultatieversie 19 januari 2026](https://logius-standaarden.github.io/Openbare-Consultaties/2026-01-Digikoppeling-FSC/fsc/ext/)
+[:link: Consultatieversie Logging 19 januari 2026](https://logius-standaarden.github.io/Openbare-Consultaties/2026-01-Digikoppeling-FSC/fsc/logging/)  
+[:link: Consultatieversie External Contract Reference 19 januari 2026](https://logius-standaarden.github.io/Openbare-Consultaties/2026-01-Digikoppeling-FSC/fsc/ext/)
 
 Aanvullende functionaliteit wordt gestandaardiseerd in extensies en kan van toepassing zijn indien je FSC op een bepaalde manier wilt toepassen die de core (bewust) niet ondersteunt.
 
