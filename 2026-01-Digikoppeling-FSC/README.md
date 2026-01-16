@@ -1,4 +1,4 @@
-# Consultatie Digikoppeling release 2026-01
+# Consultatie Digikoppeling / FSC (release 2026-1)
 
 In het kader van het beheer en de doorontwikkeling van de Digikoppeling standaard houdt Logius een openbare consultatie
 Via deze consultatie nodigen wij u uit om feedback te geven op de standaard. De consultatie loopt tot 16 februari 2026.
