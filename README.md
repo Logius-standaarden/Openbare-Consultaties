@@ -5,6 +5,7 @@
 | Label | Locatie | Omschrijving | Consultatie loopt tot |
 |---|---|---|---|
 | Logboek Dataverwerkingen (LDV) | [Consultatie Logboek Dataverwerkingen](https://logius-standaarden.github.io/Openbare-Consultaties/2025_12_LDV/)| Documenten ter vaststelling van de Logboek Dataverwerkingen Standaard | 30/01/2026 |
+| API Design Rules bij Kennisplatform API's | [Consultatie API Design Rules](https://logius-standaarden.github.io/Openbare-Consultaties/2026-01-API-design-rules-kennisplatform/)| Documenten ter consultatie van 2 nieuwe hoofdstukken in versie 2.2 | 06/02/2026 |
 
 <!-- (Op dit moment lopen er geen openbare consultaties) -->
 
