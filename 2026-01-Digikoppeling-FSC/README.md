@@ -13,7 +13,7 @@ De volgende wijzigingen zijn onderdeel van de voorgestelde volgende release.
 ### Digikoppeling Koppelvlakstandaard REST-API en FSC
 
 #### Digikoppeling REST-API profiel
-[:link: Consultatieversie 19 januari 2026](https://logius-standaarden.github.io/Openbare-Consultaties/2026-01-Digikoppeling-FSC/dk/api/)
+[:link: Consultatieversie 19 januari 2026](https://logius-standaarden.github.io/Openbare-Consultaties/2026-01-Digikoppeling-FSC/dk/api/) ([Verschillen](https://logius-standaarden.github.io/Openbare-Consultaties/2026-01-Digikoppeling-FSC/dk/api/diff.html))
 
 Wijzigingen:
 - Verwijzen naar ADR versie 2.1
@@ -38,7 +38,7 @@ Het core profiel van de FSC-standaard biedt functionaliteit:
 
 Wijzigingen:
 
-[:link: Consultatieversie 19 januari 2026](https://logius-standaarden.github.io/Openbare-Consultaties/2026-01-Digikoppeling-FSC/fsc/core/)
+[:link: Consultatieversie 19 januari 2026](https://logius-standaarden.github.io/Openbare-Consultaties/2026-01-Digikoppeling-FSC/fsc/core/) ([Verschillen](https://logius-standaarden.github.io/Openbare-Consultaties/2026-01-Digikoppeling-FSC/fsc/core/diff.html))
 
 De core-standaard FSC specificeert de basis voor de werking van de standaard:
 - [Add properties object to Grants & update hashing algorithm](https://github.com/Logius-standaarden/fsc-core/pull/25)
@@ -49,8 +49,9 @@ De core-standaard FSC specificeert de basis voor de werking van de standaard:
 - [Certificate renewal](https://github.com/Logius-standaarden/fsc-core/pull/14)
 
 ##### Extensies
-[:link: Consultatieversie Logging 19 januari 2026](https://logius-standaarden.github.io/Openbare-Consultaties/2026-01-Digikoppeling-FSC/fsc/logging/)  
-[:link: Consultatieversie External Contract Reference 19 januari 2026](https://logius-standaarden.github.io/Openbare-Consultaties/2026-01-Digikoppeling-FSC/fsc/ext/)
+[:link: Consultatieversie Logging 19 januari 2026](https://logius-standaarden.github.io/Openbare-Consultaties/2026-01-Digikoppeling-FSC/fsc/logging/) ([Verschillen](https://logius-standaarden.github.io/Openbare-Consultaties/2026-01-Digikoppeling-FSC/fsc/logging/diff.html))
+
+[:link: Consultatieversie External Contract Reference 19 januari 2026](https://logius-standaarden.github.io/Openbare-Consultaties/2026-01-Digikoppeling-FSC/fsc/ext/) (Nieuwe extensie)
 
 Aanvullende functionaliteit wordt gestandaardiseerd in extensies en kan van toepassing zijn indien je FSC op een bepaalde manier wilt toepassen die de core (bewust) niet ondersteunt.
 
@@ -64,7 +65,7 @@ De FSC test suite bevat een lijst met testdocumentatie die ontwikkeld is om de c
 - [Bijbehorende test cases Properties](https://github.com/Logius-standaarden/fsc-test-suite/pull/3)
 
 ### Digikoppeling Beveiligingstandaarden en voorschriften
-[:link: Consultatieversie 19 januari 2026](https://logius-standaarden.github.io/Openbare-Consultaties/2026-01-Digikoppeling-FSC/dk/beveilig/)
+[:link: Consultatieversie 19 januari 2026](https://logius-standaarden.github.io/Openbare-Consultaties/2026-01-Digikoppeling-FSC/dk/beveilig/) ([Verschillen](https://logius-standaarden.github.io/Openbare-Consultaties/2026-01-Digikoppeling-FSC/dk/beveilig/diff.html))
 
 Wijzigingen:
 - [XML Signing parameters conform NCSC voorschriften](https://github.com/Logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften/pull/17)
