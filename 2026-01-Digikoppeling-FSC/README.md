@@ -16,8 +16,8 @@ De volgende wijzigingen zijn onderdeel van de voorgestelde volgende release.
 [:link: Consultatieversie 19 januari 2026](https://logius-standaarden.github.io/Openbare-Consultaties/2026-01-Digikoppeling-FSC/dk/api/)
 
 Wijzigingen:
-- Standaard baseren op ADR versie 2.1
-- Standaard baseren op FSC versie 2.0
+- Verwijzen naar ADR versie 2.1 
+- Verwijzen naar FSC versie 2.0
 
 #### FSC (Federatieve Connectiviteits Standaard)
 
@@ -55,7 +55,7 @@ Aanvullende functionaliteit wordt gestandaardiseerd in extensies en kan van toep
 - [FSC External Contract Reference extensie - nieuwe extensie voor een referentie naar een bestaand (papieren) contract](https://github.com/Logius-standaarden/fsc-external-contract-reference)
 
 ##### FSC test suite
-De FSC test suite bevat een lijst met testdocumentatie die ontwikkeld is om de conformiteit en interoperabiliteit van de implementaties van FSC-componenten te waarborgen. Daarom is besloten om vanaf heden elke nieuwe feature/wijziging in de core-standaard, gepaard met een aantal testen die deze functionaliteit beschrijven in de test suite. De testen voor het nieuwe properties-veld staan hieronder:
+De FSC test suite bevat een lijst met testdocumentatie die ontwikkeld is om de conformiteit en interoperabiliteit van de implementaties van FSC-componenten te waarborgen. Bij nieuwe features/wijzigingen in de core-standaard worden bijbehorende testen beschreven in de test suite. De testen voor het nieuwe properties-veld staan hieronder:
 
 - [Test-suite FSC](https://github.com/Logius-standaarden/fsc-test-suite)
 - [Bijbehorende test cases Properties](https://github.com/Logius-standaarden/fsc-test-suite/pull/3)
