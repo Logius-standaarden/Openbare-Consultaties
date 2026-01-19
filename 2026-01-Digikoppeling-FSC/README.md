@@ -19,13 +19,16 @@ Wijzigingen:
 - Verwijzen naar ADR versie 2.1 
 - Verwijzen naar FSC versie 2.0
 
-#### FSC (Federatieve Connectiviteits Standaard)
+#### FSC (Federated Service Connectivity)
 
-##### Standaard
+##### FSC Standaard
 
 De Federated Service Connectivity (FSC)-standaard specificaties beschrijven een manier om technisch interoperabele API-gateway-functionaliteit te implementeren, die federatieve authenticatie en veilige verbindingen omvat in een grootschalig dynamisch API-landschap.
 
-Het core van de FSC-standaard bereikt inter-organisationele, technische interoperabiliteit:
+
+##### FSC Core
+
+Het core profiel van de FSC-standaard biedt functionaliteit:
 
 - om Services te ontdekken;
 - om verzoeken te routeren naar Services in andere contexten (bijv. van binnen organisatie A naar organisatie B);
@@ -34,7 +37,6 @@ Het core van de FSC-standaard bereikt inter-organisationele, technische interope
 
 Wijzigingen:
 
-##### FSC Core
 [:link: Consultatieversie 19 januari 2026](https://logius-standaarden.github.io/Openbare-Consultaties/2026-01-Digikoppeling-FSC/fsc/core/)
 
 De core-standaard FSC specificeert de basis voor de werking van de standaard:
