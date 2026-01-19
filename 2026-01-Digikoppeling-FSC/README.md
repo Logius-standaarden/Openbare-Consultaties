@@ -17,8 +17,8 @@ De volgende wijzigingen zijn onderdeel van de voorgestelde volgende release.
 
 Wijzigingen:
 - Verwijzen naar ADR versie 2.1
-  - [Regelreproductie verminderd](https://github.com/Logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API/pull/56)
 - Verwijzen naar FSC versie 2.0
+- [Duplicatie van regels verminderd](https://github.com/Logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API/pull/56)
 
 #### FSC (Federated Service Connectivity)
 
