@@ -10,7 +10,6 @@
 
 <!-- (Op dit moment lopen er geen openbare consultaties) -->
 
-https://github.com/Logius-standaarden/Openbare-Consultaties/blob/master/2026-01-Digikoppeling-FSC/README.md
 
 ## Op- en Aanmerkingen
 
