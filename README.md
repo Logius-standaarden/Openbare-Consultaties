@@ -6,10 +6,11 @@
 |---|---|---|---|
 | Logboek Dataverwerkingen (LDV) | [Consultatie Logboek Dataverwerkingen](https://logius-standaarden.github.io/Openbare-Consultaties/2025_12_LDV/)| Documenten ter vaststelling van de Logboek Dataverwerkingen Standaard | 30/01/2026 |
 | API Design Rules bij Kennisplatform API's | [Consultatie API Design Rules](https://logius-standaarden.github.io/Openbare-Consultaties/2026-01-API-design-rules-kennisplatform/)| Documenten ter consultatie van 2 nieuwe hoofdstukken in versie 2.2 | 06/02/2026 |
+| Digikoppeling / FSC (Federated Service Connectivity) Standaard |[Consultatie Digikoppeling / FSC (2026-1) ](https://github.com/Logius-standaarden/Openbare-Consultaties/blob/master/2026-01-Digikoppeling-FSC/README.md)| Nieuwe versie van de Digikoppeling en FSC standaard | 20/02/2026 |
 
 <!-- (Op dit moment lopen er geen openbare consultaties) -->
 
-
+https://github.com/Logius-standaarden/Openbare-Consultaties/blob/master/2026-01-Digikoppeling-FSC/README.md
 
 ## Op- en Aanmerkingen
 
