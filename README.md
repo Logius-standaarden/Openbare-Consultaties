@@ -2,13 +2,11 @@
 
 ## Lopende Consultaties
 
+<!--
 | Label | Locatie | Omschrijving | Consultatie loopt tot |
 |---|---|---|---|
-| Logboek Dataverwerkingen (LDV) | [Consultatie Logboek Dataverwerkingen](https://logius-standaarden.github.io/Openbare-Consultaties/2025_12_LDV/)| Documenten ter vaststelling van de Logboek Dataverwerkingen Standaard | 30/01/2026 |
-| API Design Rules bij Kennisplatform API's | [Consultatie API Design Rules](https://logius-standaarden.github.io/Openbare-Consultaties/2026-01-API-design-rules-kennisplatform/)| Documenten ter consultatie van 2 nieuwe hoofdstukken in versie 2.2 | 06/02/2026 |
-| Digikoppeling / FSC (Federated Service Connectivity) Standaard |[Consultatie Digikoppeling / FSC (2026-1) ](https://github.com/Logius-standaarden/Openbare-Consultaties/blob/master/2026-01-Digikoppeling-FSC/README.md)| Nieuwe versie van de Digikoppeling en FSC standaard | 20/02/2026 |
-
-<!-- (Op dit moment lopen er geen openbare consultaties) -->
+-->
+Op dit moment lopen er geen openbare consultaties.
 
 
 ## Op- en Aanmerkingen
@@ -27,6 +25,9 @@ Het is ook mogelijk uw commentaar te sturen per email naar api[@]logius.nl.
 
 |Onderwerp|Locatie|Omschrijving|Consultatie geëindigd op|
 |---|---|---|---|
+| Digikoppeling / FSC (Federated Service Connectivity) Standaard |[Consultatie Digikoppeling / FSC (2026-1) ](https://github.com/Logius-standaarden/Openbare-Consultaties/blob/master/2026-01-Digikoppeling-FSC/README.md)| Nieuwe versie van de Digikoppeling en FSC standaard | 20/02/2026 |
+| API Design Rules bij Kennisplatform API's | [Consultatie API Design Rules](https://logius-standaarden.github.io/Openbare-Consultaties/2026-01-API-design-rules-kennisplatform/)| Documenten ter consultatie van 2 nieuwe hoofdstukken in versie 2.2 | 06/02/2026 |
+| Logboek Dataverwerkingen (LDV) | [Consultatie Logboek Dataverwerkingen](https://logius-standaarden.github.io/Openbare-Consultaties/2025_12_LDV/)| Documenten ter vaststelling van de Logboek Dataverwerkingen Standaard | 30/01/2026 |
 | CloudEvents | [Consultatie NL Gov profile for CloudEvents versie 1.1](https://github.com/Logius-standaarden/Openbare-Consultaties/blob/master/2025-10-CloudEvents/README.md)| Nieuwe versie van NL Gov profile for CloudEvents (CloudEvents) | 20/11/2025 |
 | AuthZEN  | [Consultatie NL Gov AuthZEN Authorization API versie 1.0](https://github.com/Logius-standaarden/Openbare-Consultaties/blob/master/2025-10-15-Authzen/README.md)| Nieuwe versie van NL Gov AuthZEN Authorization API (AuthZEN) | 20/11/2025 |
 | OAuth | [Consultatie NL Gov Assurance Profile for OAuth 2.0 versie 1.2](https://github.com/Logius-standaarden/Openbare-Consultaties/blob/master/2025-07-25%20OAuth%20v1.2/README.md)| Nieuwe versie van NL Gov Assurance Profile for OAuth 2.0 (OAuth) | 05/09/2025 |
