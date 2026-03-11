@@ -4,7 +4,7 @@ In het kader van het beheer en de doorontwikkeling van [**OIN Stelsel**](https:/
 
 Via deze consultatie nodigen wij u uit om feedback te geven op de standaard. De consultatie loopt tot **n.t.b.**.
 
-Bij het Technisch Overleg (TO) **Digikoppeling** [](https://github.com/Logius-standaarden/Overleg/tree/main/Digikoppeling) wordt gewerkt aan de nieuwe versie van **OIN Stelsel**, waarbij de omschrijving van het bestaande OIN-prefix voor zorginstellingen wordt aangepast in verband met de overgang naar het Dezi-register.
+Vanuit Logius wordt er gewerkt aan een nieuwe versie van **OIN Stelsel**, waarbij de omschrijving van het bestaande OIN-prefix voor zorginstellingen wordt aangepast in verband met de overgang naar het Dezi-register.
 
 Met deze openbare consultatie bieden wij belanghebbenden de gelegenheid om kennis te nemen van deze nieuwe versie en te reageren op de bijbehorende wijzigingen.
 
