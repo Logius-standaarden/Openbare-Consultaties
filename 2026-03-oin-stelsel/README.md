@@ -4,7 +4,7 @@ In het kader van het beheer en de doorontwikkeling van [**OIN Stelsel**](https:/
 
 Via deze consultatie nodigen wij u uit om feedback te geven op de standaard. De consultatie loopt tot __17/04/2026__
 
-Voor het **OIN Stelsel** is er een verzoek vanuit CIBG ingediend , om de omschrijving van het bestaande OIN-prefix voor zorgaanbieders aan te passen en een nieuwe prefix voor zorgverzekeraars toe te voegen in verband met de overgang naar het Dezi-register.
+Voor het **OIN Stelsel** is een verzoek vanuit CIBG ingediend om de omschrijving van de bestaande (UZI) OIN-prefix voor zorgaanbieders aan te passen en een nieuwe prefix voor zorgverzekeraars toe te voegen in verband met de overgang naar het Dezi-register.
 
 Met deze openbare consultatie bieden wij belanghebbenden de gelegenheid om kennis te nemen van deze nieuwe versie en te reageren op de bijbehorende wijzigingen.
 
