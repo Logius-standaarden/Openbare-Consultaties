@@ -22,8 +22,8 @@ De volgende wijzigingen zijn onderdeel van de voorgestelde volgende release:
 
 (NB net zoals de huidige UZI nummers worden de DEZI nummer-reeksen niet in de centrale OIN register van Logius opgenomen) 
 
-Zie voor de consultatie versie :
-Zie voor de aanpassing in de tekst :
+* Zie voor de consultatie versie :
+* Zie voor de aanpassing in de tekst :
 **Dit moet nog nader ingevuld worden** [Consultatieversie **11 maart 2026**](./OIN-Stelsel) <!-- Het document wordt gepubliceerd vanaf een `consultatie/` branch, zie CONTRIBUTING.md -->
 
 
