@@ -4,7 +4,9 @@
 
 In het kader van het beheer en de doorontwikkeling van [**OIN Stelsel**](https://gitdocumentatie.logius.nl/publicatie/dk/oin/) houdt Logius een openbare consultatie.
 
-Via deze consultatie nodigen wij u uit om feedback te geven op de standaard. De consultatie loopt tot __17/04/2026__
+Via deze consultatie nodigen wij u uit om feedback te geven op de standaard. De consultatie loopt tot __17 april 2026__
+
+Bij het Technisch Overleg (TO) **Digikoppeling** ([notulen](https://github.com/Logius-standaarden/Overleg/tree/main/**Digikoppeling**)) wordt gewerkt aan de nieuwe versie van het **OIN Stelsel** 
 
 Voor het **OIN Stelsel** is een verzoek vanuit CIBG ingediend om de omschrijving van de bestaande (UZI) OIN-prefix voor zorgaanbieders aan te passen en een nieuwe prefix voor zorgverzekeraars toe te voegen in verband met de overgang naar het Dezi-register.
 
@@ -14,17 +16,21 @@ Met deze openbare consultatie bieden wij belanghebbenden de gelegenheid om kenni
 
 Feedback en suggesties zijn welkom via [**digikoppeling@logius.nl**](mailto:digikoppeling@logius.nl) of via [issues](https://github.com/Logius-standaarden/OIN-Stelsel/issues) op GitHub.
 
-Help mee deze versie klaar te maken ter vaststelling.
+Help mee versie 3.0 klaar te maken ter vaststelling.
 
 ## Wijzigingen
 
 De volgende wijzigingen zijn onderdeel van de voorgestelde volgende release:
+
+### OIN-Stelsel 
+
+wijzigingen:
 * Toekennen van een nieuw Prefix OIN voor ‘Dezi-register Zorgverzekeraars’.
 * Aanpassing van de omschrijving van de UZI register prefix '00000009' naar ‘Dezi-register Zorgaanbieders’
 
 (NB net zoals de huidige UZI nummers worden de DEZI nummer-reeksen niet in het centrale OIN register van Logius opgenomen) 
 
-* [Consultatieversie **19 maart 2026**](./OIN-Stelsel) <!-- Het document wordt gepubliceerd vanaf een `consultatie/` branch, zie CONTRIBUTING.md -->
+* [Consultatieversie **19 maart 2026**](https://logius-standaarden.github.io/Openbare-Consultaties/2026-03-oin-stelsel/OIN-Stelsel/) <!-- Het document wordt gepubliceerd vanaf een `consultatie/` branch, zie CONTRIBUTING.md -->
 * [Overzicht wijzigingen](https://services.w3.org/htmldiff?doc1=https://logius-standaarden.github.io/publicatie/dk/oin/2.2.2/&doc2=https://logius-standaarden.github.io/Openbare-Consultaties/2026-03-oin-stelsel/OIN-Stelsel#prefix-tabel)
 
 
