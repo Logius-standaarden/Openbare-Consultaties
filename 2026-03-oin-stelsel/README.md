@@ -6,7 +6,7 @@ In het kader van het beheer en de doorontwikkeling van het [**OIN Stelsel**](htt
 
 Via deze consultatie nodigen wij u uit om feedback te geven op de standaard. De consultatie loopt tot __17 april 2026__
 
-Bij het Technisch Overleg (TO) **Digikoppeling** ([notulen](https://github.com/Logius-standaarden/Overleg/tree/main/**Digikoppeling**)) wordt gewerkt aan de nieuwe versie van het **OIN Stelsel** 
+Bij het Technisch Overleg (TO) **Digikoppeling** ([notulen](https://github.com/Logius-standaarden/Overleg/tree/main/Digikoppeling)) wordt gewerkt aan de nieuwe versie van het **OIN Stelsel** 
 
 Voor het **OIN Stelsel** is een verzoek vanuit CIBG ingediend om de omschrijving van de bestaande (UZI) OIN-prefix voor zorgaanbieders aan te passen en een nieuwe prefix voor zorgverzekeraars toe te voegen in verband met de overgang naar het Dezi-register.
 
