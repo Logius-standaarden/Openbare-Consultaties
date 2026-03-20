@@ -4,7 +4,7 @@
 
 | Label | Locatie | Omschrijving | Consultatie loopt tot |
 |---|---|---|---|
-| OIN-stelsel | [Consultatie Dezi-prefixen](https://logius-standaarden.github.io/Openbare-Consultaties/2026-03-oin-stelsel)| Consultatie Documenten voor de aanvraag nummerreeks Dezi-stelsel | 11 april 2026 |
+| OIN-stelsel | [Consultatie Dezi-prefixen](https://logius-standaarden.github.io/Openbare-Consultaties/2026-03-oin-stelsel)| Aanvraag OIN nummerreeks voor Dezi-stelsel CIBG| 11 april 2026 |
 
 
 ## Op- en Aanmerkingen
