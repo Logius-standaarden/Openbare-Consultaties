@@ -10,7 +10,8 @@ Zet hierin een README.md bestand en gebruik hiervoor het volgende template voor 
 In het kader van het beheer en de doorontwikkeling van [**<STANDAARD-NAAM>**](https://gitdocumentatie.logius.nl/publicatie/**<PUBLICATIE-URL>**) houdt Logius een openbare consultatie.
 Via deze consultatie nodigen wij u uit om feedback te geven op de standaard. De consultatie loopt tot **<EIND-DAG> <EIND-MAAND-UITGESCHREVEN> <EIND-JAAR>**.
 
-Bij het Technisch Overleg (TO) **<NAAM-VAN-TO>** ([notulen](https://github.com/Logius-standaarden/Overleg/tree/main/**<NAAM-VAN-TO>**)) wordt gewerkt aan de nieuwe versie van **<STANDAARD-NAAM>**, waarbij **<KORTE-SAMENVATTING>**.
+Bij het Technisch Overleg (TO) **<NAAM-VAN-TO>** ([notulen](https://github.com/Logius-standaarden/Overleg/tree/main/**<NAAM-VAN-TO>**)) wordt gewerkt aan de nieuwe versie van **<STANDAARD-NAAM>**.
+**<KORTE-SAMENVATTING>**.
 
 Met deze openbare consultatie bieden wij belanghebbenden de gelegenheid om kennis te nemen van deze nieuwe versie en te reageren op de bijbehorende wijzigingen.
 
@@ -27,12 +28,14 @@ De volgende wijzigingen zijn onderdeel van de voorgestelde volgende release.
 
 ### **<DOCUMENT-NAAM>**
 
-[Consultatieversie **<START-DAG> <START-MAAND> <START-JAAR>**](./**<REPOSITORY-NAAM>**) <!-- Het document wordt gepubliceerd vanaf een `consultatie/` branch, zie CONTRIBUTING.md -->
+[Consultatieversie **<START-DAG> <START-MAAND> <START-JAAR>**](https://logius-standaarden.github.io/Openbare-Consultaties/**<REPOSITORY-NAAM>**) <!-- Het document wordt gepubliceerd vanaf een `consultatie/` branch, zie CONTRIBUTING.md -->
 
 Wijzigingen:
  * **<TEKSTUELE BESCHRIJVING VAN EEN WIJZIGING>**
  * **<TEKSTUELE BESCHRIJVING VAN EEN WIJZIGING>**
  * **<TEKSTUELE BESCHRIJVING VAN EEN WIJZIGING>**
+
+**<TOELICHTING>** <!-- optionele toelichting -->
 ```
 
 Voeg daarnaast een link toe in de README.md van de Openbare-Consultaties repository naar de README.md van de consultatie in de tabel "Lopende Consultaties".
