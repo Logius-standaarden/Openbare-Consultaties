@@ -24,14 +24,15 @@ De volgende wijzigingen zijn onderdeel van de voorgestelde volgende release:
 
 ### OIN-Stelsel 
 
+* [Consultatieversie **19 maart 2026**](https://logius-standaarden.github.io/Openbare-Consultaties/2026-03-oin-stelsel/OIN-Stelsel/) <!-- Het document wordt gepubliceerd vanaf een `consultatie/` branch, zie CONTRIBUTING.md -->
+
 wijzigingen:
 * Toekennen van een nieuw Prefix OIN voor ‘Dezi-register Zorgverzekeraars’.
 * Aanpassing van de omschrijving van de UZI register prefix '00000009' naar ‘Dezi-register Zorgaanbieders’
 
 (NB net zoals de huidige UZI nummers worden de DEZI nummer-reeksen niet in het centrale OIN register van Logius opgenomen) 
 
-* [Consultatieversie **19 maart 2026**](https://logius-standaarden.github.io/Openbare-Consultaties/2026-03-oin-stelsel/OIN-Stelsel/) <!-- Het document wordt gepubliceerd vanaf een `consultatie/` branch, zie CONTRIBUTING.md -->
-* [Overzicht wijzigingen](https://services.w3.org/htmldiff?doc1=https://logius-standaarden.github.io/publicatie/dk/oin/2.2.2/&doc2=https://logius-standaarden.github.io/Openbare-Consultaties/2026-03-oin-stelsel/OIN-Stelsel#prefix-tabel)
+[Overzicht wijzigingen](https://services.w3.org/htmldiff?doc1=https://logius-standaarden.github.io/publicatie/dk/oin/2.2.2/&doc2=https://logius-standaarden.github.io/Openbare-Consultaties/2026-03-oin-stelsel/OIN-Stelsel#prefix-tabel)
 
 
 ## Toelichting
