@@ -2,7 +2,7 @@
 
 # Consultatie **OIN-Stelsel – Aanvraag nummerreeks Dezi-stelsel (verzoek CIBG)**
 
-In het kader van het beheer en de doorontwikkeling van [**OIN Stelsel**](https://gitdocumentatie.logius.nl/publicatie/dk/oin/) houdt Logius een openbare consultatie.
+In het kader van het beheer en de doorontwikkeling van het [**OIN Stelsel**](https://gitdocumentatie.logius.nl/publicatie/dk/oin/) houdt Logius een openbare consultatie.
 
 Via deze consultatie nodigen wij u uit om feedback te geven op de standaard. De consultatie loopt tot __17 april 2026__
 
