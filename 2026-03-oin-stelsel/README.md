@@ -30,14 +30,14 @@ wijzigingen:
 * Toekennen van een nieuw Prefix OIN voor ‘Dezi-register Zorgverzekeraars’.
 * Aanpassing van de omschrijving van de UZI register prefix '00000009' naar ‘Dezi-register Zorgaanbieders’
 
-(NB net zoals de huidige UZI nummers worden de DEZI nummer-reeksen niet in het centrale OIN register van Logius opgenomen) 
+(NB net zoals de huidige UZI nummers worden de Dezi nummer-reeksen niet in het centrale OIN register van Logius opgenomen) 
 
 [Overzicht wijzigingen](https://services.w3.org/htmldiff?doc1=https://logius-standaarden.github.io/publicatie/dk/oin/2.2.2/&doc2=https://logius-standaarden.github.io/Openbare-Consultaties/2026-03-oin-stelsel/OIN-Stelsel#prefix-tabel)
 
 
 ## Toelichting
 
-De aanvraag nummerreeks DEZI-Stelsel is een verzoek vanuit CIBG 
+De aanvraag nummerreeks Dezi-Stelsel is een verzoek vanuit CIBG 
 
 ### Context
 In de huidige situatie verstrekt het CIBG, namens de minister van VWS, vanuit het Unieke Zorgverlener Identificatie (UZI-)register en Zorgverzekeraars‑Identificatie‑ en Authenticatieregister (ZOVAR) certificaten aan zorgaanbieders en zorgverzekeraars t.b.v. het raadplegen van de Sectorale Berichtenvoorziening in de Zorg (SBV-Z) en gegevensuitwisseling binnen de zorgsector in het algemeen. 
