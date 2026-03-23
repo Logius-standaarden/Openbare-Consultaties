@@ -4,8 +4,8 @@
 
 | Label | Locatie | Omschrijving | Consultatie loopt tot |
 |---|---|---|---|
-| OIN-stelsel | [Consultatie Dezi-prefixen](https://logius-standaarden.github.io/Openbare-Consultaties/2026-03-oin-stelsel)| Aanvraag OIN nummerreeks voor Dezi-stelsel CIBG| 11 april 2026 |
-
+| OIN-stelsel | [Consultatie Dezi-prefixen](./2026-03-oin-stelsel)| Aanvraag OIN nummerreeks voor Dezi-stelsel CIBG| 11 april 2026 |
+| API Design Rules | [2026-03-API-Design-Rules](./2026-03-API-Design-Rules)| Versie 2.2 van API Design Rules | 24 april 2026 |
 
 ## Op- en Aanmerkingen
 
@@ -15,9 +15,6 @@ U kunt natuurlijk ook op- en aanmerkingen aanbrengen op de issues pagina van de 
 ### Commentaar per email
 
 Het is ook mogelijk uw commentaar te sturen per email naar api[@]logius.nl.
-
-<br>
-<br>
 
 ## Afgeronde Consultaties
 
@@ -41,10 +38,6 @@ Het is ook mogelijk uw commentaar te sturen per email naar api[@]logius.nl.
 |Wijziging Digikoppeling WUS - 2020|[Digikoppeling Koppelvlakstandaard WUS](https://github.com/Logius-standaarden/Openbare-Consultaties/tree/master/20201007_Digikoppeling_WUS-gereed)|RFC 2020-2 wsa-to, RFC 2020-3 mtom| 18 november 2020|
 |Wijziging OIN regels - 2020| [OIN Stelsel](https://github.com/Logius-standaarden/Openbare-Consultaties/tree/master/OIN%20Stelsel-consultatie-gereed) |Wijzigingen in het gebruik en uitgifte van SubOINS| 4 november 2020|
 
-<br>
-<br>
-<br>
-
 ## Issues en Pull Requests: Opmerkingen maken of tekstvoorstellen indienen
 
 Om opmerkingen (*Issues* in Github) te maken in een dossier (repository) heeft u een Github Account nodig. U kunt dit account gratis aanmaken.
@@ -57,9 +50,6 @@ Met uw account kunt u Issues of Pull Request maken in een repository of reageren
 |Aanmaken Issue| [Creating an issue](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/creating-an-issue)|
 |Aanmaken Pull request| [Creating an issue or pull request](https://docs.github.com/en/free-pro-team@latest/desktop/contributing-and-collaborating-using-github-desktop/creating-an-issue-or-pull-request)|
 
-<br>
-<br>
-
 ### Schermvoorbeelden
 
 **De Issues pagina van een Repository**
@@ -67,11 +57,7 @@ Met uw account kunt u Issues of Pull Request maken in een repository of reageren
 
 figuur 1. Klik op de Issues tab van een repository
 
-<br>
-<br>
-
 **Issues aanmaken of reageren op bestaande issues**
 ![Aanmaken of bekijken issue](media/KiesIssue.png)
 
 figuur 2. Klik in een Issues pagina op *New issue* of bekijk een bestaande issue en discussieer mee
-

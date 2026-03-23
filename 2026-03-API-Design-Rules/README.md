@@ -1,7 +1,7 @@
 # Consultatie API Design Rules versie 2.2
 
 In het kader van het beheer en de doorontwikkeling van [API Design Rules](https://gitdocumentatie.logius.nl/publicatie/api/adr) houdt Logius een openbare consultatie.
-Via deze consultatie nodigen wij u uit om feedback te geven op de standaard. De consultatie loopt tot **<EIND-DAG> <EIND-MAAND-UITGESCHREVEN> <EIND-JAAR>**.
+Via deze consultatie nodigen wij u uit om feedback te geven op de standaard. De consultatie loopt tot 24 april 2026.
 
 Bij het Technisch Overleg (TO) API ([notulen](https://github.com/Logius-standaarden/Overleg/tree/main/API)) wordt gewerkt aan de nieuwe versie van API Design Rules, waarbij er drie nieuwe hoofdstukken en enkele normatieve regels zijn gewijzigd.
 
