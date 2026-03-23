@@ -23,7 +23,7 @@ Wijzigingen:
  * **Nieuw hoofdstuk** Date & Time
  * **Nieuw hoofdstuk** Error Handling
  * Signing en Encryption modules als normatief (wanneer relevant)
- * RELEASING.md met informatie over versie wijzigingen
+ * RELEASING.md met informatie over versiewijzigingen
  * Verduidelijking gebruik Nederlandse taal in `/core/interface-language`
  * Voeg uitzondering op trailing slash toe voor root resource in `/core/no-trailing-slash`
  * Maak semantiek van HTTP expliciet in `/core/http-methods`
