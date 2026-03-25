@@ -1,6 +1,6 @@
-# Consultatie **Logboek Toegangsbeslissingen (Authorization Decision Log)**
+# Consultatie **Authorization Decision Log**
 
-In het kader van het beheer en de doorontwikkeling van [Logboek Toegangsbeslissingen](https://gitdocumentatie.logius.nl/publicatie/dk/authorization-decision-log/0.0.1/) houdt Logius een openbare consultatie.
+In het kader van het beheer en de doorontwikkeling van [Authorization Decision Log](https://gitdocumentatie.logius.nl/publicatie/dk/authorization-decision-log/0.0.1/) houdt Logius een openbare consultatie.
 Via deze consultatie nodigen wij u uit om feedback te geven op de standaard. De consultatie loopt tot **4 mei 2026**.
 
 Bij het Technisch Overleg (TO) **<NAAM-VAN-TO>** ([notulen](https://github.com/Logius-standaarden/Overleg/tree/main/**<NAAM-VAN-TO>**)) wordt gewerkt aan de nieuwe versie van **<STANDAARD-NAAM>**.
