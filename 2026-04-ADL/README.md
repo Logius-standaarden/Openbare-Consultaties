@@ -10,8 +10,8 @@ Met deze openbare consultatie bieden wij belanghebbenden de gelegenheid om kenni
 
 ## Reageren?
 
-Feedback en suggesties zijn welkom via [**<EMAIL:api|digikoppeling>**@logius.nl](mailto:**<EMAIL:api|digikoppeling>**@logius.nl) of via [issues](https://github.com/Logius-standaarden/authorization-decision-log/issues) op GitHub.  
-Help mee versie **<VERSIE-NUMMER>** klaar te maken ter vaststelling.
+Feedback en suggesties zijn welkom via [**<EMAIL:api>**@logius.nl](mailto:**<EMAIL:api>**@logius.nl) of via [issues](https://github.com/Logius-standaarden/authorization-decision-log/issues) op GitHub.  
+Help mee versie 1.0 klaar te maken ter vaststelling.
 
 ## Wijzigingen
 
