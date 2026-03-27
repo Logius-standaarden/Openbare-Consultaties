@@ -21,7 +21,7 @@ De volgende wijzigingen zijn onderdeel van de voorgestelde volgende release.
 
 ### **<DOCUMENT-NAAM>**
 
-[Consultatieversie **<START-DAG> <START-MAAND> <START-JAAR>**](./**<REPOSITORY-NAAM>**) <!-- Het document wordt gepubliceerd vanaf een `consultatie/` branch, zie CONTRIBUTING.md -->
+[Consultatieversie **<START-DAG> <START-MAAND> <START-JAAR>**](./authorization-decision-log) <!-- Het document wordt gepubliceerd vanaf een `consultatie/` branch, zie CONTRIBUTING.md -->
 
 Wijzigingen:
  * **<TEKSTUELE BESCHRIJVING VAN EEN WIJZIGING>**
