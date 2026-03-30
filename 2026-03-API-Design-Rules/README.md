@@ -19,9 +19,9 @@ De volgende wijzigingen zijn onderdeel van de voorgestelde volgende release.
 [Consultatieversie 2026-03](./API-Design-Rules) ([Diff met 2.1.0](https://services.w3.org/htmldiff?doc1=https%3A%2F%2Fgitdocumentatie.logius.nl%2Fpublicatie%2Fapi%2Fadr%2F2.1.0&doc2=https%3A%2F%2Flogius-standaarden.github.io%2FOpenbare-Consultaties%2F2026-03-API-Design-Rules%2FAPI-Design-Rules%2F))
 
 Wijzigingen:
- * **Nieuw hoofdstuk** Naming conventions voor paden en query keys
  * **Nieuw hoofdstuk** Date & Time
  * **Nieuw hoofdstuk** Error Handling
+ * Integratie Naming conventions module (als geheel in core)
  * Signing en Encryption modules als normatief (wanneer relevant)
  * RELEASING.md met informatie over versiewijzigingen
  * Verduidelijking gebruik Nederlandse taal in `/core/interface-language`
