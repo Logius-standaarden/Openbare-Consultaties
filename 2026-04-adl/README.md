@@ -1,9 +1,9 @@
 # Consultatie **Authorization Decision Log**
 
 In het kader van het beheer en de doorontwikkeling van [Authorization Decision Log](https://gitdocumentatie.logius.nl/publicatie/ftv/adl/0.0.1/) houdt Logius een openbare consultatie.
-Via deze consultatie nodigen wij u uit om feedback te geven op de standaard. De consultatie loopt tot **7 mei 2026**.
+Via deze consultatie nodigen wij u uit om feedback te geven op de standaard. De consultatie loopt tot **13 mei 2026**.
 
-Bij de Werkgroep FTV (Federatieve Toegangsverlening) [notulen](https://vng-realisatie.github.io/ftv/meedoen/werkgroep/contracten/) wordt gewerkt aan de nieuwe versie van Authorization Decision Log. 
+Bij de Werkgroep FTV (Federatieve Toegangsverlening), zie [notulen](https://vng-realisatie.github.io/ftv/meedoen/werkgroep/contracten/), wordt gewerkt aan de nieuwe versie van Authorization Decision Log. 
 
 Het Authorization Decision Log (Logboek Toegangsbeslissingen) is een standaard voor het vastleggen van genomen toegangsbeslissingen. Het logboek is bedoeld voor verantwoording binnen en tussen (semi-)overheidsorganisaties.
 
@@ -18,7 +18,7 @@ Help mee versie 1.0 klaar te maken ter vaststelling.
 
 Dit is de eerste versie van het document - alle feedback is welkom.
 
-[Consultatieversie **7 april 2026**](./authorization-decision-log) <!-- Het document wordt gepubliceerd vanaf een `consultatie/` branch, zie CONTRIBUTING.md -->
+[Consultatieversie **13 april 2026**](./authorization-decision-log) <!-- Het document wordt gepubliceerd vanaf een `consultatie/` branch, zie CONTRIBUTING.md -->
 
 ### Toelichting
 Dit is een standaard die onderdeel is van een bundeling van drie standaarden onder de FTV noemer, die bedoeld zijn om het beheren en uitvoeren van autorisaties te ondersteunen.
