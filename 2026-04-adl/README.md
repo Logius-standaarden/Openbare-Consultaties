@@ -1,7 +1,7 @@
 # Consultatie **Authorization Decision Log**
 
 In het kader van het beheer en de doorontwikkeling van [Authorization Decision Log](https://gitdocumentatie.logius.nl/publicatie/ftv/adl/0.0.1/) houdt Logius een openbare consultatie.
-Via deze consultatie nodigen wij u uit om feedback te geven op de standaard. De consultatie loopt tot **13 mei 2026**.
+Via deze consultatie nodigen wij u uit om feedback te geven op de standaard. De consultatie loopt tot **4 mei 2026**.
 
 Bij de Werkgroep FTV (Federatieve Toegangsverlening), zie [notulen](https://vng-realisatie.github.io/ftv/meedoen/werkgroep/contracten/), wordt gewerkt aan de nieuwe versie van Authorization Decision Log. 
 
