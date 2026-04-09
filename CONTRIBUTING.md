@@ -7,13 +7,13 @@ Zet hierin een README.md bestand en gebruik hiervoor het volgende template voor 
 ```md
 # Consultatie **<TITEL-VAN-CONSULTATIE>**
 
-In het kader van het beheer en de doorontwikkeling van [**<STANDAARD-NAAM>**](https://gitdocumentatie.logius.nl/publicatie/**<PUBLICATIE-URL>**) houdt Logius een openbare consultatie.
+In het kader van het beheer en de doorontwikkeling van [**<STANDAARD-NAAM>**](https://gitdocumentatie.logius.nl/publicatie/**<PUBLICATIE-URL>**) houdt Logius een openbare consultatie. <!-- Haal deze zin weg als het de eerste versie is -->
 Via deze consultatie nodigen wij u uit om feedback te geven op de standaard. De consultatie loopt tot **<EIND-DAG> <EIND-MAAND-UITGESCHREVEN> <EIND-JAAR>**.
 
-Bij het Technisch Overleg (TO) **<NAAM-VAN-TO>** ([notulen](https://github.com/Logius-standaarden/Overleg/tree/main/**<NAAM-VAN-TO>**)) wordt gewerkt aan de nieuwe versie van **<STANDAARD-NAAM>**.
+Bij het Technisch Overleg (TO) **<NAAM-VAN-TO>** ([notulen](https://github.com/Logius-standaarden/Overleg/tree/main/**<NAAM-VAN-TO>**)) wordt gewerkt aan de nieuwe versie van **<STANDAARD-NAAM>**. <!-- Haal deze zin weg als het de eerste versie is -->
 **<KORTE-SAMENVATTING>**.
 
-Met deze openbare consultatie bieden wij belanghebbenden de gelegenheid om kennis te nemen van deze nieuwe versie en te reageren op de bijbehorende wijzigingen.
+Met deze openbare consultatie bieden wij belanghebbenden de gelegenheid om kennis te nemen van deze versie en te reageren op de bijbehorende wijzigingen.
 
 ## Reageren?
 
@@ -22,7 +22,7 @@ Help mee versie **<VERSIE-NUMMER>** klaar te maken ter vaststelling.
 
 ## Wijzigingen
 
-De volgende wijzigingen zijn onderdeel van de voorgestelde volgende release.
+De volgende wijzigingen zijn onderdeel van de voorgestelde release.
 
 <!-- De volgende sectie moeten worden gerepeteerd voor elk document -->
 
@@ -30,7 +30,7 @@ De volgende wijzigingen zijn onderdeel van de voorgestelde volgende release.
 
 [Consultatieversie **<START-DAG> <START-MAAND> <START-JAAR>**](./**<REPOSITORY-NAAM>**) <!-- Het document wordt gepubliceerd vanaf een `consultatie/` branch, zie CONTRIBUTING.md -->
 
-Wijzigingen:
+Wijzigingen: <!-- Haal deze lijst weg als het de eerste versie is -->
  * **<TEKSTUELE BESCHRIJVING VAN EEN WIJZIGING>**
  * **<TEKSTUELE BESCHRIJVING VAN EEN WIJZIGING>**
  * **<TEKSTUELE BESCHRIJVING VAN EEN WIJZIGING>**
