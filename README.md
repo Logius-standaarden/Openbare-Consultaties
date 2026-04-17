@@ -4,7 +4,7 @@
 
 | Label | Locatie | Omschrijving | Consultatie loopt tot |
 |---|---|---|---|
-| OIN-stelsel | [Consultatie Dezi-prefixen](./2026-03-oin-stelsel)| Aanvraag OIN nummerreeks voor Dezi-stelsel CIBG| 11 april 2026 |
+| OIN-stelsel | [Consultatie Dezi-prefixen](./2026-03-oin-stelsel)| Aanvraag OIN nummerreeks voor Dezi-stelsel CIBG| 17 april 2026 |
 | API Design Rules | [2026-03-API-Design-Rules](./2026-03-API-Design-Rules)| Versie 2.2 van API Design Rules | 24 april 2026 |
 
 ## Op- en Aanmerkingen
