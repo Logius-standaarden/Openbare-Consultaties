@@ -1,0 +1,14 @@
+sequenceDiagram
+    participant PEP
+    participant PDP
+    participant PIP
+    participant PAP
+
+    PAP-->>PDP: Distribute policies
+    PIP-->>PDP: Pre-populate static information
+
+    PEP->>+PDP: Access Evaluation Request
+    PDP->>+PIP: Query dynamic information
+    PIP-->>-PDP: Response
+    PDP->>PDP: Decide
+    PDP->>-PEP: Decision

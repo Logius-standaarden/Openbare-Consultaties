@@ -1,0 +1,6 @@
+graph TD;
+    PEP[Policy Enforcement Point]--Information model-->PDP[Policy Decision Point];
+    PDP--Decision-->PEP;
+    PAP[Policy Administration Point]--Policies-->PDP;
+    PIP[Policy Information Point]--Contextual information-->PDP;
+    PDP--Log entry-->ADL[Authorization Decision Log]

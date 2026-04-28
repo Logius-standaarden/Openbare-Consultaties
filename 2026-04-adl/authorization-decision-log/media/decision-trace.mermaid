@@ -1,0 +1,27 @@
+sequenceDiagram
+    actor Client
+    participant PEP
+    participant PDP
+    participant PIP
+    participant PAP
+
+    Note over PDP,PAP: Pro-active (outside the trace)
+    PAP-->>PDP: Distribute policies
+    PIP-->>PDP: Pre-populate static information
+
+    rect rgb(230, 240, 255)
+    Note over Client,PIP: Trace
+    Client->>+PEP: Request
+    rect rgb(205, 220, 245)
+    Note over PEP,PDP: Sub-span: PEP → PDP
+    PEP->>+PDP: Access Evaluation Request
+    rect rgb(180, 200, 235)
+    Note over PDP,PIP: Sub-span: PDP → PIP
+    PDP->>+PIP: Query dynamic information
+    PIP-->>-PDP: Response
+    end
+    PDP->>PDP: Decide
+    PDP->>-PEP: Decision
+    end
+    PEP-->>-Client: Response
+    end

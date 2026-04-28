@@ -1,0 +1,10 @@
+sequenceDiagram
+    participant PEP
+    participant PDP
+    participant Storage as Durable<br/>Storage
+    participant ADL as Decision<br/>Log
+    PEP->>+PDP: Access Evaluation Request
+    PDP->>PDP: Decide
+    PDP->>Storage: Idempotent write<br/>of Log Record
+    PDP->>-PEP: Decision
+    Storage-)ADL: Flush to log
