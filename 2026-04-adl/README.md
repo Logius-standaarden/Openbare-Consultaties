@@ -16,7 +16,7 @@ Help mee versie 1.0 klaar te maken ter vaststelling.
 
 Dit is de eerste versie van het document - alle feedback is welkom.
 
-[Consultatieversie **29 april 2026**](./authorization-decision-log) <!-- Het document wordt gepubliceerd vanaf een `consultatie/` branch, zie CONTRIBUTING.md -->
+[Consultatieversie **29 april 2026**](https://logius-standaarden.github.io/Openbare-Consultaties/2026-04-adl/authorization-decision-log) <!-- Het document wordt gepubliceerd vanaf een `consultatie/` branch, zie CONTRIBUTING.md -->
 
 ### Toelichting
 Dit is een standaard die onderdeel is van een bundeling van drie standaarden onder de FTV noemer, die bedoeld zijn om het beheren en uitvoeren van autorisaties te ondersteunen.
