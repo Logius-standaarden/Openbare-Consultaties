@@ -1,7 +1,7 @@
 # Consultatie **Authorization Decision Log**
 
 In het kader van het beheer en de doorontwikkeling van [Authorization Decision Log](https://gitdocumentatie.logius.nl/publicatie/ftv/adl/0.0.1/) houdt Logius een openbare consultatie.
-Via deze consultatie nodigen wij u uit om feedback te geven op de standaard. De consultatie loopt tot **29 juni 2026**.
+Via deze consultatie nodigen wij u uit om feedback te geven op de standaard. De consultatie loopt tot **29 mei 2026**.
 
 Het Authorization Decision Log (Logboek Toegangsbeslissingen) is een standaard voor het vastleggen van genomen toegangsbeslissingen. Het logboek is bedoeld voor verantwoording binnen en tussen (semi-)overheidsorganisaties.
 
