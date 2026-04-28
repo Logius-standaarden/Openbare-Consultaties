@@ -6,7 +6,7 @@
 |---|---|---|---|
 | OIN-stelsel | [Consultatie Dezi-prefixen](./2026-03-oin-stelsel)| Aanvraag OIN nummerreeks voor Dezi-stelsel CIBG| 17 april 2026 |
 | API Design Rules | [2026-03-API-Design-Rules](./2026-03-API-Design-Rules)| Versie 2.2 van API Design Rules | 24 april 2026 |
-| Authorization Decision Log | [2026-04-adl](./2026-04-adl)| Versie 1.0 van Authorization Decision Log | 29 april 2026 |
+| Authorization Decision Log | [2026-04-adl](./2026-04-adl)| Versie 1.0 van Authorization Decision Log | 29 mei 2026 |
 
 
 ## Op- en Aanmerkingen
