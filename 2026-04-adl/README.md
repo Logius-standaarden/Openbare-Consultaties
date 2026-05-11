@@ -7,14 +7,11 @@ Authorization Decision Log (Logboek Toegangsbeslissingen) is een standaard voor 
 
 Met deze openbare consultatie bieden wij belanghebbenden de gelegenheid om kennis te nemen van deze eerste versie en te reageren op de standaard en de bijbehorende wijzigingen.
 
-# Relevante documenten
+# Relevante document(en)
 
-Bekijk de documenten die bij deze consultatie horen:
+Dit is de eerste versie van het document - alle feedback is welkom.
 
-- [conceptversie Authorization Decision Log](https://logius-standaarden.github.io/authorization-decision-log/);
-- [consultatieversie Authorization Decision Log](https://logius-standaarden.github.io/Openbare-Consultaties/2026-04-adl/authorization-decision-log);
-- [notulen van de Werkgroep FTV (Federatieve Toegangsverlening)](https://vng-realisatie.github.io/ftv/meedoen/werkgroep/contracten/);
-- [GitHub-repository](https://github.com/Logius-standaarden/authorization-decision-log).
+[Consultatieversie **29 april 2026**](https://logius-standaarden.github.io/Openbare-Consultaties/2026-04-adl/authorization-decision-log)
 
 # Wat verandert er?
 
