@@ -1,4 +1,4 @@
-# Openbare consultatie eerste versie Authorization Decision Log (1.0)
+# Openbare consultatie eerste versie Authorization Decision Log
 
 __Logius werkt aan een nieuwe standaard voor het vastleggen van toegangsbeslissingen. Via deze consultatie kunt u reageren op de eerste versie van Authorization Decision Log. Reageren kan tot en met 29 mei 2026.__
 
