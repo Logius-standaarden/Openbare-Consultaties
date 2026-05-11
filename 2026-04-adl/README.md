@@ -35,7 +35,7 @@ Stuur uw feedback of suggesties:
 - via e-mail: [api@logius.nl](mailto:api@logius.nl);
 - via [issues op GitHub](https://github.com/Logius-standaarden/authorization-decision-log/issues).
 
-Help mee versie 1.0.0 klaar te maken voor vaststelling.
+Help mee versie 1.0 klaar te maken voor vaststelling.
 
 ## Consultatiegegevens
 
