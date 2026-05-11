@@ -7,25 +7,14 @@ Authorization Decision Log (Logboek Toegangsbeslissingen) is een standaard voor 
 
 Met deze openbare consultatie bieden wij belanghebbenden de gelegenheid om kennis te nemen van deze eerste versie en te reageren op de standaard en de bijbehorende wijzigingen.
 
-## Consultatiegegevens
+# Relevante documenten
 
-|  |  |
-|---------------------|-|
-| Startdatum consultatie | 29 april 2026 |
-| Einddatum consultatie | 29 mei 2026 |
-| Status | Open |
-| Onderwerp | Authorization Decision Log |
+Bekijk de documenten die bij deze consultatie horen:
 
-# Voor wie is deze consultatie belangrijk?
-
-Deze consultatie is bedoeld voor:
-
-- overheidsorganisaties;
-- semi-overheidsorganisaties;
-- leveranciers;
-- ontwikkelaars;
-- architecten en adviseurs;
-- andere belanghebbenden.
+- [conceptversie Authorization Decision Log](https://logius-standaarden.github.io/authorization-decision-log/);
+- [consultatieversie Authorization Decision Log](https://logius-standaarden.github.io/Openbare-Consultaties/2026-04-adl/authorization-decision-log);
+- [notulen van de Werkgroep FTV (Federatieve Toegangsverlening)](https://vng-realisatie.github.io/ftv/meedoen/werkgroep/contracten/);
+- [GitHub-repository](https://github.com/Logius-standaarden/authorization-decision-log).
 
 # Wat verandert er?
 
@@ -54,15 +43,6 @@ De standaard beschrijft uitsluitend het informatiemodel van de vast te leggen ge
 
 Daarnaast beschrijft de standaard dat loginformatie op verschillende detailniveaus kan worden vastgelegd. Organisaties bepalen zelf welk detailniveau passend is.
 
-# Relevante documenten
-
-Bekijk de documenten die bij deze consultatie horen:
-
-- [conceptversie Authorization Decision Log](https://logius-standaarden.github.io/authorization-decision-log/);
-- [consultatieversie Authorization Decision Log](https://logius-standaarden.github.io/Openbare-Consultaties/2026-04-adl/authorization-decision-log);
-- [notulen van de Werkgroep FTV (Federatieve Toegangsverlening)](https://vng-realisatie.github.io/ftv/meedoen/werkgroep/contracten/);
-- [GitHub-repository](https://github.com/Logius-standaarden/authorization-decision-log).
-
 # Hoe kunt u reageren?
 
 Stuur uw feedback of suggesties:
@@ -71,6 +51,26 @@ Stuur uw feedback of suggesties:
 - via [issues op GitHub](https://github.com/Logius-standaarden/authorization-decision-log/issues).
 
 Help mee versie 1.0.0 klaar te maken voor vaststelling.
+
+## Consultatiegegevens
+
+|  |  |
+|---------------------|-|
+| Startdatum consultatie | 29 april 2026 |
+| Einddatum consultatie | 29 mei 2026 |
+| Status | Open |
+| Onderwerp | Authorization Decision Log |
+
+# Voor wie is deze consultatie belangrijk?
+
+Deze consultatie is bedoeld voor:
+
+- overheidsorganisaties;
+- semi-overheidsorganisaties;
+- leveranciers;
+- ontwikkelaars;
+- architecten en adviseurs;
+- andere belanghebbenden.
 
 # Wat gebeurt er met uw reactie?
 
