@@ -24,24 +24,15 @@ Dit is de eerste versie van het document. Daarom is alle feedback welkom.
 
 ### Toelichting
 
-Authorization Decision Log is een standaard die onderdeel is van een bundeling van drie standaarden onder de FTV-noemer. Deze standaarden ondersteunen het beheren en uitvoeren van autorisaties.
+Dit is een standaard die onderdeel is van een bundeling van drie standaarden onder de FTV noemer, die bedoeld zijn om het beheren en uitvoeren van autorisaties te ondersteunen. Bij de Werkgroep FTV ([notulen](https://vng-realisatie.github.io/ftv/meedoen/werkgroep/contracten/)), is inhoudelijk gewerkt aan deze versie van Authorization Decision Log.
 
-Binnen de Werkgroep FTV is inhoudelijk gewerkt aan deze versie van Authorization Decision Log. De standaard beschrijft hoe een opdracht tot het opslaan van een toegangsbeslissing eruit moet zien. Daarbij wordt het AuthZEN-gegevensmodel gebruikt als basis voor de gegevens die moeten worden vastgelegd in de log.
+De Authorization Decision Log beschrijft hoe een opdracht tot het opslaan van een toegangsbeslissing eruit moet zien. Het logboek gebruikt daarom het AuthZEN-gegevensmodel als basis voor de gegevens die moeten worden vastgelegd in de log.
 
-De standaard schrijft voor dat zowel het autorisatieverzoek als het bijbehorende antwoord worden vastgelegd.
+Het stelt dat zowel het autorisatieverzoek als het bijbehorende antwoord wordt vastgelegd.
 
-Aanvullend kan worden verwezen naar:
+Aanvullend kan worden verwezen naar de gehanteerde autorisatieregels, gebruikte informatiebronnen, configuratie-informatie als ook eventuele correlatie-identificaties. Het Authorization Decision Log biedt een drietal manieren om te verwijzen naar deze gegevens conform het "data bij de bron"-principe.
 
-- gehanteerde autorisatieregels;
-- gebruikte informatiebronnen;
-- configuratie-informatie;
-- correlatie-identificaties.
-
-Authorization Decision Log biedt drie manieren om naar deze gegevens te verwijzen conform het principe van ‘data bij de bron’.
-
-De standaard beschrijft uitsluitend het informatiemodel van de vast te leggen gegevens en niet de wijze waarop deze worden opgeslagen. Wel wordt geadviseerd om hiervoor gebruik te maken van het OpenTelemetry Protocol.
-
-Daarnaast beschrijft de standaard dat loginformatie op verschillende detailniveaus kan worden vastgelegd. Organisaties bepalen zelf welk detailniveau passend is.
+De standaard beschrijft alleen het informatiemodel van de vast te leggen gegevens en niet op welke wijze deze worden vastgelegd. Er wordt wel geadviseerd om daarbij gebruik te maken van het OpenTelemetry Protocol. De standaard beschrijft verder dat loginformatie op verschillende detailniveaus kan worden vastgelegd. Het laat het aan organisaties zelf om te bepalen welk detailniveau wordt gekozen.
 
 # Hoe kunt u reageren?
 
