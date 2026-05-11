@@ -9,12 +9,12 @@ Met deze openbare consultatie bieden wij belanghebbenden de gelegenheid om kenni
 
 # Relevante document(en)
 
-Binnen de Werkgroep FTV (Federatieve Toegangsverlening) wordt gewerkt aan een nieuwe versie van Authorization Decision Log.
-Dit is de eerste versie van het document - alle feedback is welkom.
+Hieronder vindt u het document van de standaard dat ter consultatie is aangeboden. Wij nodigen u uit om het te lezen en feedback te geven.
 
 [Consultatieversie **29 april 2026**](https://logius-standaarden.github.io/Openbare-Consultaties/2026-04-adl/authorization-decision-log)
 
 # Wat verandert er?
+Binnen de Werkgroep FTV (Federatieve Toegangsverlening) wordt gewerkt aan een nieuwe versie van Authorization Decision Log. Dit is de eerste versie van het document. Daarom is alle feedback welkom.
 
 ### Toelichting
 
