@@ -63,7 +63,7 @@ Na afloop van de consultatie beoordeelt Logius alle reacties. Op basis van de re
 
 # Meer informatie
 
-Openbare Consultatie: [hoe werkt het?](https://acc-dictu.logius.nl/openbare-consultatie)
+Openbare Consultatie: [hoe werkt het?](https://www.logius.nl/onze-dienstverlening/standaarden/openbare-consultatie-standaarden)
 
 # Vragen over standaarden?
 
