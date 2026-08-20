@@ -73,6 +73,6 @@ Deze release candidate bevat inhoudelijke uitbreidingen en verduidelijkingen ten
 
 Feedback en suggesties zijn welkom via api@logius.nl of via [issues](https://github.com/Logius-standaarden/OAuth-NL-profiel/issues) op GitHub. Help mee dit profiel klaar te maken voor de definitieve v1.2.0!
 
-Lees hier de [consultatieversie](https://logius-standaarden.github.io/Publicatie-Preview/OAuth-NL-profiel/2025rc1/).
+Lees hier de [consultatieversie](https://logius-standaarden.github.io/Openbare-Consultaties/2025-07-25%20OAuth%20v1.2/cv/index.html).
 
 De consultatie loopt tot 5 september 2025.
