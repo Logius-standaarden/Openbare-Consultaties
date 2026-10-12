@@ -4,8 +4,7 @@
 
 | Label | Locatie | Omschrijving | Consultatie loopt tot |
 |---|---|---|---|
-| Authorization Decision Log | [2026-04-adl](./2026-04-adl)| Versie 1.0 van Authorization Decision Log | 29 mei 2026 |
-
+|   |   |   |   |
 
 ## Op- en Aanmerkingen
 
@@ -20,6 +19,7 @@ Het is ook mogelijk uw commentaar te sturen per email naar api[@]logius.nl.
 
 |Onderwerp|Locatie|Omschrijving|Consultatie geëindigd op|
 |---|---|---|---|
+| Authorization Decision Log | [2026-04-adl](./2026-04-adl)| Versie 1.0 van Authorization Decision Log | 29 mei 2026 |
 | OIN-stelsel | [Consultatie Dezi-prefixen](./2026-03-oin-stelsel)| Aanvraag OIN nummerreeks voor Dezi-stelsel CIBG| 17 april 2026 |
 | API Design Rules | [2026-03-API-Design-Rules](./2026-03-API-Design-Rules)| Versie 2.2 van API Design Rules | 24 april 2026 |
 | Digikoppeling / FSC (Federated Service Connectivity) Standaard |[Consultatie Digikoppeling / FSC (2026-1) ](https://github.com/Logius-standaarden/Openbare-Consultaties/blob/master/2026-01-Digikoppeling-FSC/README.md)| Nieuwe versie van de Digikoppeling en FSC standaard | 20/02/2026 |
