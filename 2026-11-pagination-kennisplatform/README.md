@@ -15,4 +15,4 @@ Help mee de eerste versie klaar te maken ter vaststelling.
 
 ## API mod pagination
 
-[Consultatieversie **<START-DAG> <START-MAAND> <START-JAAR>**](./API-mod-pagination) <!-- Het document wordt gepubliceerd vanaf een `consultatie/` branch, zie CONTRIBUTING.md -->
+[Consultatieversie 5 November 2026](./API-mod-pagination) <!-- Het document wordt gepubliceerd vanaf een `consultatie/` branch, zie CONTRIBUTING.md -->
