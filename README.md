@@ -20,7 +20,6 @@ Het is ook mogelijk uw commentaar te sturen per email naar api[@]logius.nl.
 
 |Onderwerp|Locatie|Omschrijving|Consultatie geëindigd op|
 |---|---|---|---|
-| OIN-stelsel | [Consultatie Dezi-prefixen](./2026-03-oin-stelsel)| Aanvraag OIN nummerreeks voor Dezi-stelsel CIBG| 17-04-2026 |
 | Authorization Decision Log | [2026-04-adl](./2026-04-adl)| Versie 1.0 van Authorization Decision Log | 29-05-2026 |
 | API Design Rules | [2026-03-API-Design-Rules](./2026-03-API-Design-Rules)| Versie 2.2 van API Design Rules | 24-04-2026 |
 | OIN-stelsel | [Consultatie Dezi-prefixen](./2026-03-oin-stelsel)| Aanvraag OIN nummerreeks voor Dezi-stelsel CIBG| 17-04-2026 |
