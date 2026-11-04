@@ -930,12 +930,15 @@ body:has(input[name=color-scheme][value=dark]:checked) .hljs{
     }
   ],
   "github": "https://github.com/Logius-standaarden/API-mod-pagination",
-  "postProcess": [
+  "preProcess": [
+    null,
+    null,
+    null,
     null,
     null,
     null
   ],
-  "preProcess": [
+  "postProcess": [
     null,
     null,
     null,
@@ -1000,7 +1003,7 @@ body:has(input[name=color-scheme][value=dark]:checked) .hljs{
             <a rel="license" href="https://creativecommons.org/licenses/by/4.0/legalcode" class="subfoot"><img class="license" src="https://gitdocumentatie.logius.nl/publicatie/respec/media/logos/cc-by.svg" alt="Logo Creative Commons Attribution 4.0 International Public License"><br> Creative Commons Attribution 4.0 International Public License</a>
           </p>
     <hr title="Separator for header">
-  </div><section id="sotd" class="introductory"><h2>Status of This Document</h2><p>This is a proposed recommendation approved by TO. Comments regarding this document may be sent to api@logius.nl</p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#conformance">Conformance</a></li><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#static-collections"><bdi class="secno">1.1 </bdi>Static collections</a></li><li class="tocline"><a class="tocxref" href="#dynamic-collections"><bdi class="secno">1.2 </bdi>Dynamic collections</a></li><li class="tocline"><a class="tocxref" href="#pagination-formats"><bdi class="secno">1.3 </bdi>Pagination formats</a></li></ol></li><li class="tocline"><a class="tocxref" href="#design-rules"><bdi class="secno">2. </bdi>Design rules</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#summary"><bdi class="secno">2.1 </bdi>Summary</a></li><li class="tocline"><a class="tocxref" href="#rules"><bdi class="secno">2.2 </bdi>Rules</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">A. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">A.1 </bdi>Normative references</a></li></ol></li></ol></nav><section id="conformance" class="introductory"><div class="header-wrapper"><h2 id="conformance-0">Conformance</h2><a class="self-link" href="#conformance" aria-label="Permalink for this Section"></a></div><p>As well as sections marked as non-normative, all authoring guidelines, diagrams, examples, and notes in this specification are non-normative. Everything else in this specification is normative.</p><p>
+  </div><section id="sotd" class="introductory"><h2>Status of This Document</h2><p>This is a proposed recommendation approved by TO. Comments regarding this document may be sent to api@logius.nl</p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#conformance">Conformance</a></li><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#static-collections"><bdi class="secno">1.1 </bdi>Static collections</a></li><li class="tocline"><a class="tocxref" href="#dynamic-collections"><bdi class="secno">1.2 </bdi>Dynamic collections</a></li><li class="tocline"><a class="tocxref" href="#pagination-formats"><bdi class="secno">1.3 </bdi>Pagination formats</a></li></ol></li><li class="tocline"><a class="tocxref" href="#design-rules"><bdi class="secno">2. </bdi>Design rules</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#summary"><bdi class="secno">2.1 </bdi>Summary</a></li><li class="tocline"><a class="tocxref" href="#rules"><bdi class="secno">2.2 </bdi>Rules</a></li></ol></li><li class="tocline"><a class="tocxref" href="#linter-configuration"><bdi class="secno">A. </bdi>Linter configuration</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">B. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">B.1 </bdi>Normative references</a></li></ol></li></ol></nav><section id="conformance" class="introductory"><div class="header-wrapper"><h2 id="conformance-0">Conformance</h2><a class="self-link" href="#conformance" aria-label="Permalink for this Section"></a></div><p>As well as sections marked as non-normative, all authoring guidelines, diagrams, examples, and notes in this specification are non-normative. Everything else in this specification is normative.</p><p>
         The key words <em class="rfc2119">MAY</em>, <em class="rfc2119">MUST</em>, and <em class="rfc2119">SHOULD</em> in this document
         are to be interpreted as described in
         <a href="https://www.rfc-editor.org/info/bcp14">BCP 14</a>
@@ -1134,7 +1137,7 @@ At the cost of complexity, cursor pagination is more robust by providing a point
         </p></dd>
         <dt>How to test</dt>
         <dd>
-        </dd>
+        This rule can be automatically checked and an example test is shown in the <a href="#:~:text=%23%2Fpagination%2Flimits">linter configuration</a>.</dd>
     </dl>
 </div><div class="rule" id="/pagination/links" data-type="technical"><div title="This is a technical design rule and hence should be tested automatically." class="flag">technical</div>
     <p class="rulelab"><a href="#/pagination/links">/pagination/links</a>: Use a Link header for navigation</p>
@@ -1173,10 +1176,58 @@ At the cost of complexity, cursor pagination is more robust by providing a point
         </p></dd>
     </dl>
 </div></section></section>
+    <section class="appendix informative" id="linter-configuration">
+    <div class="header-wrapper"><h2 id="a-linter-configuration"><bdi class="secno">A. </bdi>Linter configuration</h2><a class="self-link" href="#linter-configuration" aria-label="Permalink for Appendix A."></a></div><p><em>This section is non-normative.</em></p>
+    <details class="linter-yaml">
+      <pre><code><span class="hljs-attr">formats:</span>
+  <span class="hljs-bullet">-</span> <span class="hljs-string">oas3</span>
+
+<span class="hljs-attr">rules:</span>
+  <span class="hljs-comment">#/pagination/limits</span>
+  <span class="hljs-attr">nlgov:pagination:limit:schema:missing:</span>
+    <span class="hljs-attr">severity:</span> <span class="hljs-string">error</span>
+    <span class="hljs-attr">given:</span> <span class="hljs-string">$.paths[*][*].parameters[?(@.in</span> <span class="hljs-string">==</span> <span class="hljs-string">'query'</span> <span class="hljs-string">&amp;&amp;</span> <span class="hljs-string">(@.name</span> <span class="hljs-string">==</span> <span class="hljs-string">'pageSize'</span> <span class="hljs-string">||</span> <span class="hljs-string">@.name</span> <span class="hljs-string">==</span> <span class="hljs-string">'limit'</span><span class="hljs-string">))]</span>
+    <span class="hljs-attr">then:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">field:</span> <span class="hljs-string">"schema"</span>
+        <span class="hljs-attr">function:</span> <span class="hljs-string">truthy</span>
+    <span class="hljs-attr">message:</span> <span class="hljs-string">"Any query parameter that represents a page size must have a schema defined"</span>
+
+  <span class="hljs-comment">#/pagination/limits</span>
+  <span class="hljs-attr">nlgov:pagination:limit:default:</span>
+    <span class="hljs-attr">severity:</span> <span class="hljs-string">error</span>
+    <span class="hljs-attr">given:</span> <span class="hljs-string">$.paths[*][*].parameters[?(@.in</span> <span class="hljs-string">==</span> <span class="hljs-string">'query'</span> <span class="hljs-string">&amp;&amp;</span> <span class="hljs-string">(@.name</span> <span class="hljs-string">==</span> <span class="hljs-string">'pageSize'</span> <span class="hljs-string">||</span> <span class="hljs-string">@.name</span> <span class="hljs-string">==</span> <span class="hljs-string">'limit'</span><span class="hljs-string">))].schema</span>
+    <span class="hljs-attr">then:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">field:</span> <span class="hljs-string">"default"</span>
+        <span class="hljs-attr">function:</span> <span class="hljs-string">truthy</span>
+    <span class="hljs-attr">message:</span> <span class="hljs-string">"Any query parameter that represents a page size must have a default value"</span>
+
+  <span class="hljs-comment">#/pagination/limits</span>
+  <span class="hljs-attr">nlgov:pagination:limit:integer-type:missing:</span>
+    <span class="hljs-attr">severity:</span> <span class="hljs-string">error</span>
+    <span class="hljs-attr">given:</span> <span class="hljs-string">$.paths[*][*].parameters[?(@.in</span> <span class="hljs-string">==</span> <span class="hljs-string">'query'</span> <span class="hljs-string">&amp;&amp;</span> <span class="hljs-string">(@.name</span> <span class="hljs-string">==</span> <span class="hljs-string">'pageSize'</span> <span class="hljs-string">||</span> <span class="hljs-string">@.name</span> <span class="hljs-string">==</span> <span class="hljs-string">'limit'</span><span class="hljs-string">))].schema</span>
+    <span class="hljs-attr">then:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">field:</span> <span class="hljs-string">"type"</span>
+        <span class="hljs-attr">function:</span> <span class="hljs-string">truthy</span>
+    <span class="hljs-attr">message:</span> <span class="hljs-string">"Any query parameter that represents a page size must have integer as type"</span>
+
+  <span class="hljs-comment">#/pagination/limits</span>
+  <span class="hljs-attr">nlgov:pagination:limit:integer-type:</span>
+    <span class="hljs-attr">severity:</span> <span class="hljs-string">error</span>
+    <span class="hljs-attr">given:</span> <span class="hljs-string">$.paths[*][*].parameters[?(@.in</span> <span class="hljs-string">==</span> <span class="hljs-string">'query'</span> <span class="hljs-string">&amp;&amp;</span> <span class="hljs-string">(@.name</span> <span class="hljs-string">==</span> <span class="hljs-string">'pageSize'</span> <span class="hljs-string">||</span> <span class="hljs-string">@.name</span> <span class="hljs-string">==</span> <span class="hljs-string">'limit'</span><span class="hljs-string">))].schema</span>
+    <span class="hljs-attr">then:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">field:</span> <span class="hljs-string">"type"</span>
+        <span class="hljs-attr">function:</span> <span class="hljs-string">enumeration</span>
+        <span class="hljs-attr">functionOptions:</span>
+          <span class="hljs-attr">values:</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-string">"integer"</span>
+    <span class="hljs-attr">message:</span> <span class="hljs-string">"Any query parameter that represents a page size must have integer as type"</span>
+</code></pre>
+    </details><div style="margin-top: 1em;">Open the above details to inspect the linter configuration. You can also <a href="media/linter.yaml">open the configuration file in separate tab</a></div>
+  </section>
 
 
-<section id="references" class="appendix"><div class="header-wrapper"><h2 id="a-references"><bdi class="secno">A. </bdi>References</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix A."></a></div><section id="normative-references">
-    <div class="header-wrapper"><h3 id="a-1-normative-references"><bdi class="secno">A.1 </bdi>Normative references</h3><a class="self-link" href="#normative-references" aria-label="Permalink for Appendix A.1"></a></div>
+<section id="references" class="appendix"><div class="header-wrapper"><h2 id="b-references"><bdi class="secno">B. </bdi>References</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix B."></a></div><section id="normative-references">
+    <div class="header-wrapper"><h3 id="b-1-normative-references"><bdi class="secno">B.1 </bdi>Normative references</h3><a class="self-link" href="#normative-references" aria-label="Permalink for Appendix B.1"></a></div>
     <dl class="bibliography"><dt id="bib-adr">[ADR]</dt><dd>
       <a href="https://gitdocumentatie.logius.nl/publicatie/api/adr/"><cite>API Design Rules</cite></a>. Jasper Roes; Joost Farla.  Logius. URL: <a href="https://gitdocumentatie.logius.nl/publicatie/api/adr/">https://gitdocumentatie.logius.nl/publicatie/api/adr/</a>
     </dd><dt id="bib-rfc2119">[RFC2119]</dt><dd>

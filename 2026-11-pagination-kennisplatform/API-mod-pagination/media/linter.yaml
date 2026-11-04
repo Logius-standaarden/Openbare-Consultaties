@@ -1,0 +1,42 @@
+formats:
+  - oas3
+
+rules:
+  #/pagination/limits
+  nlgov:pagination:limit:schema:missing:
+    severity: error
+    given: $.paths[*][*].parameters[?(@.in == 'query' && (@.name == 'pageSize' || @.name == 'limit'))]
+    then:
+      - field: "schema"
+        function: truthy
+    message: "Any query parameter that represents a page size must have a schema defined"
+
+  #/pagination/limits
+  nlgov:pagination:limit:default:
+    severity: error
+    given: $.paths[*][*].parameters[?(@.in == 'query' && (@.name == 'pageSize' || @.name == 'limit'))].schema
+    then:
+      - field: "default"
+        function: truthy
+    message: "Any query parameter that represents a page size must have a default value"
+
+  #/pagination/limits
+  nlgov:pagination:limit:integer-type:missing:
+    severity: error
+    given: $.paths[*][*].parameters[?(@.in == 'query' && (@.name == 'pageSize' || @.name == 'limit'))].schema
+    then:
+      - field: "type"
+        function: truthy
+    message: "Any query parameter that represents a page size must have integer as type"
+
+  #/pagination/limits
+  nlgov:pagination:limit:integer-type:
+    severity: error
+    given: $.paths[*][*].parameters[?(@.in == 'query' && (@.name == 'pageSize' || @.name == 'limit'))].schema
+    then:
+      - field: "type"
+        function: enumeration
+        functionOptions:
+          values:
+          - "integer"
+    message: "Any query parameter that represents a page size must have integer as type"
