@@ -2,10 +2,11 @@
 
 ## Lopende Consultaties
 
-<!-- | Label | Locatie | Omschrijving | Consultatie loopt tot |
+| Label | Locatie | Omschrijving | Consultatie loopt tot |
 |---|---|---|---|
-| Authorization Decision Log | [2026-04-adl](./2026-04-adl)| Versie 1.0 van Authorization Decision Log | 29 mei 2026 | -->
-Er zijn op dit moment geen lopende consultaties.
+| API module Pagination bij Kennisplatform API’s | [2026-11-pagination-kennisplatform](./2026-11-pagination-kennisplatform)| Versie 1.0 van API Design Rules Module: Pagination | 04-12-2026 |
+
+<!-- Er zijn op dit moment geen lopende consultaties. -->
 
 ## Op- en Aanmerkingen
 
